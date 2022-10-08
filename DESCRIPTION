@@ -1,0 +1,14 @@
+Package: GWASpops.pheno2geno
+Title: Extends GWAS catalog such that SNP population-specific allele frequency data can be visualized 
+Version: 0.0.0.9000
+Authors@R: 
+    person("Jon Tanner", "Nelson", , "mr.tnelsoner@gmail.com", role = c("aut", "cre"))
+Description: GWASpops.pheno2geno extends GWAS catalog (from EMBL-EBI) function by providing a framework for users to retreive and visualize population allele frequency data for any SNPs found within association tables downloaded off of the GWAS catalog.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
+Depends: 
+    R (>= 2.10)
+LazyData: true

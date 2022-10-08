@@ -1,0 +1,73 @@
+﻿1000GENOMES:phase_3:ALL,2504,All phase 3 individuals,All phase 3 
+1000GENOMES:phase_3:AFR,661,African,African
+1000GENOMES:phase_3:ACB,96,African Caribbean in Barbados,Afri-Caribb Barbados
+1000GENOMES:phase_3:ASW ,61,African Ancestry in Southwest US,Afri-Ances SW US
+1000GENOMES:phase_3:ESN ,99,Esan in Nigeria,Esan in Nigeria
+1000GENOMES:phase_3:GWD ,113,"Gambian in Western Division, The Gambia",W division Gambian
+1000GENOMES:phase_3:LWK ,99,"Luhya in Webuye, Kenya",Kenya Webuye Luhya
+1000GENOMES:phase_3:MSL ,85,Mende in Sierra Leone,Mende Sierra Leone
+1000GENOMES:phase_3:YRI ,108,"Yoruba in Ibadan, Nigeria",Nigeria Ibadan Yoruba
+1000GENOMES:phase_3:AMR,347,American,American
+1000GENOMES:phase_3:CLM ,94,"Colombian in Medellin, Colombia",Colombia Medellin
+1000GENOMES:phase_3:MXL,64,"Mexican Ancestry in Los Angeles, California","Mex-Ances CA, LA"
+1000GENOMES:phase_3:PEL ,85,"Peruvian in Lima, Peru",Peru Lima Peruvian
+1000GENOMES:phase_3:PUR ,104,Puerto Rican in Puerto Rico,PR Puerto Rican 
+1000GENOMES:phase_3:EAS,504,East Asian,East Asian
+1000GENOMES:phase_3:CDX ,93,"Chinese Dai in Xishuangbanna, China",China XSBN Han CHI
+1000GENOMES:phase_3:CHB ,103,"Han Chinese in Bejing, China",China Bejing Han CHI
+1000GENOMES:phase_3:CHS ,105,"Southern Han Chinese, China",China S Han Chinese
+1000GENOMES:phase_3:JPT ,104,"Japanese in Tokyo, Japan",JPN Tokyo Japanese
+1000GENOMES:phase_3:KHV,99,"Kinh in Ho Chi Minh City, Vietnam",Vietnam HCMC Kinh
+1000GENOMES:phase_3:EUR,503,European,European
+1000GENOMES:phase_3:CEU ,99,Utah residents with Northern and Western European ancestry,"Utah, N+W Euro-Ances"
+1000GENOMES:phase_3:FIN ,99,Finnish in Finland,Finnish in Finland
+1000GENOMES:phase_3:GBR ,91,British in England and Scotland,England/Scotland BRT
+1000GENOMES:phase_3:IBS ,107,Iberian populations in Spain,Spain Iberian pops
+1000GENOMES:phase_3:TSI ,107,Toscani in Italy,Toscani in Italy
+1000GENOMES:phase_3:SAS,489,South Asian,South Asian
+1000GENOMES:phase_3:BEB ,86,Bengali in Bangladesh,Bengali in Bangladesh
+1000GENOMES:phase_3:GIH ,103,"Gujarati Indian in Houston, TX",TX HOU Gujarati Indian
+1000GENOMES:phase_3:ITU,102,Indian Telugu in the UK,UK Telugu Indian
+1000GENOMES:phase_3:PJL ,96,"Punjabi in Lahore, Pakistan",Pakistan Lahore Punjabi
+1000GENOMES:phase_3:STU ,102,Sri Lankan Tamil in the UK,UK Sri Lankan Tamil
+GEM-J,-,Japanese,Japanese
+GGVP:ALL 580,-,All populations from the Gambian Genome Variation Project.,All Gambian
+GGVP:GWD 280,-,"Gambian in Western Division, The Gambia - Mandinka.",W div mandinka
+GGVP:GWF 100,-,"Gambian in Western Division, The Gambia - Fula",W div Fula
+GGVP:GWJ 100,-,"Gambian in Western Division, The Gambia - Jola.",W div Jola
+GGVP:GWW 100,-,"Gambian in Western Division, The Gambia - Wolof.",W div Wolof
+ALFA:SAMN10492695,-,European,European
+ALFA:SAMN10492696,-,African Others,African Others
+ALFA:SAMN10492697,-,East Asian,East Asian
+ALFA:SAMN10492698,-,African American,African American
+ALFA:SAMN10492699,-,Latin American 1,Latin American 1
+ALFA:SAMN10492700,-,Latin American 2,Latin American 2
+ALFA:SAMN10492701,-,Other Asian,Other Asian
+ALFA:SAMN10492702,-,South Asian,South Asian
+ALFA:SAMN10492703,-,African,African
+ALFA:SAMN10492704,-,Asian,Asian
+ALFA:SAMN10492705,-,Total,Total
+ALFA:SAMN11605645,-,Other,Other
+ESP6500:AA,-,African American,African American
+ESP6500:EA,-,European American,European American
+TOPMed,-,Unspecified ,Unspecified 
+gnomADg:ALL,-,All gnomAD genomes individuals,All genomAD 
+gnomADg:afr,-,African/African American,African/African American
+gnomADg:ami,-,Amish,Amish
+gnomADg:amr,-,Latino/Admixed American,Latino/Admixed American
+gnomADg:asj,-,Ashkenazi Jewish,Ashkenazi Jewish
+gnomADg:eas,-,East Asian,East Asian
+gnomADg:fin,-,Finnish,Finnish
+gnomADg:mid,-,Middle Eastern,Middle Eastern
+gnomADg:nfe,-,Non-Finnish European,Non-Finnish European
+gnomADg:oth,-,Other,Other
+gnomADg:sas,-,South Asian,South Asian
+gnomADe:ALL,-,All gnomAD exomes individuals,All gnomAD exomes
+gnomADe:afr,-,African/African American,African/African American
+gnomADe:amr,-,Latino,Latino
+gnomADe:asj,-,Ashkenazi Jewish,Ashkenazi Jewish
+gnomADe:eas,-,East Asian,East Asian
+gnomADe:fin,-,Finnish,Finnish
+gnomADe:nfe,-,Non-Finnish European,Non-Finnish European
+gnomADe:oth,-,Other,Other
+gnomADe:sas,-,South Asian,South Asian
