@@ -29,8 +29,6 @@
 #' @noRd
 importGWAS_DataTables <- function(folderPath){
   #import all files from a single folder using fread from data.table
-  require(data.table)
-
 
   # Fill a list with all files from specified folder
   files <- list.files(folderPath, full.names = TRUE)
@@ -73,7 +71,6 @@ importGWAS_DataTables <- function(folderPath){
 #'
 #' @noRd
 list2table_associations_studies <- function(dfList){
-  require(data.table)
 
   #splitting the DFs into two lists to independently combine each into single DFs
   studyList <- dfList[grep('.*studies.*', names(dfList))]
@@ -201,7 +198,6 @@ maxVecLength <- function(vector, maxLen = 1){
 #'
 #' @noRd
 bindTables_keyTerm <- function(dfList, term = 'association'){
-  require(data.table)
 
   term <- paste0('.*', term, '.*')
   ListToBind <- dfList[grep(term, names(dfList))]

@@ -15,6 +15,8 @@ write_csv_listOf_DFs(
 )
 }
 \arguments{
+\item{listOfDataFrames}{Data in. A list of data.frame(s) or similarly shaped objects which can be exported as CSVs.}
+
 \item{destinationFolder}{folder the user wishes to export files to. By default files will export to current working directory}
 
 \item{pattern}{specifies character or characters within data table names to replace by 'replacementChar'}

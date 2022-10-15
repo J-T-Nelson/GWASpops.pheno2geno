@@ -10,7 +10,8 @@
 #'
 #' Names of files come from the names of the tables within the list input. Destination folder can be selected otherwise files will be exported into current wd.
 #'
-#' @param  destinationFolder folder the user wishes to export files to. By default files will export to current working directory
+#' @param listOfDataFrames Data in. A list of data.frame(s) or similarly shaped objects which can be exported as CSVs.
+#' @param destinationFolder folder the user wishes to export files to. By default files will export to current working directory
 #' @param pattern specifies character or characters within data table names to replace by 'replacementChar'
 #' @param replacementChar replacement character which will be inserted in place of 'patten' within file names
 #' @param sortTables when TRUE will sort the tables according to the column specified by 'sortingCriteria'

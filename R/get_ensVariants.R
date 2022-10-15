@@ -399,10 +399,6 @@ fixMultiMapping <- function(rsO_list){
 #' @noRd
 ensemblPing <- function() {
 
-  require(httr)
-  require(jsonlite)
-  require(xml2)
-
   server <- "https://rest.ensembl.org"
   ext <- "/info/ping?"
 

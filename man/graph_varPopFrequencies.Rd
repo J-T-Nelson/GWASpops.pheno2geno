@@ -18,6 +18,8 @@ graph_varPopFrequencies(
 )
 }
 \arguments{
+\item{popFreqTable}{Data in. - data.table of population data for a single variant (SNP), popFreqTables are output from get_ensVariants() which is called by createMT().}
+
 \item{numPopulations}{is the number of populations shown on the graph. If it is not adjusted by the user, the graph is unsorted by default, if the user changes the value of numPopulations the data graphed will be sorted descending by default, but can be adjusted to ascending by using the 'ascending' option.}
 
 \item{graph_style}{can be either 'bar' or 'point' .. changes the geometry of the graph, the two different styles convey some different information as well. (Try them both!)}

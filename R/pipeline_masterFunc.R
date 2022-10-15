@@ -41,9 +41,9 @@ createMT <- function(fileFolderPath,
     masterTable <- merge(GWAS_DF, var_pop_list[[1]], by.x = 'VariantID', by.y = 'EnsVar_name')
 
     # Transforming data for single population based data tables
-    singlePop_alleleFreqDTs <- lapply(popFreqInfoTable$Population_Abbreviation,
+    singlePop_alleleFreqDTs <- lapply(Populations$Population_Abbreviation,
                                        function(x) singlePopTransform(var_pop_list[[2]], targetPopulation = x))
-    names(singlePop_alleleFreqDTs) <- popFreqInfoTable$Population_Abbreviation
+    names(singlePop_alleleFreqDTs) <- Populations$Population_Abbreviation
 
     masterList <- list(masterTable, var_pop_list[[2]], singlePop_alleleFreqDTs)
     names(masterList) <- c('masterTable', 'PopAlleleFreqData', 'singlePop_alleleFreqDTs')

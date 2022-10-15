@@ -12,7 +12,6 @@ if(!require(data.table)){
 
 Populations <- fread('./data_and_testData/PopulationFrequencyDataKey.csv', col.names = c('Population_Abbreviation', 'Sample_Count', 'Pop_Ancestry', 'PopAnces_Graph_Labels'))
 
-    #usethis::use_data(DATASET, overwrite = TRUE)
 usethis::use_data(Populations, overwrite = TRUE)
 
 
@@ -40,19 +39,14 @@ source('plotting_graphing.R')
 setwd('..')
 
 GWAS.asso.study.data <- createMT("./data_and_testData/GWASc_air_pollution_search", varAnnotations = FALSE)
+titleVec <- as.character(GWAS.asso.study.data[ ,'Title'])
+Encoding(titleVec) <- 'UTF-8'
+GWAS.asso.study.data[ , 'Title'] <- titleVec # Nice fast way to fix encoding of a vector in a structure. Just need to verify the conversion preserves the human-read meaning of the contents of the vec.
+
+
 usethis::use_data(GWAS.asso.study.data, overwrite = TRUE)
 
 
-# Code block of saving objects for internal usage by a package  -----------
-#   or by a user in the context of a p
-
-internalDataExample <- sample(100)
-use_data(internalDataExample, internal = TRUE)
-rm(internalDataExample)
-setwd('./R')
-load('sysdata.rda')
-
-# -------------------------------------------------------------------------
 
 
 

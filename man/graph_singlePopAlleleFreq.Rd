@@ -22,9 +22,15 @@ graph_singlePopAlleleFreq(
 )
 }
 \arguments{
+\item{masterTable}{Data in. - Table of SNP data from GWAS catalog and Ensembl-variants endpoint. Output by get_ensVariants(). Contains 40 variables.}
+
+\item{singlePopTable}{Data in - A population allele / SNP frequency table which is produced by singlePopTransform() function. Contains 'VariantID' 'allele_count' 'frequency' 'allele' variables, as well as a population attribute}
+
 \item{numVariants}{specifys the number of variants to be displayed by the graph.}
 
 \item{graph_style}{can be either 'bar' / 'col' or 'point' .. changes the geometry of the graph, the two different styles convey some different information as well. (Try them both!) (bar and col are synonymous and produce the same graph)}
+
+\item{facet_graph}{when TRUE, graph will be faceted according to 'Reported_trait'.}
 
 \item{orderless}{when TRUE, the graph will be unordered and thus bars / points will be randomly distributed instead of sorted}
 
@@ -51,7 +57,5 @@ ggplot2 graph object
 Graphing function which takes in a master table and a single-population allele frequency table and outputs a customizable graph which is either 'point' or 'bar' geometry / style.
 }
 \details{
-masterTable = the merged table of SNP data from both GWASc and Ensembl Variants endpoint.
-singlePopTable = a population allele / SNP frequency table which is produced by singlePopTransform() function. Contains 'VariantID' 'allele_count' 'frequency' 'allele' variables, as well as a population attribute
 See params for details on graph customization / options. It is strongly suggested to play around with the various optional arguments in order to discover the range of possible outputs when seeking any specific look or style of graph.
 }

@@ -1,2 +1,5 @@
 ^GWASpops\.pheno2geno\.Rproj$
 ^\.Rproj\.user$
+^LICENSE\.md$
+^workingBootCalls\.R$
+^data-raw$
