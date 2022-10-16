@@ -47,6 +47,9 @@ GWAS.asso.study.data[ , 'Title'] <- titleVec # Nice fast way to fix encoding of 
 usethis::use_data(GWAS.asso.study.data, overwrite = TRUE)
 
 
+# masterList creation for dev use --------------------------------------------
 
+masterList <- createMT('./exampleData/air_pollution', population_data = T)
+use_data(masterList, internal = T)
 
 

@@ -3,3 +3,8 @@
 ^LICENSE\.md$
 ^workingBootCalls\.R$
 ^data-raw$
+^README\.md$
+^README\.Rmd$
+^exampleData$
+^man/example_graphs$
+^data/sysdata\.rda$

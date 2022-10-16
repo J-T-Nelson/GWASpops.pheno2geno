@@ -1,3 +1,6 @@
+# package development start up script.
+#  This script is here to ease the process of beginning development sessions with a fresh Rstudio environment.
+
 # loading packages for development purposes
 library(devtools)
 library(data.table)
