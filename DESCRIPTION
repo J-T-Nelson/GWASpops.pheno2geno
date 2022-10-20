@@ -4,12 +4,12 @@ Version: 0.0.0.9000
 Authors@R: 
     person(given = "Jon", family = "Nelson", middle = "Tanner", email = "mr.tnelsoner@gmail.com", role = c("aut", "cre"))
 Description: GWASpops.pheno2geno extends GWAS catalog (from EMBL-EBI) function 
-    by providing a framework for users to retreive and visualize population 
+    by providing a framework for users to retrieve and visualize population 
     allele frequency data for any SNPs found within association tables 
     downloaded off of the GWAS catalog. Thus assisting in the process of 
     understanding the connection of disease phenotypes to population genotypes.
     GWAS = Genome Wide Association Study, 
-    SNP = Single Nucelotide Polymorphism.
+    SNP = Single Nucleotide Polymorphism.
 License: AGPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

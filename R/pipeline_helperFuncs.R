@@ -1,6 +1,6 @@
 # AUTHOR: Jon Tanner Nelson
 # LAST UPDATED: 9-26-2022
-# CONTENTS: LIST ALL FUNCTIONS HERE
+# CONTENTS: importGWAS_DataTables(), list2table_associations_studies(), singlePopTransform(), GWAScat_sciConvert(), maxVecLength(), bindTables_keyTerm()
 # PURPOSE: These functions all aid in the operation of exposed functions in this package, all functions within this file are to be left unexposed to the user.
 
 #' importGWAS_DataTables

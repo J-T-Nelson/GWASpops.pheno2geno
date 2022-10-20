@@ -30,3 +30,5 @@
 #'
 #' @source <https://www.ebi.ac.uk/gwas/search?query=air%20pollution>
 "GWAS.asso.study.data"
+
+
