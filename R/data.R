@@ -31,4 +31,16 @@
 #' @source <https://www.ebi.ac.uk/gwas/search?query=air%20pollution>
 "GWAS.asso.study.data"
 
+#' Master List for package examples
+#'
+#' @description full data list which can be used to learn the package.
+#' Also serves as an example to verify the data you get from calling createMT() is coming out in proper form with all desired variables.
+#'
+#' @details This master list uses the same base data as the 'GWAS.asso.study.data' data object which comes with the package as well, but also includes data from Ensembl.
+#'
+#' @format ## `testMasterList`
+#' A list with 3 elements. 1. masterTable, 2. PopAlleleFreqData 3. singlePop_alleleFreqDTs
+#'
+#' @source <https://www.ebi.ac.uk/gwas/search?query=air%20pollution>, <https://useast.ensembl.org/info/genome/variation/species/populations.html>
+"testMasterList"
 

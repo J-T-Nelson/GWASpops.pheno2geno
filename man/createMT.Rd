@@ -14,14 +14,35 @@ createMT(fileFolderPath, varAnnotations = TRUE, population_data = FALSE)
 \item{population_data}{FALSE by default. When TRUE population allele frequency data will be retrieved in addition to basic variant data from variation endpoint}
 }
 \value{
-When varAnnotations & population_data are FALSE a data.frame is returned. When either or both arguments are TRUE instead a list containing different data tables will be returned.
+A list or data.frame
+\itemize{
+\item When varAnnotations & population_data are FALSE a data.frame is returned.
+\item When either or both arguments are TRUE instead, a list containing different data tables will be returned.
+}
 }
 \description{
-createMT is the central all-in-one function for the GWAS-p2g pipeline. It calls upon many helper functions in order to generate organized, labeled data structures in a list which can be further processed for visualization or data storage purposes.
+createMT is the central all-in-one function for the GWAS-p2g pipeline. It calls upon many helper functions in order to generate organized, labeled data structures in a list or table (depending on which options are active)which can be further processed for visualization or data storage purposes.
+\itemize{
+\item "createMT" is short for "create Master Table"
+}
 }
 \details{
 For population_data to function when TRUE varAnnotations must also be TRUE. This is because the data associated with the population_data argument is optional data which comes from the same endpoint that is called for varAnnotations = TRUE.
+
 GWAS tables which are to be processed and used by this function should be association or studies tables. Other table types are likely to break the function as it was specifically designed to take in those two table types and thus depends on their specific variables / values.
+
 This function will take substantially longer depending on the # of variant IDs found within the tables imported and when the population_data option is set TRUE. The major bottleneck is due to Ensembl's REST API, and thus cannot be worked around in some cases. varAnnotations = TRUE will also add a significant amount of run time to the function call due to the REST API bottle neck, though substantially less data is transferred when only varAnnotations is true and population_data is FALSE.
+
 This function has failed several times in a row in the past during testing due to failures of API calls, thus one may need patience to see the data they wish to see, as reliability / stability of the API being called is beyond control of the user.
+}
+\examples{
+# Calling createMT with example data available at https://github.com/J-T-Nelson/GWASpops.pheno2geno
+# Download the 'exampleData' folder from github, then relocate it to the
+# working directory you're working in currently for this command to run.
+
+     masterList <- createMT("./exampleData/air_pollution", population_data = TRUE)
+
+# The call above will take some time and thus serves best as an example
+# of how to use the function.
+
 }

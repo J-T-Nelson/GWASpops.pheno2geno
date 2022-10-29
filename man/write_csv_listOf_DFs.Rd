@@ -21,7 +21,7 @@ write_csv_listOf_DFs(
 
 \item{pattern}{specifies character or characters within data table names to replace by 'replacementChar'}
 
-\item{replacementChar}{replacement character which will be inserted in place of 'patten' within file names}
+\item{replacementChar}{replacement character which will be inserted in place of 'pattern' within file names}
 
 \item{sortTables}{when TRUE will sort the tables according to the column specified by 'sortingCriteria'}
 
@@ -29,12 +29,22 @@ write_csv_listOf_DFs(
 
 \item{ascending}{will change the default sorting order from descending to ascending}
 }
-\value{
-NA
-}
 \description{
-iterates over a list of data.frames or table like data structures writing each to their own csv files.
+iterates over a list of data.frames or table like data structures writing each to their own csv file.
 }
 \details{
 Names of files come from the names of the tables within the list input. Destination folder can be selected otherwise files will be exported into current wd.
+}
+\examples{
+# use internal example masterList for this example
+     masterList <- testMasterList
+
+# grabbing just a few tables for examples sake
+     tableList <- masterList[[2]][1:5]
+
+# creating a single csv for each of the 5 tables, replacing 'rs' in the name with 'Table_Prefix',
+# they're being created in the current working directory since no destination folder is specified.
+     write_csv_listOf_DFs(tableList, pattern = 'rs', replacementChar = 'Table_Prefix')
+
+
 }

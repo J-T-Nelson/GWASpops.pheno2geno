@@ -6,22 +6,30 @@
 
 #' write_csv_listOf_DFs
 #'
-#' iterates over a list of data.frames or table like data structures writing each to their own csv files.
+#' iterates over a list of data.frames or table like data structures writing each to their own csv file.
 #'
 #' Names of files come from the names of the tables within the list input. Destination folder can be selected otherwise files will be exported into current wd.
 #'
 #' @param listOfDataFrames Data in. A list of data.frame(s) or similarly shaped objects which can be exported as CSVs.
 #' @param destinationFolder folder the user wishes to export files to. By default files will export to current working directory
 #' @param pattern specifies character or characters within data table names to replace by 'replacementChar'
-#' @param replacementChar replacement character which will be inserted in place of 'patten' within file names
+#' @param replacementChar replacement character which will be inserted in place of 'pattern' within file names
 #' @param sortTables when TRUE will sort the tables according to the column specified by 'sortingCriteria'
 #' @param sortingCriteria name of column which will be used to sort the data table by.
 #' @param ascending will change the default sorting order from descending to ascending
 #'
-#' @returns
-#' NA
 #'
-#' @example N/A
+#' @examples
+#' # use internal example masterList for this example
+#'      masterList <- testMasterList
+#'
+#' # grabbing just a few tables for examples sake
+#'      tableList <- masterList[[2]][1:5]
+#'
+#' # creating a single csv for each of the 5 tables, replacing 'rs' in the name with 'Table_Prefix',
+#' # they're being created in the current working directory since no destination folder is specified.
+#'      write_csv_listOf_DFs(tableList, pattern = 'rs', replacementChar = 'Table_Prefix')
+#'
 #'
 #' @importFrom dplyr arrange
 #' @importFrom dplyr desc

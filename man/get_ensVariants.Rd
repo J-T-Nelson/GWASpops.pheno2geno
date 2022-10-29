@@ -19,6 +19,14 @@ grabs ensVariants from API and converts to tabular form. Optionally grabs popula
 }
 \details{
 Primary method to grab variant data from Ensembl REST API in the pipeline.
-Calls the variants POST endpoint, build into the function are several layers of processing which both ensure arbitrarily large calls are executed successfully, as well as that data returned is in an acceptable format.
-Requesting population data will substantially increase the time this funciton takes to complete due to the increase in data being transferred.
+
+Use this function if you're interested in grabbing data on specific variants from Ensembl's Variants endpoint.
+
+Calls the variants POST endpoint, build into the function are several layers of processing which both ensure arbitrarily large calls are executed successfully, as well as that data returned is in a set of tabular semi-flat formatted objects.
+
+Requesting population data will substantially increase the time this function takes to complete due to the increase in data being transferred.
+}
+\examples{
+variantData <- get_ensVariants(c("rs11137048","rs6866110", "rs62227671", "rs6122625", "rs57504074"), population_data = TRUE)
+
 }

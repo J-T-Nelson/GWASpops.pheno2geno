@@ -57,5 +57,14 @@ ggplot2 graph object
 Graphing function which takes in a master table and a single-population allele frequency table and outputs a customizable graph which is either 'point' or 'bar' geometry / style.
 }
 \details{
-See params for details on graph customization / options. It is strongly suggested to play around with the various optional arguments in order to discover the range of possible outputs when seeking any specific look or style of graph.
+See 'Arguments' for details on graph customization / options. It is strongly suggested to play around with the various optional arguments in order to discover the range of possible outputs when seeking any specific look or style of graph.
+}
+\examples{
+# using package data object 'testMasterList' for this example
+   testMasterTable <- testMasterList[[1]]
+   singlePopulation <- testMasterList[[3]][[1]]
+
+# graphing with default options, see vignettes at https://github.com/J-T-Nelson/GWASpops.pheno2geno for more details on graphs which this function can produce
+   graph_singlePopAlleleFreq(testMasterTable, singlePopulation)
+
 }

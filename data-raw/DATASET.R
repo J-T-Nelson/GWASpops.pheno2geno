@@ -52,4 +52,10 @@ usethis::use_data(GWAS.asso.study.data, overwrite = TRUE)
 masterList <- createMT('./exampleData/air_pollution', population_data = T)
 use_data(masterList, internal = T)
 
+# masterList creation for user --------------------------------------------
+
+masterList <- createMT('./exampleData/air_pollution', population_data = T)
+testMasterList <- masterList
+use_data(testMasterList, overwrite = T)
+
 

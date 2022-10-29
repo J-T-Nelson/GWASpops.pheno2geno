@@ -6,19 +6,23 @@
 
 #' get_ensVariants
 #'
-#' grabs ensVariants from API and converts to tabular form. Optionally grabs population data as well.
+#' @description grabs ensVariants from API and converts to tabular form. Optionally grabs population data as well.
 #'
-#' Primary method to grab variant data from Ensembl REST API in the pipeline.
-#' Calls the variants POST endpoint, build into the function are several layers of processing which both ensure arbitrarily large calls are executed successfully, as well as that data returned is in an acceptable format.
-#' Requesting population data will substantially increase the time this funciton takes to complete due to the increase in data being transferred.
+#' @details Primary method to grab variant data from Ensembl REST API in the pipeline.
+#'
+#' Use this function if you're interested in grabbing data on specific variants from Ensembl's Variants endpoint.
+#'
+#' Calls the variants POST endpoint, build into the function are several layers of processing which both ensure arbitrarily large calls are executed successfully, as well as that data returned is in a set of tabular semi-flat formatted objects.
+#'
+#' Requesting population data will substantially increase the time this function takes to complete due to the increase in data being transferred.
 #'
 #' @param rsIDs vector of rsIDs (variant IDs of the rs00000000 form)
 #' @param population_data when TRUE, activates the option to grab population data for each variant in the request as well.
 #'
 #' @return list of data.frame(s) / data.table(s)
 #'
-#' @example
-#' variantData <- get_ensVariants(rsIDvector, population_data = TRUE)
+#' @examples
+#' variantData <- get_ensVariants(c("rs11137048","rs6866110", "rs62227671", "rs6122625", "rs57504074"), population_data = TRUE)
 #'
 #' @importFrom httr POST
 #' @importFrom httr stop_for_status
