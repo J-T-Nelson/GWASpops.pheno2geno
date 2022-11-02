@@ -35,7 +35,7 @@ This package can be installed using the devtools function
 ## Tutorial
 
 There is an independent document which is a full
-[tutorial](https://github.com/J-T-Nelson/GWASpops.pheno2geno/man/GWAS.pops.pheno2geno.md)
+[tutorial](https://github.com/J-T-Nelson/GWASpops.pheno2geno/blob/main/man/GWASpops.pheno2geno.md)
 that explains how this package is meant to be used. The basic workflow
 needed requires some data retrieval outside of R, thus it is suggested
 to at least skim the document before attempting to use the package!
@@ -51,7 +51,7 @@ package development and thus is guaranteed to play nicely with all
 package functions. This very same data was used to create some of the
 data objects which are included in the package. (More on those data
 objects in the
-[tutorial](https://github.com/J-T-Nelson/GWASpops.pheno2geno/man/GWAS.pops.pheno2geno.md))
+[tutorial](https://github.com/J-T-Nelson/GWASpops.pheno2geno/blob/main/man/GWASpops.pheno2geno.md))
 
 The data can be downloaded directly from github with the help of a
 community driven web-app:
