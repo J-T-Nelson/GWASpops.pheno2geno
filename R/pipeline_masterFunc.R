@@ -32,7 +32,7 @@
 #' # Download the 'exampleData' folder from github, then relocate it to the
 #' # working directory you're working in currently for this command to run.
 #'
-#'      masterList <- createMT("./exampleData/air_pollution", population_data = TRUE)
+#'      #masterList <- createMT("./exampleData/air_pollution", population_data = TRUE)
 #'
 #' # The call above will take some time and thus serves best as an example
 #' # of how to use the function.

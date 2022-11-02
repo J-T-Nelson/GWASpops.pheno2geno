@@ -32,20 +32,26 @@ This package can be installed using the devtools function
     # Copy this code into your R console in order to download the package. 
     devtools::install_github("J-T-Nelson/GWASpops.pheno2geno")
 
-## Tutorial and Vignettes
+## Tutorial
 
-TODO: Write tutorial and Vignettes, nest them into the github repo, link
-to them in this section. TODO: display a graph example image in this
-section to help give an early impression of what this package is capable
-of!
+There is an independent document which is a full
+[tutorial](https://github.com/J-T-Nelson/GWASpops.pheno2geno/man/GWAS.pops.pheno2geno.md)
+that explains how this package is meant to be used. The basic workflow
+needed requires some data retrieval outside of R, thus it is suggested
+to at least skim the document before attempting to use the package!
 
-##### Example Data
+## Example Data
 
-There is example data available in the “air_pollution” folder which has
-been used to generate the example plots below. New users may find this
-data helpful for learning the various functions in this package, as this
-data has been persistently used throughout package development and thus
-is guaranteed to play nicely with all package functions.
+Example data available in the “air_pollution” folder which has been used
+to generate the example plots below.
+
+New users may find this data helpful for learning the various functions
+in this package, as this data has been persistently used throughout
+package development and thus is guaranteed to play nicely with all
+package functions. This very same data was used to create some of the
+data objects which are included in the package. (More on those data
+objects in the
+[tutorial](https://github.com/J-T-Nelson/GWASpops.pheno2geno/man/GWAS.pops.pheno2geno.md))
 
 The data can be downloaded directly from github with the help of a
 community driven web-app:

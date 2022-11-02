@@ -8,3 +8,6 @@
 ^exampleData$
 ^man/example_graphs$
 ^data/sysdata\.rda$
+^\./GWAS\.data$
+^tutorialWorkspace\.R$
+^workingScripts$

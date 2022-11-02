@@ -101,7 +101,7 @@ graph_varPopFrequencies <- function(popFreqTable,
     eval(pointSize) +
     theme_bw(base_size = 15) +
     theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-    labs(title = paste0('Variant ID: ', attr(popFreqTable, 'VariantName')),
+    labs(title = paste0('Variant ID: ', attr(popFreqTable, 'VariantID')),
          subtitle = paste0('Ancestral Allele: ', attr(popFreqTable, 'Ancestral_Allele')),
          size = 'Individuals Sampled') +
     xlab('Population Ancestry')+ylab('Allele Frequency') +
