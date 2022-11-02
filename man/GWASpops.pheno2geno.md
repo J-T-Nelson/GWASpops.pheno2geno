@@ -50,14 +50,14 @@ For example you may be interested in prostate disease, and so you enter
 disease* has 1543 Associations (associated SNPs) and 120 studies
 (sources of data for the aforementioned associations).
 
-<img src='man/Tutorial_images/1.png'/>
+<img src='Tutorial_images/1.png'/>
 
 Clicking through on your trait of interest will reveal a substantial
 amount of interesting data about that trait, and *scrolling down* a bit
 will reveal the option to download CSV tables of both the associations
 and studies hosted on the GWAS catalog.
 
-<img src='man/Tutorial_images/2.png'/> *The above image shows the CSV
+<img src='Tutorial_images/2.png'/> *The above image shows the CSV
 drop-down option for downloading a table of interest in the top right
 corner of the image*
 
@@ -118,19 +118,19 @@ masterTable_3 <- createMT('./exampleData/air_pollution', population_data = TRUE)
 
 ##### Option 1:
 
-<img src='man/Tutorial_images/3.png'/> *Image is a small portion of the
+<img src='Tutorial_images/3.png'/> *Image is a small portion of the
 table for, there are many more variables and observations within the
 object*
 
 ##### Option 2:
 
-<img src='man/Tutorial_images/4.png'/> *Emphasizing the additional
-columns added by hitting Ensembl API for variants data, they all share a
-common prefix “EnsVar”*
+<img src='Tutorial_images/4.png'/> *Emphasizing the additional columns
+added by hitting Ensembl API for variants data, they all share a common
+prefix “EnsVar”*
 
 ##### Option 3:
 
-<img src='man/Tutorial_images/5.png'/>
+<img src='Tutorial_images/5.png'/>
 
 *Note in the above image the structure of the data created by
 `createMT()`, the first object in the list is the masterTable generated
@@ -191,11 +191,11 @@ interestingSNP2 <- masterList[[2]][[23]]
 graph_varPopFrequencies(interestingSNP2, ascending = T , yUpperLim = .25, graph_style = 'point')
 ```
 
-**Graph 1** <img src='man/Tutorial_images/10.png'/>
+**Graph 1** <img src='Tutorial_images/10.png'/>
 
-**Graph 2** <img src='man/Tutorial_images/11.png'/>
+**Graph 2** <img src='Tutorial_images/11.png'/>
 
-**Graph 3** <img src='man/Tutorial_images/12.png'/>
+**Graph 3** <img src='Tutorial_images/12.png'/>
 
 ### graph_singlePopAlleleFreq() Demo:
 
@@ -218,12 +218,12 @@ graph_singlePopAlleleFreq(masterList[[1]], All1kGenomes, numVariants = 10, graph
 graph_singlePopAlleleFreq(masterList[[1]], All1kGenomes, facet_graph = T, pValAsSize = T, orderless = T)
 ```
 
-**Graph 4** <img src='man/Tutorial_images/7.png'/>
+**Graph 4** <img src='Tutorial_images/7.png'/>
 
-**Graph 5** <img src='man/Tutorial_images/8.png'/>
+**Graph 5** <img src='Tutorial_images/8.png'/>
 
-**Graph 6** <img src='man/Tutorial_images/9.png'/> *This last graph may
-be difficult to see, though I simply wanted to show some of variance in
+**Graph 6** <img src='Tutorial_images/9.png'/> *This last graph may be
+difficult to see, though I simply wanted to show some of variance in
 graphs which can be produced by this function, as different options
 allow the user to learn about otherwise hidden aspects of their data
 visually.*
@@ -260,7 +260,7 @@ As you can see this will generate csv files within the specified folder,
 I used numbered names as well, which is the laziest and easiest ways to
 get flat file versions of the data tables created by this package.
 
-<img src='man/Tutorial_images/6.png'/>
+<img src='Tutorial_images/6.png'/>
 
 ## This Packages Premade Data Objects
 
