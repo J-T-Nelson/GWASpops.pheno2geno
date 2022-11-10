@@ -11,3 +11,5 @@
 ^\./GWAS\.data$
 ^tutorialWorkspace\.R$
 ^workingScripts$
+^\./R/Debugging_APIcalls\.R$
+^bootScripts\.R$

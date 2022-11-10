@@ -1,4 +1,7 @@
 .Rproj.user
-./GWAS.data
+GWAS.data
 
 workingScripts
+./R/Debugging_APIcalls.R
+bootScripts.R
+R/Debugging_APIcall.R
