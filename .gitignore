@@ -3,5 +3,5 @@ GWAS.data
 
 workingScripts
 ./R/Debugging_APIcalls.R
-bootScripts.R
+bootCalls.R
 R/Debugging_APIcall.R
