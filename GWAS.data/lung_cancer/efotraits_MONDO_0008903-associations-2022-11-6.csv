@@ -1,0 +1,1066 @@
+﻿"Variant and risk allele",P-value,"P-value annotation",RAF,OR,Beta,CI,"Mapped gene","Reported trait",Trait(s),"Background trait(s)","Study accession",Location
+rs186507655-<b>A</b>,"5 x 10-10","(subset analysis)",NR,'-,'-,'-,"MXRA8, DVL1","Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,1:1351675
+rs2075570-<b>T</b>,"5 x 10-6","(subset analysis)",NR,'-,'-,'-,MTX1,"Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,1:155212373
+rs481519-<b>T</b>,"2 x 10-9","(subset analysis)",NR,'-,'-,'-,NEK10,"Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,3:27285723
+rs7679673-<b>A</b>,"1 x 10-10","(subset analysis)",NR,'-,'-,'-,"RNU6-351P, TET2","Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,4:105140377
+rs7725218-<b>A</b>,"2 x 10-10","(subset analysis)",NR,'-,'-,'-,TERT,"Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,5:1282299
+rs1862626-<b>T</b>,"4 x 10-12","(subset analysis)",NR,'-,'-,'-,MAP3K1,"Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,5:56737113
+rs147680653-<b>G</b>,"1 x 10-6","(subset analysis)",NR,'-,'-,'-,"IFITM4P, HLA-V","Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,6:29785031
+rs115707823-<b>A</b>,"5 x 10-7","(subset analysis)",NR,'-,'-,'-,"UBQLN1P1, MICC","Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,6:30374976
+rs115392158-<b>G</b>,"3 x 10-7","(subset analysis)",NR,'-,'-,'-,"HLA-B, LINC02571","Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,6:31347004
+rs147527678-<b>C</b>,"6 x 10-8","(subset analysis)",NR,'-,'-,'-,"MTCO3P1, HLA-DQB1","Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,6:32699696
+rs1011970-<b>T</b>,"5 x 10-6","(subset analysis)",NR,'-,'-,'-,CDKN2B-AS1,"Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,9:22062135
+rs11200014-<b>A</b>,"8 x 10-35","(subset analysis)",NR,'-,'-,'-,FGFR2,"Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,10:121575416
+rs7931342-<b>G</b>,"4 x 10-14","(subset analysis)",NR,'-,'-,'-,"SMIM38, MYEOV","Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,11:69227030
+rs148883465-<b>G</b>,"3 x 10-8","(subset analysis)",NR,'-,'-,'-,MIR4693,"Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,11:103813371
+rs11168936-<b>C</b>,"9 x 10-7","(subset analysis)",NR,'-,'-,'-,TUBA1C,"Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,12:49251457
+rs73110464-<b>T</b>,"2 x 10-15","(subset analysis)",NR,'-,'-,'-,KRT8,"Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,12:52918828
+rs3184504-<b>C</b>,"1 x 10-6","(subset analysis)",NR,'-,'-,'-,"ATXN2, SH2B3","Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, squamous cell lung carcinoma, lung adenocarcinoma",'-,GCST003588,12:111446804
+rs11571818-<b>C</b>,"5 x 10-10","(subset analysis)",NR,'-,'-,'-,BRCA2,"Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,13:32394673
+rs11844632-<b>A</b>,"3 x 10-10","(subset analysis)",NR,'-,'-,'-,RAD51B,"Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,14:68559662
+rs12601991-<b>T</b>,"7 x 10-28","(subset analysis)",NR,'-,'-,'-,HNF1B,"Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,17:37741642
+rs4808075-<b>C</b>,"2 x 10-9","(subset analysis)",NR,'-,'-,'-,"USHBP1, BABAM1","Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,19:17279482
+rs11907546-<b>T</b>,"3 x 10-6","(subset analysis)",NR,'-,'-,'-,"ASIP, RPS2P1","Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,20:34131991
+rs141752671-<b>G</b>,"1 x 10-7","(subset analysis)",NR,'-,'-,'-,'-,"Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,11:103745837
+rs11065979-<b>T</b>,"5 x 10-6","(subset analysis)",NR,'-,'-,'-,"BRAP, ATXN2-AS","Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,12:111621753
+rs2300206-<b>C</b>,"6 x 10-6","(subset analysis)",NR,'-,'-,'-,RALY,"Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,20:34002002
+rs56084662-<b>A</b>,"4 x 10-9","(subset analysis)",NR,'-,'-,'-,FRY,"Cancer (pleiotropy)","lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003588,13:32295727
+rs1057941-<b>A</b>,"2 x 10-7",,NR,1.1,'-,[NR],GBAP1,Cancer,"lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003587,1:155216951
+rs2974935-<b>T</b>,"2 x 10-7",,NR,1.1,'-,[NR],MTX1,Cancer,"lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003587,1:155212052
+rs11119608-<b>T</b>,"1 x 10-7",,NR,1.1111112,'-,[NR],KCNH1,Cancer,"lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003587,1:210816167
+rs75316749-<b>G</b>,"2 x 10-7",,NR,1.1,'-,[NR],"LINC01997, MECOM",Cancer,"lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003587,3:169043635
+rs115707823-<b>A</b>,"2 x 10-6",,NR,1.1,'-,[NR],"UBQLN1P1, MICC",Cancer,"lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003587,6:30374976
+rs115392158-<b>G</b>,"9 x 10-6",,NR,1.1,'-,[NR],"HLA-B, LINC02571",Cancer,"lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003587,6:31347004
+rs147527678-<b>C</b>,"5 x 10-7",,NR,1.1,'-,[NR],"MTCO3P1, HLA-DQB1",Cancer,"lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003587,6:32699696
+rs4604234-<b>C</b>,"6 x 10-6",,NR,1.1,'-,[NR],"RPL17P25, RPSAP72",Cancer,"lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003587,6:80398959
+rs12349081-<b>A</b>,"6 x 10-6",,NR,1.1,'-,[NR],"MTAP, CDKN2A-DT",Cancer,"lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003587,9:21951903
+rs1011970-<b>T</b>,"2 x 10-7",,NR,1.1,'-,[NR],CDKN2B-AS1,Cancer,"lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003587,9:22062135
+rs3184504-<b>C</b>,"2 x 10-6",,NR,1.1,'-,[NR],"ATXN2, SH2B3",Cancer,"lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003587,12:111446804
+rs11571833-<b>T</b>,"8 x 10-12",,NR,1.6,'-,[NR],BRCA2,Cancer,"lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003587,13:32398489
+rs12601991-<b>T</b>,"1 x 10-9",,NR,1.1,'-,[NR],HNF1B,Cancer,"lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003587,17:37741642
+rs4808075-<b>C</b>,"4 x 10-7",,NR,1.1,'-,[NR],"USHBP1, BABAM1",Cancer,"lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003587,19:17279482
+rs11907546-<b>C</b>,"3 x 10-9",,NR,1.1111112,'-,[NR],"ASIP, RPS2P1",Cancer,"lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003587,20:34131991
+rs56404467-<b>A</b>,"1 x 10-7",,NR,1.2,'-,[NR],FRY,Cancer,"lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003587,13:32265853
+rs2300206-<b>G</b>,"2 x 10-8",,NR,1.1111112,'-,[NR],RALY,Cancer,"lung carcinoma, estrogen-receptor negative breast cancer, colorectal cancer, ovarian endometrioid carcinoma, prostate carcinoma, ovarian serous carcinoma, breast carcinoma, ovarian carcinoma, lung adenocarcinoma, squamous cell lung carcinoma",'-,GCST003587,20:34002002
+rs7593032-<b>T</b>,"4 x 10-6",(Female),0.713,0.631,'-,[0.52-0.74],"PKDCC, EML4-AS1","Lung cancer","lung cancer",'-,GCST011974,2:42122050
+rs42775-<b>T</b>,"5 x 10-6",(Female),0.325,1.561,'-,[1.29-1.83],LINC02056,"Lung cancer","lung cancer",'-,GCST011974,5:72584687
+rs76972397-<b>T</b>,"1 x 10-6",(Female),0.93,0.432,'-,[0.31-0.56],ZRANB1,"Lung cancer","lung cancer",'-,GCST011974,10:124961380
+rs482962-<b>A</b>,"5 x 10-6",(Female),0.262,1.607,'-,[1.31-1.9],"EIF4A3P1, LINC01915","Lung cancer","lung cancer",'-,GCST011974,18:24532843
+rs12657742-<b>A</b>,"4 x 10-6",(Male),0.864,0.555,'-,[0.43-0.68],LINC01377,"Lung cancer","lung cancer",'-,GCST011974,5:3123661
+rs77914729-<b>C</b>,"3 x 10-6",(Male),0.929,0.475,'-,[0.35-0.6],RPSAP37,"Lung cancer","lung cancer",'-,GCST011974,5:126003571
+rs11954381-<b>G</b>,"3 x 10-6",(Male),0.929,0.477,'-,[0.35-0.6],RPSAP37,"Lung cancer","lung cancer",'-,GCST011974,5:126006435
+rs3799451-<b>A</b>,"2 x 10-6",(Male),0.852,0.565,'-,[0.45-0.68],MAP7,"Lung cancer","lung cancer",'-,GCST011974,6:136508794
+rs13261356-<b>C</b>,"3 x 10-6",(Male),0.9,0.482,'-,[0.35-0.61],CSMD1,"Lung cancer","lung cancer",'-,GCST011974,8:4605119
+rs11012129-<b>T</b>,"3 x 10-7",(Male),0.945,0.375,'-,[0.26-0.49],MIR4675,"Lung cancer","lung cancer",'-,GCST011974,10:20545511
+rs2437037-<b>A</b>,"4 x 10-6",(Male),0.909,0.449,'-,[0.32-0.58],ATP8B1,"Lung cancer","lung cancer",'-,GCST011974,18:57795758
+rs363433-<b>C</b>,"1 x 10-6",(Male),0.863,0.539,'-,[0.42-0.66],"GRIK1, BACH1","Lung cancer","lung cancer",'-,GCST011974,21:29588811
+rs11747472-<b>T</b>,"6 x 10-8",,0.948,0.46,'-,[0.35-0.57],"TENM2, CTB-178M22.2","Lung cancer","lung cancer",'-,GCST90101896,5:168261395
+rs716274-<b>G</b>,"9 x 10-8","(AG genotype)",NR,1.83,'-,[1.47-2.29],DYNC2H1,"Small-cell lung cancer (survival)","small cell lung carcinoma",'-,GCST000896,11:103547430
+rs138600791-<b>C</b>,"2 x 10-6",,0.012265263,1.8133612,'-,[1.419742717-2.316108819],'-,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,3:135461153
+rs80152782-<b>A</b>,"9 x 10-6",,0.014091705,1.7656513,'-,[1.372958748-2.270661615],BBX,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,3:107528583
+rs9308062-<b>T</b>,"5 x 10-7",,0.416531265,1.1650723,'-,[1.097465593-1.236843752],TMA16,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,4:163517048
+rs79669866-<b>A</b>,"9 x 10-6",,0.010059146,1.8112257,'-,[1.39404894-2.353244681],MARCHF1,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,4:164402797
+rs55656647-<b>C</b>,"7 x 10-6",,0.087723238,1.3116096,'-,[1.165572775-1.475943646],LINC00290,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,4:181038635
+rs1703426-<b>C</b>,"2 x 10-6",,0.825064016,1.2045968,'-,[1.12-1.3],WSPAR,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,5:133849844
+rs258892-<b>C</b>,"5 x 10-6",,0.139422331,1.2072699,'-,[1.11347027-1.308971306],FCHO2,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,5:73010019
+rs74501188-<b>G</b>,"3 x 10-7",,0.776056638,1.2018008,'-,[1.12-1.29],ADGRV1,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,5:90931162
+rs80271657-<b>A</b>,"4 x 10-6",,0.012126484,1.9961306,'-,[1.48586427-2.681629472],NEDD9,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,6:11322557
+rs12200782-<b>C</b>,"1 x 10-6",,0.90335766,1.2811285,'-,[1.16-1.42],BTN3A1,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,6:26402808
+rs115867638-<b>T</b>,"6 x 10-6",,0.217424584,1.1754762,'-,[1.096168956-1.26052129],"IFITM4P, HLA-V","Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,6:29760793
+rs114719647-<b>T</b>,"4 x 10-6",,0.318140779,1.1571459,'-,[1.087830881-1.230877362],"MICC, UBQLN1P1","Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,6:30414391
+rs115973930-<b>A</b>,"4 x 10-6",,0.226094221,1.1751325,'-,[1.097338558-1.258441576],HCG20,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,6:30766303
+rs114115252-<b>A</b>,"2 x 10-6",,0.123416681,1.2330538,'-,[1.130912186-1.344420602],SFTA2,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,6:30931418
+rs114033761-<b>C</b>,"1 x 10-7",,0.119524609,1.265363,'-,[1.160413963-1.379803582],"RNU6-1133P, C6orf15","Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,6:31093784
+rs116427960-<b>T</b>,"5 x 10-8",,0.155571968,1.2539612,'-,[1.155764574-1.360500794],"HLA-B, LINC02571","Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,6:31351449
+rs115441327-<b>C</b>,"8 x 10-6",,0.261604857,1.1617801,'-,[1.087902659-1.240674335],BAG6,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,6:31645962
+rs67682613-<b>A</b>,"5 x 10-6",,0.137710569,1.2151433,'-,[1.11744981-1.32137761],NEU1,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,6:31858928
+rs112037939-<b>T</b>,"2 x 10-6",,0.250976287,1.1774344,'-,[1.100213154-1.260075647],"HLA-DRB1, HLA-DQA1","Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,6:32623699
+rs9464379-<b>G</b>,"8 x 10-6",,0.5832657130000001,1.1592995,'-,[1.09-1.24],COL21A1,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,6:56338876
+rs140013431-<b>C</b>,"1 x 10-6",,0.021230605,1.6634338,'-,[1.355454781-2.041390117],BMP6,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,6:7770278
+rs116877011-<b>T</b>,"2 x 10-6",,0.020399938,1.6737633,'-,[1.351182202-2.073357283],SCIN,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,7:12613434
+rs117205897-<b>T</b>,"7 x 10-6",,0.017012195,1.862035,'-,[1.419121326-2.443184068],SKAP2,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,7:26980172
+rs6463739-<b>G</b>,"2 x 10-6",,0.596687126,1.155505,'-,[1.09-1.23],UMAD1,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,7:7867093
+rs2898279-<b>G</b>,"6 x 10-6",,0.659080483,1.1534675,'-,[1.08-1.23],"FAM167A, FAM167A-AS1","Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,8:11437742
+rs55843245-<b>A</b>,"3 x 10-6",,0.326033226,1.1604022,'-,[1.090087033-1.235253053],DLC1,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,8:13580367
+rs17185553-<b>C</b>,"9 x 10-7",,0.081032077,1.2937081,'-,[1.167420859-1.433656677],ADAMTSL1,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,9:17934122
+rs10118776-<b>G</b>,"4 x 10-7",,0.062814101,1.3389986,'-,[1.196193182-1.498852438],IL33,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,9:6227418
+rs141877527-<b>G</b>,"1 x 10-6",,0.013192445,1.9389111,'-,[1.480804376-2.538739234],LINC02628,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,10:33497992
+rs3134425-<b>C</b>,"1 x 10-6",,0.6190244389999999,1.1615169,'-,[1.09-1.23],"CRTAM, UBASH3B","Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,11:122838470
+rs117729306-<b>C</b>,"7 x 10-7",,0.01066031,2.3079925,'-,[1.659462156-3.209973571],STK33,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,11:8465623
+rs34735495-<b>G</b>,"4 x 10-6",,0.034076152,1.4680247,'-,[1.246296636-1.729200387],DISC1FP1,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,11:90676974
+rs12279741-<b>G</b>,"8 x 10-6",,0.013703728,1.8242028,'-,[1.401328759-2.374685998],PIWIL4,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,11:94551363
+rs12822733-<b>C</b>,"7 x 10-6",,0.813559578,1.1891366,'-,[1.1-1.28],RAD52,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,12:946864
+rs1073160-<b>A</b>,"3 x 10-6",,0.490180585,1.149611,'-,[1.084500629-1.218630424],"A2ML1, PHC1","Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,12:8905966
+rs77028233-<b>A</b>,"8 x 10-6",,0.058610026,1.3694347,'-,[1.19257259-1.572525982],LINC02822,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,12:90637859
+rs11571833-<b>T</b>,"3 x 10-8",,0.009562644,2.1940665,'-,[1.66261291-2.89539903],BRCA2,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,13:32398489
+rs117823901-<b>C</b>,"4 x 10-6",,0.028043892,1.5131308,'-,[1.268374289-1.805117729],LINC00383,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,13:69272886
+rs116039120-<b>C</b>,"5 x 10-6",,0.019935006,1.6098583,'-,[1.311361149-1.97630046],"TMEM179, LINC02280","Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,14:104637421
+rs847245-<b>G</b>,"2 x 10-6",,0.04109971,1.5125053,'-,[1.274042132-1.795601601],RGS6,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,14:72249978
+rs77216150-<b>T</b>,"6 x 10-6",,0.029213786,1.5436904,'-,[1.278637808-1.863686591],FOXN3,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,14:89201573
+rs2704201-<b>C</b>,"4 x 10-6",,0.075227456,1.2850466,'-,[1.154833051-1.429942352],ALDH1A2,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,15:58125929
+rs55853698-<b>G</b>,"5 x 10-21",,0.359915817,1.3336763,'-,[1.256072968-1.416074239],CHRNA5,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,15:78565597
+rs3813565-<b>T</b>,"1 x 10-9",,0.401175298,1.2131084,'-,[1.139778258-1.291156411],CHRNB4,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,15:78727268
+rs145474218-<b>C</b>,"3 x 10-6",,0.012956586,1.9609474,'-,[1.476818807-2.603782368],LINC02254,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,15:97438904
+rs8049634-<b>G</b>,"1 x 10-6",,0.248145728,1.1792545,'-,[1.102930622-1.260860039],ADAD2,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,16:84192073
+rs140394255-<b>A</b>,"2 x 10-6",,0.075061735,1.3050312,'-,[1.168823371-1.457111962],"UBE2G1, SPNS3","Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,17:4424688
+rs12981718-<b>A</b>,"2 x 10-7",,0.071553425,1.3595927,'-,[1.210609031-1.52691111],"TARM1, VSTM1","Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,19:54064604
+rs141670911-<b>A</b>,"1 x 10-6",,0.904847906,1.2866561,'-,[1.16-1.42],"HMGN4, ABT1","Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,6:26581030
+rs10456332-<b>A</b>,"7 x 10-6",,0.90103678,1.271729,'-,[1.14-1.41],ZNF322,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST004746,6:26685903
+rs141178913-<b>G</b>,"1 x 10-9",,NR,'-,"2.43 unit increase",[0.078-4.782],IL17RC,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST90134664,3:9928389
+rs191133092-<b>T</b>,"7 x 10-9",,NR,'-,"1.8 unit increase",[1.19-2.41],"KRT18P1, LINC01556","Small cell lung carcinoma","small cell lung carcinoma",'-,GCST90134664,6:28965208
+rs16969968-<b>?</b>,"1 x 10-23",,NR,'-,"0.26 unit increase",[0.2-0.32],CHRNA5,"Small cell lung carcinoma","small cell lung carcinoma",'-,GCST90134664,15:78590583
+rs9303196-<b>T</b>,"8 x 10-6",,0.07,1.43,'-,[1.14-1.82],WSCD1,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST000815,17:6004123
+rs16951095-<b>C</b>,"7 x 10-6",,0.78,1.3,'-,[1.10-1.54],LAMA1,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST000815,18:7042912
+rs2131877-<b>G</b>,"2 x 10-8",,0.44,1.3,'-,[1.19-1.42],XXYLT1,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST000815,3:195137645
+rs12296850-<b>A</b>,"1 x 10-10",,0.744,1.28,'-,[1.19-1.39],"SLC17A8, NR1H4","Squamous cell carcinoma","non-small cell lung carcinoma",'-,GCST001827,12:100426307
+rs1656402-<b>?</b>,"8 x 10-8",,NR,2.38,'-,[1.49-3.85],EIF4E2,"Non-small cell lung cancer (survival)","non-small cell lung carcinoma",'-,GCST000871,2:232561816
+rs9981861-<b>G</b>,"4 x 10-6",,NR,1.33,'-,[0.82-2.15],DSCAM,"Non-small cell lung cancer (survival)","non-small cell lung carcinoma",'-,GCST000871,21:40043117
+rs1209950-<b>T</b>,"3 x 10-7",,NR,4.96,'-,[2.52-9.76],"LINC00114, ETS2","Non-small cell lung cancer (survival)","non-small cell lung carcinoma",'-,GCST000871,21:38801604
+rs11080466-<b>C</b>,"1 x 10-6",,NR,1.47,'-,[1.27-1.72],PIEZO2,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST001210,18:10899030
+rs6753473-<b>G</b>,"4 x 10-6","(Additive model)",0.052,'-,'-,'-,"ADGRF3, HADHB","Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST001734,2:26303551
+rs539901-<b>G</b>,"8 x 10-6","(Additive model)",0.109,'-,'-,'-,ALDH1A2,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST001734,15:58382470
+rs1571228-<b>?</b>,"2 x 10-7","(Dominant model)",NR,'-,'-,'-,SAXO1,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST001734,9:18930224
+rs2371030-<b>G</b>,"3 x 10-6","(Additive model)",0.091,'-,'-,'-,"RPS27P10, CPS1","Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST001734,2:210704998
+rs6510725-<b>?</b>,"3 x 10-6","(Dominant model)",NR,'-,'-,'-,"MIER2, THEG","Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST001734,19:348743
+rs10029269-<b>?</b>,"4 x 10-6","(Dominant model)",NR,'-,'-,'-,'-,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST001734,4:134859217
+rs847845-<b>?</b>,"6 x 10-6","(Dominant model)",NR,'-,'-,'-,ANKS1A,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST001734,6:34956087
+rs732765-<b>G</b>,"7 x 10-6","(Additive model)",0.257,'-,'-,'-,DLST,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST001734,14:74899026
+rs13405020-<b>?</b>,"7 x 10-6","(Dominant model)",NR,'-,'-,'-,THSD7B,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST001734,2:137384594
+rs2926702-<b>T</b>,"7 x 10-6","(Additive model)",0.572,'-,'-,'-,NCOA2,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST001734,8:70255759
+rs8048207-<b>T</b>,"8 x 10-6","(Additive model)",0.121,'-,'-,'-,CDH8,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST001734,16:61744191
+rs9557635-<b>A</b>,"9 x 10-6","(Additive model)",0.146,'-,'-,'-,NALCN,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST001734,13:101398739
+rs6479272-<b>T</b>,"9 x 10-6","(Additive model)",0.086,'-,'-,'-,SLC35D2,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST001734,9:96335245
+rs10429489-<b>A</b>,"7 x 10-10",,NR,1.11,'-,[1.08-1.15],"RN7SL151P, MTAP","Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,9:21787522
+rs1853837-<b>A</b>,"1 x 10-10",,NR,1.12,'-,[1.08-1.15],FOXP4-AS1,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,6:41529297
+rs3115672-<b>T</b>,"4 x 10-6",,NR,1.15,'-,[1.08-1.22],"MSH5, MSH5-SAPCD1","Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,6:31760120
+rs71658797-<b>A</b>,"9 x 10-7",,NR,1.16,'-,[1.09-1.22],AK5,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,1:77501822
+rs2517873-<b>A</b>,"5 x 10-11",,NR,1.16,'-,[1.11-1.21],MCCD1P1,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,6:29908215
+rs1264308-<b>T</b>,"2 x 10-7",,NR,1.16,'-,[1.1-1.23],GTF2H4,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,6:30912210
+rs7705526-<b>A</b>,"1 x 10-42",,NR,1.2,'-,[1.17-1.24],TERT,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,5:1285859
+rs116205103-<b>G</b>,"2 x 10-7",,0.94,0.83,'-,[0.77-0.89],FAM114A1,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,4:38913680
+rs1815741-<b>C</b>,"3 x 10-7",,0.92,0.86,'-,[0.81-0.91],"IFITM4P, HLA-V","Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,6:29770913
+rs3217451-<b>AT</b>,"7 x 10-7",,0.87,0.9,'-,[0.87-0.94],UBXN4,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,2:135753722
+rs76354137-<b>C</b>,"6 x 10-7",,0.38,0.92,'-,[0.88-0.95],"CYP1A1, CYP1A2","Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,15:74737657
+rs35661893-<b>C</b>,"4 x 10-6",,0.55,0.93,'-,[0.91-0.96],"TRPC3, BBS7-DT","Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,4:121873961
+rs4938515-<b>A</b>,"3 x 10-7",,0.37,1.07,'-,[1.04-1.10],PHLDB1,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,11:118607689
+rs12006500-<b>A</b>,"4 x 10-6",,0.65,1.09,'-,[1.05-1.13],"MUSK, LPAR1","Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,9:110863180
+rs3117582-<b>G</b>,"2 x 10-6",,NR,0.87,'-,[0.82-0.92],APOM,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,6:31652743
+rs12265047-<b>G</b>,"8 x 10-10",,NR,0.89,'-,[0.85-0.92],VTI1A,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,10:112728166
+rs55768116-<b>C</b>,"2 x 10-13",,NR,0.91,'-,[0.88-0.93],MPZL3,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,11:118237616
+rs200595745-<b>A</b>,"2 x 10-9",,NR,1.09,'-,[1.06-1.12],BPTF,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,17:67919174
+rs2293607-<b>T</b>,"2 x 10-10",,NR,1.1,'-,[1.06-1.13],TERC,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,3:169764547
+rs11571833-<b>T</b>,"5 x 10-6",,NR,0.67,'-,[0.56-0.79],BRCA2,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,13:32398489
+rs55781567-<b>G</b>,"8 x 10-44",,NR,0.79,'-,[0.76-0.81],CHRNA5,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,15:78565644
+rs13080835-<b>G</b>,"1 x 10-20",,NR,0.88,'-,[0.86-0.91],TP63,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,3:189639410
+rs4236709-<b>G</b>,"1 x 10-12",,NR,0.89,'-,[0.86-0.92],NRG1,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,8:32552592
+rs1200399-<b>C</b>,"3 x 10-9",,NR,0.9,'-,[0.87-0.93],BAZ1A,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,14:34823979
+rs56113850-<b>C</b>,"3 x 10-9",,NR,0.92,'-,[0.89-0.94],CYP2A6,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,19:40847202
+rs3769821-<b>C</b>,"4 x 10-8",,NR,0.93,'-,[0.9-0.95],CASP8,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,2:201258707
+rs5879422-<b>T</b>,"4 x 10-9",,NR,1.08,'-,[1.05-1.11],DCBLD1,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,6:117463496
+rs77468143-<b>T</b>,"1 x 10-7",,NR,1.09,'-,[1.05-1.12],"SECISBP2L, COPS2","Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST012199,15:49084427
+rs12265047-<b>G</b>,"8 x 10-10",,0.243,1.13,'-,[1.09-1.17],VTI1A,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,10:112728166
+rs13167280-<b>A</b>,"5 x 10-32",,0.17,1.24,'-,[1.19-1.28],TERT,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,5:1280362
+rs1853837-<b>A</b>,"1 x 10-10",,0.258,1.12,'-,[1.08-1.15],FOXP4-AS1,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,6:41529297
+rs200595745-<b>A</b>,"2 x 10-9",,0.43,1.09,'-,[1.06-1.12],BPTF,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,17:67919174
+rs2293607-<b>T</b>,"2 x 10-10",,0.596,1.1,'-,[1.06-1.13],TERC,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,3:169764547
+rs2517873-<b>A</b>,"5 x 10-11",,0.145,1.16,'-,[1.11-1.21],MCCD1P1,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,6:29908215
+rs3769821-<b>C</b>,"4 x 10-8",,0.321,1.08,'-,[1.05-1.11],CASP8,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,2:201258707
+rs4236709-<b>G</b>,"1 x 10-12",,0.198,1.12,'-,[1.09-1.16],NRG1,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,8:32552592
+rs55768116-<b>C</b>,"2 x 10-13",,0.489,1.1,'-,[1.07-1.13],MPZL3,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,11:118237616
+rs55781567-<b>G</b>,"8 x 10-44",,0.32,1.27,'-,[1.23-1.31],CHRNA5,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,15:78565644
+rs56113850-<b>C</b>,"3 x 10-9",,0.487,1.09,'-,[1.06-1.12],CYP2A6,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,19:40847202
+rs5879422-<b>T</b>,"4 x 10-9",,0.51,1.08,'-,[1.05-1.11],DCBLD1,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,6:117463496
+rs3769821-<b>C</b>,"2 x 10-7",(EA),0.34,1.1,'-,[1.06-1.14],CASP8,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,2:201258707
+rs7705526-<b>A</b>,"4 x 10-41","(East Asian)",0.41,1.31,'-,[1.26-1.36],TERT,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,5:1285859
+rs11375254-<b>T</b>,"3 x 10-21","(East Asian)",0.51,1.21,'-,[1.16-1.26],TP63,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,3:189625454
+rs401681-<b>C</b>,"8 x 10-12","(East Asian)",0.68,1.16,'-,[1.11-1.2],CLPTM1L,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,5:1321972
+rs7741164-<b>A</b>,"4 x 10-12","(East Asian)",0.34,1.16,'-,[1.11-1.21],FOXP4-AS1,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,6:41525674
+rs7086803-<b>A</b>,"3 x 10-10","(East Asian)",0.28,1.14,'-,[1.1-1.19],VTI1A,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,10:112738717
+rs4236709-<b>G</b>,"1 x 10-9","(East Asian)",0.18,1.17,'-,[1.11-1.23],NRG1,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,8:32552592
+rs55768116-<b>C</b>,"2 x 10-9","(East Asian)",0.45,1.13,'-,[1.08-1.17],MPZL3,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,11:118237616
+rs2293607-<b>T</b>,"3 x 10-9","(East Asian)",0.45,1.12,'-,[1.08-1.17],TERC,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,3:169764547
+rs200595745-<b>A</b>,"3 x 10-8","(East Asian)",0.62,1.12,'-,[1.08-1.17],BPTF,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,17:67919174
+rs1200399-<b>C</b>,"4 x 10-7","(East Asian)",0.49,1.11,'-,[1.06-1.15],BAZ1A,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,14:34823979
+rs35201538-<b>C</b>,"5 x 10-6","(East Asian)",0.65,1.1,'-,[1.06-1.15],"AQP7, AQP3","Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,9:33422491
+rs10429489-<b>A</b>,"8 x 10-6","(East Asian)",0.25,1.11,'-,[1.06-1.16],"RN7SL151P, MTAP","Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,9:21787522
+rs10429489-<b>A</b>,"7 x 10-10",,0.195,1.11,'-,[1.08-1.15],"RN7SL151P, MTAP","Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,9:21787522
+rs11375254-<b>T</b>,"1 x 10-20",,0.525,1.13,'-,[1.10-1.16],TP63,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,3:189625454
+rs1200399-<b>C</b>,"3 x 10-9",,0.405,1.11,'-,[1.07-1.15],BAZ1A,"Non-small cell lung cancer","non-small cell lung carcinoma",'-,GCST008834,14:34823979
+rs55781567-<b>G</b>,"2 x 10-23",,NR,0.78,'-,[0.74-0.82],CHRNA5,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST012200,15:78565644
+rs2517873-<b>A</b>,"2 x 10-10",,NR,1.23,'-,[1.15-1.31],MCCD1P1,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST012200,6:29908215
+rs2945908-<b>C</b>,"8 x 10-7",,0.22,0.89,'-,[0.85-0.93],PRAG1,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST012200,8:8334713
+rs11571833-<b>T</b>,"5 x 10-8",,NR,0.5,'-,[0.39-0.64],BRCA2,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST012200,13:32398489
+rs3117582-<b>G</b>,"2 x 10-9",,NR,0.77,'-,[0.71-0.84],APOM,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST012200,6:31652743
+rs3094604-<b>G</b>,"2 x 10-8",,NR,0.86,'-,[0.82-0.91],HCP5,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST012200,6:31466334
+rs3748522-<b>C</b>,"7 x 10-6",,NR,0.91,'-,[0.88-0.95],RAD52,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST012200,12:949522
+rs4573350-<b>T</b>,"3 x 10-9",,NR,1.13,'-,[1.09-1.18],MORN5,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST012200,9:122192836
+rs465498-<b>A</b>,"6 x 10-18",,NR,1.21,'-,[1.16-1.26],CLPTM1L,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST012200,5:1325688
+rs2523546-<b>A</b>,"9 x 10-8",,NR,1.24,'-,[1.14-1.34],"DHFRP2, HLA-B","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST012200,6:31365143
+rs3115672-<b>T</b>,"2 x 10-8",,NR,1.28,'-,[1.17-1.39],"MSH5, MSH5-SAPCD1","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST012200,6:31760120
+rs1264308-<b>T</b>,"6 x 10-10",,NR,1.29,'-,[1.19-1.40],GTF2H4,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST012200,6:30912210
+rs35661893-<b>C</b>,"5 x 10-7",,0.55,0.9,'-,[0.86-0.94],"TRPC3, BBS7-DT","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST012200,4:121873961
+rs13213986-<b>A</b>,"7 x 10-11",,0.076648757,1.2491379,'-,[1.168376851-1.335481193],ZSCAN12,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:28390232
+rs114242735-<b>C</b>,"2 x 10-10",,0.076962679,1.241532,'-,[1.161109238-1.327525094],GPX6,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:28515140
+rs116461399-<b>C</b>,"1 x 10-11",,0.097015006,1.2472361,'-,[1.170241522-1.329296602],"NOP56P1, LINC01623","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:28828294
+rs148696809-<b>C</b>,"4 x 10-11",,0.086719155,1.2477136,'-,[1.168498995-1.332298319],"LINC01556, KRT18P1","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:28966575
+rs141600123-<b>T</b>,"3 x 10-11",,0.098184885,1.24441,'-,[1.1670044-1.326950001],"OR2J2, OR2J3","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:29165865
+rs139244745-<b>G</b>,"3 x 10-12",,0.095802754,1.2578697,'-,[1.179561443-1.34137667],"OR2U2P, OR14J1","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:29287205
+rs147680653-<b>G</b>,"1 x 10-14",,0.082184732,1.3224626,'-,[1.232029321-1.419533796],"IFITM4P, HLA-V","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:29785031
+rs147097402-<b>A</b>,"5 x 10-13",,0.144325242,1.2544376,'-,[1.179702134-1.33390745],"HLA-U, HLA-K","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:29930083
+rs116480994-<b>C</b>,"2 x 10-13",,0.095388006,1.2655623,'-,[1.188449247-1.347678784],POLR1H,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:30064745
+rs116418332-<b>A</b>,"8 x 10-13",,0.096294683,1.2566881,'-,[1.180581902-1.337700478],TRIM26,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:30193759
+rs116310021-<b>C</b>,"3 x 10-14",,0.098059255,1.2713187,'-,[1.194941971-1.352577225],"MICC, UBQLN1P1","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:30383571
+rs142618987-<b>G</b>,"5 x 10-14",,0.108856096,1.2575619,'-,[1.184808489-1.334782845],"GNL1, LINC02569","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:30540143
+rs114274879-<b>T</b>,"3 x 10-16",,0.111490347,1.2765228,'-,[1.204082426-1.353321384],VARS2,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:30914638
+rs116725014-<b>A</b>,"6 x 10-16",,0.107361373,1.2734625,'-,[1.200971166-1.350329481],MUC22,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:31018051
+rs115390513-<b>C</b>,"4 x 10-15",,0.105345843,1.2619891,'-,[1.190738196-1.337503582],"HCG27, HLA-C","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:31208169
+rs116822326-<b>G</b>,"4 x 10-19",,0.155100279,1.2500138,'-,[1.190343016-1.312675889],HCP5,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:31466334
+rs139789464-<b>G</b>,"8 x 10-18",,0.097440193,1.3017117,'-,[1.225771087-1.382357001],APOM,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:31657087
+rs139285835-<b>T</b>,"3 x 10-17",,0.094313349,1.3140805,'-,[1.233356809-1.400087657],"SNHG32, NEU1","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:31850331
+rs144433536-<b>T</b>,"1 x 10-16",,0.096448619,1.2925944,'-,[1.216536993-1.373406858],TNXB,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:32067917
+rs114665747-<b>T</b>,"3 x 10-15",,0.098724564,1.2750176,'-,[1.200229849-1.354465488],"NOTCH4, TSBP1-AS1","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:32231204
+rs114937304-<b>T</b>,"6 x 10-15",,0.102137715,1.2814854,'-,[1.204075188-1.363872529],TSBP1-AS1,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:32373094
+rs74942078-<b>T</b>,"3 x 10-17",,0.111380925,1.2715524,'-,[1.202475147-1.344598072],HLA-DQA1,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:32638107
+rs148861668-<b>T</b>,"2 x 10-10",,0.091709454,1.2225089,'-,[1.148825653-1.300917959],"HLA-DOB, HLA-DQB2","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:32788876
+rs114951367-<b>T</b>,"3 x 10-7",,0.0755486,1.2017432,'-,[1.119830115-1.289648086],HLA-DMB,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:32936274
+rs117534741-<b>A</b>,"6 x 10-7",,0.024812467,1.4064276,'-,[1.230153554-1.607960747],RNU4-66P,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:71674838
+rs113855064-<b>C</b>,"9 x 10-12",,0.011187045,1.9985485,'-,[1.638002715-2.438455141],PDS5B,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,13:32601963
+rs117371643-<b>A</b>,"3 x 10-6",,0.02156595,1.4205657,'-,[1.226820574-1.644908003],PDS5B,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,13:32769511
+rs80287486-<b>G</b>,"2 x 10-6",,0.484716938,1.0939528,'-,[1.054007746-1.135411644],OBI1-AS1,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,13:78530904
+rs9602270-<b>T</b>,"3 x 10-7",,0.048608633,1.2693835,'-,[1.158336115-1.391076925],'-,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,13:83706928
+rs10146472-<b>A</b>,"4 x 10-7",,0.802325969,1.125447,'-,[1.08-1.18],NPAS3,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,14:33545815
+rs35028925-<b>A</b>,"2 x 10-6",,0.559939357,1.0992004,'-,[1.06-1.14],CATSPER2,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,15:43638408
+rs8040868-<b>C</b>,"3 x 10-41",,0.413519195,1.2904406,'-,[1.243425108-1.339233734],CHRNA3,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,15:78618839
+rs3813565-<b>T</b>,"3 x 10-19",,0.397141366,1.2010475,'-,[1.153867939-1.25015625],CHRNB4,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,15:78727268
+rs7403155-<b>A</b>,"4 x 10-7",,0.299885406,1.1159655,'-,[1.069432691-1.164522965],MORF4L1,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,15:78838082
+rs34783982-<b>G</b>,"9 x 10-6",,0.705069358,1.0965776,'-,[1.05-1.14],"CARMAL, KRT18P47","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,15:88971932
+rs2674946-<b>T</b>,"4 x 10-6",,0.279089295,1.102755,'-,[1.05798494-1.149419408],'-,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,17:13163502
+rs117194419-<b>G</b>,"9 x 10-6",,0.974630623,1.4204632,'-,[1.22-1.66],"KRT37, KRT41P","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,17:41414466
+rs111537197-<b>C</b>,"7 x 10-6",,0.044726731,1.2532552,'-,[1.136090528-1.382503197],"LINC01973, LINC01987","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,17:77825619
+rs12957236-<b>T</b>,"8 x 10-6",,0.252374946,1.100537,'-,[1.055265996-1.147750003],LINC01478,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,18:44319280
+rs56113850-<b>C</b>,"7 x 10-11",,0.55529151,1.1555213,'-,[1.11-1.21],CYP2A6,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,19:40847202
+rs77710113-<b>T</b>,"6 x 10-6",,0.941966797,1.193753,'-,[1.11-1.29],"ADAR, KCNN3","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,1:154646147
+rs2369473-<b>C</b>,"7 x 10-6",,0.509189675,1.0888755,'-,[1.05-1.13],DCAF8,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,1:160240937
+rs78663305-<b>A</b>,"3 x 10-6",,0.882049259,1.1496092,'-,[1.08-1.22],"XCL2, QRSL1P1","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,1:168528503
+rs151066755-<b>G</b>,"2 x 10-6",,0.022968509,1.3238224,'-,[1.179085695-1.486325877],LINC01774,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,1:209017129
+rs3754287-<b>T</b>,"2 x 10-6",,0.142571693,1.1387107,'-,[1.079781533-1.20085612],"HIVEP3, EDN2","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,1:41486926
+rs113688544-<b>C</b>,"4 x 10-6",,0.747240408,1.1049403,'-,[1.06-1.15],"KDM4A-AS1, KDM4A","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,1:43686240
+rs150340921-<b>T</b>,"5 x 10-6",,0.012942394,1.6037836,'-,[1.309278568-1.964533794],LINC01712,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,1:83471638
+rs78359677-<b>G</b>,"1 x 10-6",,0.229878216,1.1185868,'-,[1.068718633-1.170781804],LRRC8D,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,1:89907211
+rs10174077-<b>T</b>,"1 x 10-6",,0.476668785,1.0992897,'-,[1.057900617-1.142297942],NEB,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,2:151625198
+rs13031455-<b>T</b>,"2 x 10-6",,0.595234799,1.0940219,'-,[1.05-1.14],VSNL1,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,2:17602890
+rs72949976-<b>T</b>,"5 x 10-6",,0.377410435,1.0923936,'-,[1.051643997-1.134722364],LINC01953,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,2:213169380
+rs6957511-<b>C</b>,"1 x 10-6",,0.397848632,1.0997349,'-,[1.058667987-1.142394783],LINC-PINT,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,7:130983859
+rs113211131-<b>G</b>,"5 x 10-6",,0.9010466,1.1660558,'-,[1.09-1.25],"CDCA7L, RAPGEF5","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,7:22030019
+rs17811625-<b>C</b>,"7 x 10-6",,0.959900401,1.2811943,'-,[1.15-1.43],COBL,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,7:51216518
+rs117723999-<b>T</b>,"4 x 10-6",,0.015538428,1.5691193,'-,[1.294572365-1.901890883],AP1S2P1,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,7:97468107
+rs1909481-<b>C</b>,"4 x 10-6",,0.865513311,1.1388079,'-,[1.08-1.2],LINC02055,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,8:136921226
+rs111960002-<b>C</b>,"5 x 10-7",,0.045638836,1.3636285,'-,[1.208731312-1.538375627],ZNF623,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,8:143640250
+rs184716813-<b>C</b>,"5 x 10-6",,0.019177004,1.3907048,'-,[1.207670898-1.601479085],ECPAS,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,9:111388967
+rs10819083-<b>T</b>,"9 x 10-6",,0.640330689,1.091151,'-,[1.05-1.13],PBX3,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,9:125897928
+rs75685923-<b>T</b>,"6 x 10-7",,0.032196583,1.3846594,'-,[1.218378029-1.57363447],REXO4,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,9:133410109
+rs1108581-<b>A</b>,"9 x 10-7",,0.796639702,1.122288,'-,[1.07-1.18],DBH,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,9:133640119
+rs1333040-<b>C</b>,"7 x 10-7",,0.457931886,1.098154,'-,[1.058273274-1.13953745],CDKN2B-AS1,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,9:22083405
+rs10974465-<b>T</b>,"6 x 10-6",,0.161054917,1.122095,'-,[1.067564608-1.179410829],GLIS3,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,9:4326243
+rs28372851-<b>A</b>,"5 x 10-7",,0.042268249,1.2485899,'-,[1.144910242-1.361658336],"CHUK, ERLIN1","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,10:100186276
+rs12765052-<b>T</b>,"1 x 10-6",,0.041715698,1.241036,'-,[1.138184927-1.353181152],PKD2L1,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,10:100289222
+rs3758407-<b>C</b>,"2 x 10-6",,0.05491298,1.2178137,'-,[1.123656383-1.319860939],MASTL,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,10:27156276
+rs4453114-<b>C</b>,"2 x 10-6",,0.050833542,1.2302109,'-,[1.129398369-1.340022202],"U8, AKR1C6P","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,10:4918829
+rs138809958-<b>C</b>,"2 x 10-6",,0.01719016,1.43228,'-,[1.236127037-1.659559011],NPFFR1,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,10:70271142
+rs113301858-<b>T</b>,"7 x 10-6",,0.953241896,1.2050368,'-,[1.11-1.31],CHEK1,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,11:125640362
+rs78276179-<b>C</b>,"5 x 10-6",,0.089914211,1.1871005,'-,[1.102555221-1.278128967],H19,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,11:2000263
+rs116955087-<b>T</b>,"4 x 10-6",,0.010630296,1.9248666,'-,[1.459030124-2.539434363],PANX1,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,11:94143496
+rs7953330-<b>G</b>,"7 x 10-13",,0.6847322140000001,1.1567484,'-,[1.11-1.2],WNK1,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,12:889653
+rs56057401-<b>C</b>,"7 x 10-6",,0.06568129,1.2347617,'-,[1.125999644-1.354029409],LINC00343,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,13:105748176
+rs118166185-<b>G</b>,"5 x 10-6",,0.956338421,1.2207745,'-,[1.12-1.33],'-,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,13:111451555
+rs56404467-<b>A</b>,"7 x 10-9",,0.018496379,1.5052111,'-,[1.31093372-1.728280005],FRY,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,13:32265853
+rs11571818-<b>C</b>,"1 x 10-15",,0.010732274,2.1252632,'-,[1.768050378-2.554646438],BRCA2,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,13:32394673
+rs116238841-<b>A</b>,"6 x 10-6",,0.030546796,1.327899,'-,[1.173993165-1.501981212],'-,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,2:225757505
+rs7591446-<b>C</b>,"5 x 10-6",,0.809729138,1.1134666,'-,[1.06-1.17],SRBD1,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,2:45606937
+rs1164302-<b>C</b>,"5 x 10-6",,0.016097125,1.4910039,'-,[1.256336139-1.769504647],CNTN6,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,3:144658358
+rs7658584-<b>A</b>,"2 x 10-6",,0.154581981,1.1268572,'-,[1.072285124-1.184206472],'-,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,"Mapping not available"
+rs467095-<b>T</b>,"7 x 10-21",,0.573051438,1.1958185,'-,[1.15-1.24],CLPTM1L,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,5:1336106
+rs252152-<b>A</b>,"6 x 10-6",,0.346340199,1.0938516,'-,[1.052336843-1.137004138],"GNPDA1, NDFIP1","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,5:142066209
+rs145108385-<b>A</b>,"9 x 10-6",,0.7124649279999999,1.102437,'-,[1.06-1.15],"ANXA2R, ZNF131","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,5:43054645
+rs150350430-<b>G</b>,"3 x 10-6",,0.017475389,1.5654097,'-,[1.29677532-1.889693062],'-,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,5:46219082
+rs28745309-<b>T</b>,"5 x 10-6",,0.010076427,1.4954325,'-,[1.257486816-1.778402944],XRCC4,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,5:83122237
+rs78913069-<b>A</b>,"7 x 10-6",,0.010668975,1.5066519,'-,[1.260762692-1.800497393],XRCC4,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,5:83272067
+rs654351-<b>G</b>,"2 x 10-6",,0.434686448,1.101157,'-,[1.058592798-1.145432464],"TFAP2A-AS1, TFAP2A","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:10414773
+rs72828912-<b>A</b>,"3 x 10-6",,0.02740709,1.2953213,'-,[1.162188982-1.443704376],"HNRNPA1P58, NRSN1","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:24091324
+rs35789010-<b>A</b>,"8 x 10-8",,0.057734438,1.235953,'-,[1.144046309-1.335242974],CARMIL1,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:25513951
+rs13191296-<b>T</b>,"3 x 10-10",,0.066698384,1.26845,'-,[1.17795334-1.365899251],SCGN,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:25684378
+rs36109883-<b>A</b>,"6 x 10-12",,0.068507564,1.2887794,'-,[1.198871275-1.385430147],H2AC6,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:26132842
+rs34107459-<b>C</b>,"1 x 10-10",,0.073714125,1.2576606,'-,[1.172474838-1.349035565],"H3C9P, BTN3A2","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:26328125
+rs13220495-<b>T</b>,"3 x 10-8",,0.075098735,1.2138206,'-,[1.133133528-1.300253026],BTN3A3,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:26441412
+rs13201782-<b>A</b>,"2 x 10-8",,0.076363422,1.220866,'-,[1.139177984-1.308411621],ZNF322,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:26650825
+rs35768595-<b>T</b>,"9 x 10-10",,0.076010276,1.2374042,'-,[1.155936353-1.324613723],"RPL10P2, MIR3143","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:27174125
+rs71537559-<b>C</b>,"3 x 10-11",,0.077421629,1.2544878,'-,[1.173163961-1.341448896],"VN1R10P, ZNF204P","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:27342000
+rs149866169-<b>A</b>,"1 x 10-11",,0.08478316,1.2456464,'-,[1.168887127-1.327446209],"HNRNPA1P1, ZNF184","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:27473944
+rs13201294-<b>T</b>,"5 x 10-10",,0.089683477,1.2158015,'-,[1.143340389-1.292854961],"CD83P1, RNU6-471P","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:27588362
+rs13218875-<b>T</b>,"2 x 10-10",,0.081266074,1.238864,'-,[1.159386415-1.323789655],"OR2B2, OR2W6P","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:27916234
+rs149949-<b>C</b>,"2 x 10-10",,0.102170669,1.2057247,'-,[1.138576585-1.27683293],ZSCAN16-AS1,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:28043738
+rs34878803-<b>C</b>,"4 x 10-11",,0.077210179,1.2508706,'-,[1.170617536-1.336625496],PGBD1,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST004750,6:28282402
+rs4573350-<b>T</b>,"3 x 10-9",,0.505,1.13,'-,[1.09-1.18],MORN5,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST008835,9:122192836
+rs4573350-<b>T</b>,"7 x 10-9","(East Asian)",0.26,1.22,'-,[1.14-1.31],MORN5,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST008835,9:122192836
+rs11375254-<b>T</b>,"3 x 10-8","(East Asian)",0.51,1.19,'-,[1.12-1.27],TP63,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST008835,3:189625454
+rs2041742-<b>G</b>,"4 x 10-10",,NR,'-,"0.25 unit decrease",[-0.0832-0.5832],LINC01122,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST90134663,2:58858891
+rs6757055-<b>A</b>,"8 x 10-8",,NR,'-,"0.14 unit decrease",[-0.1148-0.3948],IKZF2,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST90134663,2:213134686
+rs9267123-<b>C</b>,"6 x 10-18",,NR,'-,"0.22 unit increase",[0.083-0.357],"HCP5, LINC01149","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST90134663,6:31459618
+rs31487-<b>?</b>,"4 x 10-30",,NR,'-,"0.19 unit decrease",[0.15-0.23],CLPTM1L,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST90134663,5:1340986
+rs3131856-<b>?</b>,"3 x 10-10",,NR,'-,"0.24 unit increase",[0.12-0.36],"MOG, SUMO2P1","Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST90134663,6:29639324
+rs11571815-<b>?</b>,"1 x 10-14",,NR,'-,"0.58 unit increase",[0.44-0.72],BRCA2,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST90134663,13:32394413
+rs55781567-<b>?</b>,"2 x 10-33",,NR,'-,"0.21 unit increase",[0.15-0.27],CHRNA5,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST90134663,15:78565644
+rs56113850-<b>?</b>,"3 x 10-11",,NR,'-,"0.09 unit increase",[0.031-0.149],CYP2A6,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST90134663,19:40847202
+rs17879961-<b>?</b>,"5 x 10-11",,NR,'-,"1.21 unit decrease",[-0.1816-2.6016],CHEK2,"Squamous cell lung carcinoma","squamous cell lung carcinoma",'-,GCST90134663,22:28725099
+rs2736100-<b>G</b>,"2 x 10-22",,0.39,1.46,'-,[1.35-1.57],TERT,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST000761,5:1286401
+rs3117582-<b>C</b>,"5 x 10-12",,0.10,1.22,'-,[1.15-1.29],APOM,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST000506,6:31652743
+rs1051730-<b>T</b>,"2 x 10-51",,0.35,1.31,'-,[1.27-1.36],CHRNA3,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST000506,15:78601997
+rs31489-<b>C</b>,"2 x 10-10",,0.59,1.12,'-,[1.09-1.16],CLPTM1L,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST000506,5:1342599
+rs4324798-<b>A</b>,"2 x 10-8",,0.09,1.16,'-,[1.09-1.24],"LINC01623, NOP56P1","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST000506,6:28808340
+rs2736100-<b>G</b>,"2 x 10-10",,0.50,1.12,'-,[1.08-1.16],TERT,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST000506,5:1286401
+rs10937405-<b>C</b>,"7 x 10-12",,0.67,1.31,'-,[1.22-1.42],TP63,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST000810,3:189665394
+rs2736100-<b>C</b>,"3 x 10-11",,0.39,1.27,'-,[1.19-1.37],TERT,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST000810,5:1286401
+rs2853677-<b>C</b>,"3 x 10-40",,0.30,1.41,'-,[1.32-1.50],TERT,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST001609,5:1287079
+rs10937405-<b>C</b>,"7 x 10-17",,0.67,1.25,'-,[1.19-1.32],TP63,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST001609,3:189665394
+rs7216064-<b>A</b>,"7 x 10-11",,0.707,1.2,'-,[1.13-1.26],BPTF,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST001609,17:67902693
+rs3817963-<b>G</b>,"3 x 10-10",,0.318,1.18,'-,[1.12-1.24],"BTNL2, TSBP1-AS1","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST001609,6:32400310
+rs13314271-<b>T</b>,"7 x 10-10",(Adenocarcinoma),0.49,1.13,'-,[1.09-1.18],TP63,"Lung cancer","lung adenocarcinoma",'-,GCST002466,3:189639813
+rs2736100-<b>G</b>,"2 x 10-31",,0.387,1.42,'-,[1.34-1.50],TERT,"EGFR mutation-positive lung adenocarcinoma","lung adenocarcinoma",'-,GCST003605,5:1286401
+rs2179920-<b>A</b>,"5 x 10-17",,0.165,1.36,'-,[1.27-1.47],"HLA-DPB1, HLA-DPA2","EGFR mutation-positive lung adenocarcinoma","lung adenocarcinoma",'-,GCST003605,6:33091097
+rs3817963-<b>G</b>,"1 x 10-16",,0.316,1.29,'-,[1.21-1.37],"BTNL2, TSBP1-AS1","EGFR mutation-positive lung adenocarcinoma","lung adenocarcinoma",'-,GCST003605,6:32400310
+rs7636839-<b>A</b>,"9 x 10-13",,0.479,1.23,'-,[1.16-1.30],TP63,"EGFR mutation-positive lung adenocarcinoma","lung adenocarcinoma",'-,GCST003605,3:189639152
+rs7216064-<b>A</b>,"2 x 10-12",,0.706,1.27,'-,[1.19-1.35],BPTF,"EGFR mutation-positive lung adenocarcinoma","lung adenocarcinoma",'-,GCST003605,17:67902693
+rs2495239-<b>A</b>,"4 x 10-9",,0.382,1.19,'-,[1.12-1.26],FOXP4-AS1,"EGFR mutation-positive lung adenocarcinoma","lung adenocarcinoma",'-,GCST003605,6:41522750
+rs2853677-<b>C</b>,"1 x 10-8",,0.273,1.37,'-,[1.23-1.53],TERT,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST003776,5:1287079
+rs3217451-<b>AT</b>,"5 x 10-7",,0.87,0.89,'-,[0.85-0.93],UBXN4,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,2:135753722
+rs76354137-<b>C</b>,"5 x 10-7",,0.38,0.9,'-,[0.87-0.94],"CYP1A1, CYP1A2","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,15:74737657
+rs719739-<b>C</b>,"3 x 10-7",,0.57,0.92,'-,[0.89-0.95],LINC00676,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,13:109698114
+rs12006500-<b>A</b>,"8 x 10-8",,0.65,1.12,'-,[1.07-1.16],"MUSK, LPAR1","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,9:110863180
+rs55781567-<b>G</b>,"9 x 10-26",,NR,0.8,'-,[0.77-0.84],CHRNA5,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,15:78565644
+rs4236709-<b>G</b>,"9 x 10-17",,NR,0.85,'-,[0.82-0.88],NRG1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,8:32552592
+rs17038564-<b>G</b>,"2 x 10-8",,NR,0.87,'-,[0.83-0.91],ACTR2,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,2:65268924
+rs1200399-<b>C</b>,"3 x 10-10",,NR,0.88,'-,[0.85-0.92],BAZ1A,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,14:34823979
+rs55768116-<b>C</b>,"4 x 10-15",,NR,0.89,'-,[0.86-0.91],MPZL3,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,11:118237616
+rs35201538-<b>C</b>,"2 x 10-8",,NR,0.91,'-,[0.88-0.94],"AQP7, AQP3","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,9:33422491
+rs5879422-<b>T</b>,"9 x 10-12",,NR,1.11,'-,[1.08-1.14],DCBLD1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,6:117463496
+rs200595745-<b>A</b>,"4 x 10-9",,NR,1.11,'-,[1.07-1.14],BPTF,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,17:67919174
+rs2517873-<b>A</b>,"3 x 10-6",,NR,1.13,'-,[1.08-1.20],MCCD1P1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,6:29908215
+rs10429489-<b>A</b>,"4 x 10-13",,NR,1.16,'-,[1.11-1.20],"RN7SL151P, MTAP","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,9:21787522
+rs7741164-<b>A</b>,"4 x 10-12",,NR,1.17,'-,[1.12-1.22],FOXP4-AS1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,6:41525674
+rs11375254-<b>T</b>,"8 x 10-26",,NR,1.18,'-,[1.14-1.22],TP63,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,3:189625454
+rs1815741-<b>C</b>,"2 x 10-7",,0.92,0.84,'-,[0.78-0.89],"IFITM4P, HLA-V","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,6:29770913
+rs4938515-<b>A</b>,"1 x 10-6",,0.37,1.08,'-,[1.05-1.12],PHLDB1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,11:118607689
+rs56113850-<b>C</b>,"8 x 10-6",,NR,0.93,'-,[0.89-0.96],CYP2A6,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,19:40847202
+rs2293607-<b>T</b>,"1 x 10-15",,NR,1.14,'-,[1.11-1.18],TERC,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,3:169764547
+rs77468143-<b>T</b>,"7 x 10-12",,NR,1.14,'-,[1.10-1.18],"SECISBP2L, COPS2","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,15:49084427
+rs7086803-<b>A</b>,"3 x 10-13",,NR,1.17,'-,[1.12-1.23],VTI1A,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,10:112738717
+rs7705526-<b>A</b>,"4 x 10-65",,NR,1.31,'-,[1.27-1.35],TERT,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST012201,5:1285859
+rs35535570-<b>A</b>,"3 x 10-7",,0.065139767,1.2211821,'-,[1.131188032-1.318335848],MIGA1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,1:77794071
+rs12369136-<b>G</b>,"3 x 10-6",,0.039989151,1.2264934,'-,[1.125512775-1.336533821],PDE3A,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,12:20423940
+rs79421398-<b>C</b>,"3 x 10-7",,0.049231633,1.233339,'-,[1.138544749-1.336025559],CABLES1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,18:23161171
+rs7705526-<b>A</b>,"4 x 10-35",,0.342168639,1.2488487,'-,[1.20564202-1.293603768],TERT,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,5:1285859
+rs75420629-<b>C</b>,"3 x 10-6",,0.032732199,1.252284,'-,[1.139214867-1.376575508],CNTLN,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,9:17348210
+rs55781567-<b>G</b>,"3 x 10-48",,0.358612089,1.2763544,'-,[1.235221079-1.318857475],CHRNA5,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,15:78565644
+rs75108857-<b>A</b>,"6 x 10-6",,0.019808378,1.3359972,'-,[1.178752674-1.514218162],'-,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,9:81087769
+rs151124926-<b>T</b>,"3 x 10-6",,0.02070034,1.4010489,'-,[1.217470928-1.612307914],LINC01812,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,2:67740157
+rs75227923-<b>A</b>,"4 x 10-6",,0.011075546,1.4561167,'-,[1.241032447-1.708477209],LINC02789,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,1:199247989
+rs35772018-<b>C</b>,"8 x 10-8",,0.017398699,1.4609038,'-,[1.272305966-1.677458102],DCTN4,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,5:150730677
+rs185866804-<b>A</b>,"6 x 10-6",,0.011101164,1.486243,'-,[1.251461915-1.765070394],'-,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,4:179623246
+rs190996050-<b>C</b>,"1 x 10-7",,0.016581211,1.5653622,'-,[1.327700541-1.84556605],"SLC12A7, NKD2","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,5:1048492
+rs79294676-<b>A</b>,"4 x 10-7",,0.011853736,1.6454077,'-,[1.357166959-1.994866039],"LINC01829, LINC01828","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,2:67277529
+rs114928225-<b>A</b>,"7 x 10-7",,0.010373336,1.6501971,'-,[1.353581526-2.011811428],LINC01956,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,2:118692164
+rs7741164-<b>A</b>,"1 x 10-12",,0.308,1.18,'-,[1.13-1.24],FOXP4-AS1,Adenocarcinoma,"lung adenocarcinoma",'-,GCST003326,6:41525674
+rs72658409-<b>?</b>,"2 x 10-9",,0.927,1.2987013,'-,[1.19-1.41],CDKN2B-AS1,Adenocarcinoma,"lung adenocarcinoma",'-,GCST003326,9:22160088
+rs11610143-<b>?</b>,"2 x 10-9",,0.685,1.1363636,'-,[1.09-1.19],ACVR1B,Adenocarcinoma,"lung adenocarcinoma",'-,GCST003326,12:51955287
+rs3794742-<b>?</b>,"1 x 10-6",,0.483,1.098901,'-,[1.06-1.15],SYNGR2,Adenocarcinoma,"lung adenocarcinoma",'-,GCST003326,17:78169467
+rs4921799-<b>?</b>,"3 x 10-6",,0.171,1.1235955,'-,'-,MTUS1,Adenocarcinoma,"lung adenocarcinoma",'-,GCST003326,8:17650455
+rs9668978-<b>T</b>,"6 x 10-7",,0.288943856,1.0957873,'-,[1.057066927-1.135925946],RASSF3,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,12:64519457
+rs1512829-<b>G</b>,"2 x 10-6",,0.238357781,1.0958536,'-,[1.055577724-1.137666226],SBF2,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,11:9929710
+rs116506680-<b>T</b>,"4 x 10-9",,0.470294148,1.0998784,'-,[1.065550355-1.135312548],"HLA-G, MICG","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,6:29813272
+rs10091877-<b>T</b>,"6 x 10-6",,0.200336414,1.1013283,'-,[1.056271959-1.148306496],"TRMT9B, RNU6-842P","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,8:13034877
+rs1056562-<b>T</b>,"3 x 10-10",,0.47309905,1.107537,'-,[1.072961595-1.143226538],MPZL2,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,11:118254910
+rs1039766-<b>T</b>,"3 x 10-6",,0.15385084,1.1111958,'-,[1.063401586-1.161138089],"SPRED2, ACTR2","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,2:65293011
+rs7941595-<b>A</b>,"9 x 10-6",,0.204962943,1.1133189,'-,[1.061679588-1.167469854],PGR-AS1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,11:101284141
+rs12514642-<b>C</b>,"6 x 10-6",,0.169418679,1.1133295,'-,[1.062922485-1.166127143],LPCAT1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,5:1482752
+rs144071067-<b>A</b>,"3 x 10-6",,0.152249495,1.1164572,'-,[1.065792434-1.169530454],"HLA-W, HLA-A","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,6:29955450
+rs138488080-<b>A</b>,"9 x 10-7",,0.145734949,1.1176682,'-,[1.069132717-1.168407069],"MOG, SUMO2P1","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,6:29638984
+rs2403597-<b>G</b>,"3 x 10-6",,0.140710077,1.1187984,'-,[1.067267022-1.172817764],"PARVA, MICAL2","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,11:12366378
+rs4236709-<b>G</b>,"1 x 10-10",,0.217800395,1.1323667,'-,[1.090261405-1.176098008],NRG1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,8:32552592
+rs8108034-<b>G</b>,"4 x 10-6",,0.098770912,1.1390146,'-,[1.078067821-1.203406926],"GMFG, LRFN1","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,19:39323213
+rs17391694-<b>T</b>,"4 x 10-7",,0.118152408,1.145024,'-,[1.086703288-1.206474625],"RNFT1P2, GIPC2","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,1:78157942
+rs2004038-<b>A</b>,"4 x 10-15",,0.418657783,1.1474226,'-,[1.108727515-1.187467979],ADAMTS7,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,15:78779064
+rs55864010-<b>A</b>,"2 x 10-6",,0.093972213,1.1529757,'-,[1.086679004-1.223317068],"ETAA1, LINC02831","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,2:67474157
+rs11591710-<b>C</b>,"6 x 10-11",,0.136758676,1.1624825,'-,[1.111169372-1.216165284],"STN1, SLK","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,10:103927874
+rs2006209-<b>T</b>,"3 x 10-7",,0.090275641,1.1630918,'-,[1.097720361-1.232356121],"CEACAM21, CEACAMP3","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,19:41589873
+rs34517439-<b>A</b>,"4 x 10-8",,0.104561684,1.1652228,'-,[1.103352102-1.2305629],"GIPC2, DNAJB4","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,1:77984833
+rs885518-<b>G</b>,"1 x 10-9",,0.101094603,1.1671287,'-,[1.110679289-1.226447176],MTAP,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,9:21830158
+rs62560775-<b>G</b>,"2 x 10-9",,0.106543936,1.1804289,'-,[1.117964329-1.246383605],CDKN2B-AS1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,9:22052069
+rs71658797-<b>A</b>,"3 x 10-10",,0.102617403,1.1845306,'-,[1.123671054-1.248686293],AK5,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,1:77501822
+rs11639372-<b>T</b>,"6 x 10-26",,0.403532831,1.1883514,'-,[1.150784342-1.227144715],CHRNB4,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,15:78674313
+rs72728744-<b>T</b>,"3 x 10-6",,0.049520896,1.1889769,'-,[1.105240549-1.279057458],CCDC26,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,8:128953347
+rs71641308-<b>T</b>,"2 x 10-6",,0.066601393,1.1908046,'-,[1.108233166-1.279528116],ZZZ3,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,1:77621033
+rs28516445-<b>A</b>,"9 x 10-9",,0.735246537,1.1145091,'-,[1.07-1.16],DTWD1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,15:49667937
+rs67824503-<b>T</b>,"1 x 10-7",,0.752921326,1.1081239,'-,[1.07-1.15],LINC00824,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,8:128523018
+rs639436-<b>G</b>,"4 x 10-6",,0.794299021,1.1027007,'-,[1.06-1.15],"SBK2, SSC5D","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,19:55521344
+rs11848063-<b>A</b>,"3 x 10-6",,0.591682226,1.0807451,'-,[1.05-1.12],MDGA2,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,14:46766242
+rs7839435-<b>G</b>,"9 x 10-6",,0.834514742,1.100429,'-,[1.05-1.15],"GULOP, EPHX2","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,8:27555436
+rs17181550-<b>T</b>,"3 x 10-6",,0.573729560999999,1.0797197,'-,[1.05-1.12],LINC00511,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,17:72303817
+rs61900932-<b>C</b>,"5 x 10-6",,0.782229075,1.099922,'-,[1.06-1.15],UBE4A,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,11:118391991
+rs6897545-<b>G</b>,"1 x 10-6",,0.778080348,1.0992558,'-,[1.06-1.14],"SDHAP3, MIR4277","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,5:1619020
+rs9387479-<b>T</b>,"7 x 10-8",,0.507803726,1.0919205,'-,[1.06-1.13],DCBLD1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,6:117471449
+rs681343-<b>T</b>,"5 x 10-6",,0.526442405,1.0764673,'-,[1.04-1.11],FUT2,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,19:48703205
+rs444210-<b>A</b>,"4 x 10-6",,0.457292309,1.0776904,'-,[1.044016827-1.112449998],"RNASET2, MIR3939","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,6:166976754
+rs28649851-<b>A</b>,"5 x 10-6",,0.712527359,1.0917237,'-,[1.05-1.13],"ACTRT3, MYNN","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,3:169771524
+rs10758203-<b>G</b>,"9 x 10-7",,0.678494694,1.0911608,'-,[1.05-1.13],"AQP3, AQP7","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,9:33421422
+rs116080888-<b>C</b>,"8 x 10-7",,0.593311688,1.0905538,'-,[1.05-1.13],"HLA-DRB1, HLA-DQA1","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,6:32618459
+rs2316515-<b>G</b>,"1 x 10-7",,0.589206075,1.0899395,'-,[1.06-1.13],IRF4,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,6:410848
+rs9960703-<b>T</b>,"1 x 10-6",,0.558360307,1.089008,'-,[1.05-1.13],RAB31,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,18:9780849
+rs10807026-<b>C</b>,"3 x 10-6",,0.720791754,1.0867515,'-,[1.05-1.13],"RNU6-471P, CD83P1","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,6:27587740
+rs66500423-<b>C</b>,"7 x 10-6",,0.298701274,1.0815878,'-,[1.045124655-1.119323046],NUMBL,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,19:40689265
+rs2608029-<b>G</b>,"1 x 10-6",,0.350969507,1.0843331,'-,[1.049207162-1.12063491],PVT1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,8:128157880
+rs2083389-<b>C</b>,"9 x 10-6",,0.252766371,1.0861121,'-,[1.047160026-1.126513142],NCOA1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,2:24744855
+rs11855650-<b>T</b>,"6 x 10-7",,0.382512812,1.0864811,'-,[1.051754047-1.122354662],"RNU6-745P, TLE3","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,15:70139434
+rs114940428-<b>G</b>,"5 x 10-6",,0.270123231,1.0866535,'-,[1.048491756-1.126204041],POLR1H,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,6:30061874
+rs2320614-<b>C</b>,"2 x 10-7",,0.400167412,1.0883278,'-,[1.053889519-1.123891441],NAF1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,4:163148970
+rs10445262-<b>G</b>,"5 x 10-6",,0.243685768,1.0889617,'-,[1.049921099-1.129453984],SLC52A1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,17:5039881
+rs34638657-<b>C</b>,"6 x 10-6",,0.225187101,1.0949496,'-,[1.052655583-1.138943009],"MTCYBP28, HSD17B2","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,16:82119933
+rs116350534-<b>T</b>,"6 x 10-6",,0.985372271,1.4517832,'-,[1.24-1.71],TFPI,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,2:187479035
+rs115882368-<b>T</b>,"2 x 10-6",,0.980789294,1.3762412,'-,[1.21-1.57],"RPS2P18, CDCA7","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,2:173345499
+rs147560684-<b>G</b>,"3 x 10-6",,0.93914972,1.245668,'-,[1.14-1.37],"RN7SKP277, PNPT1P2","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,7:121779076
+rs59396197-<b>G</b>,"3 x 10-7",,0.959069538,1.2400912,'-,[1.14-1.35],"RPL9P13, MRPS18BP2","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,2:139675756
+rs118022189-<b>G</b>,"4 x 10-6",,0.919459301,1.1760969,'-,[1.1-1.26],"HHIPL1, CCDC85C","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,14:99619716
+rs77468143-<b>T</b>,"2 x 10-16",,0.747375077,1.1677256,'-,[1.13-1.21],"SECISBP2L, COPS2","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,15:49084427
+rs7169304-<b>G</b>,"3 x 10-12",,0.72238002,1.1346389,'-,[1.1-1.18],GALK2,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,15:49186829
+rs11632038-<b>A</b>,"5 x 10-10",,0.794887001,1.1334025,'-,[1.09-1.18],GALK2,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,15:49314101
+rs10434093-<b>G</b>,"3 x 10-6",,0.885137369,1.1294919,'-,[1.07-1.19],'-,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,4:75240065
+rs17400427-<b>T</b>,"6 x 10-10",,0.743916677,1.1236535,'-,[1.08-1.17],"FAM227B, FGF7","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,15:49448874
+rs78442819-<b>G</b>,"6 x 10-7",,0.807203427,1.1216913,'-,[1.07-1.17],TEKT5,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,16:10647125
+rs56113850-<b>C</b>,"9 x 10-10",,0.555412481999999,1.121034,'-,[1.08-1.16],CYP2A6,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,19:40847202
+rs13080835-<b>G</b>,"7 x 10-12",,0.506638548,1.1171037,'-,[1.08-1.15],TP63,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,3:189639410
+rs7182948-<b>G</b>,"2 x 10-9",,0.707325111999999,1.1155612,'-,[1.08-1.16],FAM227B,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,15:49549483
+rs28408315-<b>G</b>,"3 x 10-9",,0.722689505,1.1153598,'-,[1.08-1.16],MORF4L1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST004744,15:78892838
+rs17038564-<b>G</b>,"2 x 10-8",,0.161,1.15,'-,[1.10-1.21],ACTR2,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST008836,2:65268924
+rs35201538-<b>C</b>,"2 x 10-8",,0.676,1.1,'-,[1.06-1.13],"AQP7, AQP3","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST008836,9:33422491
+rs77468143-<b>T</b>,"7 x 10-12",,0.767,1.14,'-,[1.10-1.18],"SECISBP2L, COPS2","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST008836,15:49084427
+rs2293607-<b>T</b>,"1 x 10-15",,0.58,1.14,'-,[1.11-1.18],TERC,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST008836,3:169764547
+rs1200399-<b>C</b>,"3 x 10-10",,0.42,1.13,'-,[1.09-1.18],BAZ1A,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST008836,14:34823979
+rs17038564-<b>G</b>,"5 x 10-7","(East Asian)",0.19,1.15,'-,[1.09-1.21],ACTR2,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST008836,2:65268924
+rs2293607-<b>T</b>,"6 x 10-12","(East Asian)",0.45,1.16,'-,[1.11-1.21],TERC,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST008836,3:169764547
+rs11375254-<b>T</b>,"2 x 10-20","(East Asian)",0.51,1.23,'-,[1.17-1.28],TP63,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST008836,3:189625454
+rs7705526-<b>A</b>,"3 x 10-52","(East Asian)",0.41,1.4,'-,[1.34-1.46],TERT,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST008836,5:1285859
+rs401681-<b>C</b>,"3 x 10-10","(East Asian)",0.68,1.16,'-,[1.11-1.21],CLPTM1L,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST008836,5:1321972
+rs7741164-<b>A</b>,"7 x 10-14","(East Asian)",0.34,1.19,'-,[1.14-1.25],FOXP4-AS1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST008836,6:41525674
+rs9387478-<b>C</b>,"6 x 10-8","(East Asian)",0.5,1.12,'-,[1.08-1.17],DCBLD1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST008836,6:117465017
+rs4236709-<b>G</b>,"1 x 10-10","(East Asian)",0.18,1.2,'-,[1.13-1.27],NRG1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST008836,8:32552592
+rs10429489-<b>A</b>,"5 x 10-7","(East Asian)",0.25,1.13,'-,[1.08-1.19],"RN7SL151P, MTAP","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST008836,9:21787522
+rs35201538-<b>C</b>,"3 x 10-6","(East Asian)",0.65,1.11,'-,[1.06-1.16],"AQP7, AQP3","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST008836,9:33422491
+rs7086803-<b>A</b>,"1 x 10-12","(East Asian)",0.28,1.18,'-,[1.13-1.24],VTI1A,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST008836,10:112738717
+rs55768116-<b>C</b>,"3 x 10-10","(East Asian)",0.45,1.15,'-,[1.1-1.2],MPZL3,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST008836,11:118237616
+rs1200399-<b>C</b>,"9 x 10-8","(East Asian)",0.49,1.12,'-,[1.08-1.17],BAZ1A,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST008836,14:34823979
+rs7216064-<b>A</b>,"3 x 10-8","(East Asian)",0.62,1.13,'-,[1.08-1.18],BPTF,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST008836,17:67902693
+rs380286-<b>A</b>,"2 x 10-14",,0.61,1.3280213,'-,[1.23-1.43],CLPTM1L,"Adenocarcinoma in never smokers","lung adenocarcinoma","smoking status measurement",GCST008375,5:1320132
+rs268864-<b>A</b>,"4 x 10-17",,NR,'-,"0.12 unit decrease",[0.081-0.159],ACTR2,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST90134662,2:65262608
+rs2316515-<b>G</b>,"2 x 10-7",,NR,'-,"0.03 unit increase",[-0.0288-0.0888],IRF4,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST90134662,6:410848
+rs3129860-<b>G</b>,"9 x 10-11",,NR,'-,"0.09 unit decrease",[-0.008-0.188],"TSBP1-AS1, HLA-DRA","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST90134662,6:32433302
+rs12348845-<b>A</b>,"3 x 10-19",,NR,'-,"0.13 unit increase",[0.091-0.169],"RN7SL151P, MTAP","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST90134662,9:21775493
+rs7902587-<b>T</b>,"6 x 10-10",,NR,'-,"0.1 unit increase",[-0.0176-0.2176],"STN1, SLK","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST90134662,10:103934543
+rs12265047-<b>A</b>,"2 x 10-24",,NR,'-,"0.18 unit decrease",[0.14-0.22],VTI1A,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST90134662,10:112728166
+rs75031349-<b>G</b>,"2 x 10-8",,NR,'-,"0.13 unit decrease",[0.052-0.208],"RTEL1-TNFRSF6B, RTEL1","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST90134662,20:63682701
+rs36108040-<b>?</b>,"3 x 10-32",,NR,'-,"0.14 unit decrease",[0.1-0.18],"TP63, TPRG1","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST90134662,3:189618055
+rs2853677-<b>?</b>,"2 x 10-110",,NR,'-,"0.26 unit decrease",[0.2-0.32],TERT,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST90134662,5:1287079
+rs1611182-<b>?</b>,"2 x 10-9",,NR,'-,"0.07 unit decrease",[0.05-0.09],"MICG, HLA-G","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST90134662,6:29813272
+rs9374662-<b>?</b>,"3 x 10-23",,NR,'-,"0.11 unit decrease",[0.071-0.149],DCBLD1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST90134662,6:117456641
+rs7823498-<b>?</b>,"8 x 10-19",,NR,'-,"0.09 unit decrease",[0.031-0.149],NRG1,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST90134662,8:32546055
+rs56009889-<b>?</b>,"3 x 10-10",,NR,'-,"1.31 unit increase",[0.92-1.7],"C11orf65, ATM","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST90134662,11:108326169
+rs55768116-<b>?</b>,"2 x 10-26",,NR,'-,"0.12 unit decrease",[0.1-0.14],MPZL3,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST90134662,11:118237616
+rs77468143-<b>?</b>,"2 x 10-20",,NR,'-,"0.13 unit decrease",[0.091-0.169],"SECISBP2L, COPS2","Lung adenocarcinoma","lung adenocarcinoma",'-,GCST90134662,15:49084427
+rs55781567-<b>?</b>,"2 x 10-50",,NR,'-,"0.19 unit increase",[0.13-0.25],CHRNA5,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST90134662,15:78565644
+rs56113850-<b>?</b>,"8 x 10-11",,NR,'-,"0.07 unit increase",[0.031-0.109],CYP2A6,"Lung adenocarcinoma","lung adenocarcinoma",'-,GCST90134662,19:40847202
+rs1051730-<b>T</b>,"3 x 10-52",,NR,1.3369,'-,[NR],CHRNA3,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST006400,15:78601997
+"rs1996371-<b>?</b> x rs9375980-<b>?</b>","1 x 10-6",,NR,'-,'-,[NR],"CHRNB4 x TARID","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,15:78664464|6:133674649
+"rs8034191-<b>?</b> x rs4410152-<b>?</b>","2 x 10-6",,NR,'-,'-,[NR],"HYKK x RPL17P45 - N/A","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,15:78513681|18:40194264
+"rs6495314-<b>?</b> x rs9375980-<b>?</b>","2 x 10-6",,NR,'-,'-,[NR],"CHRNB4 x TARID","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,15:78668187|6:133674649
+"rs4887077-<b>?</b> x rs9375980-<b>?</b>","3 x 10-6",,NR,'-,'-,[NR],"CHRNB4 x TARID","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,15:78686022|6:133674649
+"rs6495309-<b>?</b> x rs159367-<b>?</b>","3 x 10-6",,NR,'-,'-,[NR],"No mapped genes x LINC02057, SMIM15-AS1","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,5:61201769
+"rs8034191-<b>?</b> x rs2191186-<b>?</b>","3 x 10-6",,NR,'-,'-,[NR],"HYKK x LINC02359 - LINC02825","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,15:78513681|12:126298020
+"rs8034191-<b>?</b> x rs2076317-<b>?</b>","3 x 10-6",,NR,'-,'-,[NR],"HYKK x GPLD1","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,15:78513681|6:24489919
+"rs11638372-<b>?</b> x rs9375980-<b>?</b>","4 x 10-6",,NR,'-,'-,[NR],"No mapped genes x TARID","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,6:133674649
+"rs2036534-<b>?</b> x rs1842565-<b>?</b>","5 x 10-6",,NR,'-,'-,[NR],"HYKK x LINC01492","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,15:78534606|9:103319097
+"rs8034191-<b>?</b> x rs6023181-<b>?</b>","5 x 10-6",,NR,'-,'-,[NR],"HYKK x N/A - DOK5","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,15:78513681|20:54385076
+"rs4887077-<b>?</b> x rs10956198-<b>?</b>","6 x 10-6",,NR,'-,'-,[NR],"CHRNB4 x MTSS1","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,15:78686022|8:124712051
+"rs11638372-<b>?</b> x rs187783-<b>?</b>","6 x 10-6",,NR,'-,'-,[NR],"No mapped genes x RGS7","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,1:240889822
+"rs8034191-<b>?</b> x rs12065806-<b>?</b>","6 x 10-6",,NR,'-,'-,[NR],"HYKK x MACO1 - NXNP1","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,15:78513681|1:82637686
+"rs4887077-<b>?</b> x rs1921627-<b>?</b>","7 x 10-6",,NR,'-,'-,[NR],"CHRNB4 x LRRTM4","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,15:78686022|2:76945567
+"rs4887077-<b>?</b> x rs187783-<b>?</b>","7 x 10-6",,NR,'-,'-,[NR],"CHRNB4 x RGS7","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,15:78686022|1:240889822
+"rs4887077-<b>?</b> x rs1359172-<b>?</b>","7 x 10-6",,NR,'-,'-,[NR],"CHRNB4 x ZNF618","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,15:78686022|9:114023278
+"rs6495309-<b>?</b> x rs973174-<b>?</b>","7 x 10-6",,NR,'-,'-,[NR],"No mapped genes x Metazoa_SRP - N/A","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,3:59601760
+"rs1051730-<b>?</b> x rs6023181-<b>?</b>","7 x 10-6",,NR,'-,'-,[NR],"CHRNA3 x N/A - DOK5","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,15:78601997|20:54385076
+"rs11638372-<b>?</b> x rs1359172-<b>?</b>","7 x 10-6",,NR,'-,'-,[NR],"No mapped genes x ZNF618","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,9:114023278
+"rs8034191-<b>?</b> x rs551610-<b>?</b>","8 x 10-6",,NR,'-,'-,[NR],"HYKK x RIMS1","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,15:78513681|6:72058111
+"rs11638372-<b>?</b> x rs1921627-<b>?</b>","8 x 10-6",,NR,'-,'-,[NR],"No mapped genes x LRRTM4","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,2:76945567
+"rs11638372-<b>?</b> x rs11125487-<b>?</b>","9 x 10-6",,NR,'-,'-,[NR],"No mapped genes x No mapped genes","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,2:53372750
+"rs1051730-<b>?</b> x rs4410152-<b>?</b>","9 x 10-6",,NR,'-,'-,[NR],"CHRNA3 x RPL17P45 - N/A","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,15:78601997|18:40194264
+"rs4887077-<b>?</b> x rs11125487-<b>?</b>","9 x 10-6",,NR,'-,'-,[NR],"CHRNB4 x No mapped genes","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,15:78686022|2:53372750
+"rs8034191-<b>?</b> x rs2744570-<b>?</b>","9 x 10-6",,NR,'-,'-,[NR],"HYKK x GPLD1","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006398,15:78513681|6:24487206
+rs1051730-<b>T</b>,"3 x 10-49",,NR,1.27,'-,[NR],CHRNA3,"Lung cancer","lung carcinoma",'-,GCST006399,15:78601997
+rs8034191-<b>C</b>,"5 x 10-20",,0.34,1.3,'-,[1.23-1.37],HYKK,"Lung cancer","lung carcinoma",'-,GCST000170,15:78513681
+rs2352028-<b>A</b>,"6 x 10-6",,0.26,1.46,'-,[1.26-1.70],GPC5,"Lung cancer","lung carcinoma",'-,GCST000633,13:91792975
+rs8034191-<b>G</b>,"3 x 10-18",,NR,1.3,'-,[1.15-1.47],HYKK,"Lung cancer","lung carcinoma",'-,GCST000172,15:78513681
+rs7626795-<b>G</b>,"8 x 10-6",,NR,1.16,'-,[1.05-1.28],IL1RAP,"Lung cancer","lung carcinoma",'-,GCST000172,3:190632672
+rs2808630-<b>G</b>,"7 x 10-6",,NR,1.22,'-,[1.10-1.35],"CRPP1, CRP","Lung cancer","lung carcinoma",'-,GCST000172,1:159711078
+rs4488809-<b>C</b>,"7 x 10-26",,0.47,1.26,'-,[1.21-1.32],TP63,"Lung cancer","lung carcinoma",'-,GCST001140,3:189638472
+rs2736100-<b>C</b>,"1 x 10-27",,0.41,1.27,'-,[1.22-1.33],TERT,"Lung cancer","lung carcinoma",'-,GCST001140,5:1286401
+rs753955-<b>G</b>,"2 x 10-12",,0.29,1.18,'-,[1.13-1.24],"TNFRSF19, MIPEP","Lung cancer","lung carcinoma",'-,GCST001140,13:23719720
+rs36600-<b>A</b>,"6 x 10-13",,0.09,1.29,'-,[1.20-1.38],MTMR3,"Lung cancer","lung carcinoma",'-,GCST001140,22:29941597
+rs4488809-<b>C</b>,"4 x 10-9",,0.42,1.19,'-,[1.12-1.26],TP63,"Lung cancer","lung carcinoma",'-,GCST001740,3:189638472
+rs2736100-<b>G</b>,"4 x 10-27",,0.40,1.38,'-,[1.30-1.47],TERT,"Lung cancer","lung carcinoma",'-,GCST001740,5:1286401
+rs7216064-<b>A</b>,"7 x 10-6",,0.63,1.16,'-,[1.09-1.25],BPTF,"Lung cancer","lung carcinoma",'-,GCST001740,17:67902693
+rs10197940-<b>T</b>,"5 x 10-6",,0.52,1.12,'-,[1.06-1.18],"TNFAIP6, RIF1","Lung cancer","lung carcinoma",'-,GCST001740,2:151397404
+rs7086803-<b>A</b>,"4 x 10-18",,0.27,1.28,'-,[1.21-.1.35],VTI1A,"Lung cancer","lung carcinoma",'-,GCST001740,10:112738717
+rs9387478-<b>C</b>,"4 x 10-10",,0.50,1.18,'-,[1.11-1.23],DCBLD1,"Lung cancer","lung carcinoma",'-,GCST001740,6:117465017
+rs2395185-<b>T</b>,"1 x 10-8",,0.35,1.17,'-,[1.11-1.23],HLA-DRB9,"Lung cancer","lung carcinoma",'-,GCST001740,6:32465390
+rs402710-<b>C</b>,"4 x 10-6",,NR,1.18,'-,[1.12-1.24],CLPTM1L,"Lung cancer","lung carcinoma",'-,GCST000256,5:1320607
+rs1051730-<b>A</b>,"1 x 10-15",,NR,1.35,'-,[1.25-1.45],CHRNA3,"Lung cancer","lung carcinoma",'-,GCST000256,15:78601997
+rs3117582-<b>C</b>,"5 x 10-10",,NR,1.24,'-,[1.16-1.33],APOM,"Lung cancer","lung carcinoma",'-,GCST000257,6:31652743
+rs8042374-<b>?</b>,"8 x 10-12",,NR,'-,'-,'-,CHRNA3,"Lung cancer","lung carcinoma",'-,GCST000257,15:78615690
+rs401681-<b>G</b>,"8 x 10-9",,NR,1.15,'-,[1.09-1.19],CLPTM1L,"Lung cancer","lung carcinoma",'-,GCST000257,5:1321972
+rs11571833-<b>T</b>,"2 x 10-19","(All lung cancer)",0.011,1.83,'-,[1.61-2.09],BRCA2,"Lung cancer","lung carcinoma",'-,GCST002466,13:32398489
+rs17879961-<b>A</b>,"3 x 10-11","(All lung cancer)",0.9975,1.67,'-,[1.43-1.92],CHEK2,"Lung cancer","lung carcinoma",'-,GCST002466,22:28725099
+rs55781567-<b>?</b>,"1 x 10-9",,NR,1.3169,'-,[1.2049-1.4394],CHRNA5,"Lung cancer","lung carcinoma",'-,GCST003775,15:78565644
+rs2853677-<b>C</b>,"3 x 10-9",,0.273,1.2818,'-,[1.1810-1.3911],TERT,"Lung cancer","lung carcinoma",'-,GCST003775,5:1287079
+rs3019885-<b>G</b>,"3 x 10-6",,0.2817,1.2394,'-,[1.1323-1.3565],SLC30A8,"Lung cancer","lung carcinoma",'-,GCST003775,8:117013406
+rs6580649-<b>?</b>,"5 x 10-6",,NR,1.2169892,'-,[1.12-1.32],"SENP1, COL2A1","Lung cancer","lung carcinoma",'-,GCST003775,12:48016734
+rs7900823-<b>?</b>,"2 x 10-6",,NR,1.7850769,'-,[1.41-2.27],"U3, ZNF101P1","Lung cancer","lung carcinoma",'-,GCST003775,10:28348731
+rs9322193-<b>?</b>,"1 x 10-7",,NR,1.2508,'-,[1.1508-1.3596],"KATNA1, RPS18P9","Lung cancer","lung carcinoma",'-,GCST003775,6:149598007
+rs5777156-<b>A</b>,"9 x 10-8",,0.24,0.92,'-,[0.89-0.95],MAGI3,"Lung cancer","lung carcinoma",'-,GCST011656,1:113399057
+rs58404727-<b>D</b>,"5 x 10-7",,0.02,1.19,'-,[1.11-1.28],'-,"Lung cancer","lung carcinoma",'-,GCST011656,4:128666152
+rs71450133-<b>D</b>,"9 x 10-7",,0.18,1.09,'-,[1.05-1.13],"ATP5MFP5, PLEKHG6","Lung cancer","lung carcinoma",'-,GCST011656,12:6287503
+rs34057993-<b>D</b>,"8 x 10-8",,0.17,0.9,'-,[0.87-0.94],OTX2-AS1,"Lung cancer","lung carcinoma",'-,GCST011656,14:56856807
+rs34218850-<b>D</b>,"8 x 10-18",,0.34,1.14,'-,[1.11-1.18],"TERT, MIR4457","Lung cancer","lung carcinoma",'-,GCST011656,5:1301999
+rs200675567-<b>D</b>,"4 x 10-7",,0.11,0.9,'-,[0.86-0.96],"HLA-DRB1, HLA-DQA1","Lung cancer","lung carcinoma",'-,GCST011656,6:32617492
+rs9279532-<b>D</b>,"3 x 10-7",,0.12,1.11,'-,[1.07-0.94],"NOTCH4, TSBP1-AS1","Lung cancer","lung carcinoma",'-,GCST011656,6:32237043
+rs550239034-<b>D</b>,"2 x 10-7",,0.25,0.92,'-,[0.89-0.95],"POU5F1, HCG27","Lung cancer","lung carcinoma",'-,GCST011656,6:31192034
+rs549219764-<b>D</b>,"2 x 10-9",,0.2,1.11,'-,[1.07-1.15],"HCP5, LINC01149","Lung cancer","lung carcinoma",'-,GCST011656,6:31448100
+rs9280949-<b>T</b>,"3 x 10-10",,0.09,1.16,'-,[1.11-1.22],"HLA-N, UBQLN1P1","Lung cancer","lung carcinoma",'-,GCST011656,6:30356200
+rs139089584-<b>TTTG</b>,"2 x 10-7",,0.29,0.92,'-,[0.89-0.95],"LINC00533, RPSAP2","Lung cancer","lung carcinoma",'-,GCST011656,6:28704208
+rs34832458-<b>T</b>,"1 x 10-9",,0.39,0.92,'-,[0.89-0.94],"HLA-G, HCP5B","Lung cancer","lung carcinoma",'-,GCST011656,6:29865215
+rs374787445-<b>D</b>,"7 x 10-9",,0.18,1.11,'-,[1.07-1.15],HLA-F-AS1,"Lung cancer","lung carcinoma",'-,GCST011656,6:29741128
+rs145093187-<b>T</b>,"9 x 10-9",,0.12,0.87,'-,[0.83-0.91],"BTN2A1, BTN1A1P1","Lung cancer","lung carcinoma",'-,GCST011656,6:26476826
+rs139157129-<b>D</b>,"2 x 10-7",,0.48,0.93,'-,[0.90-0.95],MPZL2,"Lung cancer","lung carcinoma",'-,GCST011656,11:118255680
+rs577626090-<b>D</b>,"1 x 10-63",,0.37,1.29,'-,[1.25-1.33],CHRNA5,"Lung cancer","lung carcinoma",'-,GCST011656,15:78567264
+rs138784116-<b>D</b>,"5 x 10-14",,0.37,0.89,'-,[0.86-0.92],CHRNB4,"Lung cancer","lung carcinoma",'-,GCST011656,15:78650044
+rs143284856-<b>TT</b>,"1 x 10-12",,0.47,1.11,'-,[1.08-1.14],MORF4L1,"Lung cancer","lung carcinoma",'-,GCST011656,15:78849515
+rs61655864-<b>D</b>,"6 x 10-37",,0.29,0.81,'-,[0.79-0.84],CHRNA5,"Lung cancer","lung carcinoma",'-,GCST011656,15:78574381
+rs2494938-<b>A</b>,"2 x 10-6","(Lung Cancer)",0.23,1.15,'-,[1.08-1.22],LRFN2,"Multiple cancers (lung cancer, gastric cancer, and squamous cell carcinoma)","lung carcinoma",'-,GCST001718,6:40568389
+rs2285947-<b>A</b>,"2 x 10-8","(Lung Cancer)",0.26,1.17,'-,[1.11-1.24],DNAH11,"Multiple cancers (lung cancer, gastric cancer, and squamous cell carcinoma)","lung carcinoma",'-,GCST001718,7:21544470
+rs10849605-<b>?</b>,"6 x 10-7",,0.51,1.08,'-,[1.04-1.11],RAD52,"Lung cancer","lung carcinoma",'-,GCST001638,12:955272
+rs13181-<b>C</b>,"9 x 10-7",,0.3613,'-,'-,'-,ERCC2,"Lung Cancer (DNA repair capacity)","lung carcinoma",'-,GCST001721,19:45351661
+rs9390123-<b>A</b>,"7 x 10-6",,0.3957,'-,'-,'-,PHACTR2,"Lung Cancer (DNA repair capacity)","lung carcinoma",'-,GCST001721,6:143622177
+rs116551911-<b>T</b>,"2 x 10-13",,0.10976196,1.2025579,'-,[1.144676296-1.263366488],DDR1,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:30896502
+rs2233956-<b>C</b>,"5 x 10-16",,0.167124691,1.1730286,'-,[1.128692308-1.219106364],"PSORS1C1, C6orf15","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:31113428
+rs2596500-<b>C</b>,"2 x 10-15",,0.110809826,1.2094321,'-,[1.153908741-1.267627282],"LINC02571, HLA-B","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:31353490
+rs114002231-<b>C</b>,"8 x 10-15",,0.131480802,1.2080983,'-,[1.151856144-1.267086615],"LINC01149, HCP5","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:31459618
+rs139789464-<b>G</b>,"4 x 10-14",,0.101900939,1.2005847,'-,[1.144910757-1.258965743],APOM,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:31657087
+rs501942-<b>T</b>,"3 x 10-14",,0.101035865,1.2034894,'-,[1.147434239-1.262282973],SLC44A4,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:31872700
+rs144433536-<b>T</b>,"7 x 10-14",,0.100804734,1.2000709,'-,[1.144097712-1.258782342],TNXB,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:32067917
+rs147151648-<b>G</b>,"6 x 10-11",,0.101152169,1.1864156,'-,[1.127161422-1.248784746],TSBP1-AS1,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:32284355
+rs115100928-<b>A</b>,"8 x 10-11",,0.100273105,1.1861855,'-,[1.126735663-1.248771916],"TSBP1-AS1, HLA-DRA","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:32419655
+rs115819854-<b>T</b>,"4 x 10-12",,0.122964436,1.1869539,'-,[1.130913664-1.245771133],"MTCO3P1, HLA-DQB1","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:32683864
+rs7383287-<b>G</b>,"1 x 10-10",,0.224903192,1.1205634,'-,[1.082275651-1.160205575],HLA-DOB,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:32815309
+rs115447191-<b>G</b>,"4 x 10-6",,0.83219005,1.1040647,'-,[1.06-1.15],HLA-DPA1,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:33067741
+rs114738294-<b>C</b>,"8 x 10-6",,0.753380171,1.0804458,'-,[1.04-1.12],"LYPLA2P1, MYL12BP3","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:33355488
+rs62389424-<b>A</b>,"3 x 10-6",,0.124808663,1.1453886,'-,[1.081637487-1.21289723],"EXOC2, IRF4","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:422631
+rs118087489-<b>A</b>,"2 x 10-6",,0.077708653,1.1442357,'-,[1.08204733-1.209998184],RN7SL643P,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:86345946
+rs146204659-<b>C</b>,"5 x 10-6",,0.938570174,1.2591786,'-,[1.14-1.39],"TCAF1P1, RNU6-162P","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,7:143579041
+rs3944100-<b>C</b>,"3 x 10-7",,0.368206556,1.0820277,'-,[1.050012621-1.115018756],AHR,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,7:17014722
+rs2877187-<b>T</b>,"7 x 10-6",,0.227358385,1.082824,'-,[1.045943506-1.121004821],"MRPL32, Y_RNA","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,7:43004867
+rs56212584-<b>G</b>,"8 x 10-6",,0.093779099,1.1518074,'-,[1.08242137-1.225641245],GALNT17,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,7:71149860
+rs139328189-<b>C</b>,"1 x 10-6",,0.987660471,1.619335,'-,[1.33-1.97],TP53TG1,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,7:87332982
+rs144706282-<b>G</b>,"8 x 10-6",,0.987092881,1.4321419,'-,[1.22-1.68],ADCY8,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,8:131135279
+rs3816788-<b>A</b>,"3 x 10-6",,0.436201023,1.0732349,'-,[1.041764213-1.10565643],XPO7,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,8:21974983
+rs2741348-<b>G</b>,"2 x 10-7",,0.58223113,1.0817294,'-,[1.05-1.11],GULOP,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,8:27563265
+rs188586526-<b>T</b>,"9 x 10-7",,0.01395899,1.4032447,'-,[1.225926631-1.606210214],RP1,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,8:54583273
+rs142328647-<b>T</b>,"2 x 10-6",,0.025405242,1.2979821,'-,[1.165323015-1.445743009],RP1,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,8:54778417
+rs36109883-<b>A</b>,"2 x 10-7",,0.067018189,1.1676731,'-,[1.102051078-1.237202699],H2AC6,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:26132842
+rs34158769-<b>A</b>,"1 x 10-7",,0.072601638,1.1614014,'-,[1.098845322-1.227518764],"BTN3A2, H3C9P","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:26336344
+rs3734542-<b>A</b>,"3 x 10-7",,0.084987628,1.1447185,'-,[1.087233917-1.205242518],BTN2A1,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:26468098
+rs36162392-<b>C</b>,"6 x 10-7",,0.085603567,1.1410072,'-,[1.083444904-1.201627582],"HMGN4, ABT1","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:26568907
+rs34244947-<b>C</b>,"6 x 10-7",,0.087135975,1.158347,'-,[1.093248318-1.227321976],ZNF322,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:26740141
+rs34816374-<b>G</b>,"5 x 10-7",,0.079913281,1.1463856,'-,[1.086716556-1.209330708],LINC00240,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:26981893
+rs35768595-<b>T</b>,"1 x 10-7",,0.075874027,1.1596087,'-,[1.098152503-1.224504294],"RPL10P2, MIR3143","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:27174125
+rs13212562-<b>G</b>,"1 x 10-8",,0.094669537,1.1549425,'-,[1.099214514-1.213495931],"ZNF204P, VN1R10P","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:27332531
+rs149866169-<b>A</b>,"8 x 10-9",,0.088421964,1.1601964,'-,[1.103049701-1.220303851],"HNRNPA1P1, ZNF184","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:27473944
+rs13217620-<b>T</b>,"3 x 10-8",,0.074695136,1.1669619,'-,[1.105093702-1.232293813],"LINC01012, RPL8P1","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:27685341
+rs13218875-<b>T</b>,"1 x 10-8",,0.080928069,1.16643,'-,[1.106256975-1.229875951],"OR2B2, OR2W6P","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:27916234
+rs34662244-<b>A</b>,"2 x 10-9",,0.085998654,1.1755702,'-,[1.1152522-1.239150684],ZSCAN16-AS1,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:28106103
+rs67340775-<b>C</b>,"7 x 10-10",,0.079332947,1.1820452,'-,[1.120847747-1.246584078],ZSCAN31,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:28336607
+rs67381177-<b>C</b>,"2 x 10-9",,0.07893365,1.1776505,'-,[1.116557606-1.242086049],"COX11P1, ZSCAN23","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:28444164
+rs114385935-<b>G</b>,"7 x 10-9",,0.079995652,1.1696258,'-,[1.109337082-1.233190796],"LINC00533, RPSAP2","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:28651576
+rs116668069-<b>A</b>,"3 x 10-8",,0.135876166,1.1370234,'-,[1.08637948-1.19002823],"NOP56P1, LINC01623","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:28800336
+rs116381494-<b>G</b>,"6 x 10-8",,0.082992186,1.1677012,'-,[1.104062966-1.235007726],"TRIM27, HCG14","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:28900717
+rs115287935-<b>T</b>,"9 x 10-8",,0.08238902,1.1647499,'-,[1.101314463-1.231839236],"ZNF311, OR2AD1P","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:29006488
+rs116442863-<b>A</b>,"1 x 10-7",,0.082472477,1.1634282,'-,[1.100081716-1.230422468],"OR2J3, OR2J2","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:29122234
+rs139244745-<b>G</b>,"8 x 10-8",,0.088075082,1.162069,'-,[1.100123412-1.227502509],"OR2U2P, OR14J1","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:29287205
+rs138488080-<b>A</b>,"2 x 10-13",,0.150529623,1.164588,'-,[1.118403324-1.212679804],"MOG, SUMO2P1","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:29638984
+rs115729734-<b>G</b>,"2 x 10-13",,0.160672104,1.164619,'-,[1.118327079-1.212827126],"HLA-K, HLA-U","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:29931238
+rs116418332-<b>A</b>,"2 x 10-12",,0.095504424,1.2073652,'-,[1.145408553-1.272672964],TRIM26,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:30193759
+rs115707823-<b>A</b>,"7 x 10-13",,0.116092045,1.1930656,'-,[1.136990858-1.251905844],"UBQLN1P1, MICC","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:30374976
+rs116260619-<b>C</b>,"1 x 10-12",,0.102789982,1.2033279,'-,[1.143474803-1.266313964],"SUCLA2P1, RANP1","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:30479897
+rs7534220-<b>C</b>,"1 x 10-6",,0.627826621,1.1280495,'-,[1.07-1.18],RTCA-AS1,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,1:100258911
+rs116480793-<b>T</b>,"7 x 10-6",,0.024264567,1.2884976,'-,[1.153366335-1.439461007],LMNA,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,1:156108585
+rs114864108-<b>A</b>,"3 x 10-6",,0.979200902,1.3381778,'-,[1.18-1.51],'-,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,1:195822467
+rs144503462-<b>T</b>,"8 x 10-8",,0.989928388,1.6769611,'-,[1.39-2.03],SEPTIN14P21,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,1:243029970
+rs10436951-<b>A</b>,"9 x 10-8",,0.988472307,1.6081543,'-,[1.35-1.91],CEP170,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,1:243199378
+rs117105675-<b>T</b>,"4 x 10-6",,0.011408293,1.5711766,'-,[1.298024041-1.901810783],ACTRT2,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,1:2970656
+rs71658797-<b>A</b>,"2 x 10-8",,0.102898044,1.145921,'-,[1.092331759-1.202139175],AK5,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,1:77501822
+rs34517439-<b>A</b>,"7 x 10-8",,0.105016197,1.1473451,'-,[1.091520912-1.206024349],"GIPC2, DNAJB4","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,1:77984833
+rs17391694-<b>T</b>,"3 x 10-6",,0.112781876,1.1221,'-,[1.069557757-1.177223491],"RNFT1P2, GIPC2","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,1:78157942
+rs6700362-<b>T</b>,"7 x 10-6",,0.231675779,1.0824698,'-,[1.045631889-1.12060546],PTGFR,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,1:78512030
+rs17697383-<b>C</b>,"9 x 10-6",,0.950044125,1.236974,'-,[1.13-1.36],FHL2,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,2:105454164
+rs1866631-<b>A</b>,"2 x 10-6",,0.5780087819999999,1.0744331,'-,[1.04-1.11],"MAP3K20, MAP3K20-AS1","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,2:173211033
+rs55902839-<b>A</b>,"1 x 10-6",,0.456642977,1.0806478,'-,[1.047380336-1.114971905],TMEM237,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,2:201641266
+rs62140840-<b>T</b>,"6 x 10-6",,0.108935656,1.1187994,'-,[1.065787611-1.174448167],NCOA1,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,2:24506770
+rs6710503-<b>A</b>,"4 x 10-6",,0.259856384,1.08137,'-,[1.046065996-1.117865481],NCOA1,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,2:24748307
+rs191932161-<b>A</b>,"7 x 10-6",,0.016805906,1.3283206,'-,[1.173299068-1.503824372],Y_RNA,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,2:49628893
+rs79294676-<b>A</b>,"2 x 10-7",,0.011363138,1.5717803,'-,[1.327074288-1.861609045],"LINC01829, LINC01828","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,2:67277529
+rs116165775-<b>T</b>,"4 x 10-7",,0.010702979,1.559825,'-,[1.314077351-1.851530302],ETAA1,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,2:67400580
+rs76980472-<b>C</b>,"1 x 10-7",,0.017775557,1.3714582,'-,[1.220354853-1.541270862],LINC02831,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,2:67567320
+rs151124926-<b>T</b>,"8 x 10-7",,0.018181188,1.3753732,'-,[1.211638217-1.561234682],LINC01812,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,2:67740157
+rs150954074-<b>C</b>,"8 x 10-6",,0.9607201,1.313554,'-,[1.17-1.48],MBOAT2,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,2:8896952
+rs7428320-<b>G</b>,"1 x 10-6",,0.689798468,1.0849946,'-,[1.05-1.12],RBMS3,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,3:29367165
+rs1880828-<b>A</b>,"8 x 10-6",,0.128216119,1.1144239,'-,[1.06271046-1.168653746],CACNA2D3,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,3:54866828
+rs10016781-<b>G</b>,"5 x 10-6",,0.613928566,1.1073242,'-,[1.06-1.16],"ALG1L7P, OR7E162P","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,4:3916972
+rs12108538-<b>G</b>,"2 x 10-6",,0.943863012,1.1674694,'-,[1.1-1.24],STX18-AS1,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,4:4774436
+rs79398649-<b>T</b>,"1 x 10-7",,0.025282695,1.2955143,'-,[1.176950281-1.426022404],"TRIP13, NKD2","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,5:1004587
+rs421629-<b>G</b>,"3 x 10-17",,0.581002122,1.134976,'-,[1.1-1.17],CLPTM1L,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,5:1320021
+rs4406174-<b>C</b>,"9 x 10-6",,0.8873339650000001,1.1150825,'-,[1.06-1.17],LPCAT1,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,5:1518964
+rs3810859-<b>A</b>,"4 x 10-6",,0.263131228,1.0810798,'-,[1.046035748-1.117297904],BRD9,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,5:851467
+rs13205254-<b>G</b>,"6 x 10-6",,0.094784614,1.141066,'-,[1.077600055-1.208269739],AK9,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:109607903
+rs11751666-<b>G</b>,"7 x 10-6",,0.011951814,1.39231,'-,[1.20459331-1.609279354],RNU7-152P,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:155621539
+rs62402518-<b>C</b>,"8 x 10-6",,0.93584303,1.1517986,'-,[1.08-1.23],CASC15,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:21966406
+rs35789010-<b>A</b>,"2 x 10-6",,0.058475139,1.1598864,'-,[1.090567196-1.233611681],CARMIL1,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:25513951
+rs13191296-<b>T</b>,"1 x 10-7",,0.064634889,1.1728821,'-,[1.105269802-1.244630352],SCGN,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:25684378
+rs13191445-<b>A</b>,"6 x 10-8",,0.065749196,1.1738136,'-,[1.107597937-1.243987711],"TRIM38, H3P26","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,6:26015261
+rs7741164-<b>A</b>,"6 x 10-13",,0.309,1.17,'-,[1.12-1.22],FOXP4-AS1,"Lung cancer","lung carcinoma",'-,GCST003325,6:41525674
+rs72658409-<b>?</b>,"1 x 10-10",,0.927,1.2987013,'-,[1.19-1.39],CDKN2B-AS1,"Lung cancer","lung carcinoma",'-,GCST003325,9:22160088
+rs11610143-<b>?</b>,"5 x 10-9",,0.685,1.1235955,'-,[1.09-1.18],ACVR1B,"Lung cancer","lung carcinoma",'-,GCST003325,12:51955287
+rs3794742-<b>?</b>,"4 x 10-7",,0.483,1.098901,'-,[1.06-1.14],SYNGR2,"Lung cancer","lung carcinoma",'-,GCST003325,17:78169467
+rs4921799-<b>?</b>,"3 x 10-6",,0.171,1.1235955,'-,[1.06-1.18],MTUS1,"Lung cancer","lung carcinoma",'-,GCST003325,8:17650455
+rs10969557-<b>G</b>,"6 x 10-6",,0.227,1.11,'-,[1.06-1.16],DOCK8,"Lung cancer","lung carcinoma",'-,GCST003325,9:310970
+rs79149102-<b>T</b>,"2 x 10-7",,0.034385038,1.1790844,'-,[1.108721655-1.253912704],"CSK, CYP1A2","Lung cancer","lung carcinoma",'-,GCST004748,15:74763478
+rs55781567-<b>G</b>,"3 x 10-103",,0.366673898,1.2974213,'-,[1.267092551-1.328476032],CHRNA5,"Lung cancer","lung carcinoma",'-,GCST004748,15:78565644
+rs11639372-<b>T</b>,"3 x 10-52",,0.408811078,1.1972085,'-,[1.169764209-1.225296649],CHRNB4,"Lung cancer","lung carcinoma",'-,GCST004748,15:78674313
+rs4886591-<b>A</b>,"4 x 10-34",,0.437091582,1.1673486,'-,[1.138622628-1.196799443],ADAMTS7,"Lung cancer","lung carcinoma",'-,GCST004748,15:78782176
+rs28408315-<b>G</b>,"4 x 10-12",,0.723971126,1.0961882,'-,[1.07-1.13],MORF4L1,"Lung cancer","lung carcinoma",'-,GCST004748,15:78892838
+rs17181550-<b>T</b>,"2 x 10-7",,0.573498725,1.0639783,'-,[1.04-1.09],LINC00511,"Lung cancer","lung carcinoma",'-,GCST004748,17:72303817
+rs631644-<b>A</b>,"3 x 10-6",,0.5959977320000001,1.0671345,'-,[1.04-1.1],'-,"Lung cancer","lung carcinoma",'-,GCST004748,18:2280389
+rs66500423-<b>C</b>,"2 x 10-7",,0.302766475,1.0678405,'-,[1.041643246-1.094696601],NUMBL,"Lung cancer","lung carcinoma",'-,GCST004748,19:40689265
+rs56113850-<b>C</b>,"5 x 10-19",,0.559578448,1.1306498,'-,[1.1-1.16],CYP2A6,"Lung cancer","lung carcinoma",'-,GCST004748,19:40847202
+rs13201681-<b>T</b>,"7 x 10-12",,0.078084678,1.1571598,'-,[1.109918136-1.206412233],"RNU2-45P, ZSCAN23","Lung cancer","lung carcinoma",'-,GCST004748,6:28426903
+rs10984970-<b>G</b>,"3 x 10-6",,0.9287197,1.1137654,'-,[1.06-1.17],MEGF9,"Lung cancer","lung carcinoma",'-,GCST004748,9:120638143
+rs140701862-<b>C</b>,"4 x 10-6",,0.120434377,1.0960294,'-,[1.053974019-1.139762785],"MIR3689B, MIR3689D1","Lung cancer","lung carcinoma",'-,GCST004748,9:134849951
+rs10811609-<b>G</b>,"2 x 10-6",,0.093085061,1.0990928,'-,[1.057475722-1.142347842],"RN7SL151P, MTAP","Lung cancer","lung carcinoma",'-,GCST004748,9:21746359
+rs7026112-<b>T</b>,"9 x 10-6",,0.134180854,1.077864,'-,[1.042856995-1.114046322],MTAP,"Lung cancer","lung carcinoma",'-,GCST004748,9:21852182
+rs62560775-<b>G</b>,"6 x 10-7",,0.103627773,1.1056006,'-,[1.06285881-1.150061258],CDKN2B-AS1,"Lung cancer","lung carcinoma",'-,GCST004748,9:22052069
+rs62621207-<b>T</b>,"6 x 10-7",,0.047528314,1.1592233,'-,[1.09394131-1.228401063],"Y_RNA, SLF2","Lung cancer","lung carcinoma",'-,GCST004748,10:100912491
+rs7902587-<b>T</b>,"7 x 10-6",,0.104013706,1.0910419,'-,[1.050261142-1.133406227],"STN1, SLK","Lung cancer","lung carcinoma",'-,GCST004748,10:103934543
+rs10904377-<b>T</b>,"2 x 10-6",,0.049066486,1.1438692,'-,[1.081904674-1.209382463],"U8, AKR1C6P","Lung cancer","lung carcinoma",'-,GCST004748,10:4936227
+rs78334599-<b>G</b>,"8 x 10-7",,0.963680993,1.1687047,'-,[1.1-1.24],'-,"Lung cancer","lung carcinoma",'-,GCST004748,11:116128039
+rs1629083-<b>C</b>,"1 x 10-8",,0.497560515,1.0693134,'-,[1.044923397-1.094272745],MPZL2,"Lung cancer","lung carcinoma",'-,GCST004748,11:118255861
+rs11032090-<b>G</b>,"8 x 10-6",,0.196297709,1.0693008,'-,[1.038397649-1.101123671],OR52K3P,"Lung cancer","lung carcinoma",'-,GCST004748,11:4395899
+rs78853063-<b>C</b>,"5 x 10-7",,0.924710242,1.1254505,'-,[1.07-1.18],"RTN4RL2, SLC43A1","Lung cancer","lung carcinoma",'-,GCST004748,11:57482553
+rs215335-<b>T</b>,"4 x 10-6",,0.489366041,1.0564134,'-,[1.031951273-1.081455483],"PCED1B, PPIAP45","Lung cancer","lung carcinoma",'-,GCST004748,12:47335812
+rs3847711-<b>G</b>,"3 x 10-7",,0.127131273,1.095207,'-,[1.05759005-1.134161971],SCARB1,"Lung cancer","lung carcinoma",'-,GCST004748,12:58440252
+rs7953330-<b>G</b>,"6 x 10-12",,0.687905768,1.0911875,'-,[1.06-1.12],WNK1,"Lung cancer","lung carcinoma",'-,GCST004748,12:889653
+rs56404467-<b>A</b>,"1 x 10-7",,0.019127332,1.260481,'-,[1.157199985-1.372980001],FRY,"Lung cancer","lung carcinoma",'-,GCST004748,13:32265853
+rs11571833-<b>T</b>,"6 x 10-16",,0.010904125,1.6034979,'-,[1.430101714-1.797917759],BRCA2,"Lung cancer","lung carcinoma",'-,GCST004748,13:32398489
+rs185038874-<b>G</b>,"2 x 10-10",,0.010740227,1.4931829,'-,[1.319945542-1.689156872],PDS5B,"Lung cancer","lung carcinoma",'-,GCST004748,13:32664993
+rs56377826-<b>T</b>,"6 x 10-6",,0.7807425530000001,1.0730215,'-,[1.04-1.11],SNRPA1,"Lung cancer","lung carcinoma",'-,GCST004748,15:101287286
+rs35028925-<b>A</b>,"2 x 10-6",,0.556909383,1.0604849,'-,[1.03-1.09],CATSPER2,"Lung cancer","lung carcinoma",'-,GCST004748,15:43638408
+rs2412819-<b>A</b>,"3 x 10-6",,0.6187932970000001,1.0664301,'-,[1.04-1.1],WDR76,"Lung cancer","lung carcinoma",'-,GCST004748,15:43863560
+rs66759488-<b>A</b>,"3 x 10-8",,0.361826324,1.0702693,'-,[1.044914401-1.096239489],SEMA6D,"Lung cancer","lung carcinoma",'-,GCST004748,15:47285254
+rs77468143-<b>T</b>,"1 x 10-9",,0.7461243470000001,1.0861762,'-,[1.06-1.12],"SECISBP2L, COPS2","Lung cancer","lung carcinoma",'-,GCST004748,15:49084427
+rs7169304-<b>G</b>,"1 x 10-6",,0.720637921,1.0655863,'-,[1.04-1.09],GALK2,"Lung cancer","lung carcinoma",'-,GCST004748,15:49186829
+rs12904211-<b>T</b>,"3 x 10-6",,0.6327392439999999,1.0599552,'-,[1.03-1.09],DTWD1,"Lung cancer","lung carcinoma",'-,GCST004748,15:49702202
+rs12234934-<b>A</b>,"7 x 10-6",,0.102964307,1.1144483,'-,[1.062854563-1.168546469],"MSC-AS1, TRPA1","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,8:72068569
+rs35440884-<b>G</b>,"7 x 10-7",,0.8522893460000001,1.1096019,'-,[1.06-1.16],"CT70, RN7SKP191","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,9:105051392
+rs148802107-<b>T</b>,"8 x 10-6",,0.018010521,1.3019569,'-,[1.159839669-1.461487992],VLDLR-AS1,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,9:2552965
+rs2918130-<b>T</b>,"1 x 10-6",,0.871539692,1.120273,'-,[1.07-1.17],TCERG1L,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,10:131203676
+rs61677309-<b>A</b>,"4 x 10-7",,0.679913516,1.0839134,'-,[1.05-1.12],"MPZL2, CD3E","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,11:118297371
+rs4755351-<b>G</b>,"4 x 10-6",,0.15972899,1.0984026,'-,[1.055417914-1.143137891],DEPDC7,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,11:33017547
+rs2072113-<b>C</b>,"4 x 10-6",,0.872052617,1.1081095,'-,[1.06-1.16],FADS2,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,11:61837495
+rs4619206-<b>C</b>,"1 x 10-9",,0.70942984,1.1038703,'-,[1.07-1.14],WNK1,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,12:893691
+rs116901460-<b>T</b>,"5 x 10-6",,0.986292546,1.4525692,'-,[1.24-1.7],SMCO2,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,12:27477804
+rs11571833-<b>T</b>,"6 x 10-8",,0.011377544,1.4946846,'-,[1.292873756-1.727997028],BRCA2,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,13:32398489
+rs2439831-<b>C</b>,"4 x 10-6",,0.891060495,1.1158895,'-,[1.07-1.17],TP53BP1,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,15:43492277
+15:43897499-<b>T</b>,"7 x 10-6",,0.90298027,1.1196936,'-,[1.07-1.18],'-,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,"Mapping not available"
+rs79040073-<b>C</b>,"2 x 10-7",,0.7531793609999999,1.0951287,'-,[1.06-1.13],SECISBP2L,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,15:49038657
+rs7169304-<b>G</b>,"9 x 10-6",,0.7218229469999999,1.0758595,'-,[1.04-1.11],GALK2,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,15:49186829
+rs12439944-<b>T</b>,"6 x 10-7",,0.04210115,1.2104888,'-,[1.123188371-1.304574605],CSK,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,15:74783309
+rs62027346-<b>A</b>,"6 x 10-6",,0.9117139910000001,1.1691946,'-,[1.09-1.25],"NIFKP4, C15orf39","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,15:75223213
+rs55781567-<b>G</b>,"2 x 10-78",,0.386053854,1.3320138,'-,[1.292694434-1.372529125],CHRNA5,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,15:78565644
+rs11639372-<b>T</b>,"5 x 10-37",,0.423901062,1.2087405,'-,[1.173918989-1.244594833],CHRNB4,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,15:78674313
+rs4886591-<b>A</b>,"1 x 10-23",,0.447006685,1.1780756,'-,[1.140996523-1.216359618],ADAMTS7,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,15:78782176
+rs28408315-<b>G</b>,"4 x 10-8",,0.7325735959999999,1.0970801,'-,[1.06-1.13],MORF4L1,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,15:78892838
+rs17791430-<b>T</b>,"6 x 10-6",,0.754054695,1.081127,'-,[1.05-1.12],HAPLN3,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,15:88883704
+rs28510890-<b>G</b>,"8 x 10-6",,0.767994658,1.0823249,'-,[1.05-1.12],LINC00930,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,15:92567899
+rs140040369-<b>C</b>,"7 x 10-6",,0.985976593,1.4697365,'-,[1.24-1.74],"ATAD5, TEFM","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,17:30896564
+rs7227917-<b>A</b>,"8 x 10-6",,0.890682263,1.1139429,'-,[1.06-1.17],"SMAD2, ZBTB7C","Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,18:48019814
+rs56113850-<b>C</b>,"4 x 10-13",,0.564992436,1.1372905,'-,[1.1-1.18],CYP2A6,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,19:40847202
+rs72981884-<b>G</b>,"9 x 10-7",,0.969962745,1.3132664,'-,[1.18-1.46],PLIN3,"Lung cancer in ever smokers","lung carcinoma","smoking status measurement",GCST004749,19:4840787
+rs10113175-<b>G</b>,"9 x 10-6",,0.964893333,1.5820769,'-,[1.29-1.94],PCAT1,"Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,8:127057790
+rs7299138-<b>T</b>,"2 x 10-7",,0.718589466,1.2594087,'-,[1.15-1.37],TMEM132C,"Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,12:128586392
+rs17007554-<b>C</b>,"3 x 10-6",,0.757594589,1.2231709,'-,[1.12-1.33],"PCARE, CLIP4","Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,2:29074892
+rs4455778-<b>T</b>,"4 x 10-6",,0.355925471,1.1842692,'-,[1.102042629-1.272630905],'-,"Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,7:49079904
+rs7979031-<b>C</b>,"7 x 10-6",,0.455423445,1.205228,'-,[1.110720693-1.307776555],"RNU5E-5P, RNA5SP367","Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,12:101467714
+rs2187172-<b>A</b>,"1 x 10-6",,0.275111292,1.2159665,'-,[1.123057491-1.316561682],TENM4,"Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,11:79098201
+rs10755723-<b>T</b>,"3 x 10-6",,0.250839342,1.2163181,'-,[1.120171875-1.320716736],UBR2,"Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,6:42625980
+rs11514963-<b>C</b>,"8 x 10-8",,0.195714091,1.3071538,'-,[1.185410904-1.44139993],MKLN1,"Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,7:131247904
+rs12336169-<b>A</b>,"2 x 10-6",,0.099654162,1.3087158,'-,[1.170657752-1.463055303],"MTAP, RN7SL151P","Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,9:21721062
+rs7962738-<b>A</b>,"9 x 10-6",,0.056746761,1.4109263,'-,[1.212315484-1.642075099],C1S,"Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,12:7059368
+rs12165127-<b>T</b>,"5 x 10-6",,0.057694791,1.4677519,'-,[1.245597518-1.729527897],SIGLEC11,"Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,19:49954294
+rs60280813-<b>C</b>,"9 x 10-8",,0.047817496,1.5677797,'-,[1.329726515-1.848450189],CRTAC1,"Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,10:97913426
+rs75077515-<b>C</b>,"7 x 10-6",,0.034144918,1.5755453,'-,[1.29269826-1.920280269],"SHOX2, RSRC1","Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,3:158106120
+rs366403-<b>A</b>,"7 x 10-6",,0.038004453,1.6124116,'-,[1.30846138-1.986968327],"CCDC50, PYDC2","Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,3:191401867
+rs34763909-<b>C</b>,"6 x 10-6",,0.029477015,1.613073,'-,[1.31213505-1.983031114],LINC01717,"Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,1:208834717
+rs79793963-<b>G</b>,"2 x 10-6",,0.033921972,1.6318891,'-,[1.334761481-1.9951595],LINC01951,"Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,5:174961029
+rs11769862-<b>T</b>,"9 x 10-6",,0.029014328,1.7594036,'-,[1.370410647-2.258812715],"OGDH, ZMIZ2","Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,7:44709971
+rs117413473-<b>G</b>,"9 x 10-6",,0.018592851,1.847798,'-,[1.408824891-2.423549958],RIMS1,"Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,6:71939241
+rs29999-<b>A</b>,"8 x 10-6",,0.014806343,1.8959502,'-,[1.433001343-2.508460415],"RPL26P19, C5orf67","Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,5:56505512
+rs74635764-<b>T</b>,"9 x 10-6",,0.014385871,2.1312459,'-,[1.526686893-2.975206542],'-,"Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,16:63988622
+rs7705526-<b>A</b>,"7 x 10-8",,0.346810832,1.2275395,'-,[1.139566941-1.322303439],TERT,"Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,5:1285859
+rs17382996-<b>A</b>,"4 x 10-6",,0.040771834,1.5072039,'-,[1.266731374-1.793327236],FUBP1,"Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,1:77947094
+rs117049781-<b>T</b>,"2 x 10-6",,0.030707815,1.6999506,'-,[1.365588806-2.116180046],"TMEM243, TP53TG1","Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST004747,7:87246462
+rs501942-<b>T</b>,"8 x 10-19",,0.098642093,1.1851386,'-,[1.141406179-1.230546538],SLC44A4,"Lung cancer","lung carcinoma",'-,GCST004748,6:31872700
+rs144433536-<b>T</b>,"3 x 10-18",,0.098155511,1.1827334,'-,[1.138952839-1.228196939],TNXB,"Lung cancer","lung carcinoma",'-,GCST004748,6:32067917
+rs147151648-<b>G</b>,"3 x 10-18",,0.092765437,1.1852659,'-,[1.140775073-1.231491834],TSBP1-AS1,"Lung cancer","lung carcinoma",'-,GCST004748,6:32284355
+rs115613607-<b>C</b>,"2 x 10-17",,0.103558766,1.1788805,'-,[1.135038046-1.224416391],"HLA-DRA, TSBP1-AS1","Lung cancer","lung carcinoma",'-,GCST004748,6:32413503
+rs74942078-<b>T</b>,"2 x 10-18",,0.114394817,1.1690893,'-,[1.12887803-1.210732997],HLA-DQA1,"Lung cancer","lung carcinoma",'-,GCST004748,6:32638107
+rs114828403-<b>C</b>,"1 x 10-11",,0.087933756,1.1479195,'-,[1.103258924-1.194388157],"HLA-DQB2, HLA-DOB","Lung cancer","lung carcinoma",'-,GCST004748,6:32809144
+rs13217620-<b>T</b>,"1 x 10-10",,0.075167913,1.1495541,'-,[1.101661527-1.199528857],"LINC01012, RPL8P1","Lung cancer","lung carcinoma",'-,GCST004748,6:27685341
+rs35037868-<b>C</b>,"2 x 10-10",,0.076657538,1.1462637,'-,[1.099034119-1.195523033],"RSL24D1P1, H4C10P","Lung cancer","lung carcinoma",'-,GCST004748,6:27791336
+rs13199649-<b>T</b>,"2 x 10-10",,0.077072293,1.1453075,'-,[1.098230655-1.194402414],"OR2B2, RNU7-26P","Lung cancer","lung carcinoma",'-,GCST004748,6:27901014
+rs114393147-<b>A</b>,"1 x 10-6",,0.957630621,1.148247,'-,[1.09-1.21],"COL11A2, HCG24","Lung cancer","lung carcinoma",'-,GCST004748,6:33157965
+rs114984535-<b>T</b>,"2 x 10-6",,0.985403356,1.2639532,'-,[1.15-1.39],"LYPLA2P1, MYL12BP3","Lung cancer","lung carcinoma",'-,GCST004748,6:33360927
+rs210191-<b>G</b>,"9 x 10-6",,0.986410501,1.237917,'-,[1.13-1.36],"GGNBP1, ZBTB9","Lung cancer","lung carcinoma",'-,GCST004748,6:33499993
+rs117497853-<b>A</b>,"5 x 10-6",,0.025549762,1.1929358,'-,[1.105765669-1.286977703],"LINC00472, LINC01626","Lung cancer","lung carcinoma",'-,GCST004748,6:71448423
+rs117534741-<b>A</b>,"5 x 10-7",,0.024212689,1.2351797,'-,[1.137762259-1.340938091],RNU4-66P,"Lung cancer","lung carcinoma",'-,GCST004748,6:71674838
+rs10265693-<b>G</b>,"2 x 10-6",,0.086133972,1.0986036,'-,[1.056940879-1.141908633],LINC-PINT,"Lung cancer","lung carcinoma",'-,GCST004748,7:131036046
+rs4722166-<b>C</b>,"6 x 10-6",,0.372978203,1.0574074,'-,[1.032065598-1.0833714],STEAP1B,"Lung cancer","lung carcinoma",'-,GCST004748,7:22699143
+rs148791337-<b>C</b>,"1 x 10-6",,0.97700716,1.3277904,'-,[1.18-1.49],CROT,"Lung cancer","lung carcinoma",'-,GCST004748,7:87356828
+rs115870917-<b>C</b>,"7 x 10-19",,0.088392616,1.1979941,'-,[1.151182826-1.246708963],"MOG, SUMO2P1","Lung cancer","lung carcinoma",'-,GCST004748,6:29639324
+rs147680653-<b>G</b>,"7 x 10-19",,0.083102808,1.2189428,'-,[1.166800555-1.273415179],"IFITM4P, HLA-V","Lung cancer","lung carcinoma",'-,GCST004748,6:29785031
+rs116480994-<b>C</b>,"4 x 10-18",,0.095741718,1.1897327,'-,[1.144024499-1.237267135],POLR1H,"Lung cancer","lung carcinoma",'-,GCST004748,6:30064745
+rs116418332-<b>A</b>,"5 x 10-18",,0.09697311,1.1875865,'-,[1.142217593-1.234757521],TRIM26,"Lung cancer","lung carcinoma",'-,GCST004748,6:30193759
+rs114601353-<b>T</b>,"4 x 10-18",,0.098825807,1.1865841,'-,[1.141573603-1.23336922],"MICC, UBQLN1P1","Lung cancer","lung carcinoma",'-,GCST004748,6:30389517
+rs142618987-<b>G</b>,"2 x 10-18",,0.109040563,1.1810062,'-,[1.137839622-1.225810326],"GNL1, LINC02569","Lung cancer","lung carcinoma",'-,GCST004748,6:30540143
+rs116295105-<b>T</b>,"4 x 10-18",,0.105472066,1.1802878,'-,[1.136875795-1.225357708],PPP1R18,"Lung cancer","lung carcinoma",'-,GCST004748,6:30685004
+rs35768595-<b>T</b>,"5 x 10-9",,0.076663203,1.1351829,'-,[1.088003741-1.184407893],"RPL10P2, MIR3143","Lung cancer","lung carcinoma",'-,GCST004748,6:27174125
+rs149866169-<b>A</b>,"2 x 10-11",,0.086548716,1.1461717,'-,[1.101581237-1.192567123],"HNRNPA1P1, ZNF184","Lung cancer","lung carcinoma",'-,GCST004748,6:27473944
+rs116298963-<b>G</b>,"2 x 10-7",,0.081809885,1.1194751,'-,[1.072991005-1.167973049],"HLA-Z, HLA-DMB","Lung cancer","lung carcinoma",'-,GCST004748,6:32911694
+rs116718336-<b>G</b>,"1 x 10-6",,0.969375767,1.1921477,'-,[1.11-1.28],"HLA-DPA1, HLA-DOA","Lung cancer","lung carcinoma",'-,GCST004748,6:33056722
+rs35952432-<b>T</b>,"6 x 10-11",,0.085445384,1.1477143,'-,[1.101269972-1.196117299],ZSCAN16-AS1,"Lung cancer","lung carcinoma",'-,GCST004748,6:28107123
+rs34661125-<b>A</b>,"2 x 10-12",,0.078778393,1.1597158,'-,[1.112709654-1.208707736],"PGBD1, SMIM15P2","Lung cancer","lung carcinoma",'-,GCST004748,6:28314117
+rs116461399-<b>C</b>,"1 x 10-12",,0.095879119,1.1547382,'-,[1.109954181-1.20132906],"NOP56P1, LINC01623","Lung cancer","lung carcinoma",'-,GCST004748,6:28828294
+rs148696809-<b>C</b>,"3 x 10-12",,0.086604881,1.1571189,'-,[1.11078617-1.205384399],"LINC01556, KRT18P1","Lung cancer","lung carcinoma",'-,GCST004748,6:28966575
+rs116826541-<b>G</b>,"4 x 10-12",,0.089874005,1.1556115,'-,[1.109395824-1.203752579],"OR2J2, OR2J4P","Lung cancer","lung carcinoma",'-,GCST004748,6:29180617
+rs139244745-<b>G</b>,"1 x 10-12",,0.094855408,1.1562266,'-,[1.110831882-1.203476432],"OR2U2P, OR14J1","Lung cancer","lung carcinoma",'-,GCST004748,6:29287205
+rs7805022-<b>A</b>,"2 x 10-6",,0.325627914,1.0614822,'-,[1.035730033-1.087874539],'-,"Lung cancer","lung carcinoma",'-,GCST004748,7:9785912
+rs17775239-<b>A</b>,"3 x 10-6",,0.261514826,1.0655429,'-,[1.037624963-1.094212078],PVT1,"Lung cancer","lung carcinoma",'-,GCST004748,8:127884833
+rs2404618-<b>T</b>,"7 x 10-6",,0.465822007,1.0544931,'-,[1.030451547-1.07909551],DLGAP2,"Lung cancer","lung carcinoma",'-,GCST004748,8:1514102
+rs76694908-<b>C</b>,"2 x 10-6",,0.950702854,1.1358638,'-,[1.08-1.2],TRIM35,"Lung cancer","lung carcinoma",'-,GCST004748,8:27307357
+rs11780471-<b>G</b>,"2 x 10-8",,0.940381112,1.1515831,'-,[1.1-1.21],"CHRNA2, EPHX2","Lung cancer","lung carcinoma",'-,GCST004748,8:27487202
+rs7820838-<b>T</b>,"4 x 10-6",,0.232818195,1.0673686,'-,[1.038317547-1.097232475],NRG1,"Lung cancer","lung carcinoma",'-,GCST004748,8:32548461
+rs6989042-<b>G</b>,"7 x 10-6",,0.196346713,1.0758488,'-,[1.042095757-1.110695132],SIRLNT,"Lung cancer","lung carcinoma",'-,GCST004748,8:40324784
+rs188586526-<b>T</b>,"2 x 10-6",,0.011966545,1.3087933,'-,[1.171812197-1.461787099],RP1,"Lung cancer","lung carcinoma",'-,GCST004748,8:54583273
+rs191205566-<b>T</b>,"1 x 10-7",,0.015134519,1.4017447,'-,[1.237134667-1.588257488],"NR4A3, STX17-AS1","Lung cancer","lung carcinoma",'-,GCST004748,9:99824951
+rs78062588-<b>T</b>,"5 x 10-7",,0.941769014,1.1326951,'-,[1.08-1.19],ADAR,"Lung cancer","lung carcinoma",'-,GCST004748,1:154593749
+rs9869622-<b>C</b>,"2 x 10-6",,0.81921203,1.0753014,'-,[1.04-1.11],DAZL,"Lung cancer","lung carcinoma",'-,GCST004748,3:16630314
+rs71658797-<b>A</b>,"3 x 10-11",,0.103377896,1.1362852,'-,[1.094197108-1.179992156],AK5,"Lung cancer","lung carcinoma",'-,GCST004748,1:77501822
+rs113659074-<b>G</b>,"2 x 10-6",,0.933111902,1.112315,'-,[1.06-1.16],ADH1B,"Lung cancer","lung carcinoma",'-,GCST004748,4:99331151
+rs35535570-<b>A</b>,"4 x 10-6",,0.064602742,1.136056,'-,[1.075958214-1.199510448],MIGA1,"Lung cancer","lung carcinoma",'-,GCST004748,1:77794071
+rs34517439-<b>A</b>,"2 x 10-10",,0.105354935,1.1355314,'-,[1.091764588-1.181052761],"GIPC2, DNAJB4","Lung cancer","lung carcinoma",'-,GCST004748,1:77984833
+rs17391694-<b>T</b>,"3 x 10-8",,0.117931448,1.1121461,'-,[1.071281501-1.154569487],"RNFT1P2, GIPC2","Lung cancer","lung carcinoma",'-,GCST004748,1:78157942
+rs71641333-<b>A</b>,"4 x 10-7",,0.063112169,1.1440215,'-,[1.085779181-1.205387897],MGC27382,"Lung cancer","lung carcinoma",'-,GCST004748,1:78277321
+rs34443463-<b>A</b>,"3 x 10-6",,0.278780776,1.0657755,'-,[1.037685637-1.094625739],PTGFR,"Lung cancer","lung carcinoma",'-,GCST004748,1:78529850
+rs12081674-<b>G</b>,"4 x 10-6",,0.184061141,1.0733533,'-,[1.041492597-1.106188635],LRRC8D,"Lung cancer","lung carcinoma",'-,GCST004748,1:89871466
+rs12517665-<b>A</b>,"8 x 10-6",,0.191790898,1.0714158,'-,[1.039420707-1.104395695],"SLC12A7, CTD-3080P12.3","Lung cancer","lung carcinoma",'-,GCST004748,5:1128621
+rs722864-<b>G</b>,"6 x 10-7",,0.805712997,1.0751604,'-,[1.05-1.11],MAP3K20,"Lung cancer","lung carcinoma",'-,GCST004748,2:173118476
+rs34357052-<b>C</b>,"3 x 10-6",,0.292529432,1.0624987,'-,[1.035812746-1.089872056],PCDH1,"Lung cancer","lung carcinoma",'-,GCST004748,5:141815981
+rs2119148-<b>A</b>,"7 x 10-6",,0.575586629,1.0550008,'-,[1.03-1.08],LINC01934,"Lung cancer","lung carcinoma",'-,GCST004748,2:181286781
+rs35452836-<b>T</b>,"3 x 10-6",,0.286890187,1.0622944,'-,[1.035770318-1.089497568],CD164,"Lung cancer","lung carcinoma",'-,GCST004748,6:109378243
+rs72951719-<b>T</b>,"5 x 10-6",,0.053278417,1.1387022,'-,[1.076775734-1.204190138],"RFX6, RPS29P13","Lung cancer","lung carcinoma",'-,GCST004748,6:116966680
+rs6920364-<b>C</b>,"1 x 10-8",,0.456226848,1.0700544,'-,[1.04537378-1.095317639],"RNASET2, MIR3939","Lung cancer","lung carcinoma",'-,GCST004748,6:166962978
+rs17615336-<b>A</b>,"9 x 10-6",,0.602807613,1.0548303,'-,[1.03-1.08],CEP43,"Lung cancer","lung carcinoma",'-,GCST004748,6:167093246
+rs35789010-<b>A</b>,"3 x 10-7",,0.05845569,1.1343168,'-,[1.081107002-1.190145595],CARMIL1,"Lung cancer","lung carcinoma",'-,GCST004748,6:25513951
+rs28412066-<b>T</b>,"2 x 10-8",,0.080344107,1.1250569,'-,[1.079912526-1.172088304],SLC17A4,"Lung cancer","lung carcinoma",'-,GCST004748,6:25775342
+rs13191445-<b>A</b>,"1 x 10-9",,0.067737115,1.1496384,'-,[1.098926584-1.202690413],"TRIM38, H3P26","Lung cancer","lung carcinoma",'-,GCST004748,6:26015261
+rs55864010-<b>A</b>,"1 x 10-6",,0.092101646,1.1116452,'-,[1.065560809-1.159722642],"ETAA1, LINC02831","Lung cancer","lung carcinoma",'-,GCST004748,2:67474157
+rs41266839-<b>C</b>,"4 x 10-9",,0.075741475,1.1371641,'-,[1.089526405-1.186884631],BTN3A1,"Lung cancer","lung carcinoma",'-,GCST004748,6:26409662
+rs66488313-<b>T</b>,"2 x 10-8",,0.076530532,1.1313485,'-,[1.083712579-1.18107831],"ZNF322, ABT1","Lung cancer","lung carcinoma",'-,GCST004748,6:26631340
+rs34244947-<b>C</b>,"9 x 10-9",,0.088018153,1.137643,'-,[1.088639372-1.188852408],ZNF322,"Lung cancer","lung carcinoma",'-,GCST004748,6:26740141
+rs80264589-<b>A</b>,"1 x 10-8",,0.079160056,1.129989,'-,[1.083615797-1.178346716],LINC00240,"Lung cancer","lung carcinoma",'-,GCST004748,6:26959823
+rs76486688-<b>A</b>,"7 x 10-6",,0.015709424,1.25974,'-,[1.139259643-1.392961438],CLSTN2,"Lung cancer","lung carcinoma",'-,GCST004748,3:140057957
+rs77045810-<b>A</b>,"2 x 10-7",,0.883228742,1.1030006,'-,[1.06-1.14],"QRSL1P1, XCL2","Lung cancer","lung carcinoma",'-,GCST004748,1:168535779
+rs13080835-<b>G</b>,"1 x 10-6",,0.5071124929999999,1.0584221,'-,[1.03-1.08],TP63,"Lung cancer","lung carcinoma",'-,GCST004748,3:189639410
+rs71641308-<b>T</b>,"7 x 10-7",,0.067319773,1.1390132,'-,[1.081953742-1.199081778],ZZZ3,"Lung cancer","lung carcinoma",'-,GCST004748,1:77621033
+rs11941078-<b>C</b>,"2 x 10-6",,0.145914083,1.1084317,'-,[1.061939155-1.15695976],"PANCR, ENPEP","Lung cancer","lung carcinoma",'-,GCST004748,4:110592565
+rs1479090-<b>A</b>,"9 x 10-6",,0.809319276,1.0680943,'-,[1.04-1.1],NAF1,"Lung cancer","lung carcinoma",'-,GCST004748,4:163180372
+rs185666783-<b>C</b>,"9 x 10-8",,0.7078826389999999,1.0813257,'-,[1.05-1.11],RNU6-699P,"Lung cancer","lung carcinoma",'-,GCST004748,4:66968056
+rs7683574-<b>T</b>,"4 x 10-6",,0.354685391,1.060866,'-,[1.034541574-1.087860288],"OR7E35P, Metazoa_SRP","Lung cancer","lung carcinoma",'-,GCST004748,4:9717524
+rs78154696-<b>A</b>,"8 x 10-7",,0.026574964,1.2176539,'-,[1.126256955-1.316467615],"TRIP13, NKD2","Lung cancer","lung carcinoma",'-,GCST004748,5:1000041
+rs1991625-<b>A</b>,"4 x 10-6",,0.6778767889999999,1.0594825,'-,[1.03-1.09],UBQLN4P2,"Lung cancer","lung carcinoma",'-,GCST004748,2:152974968
+rs380286-<b>G</b>,"2 x 10-32",,0.577369055,1.1517557,'-,[1.13-1.18],CLPTM1L,"Lung cancer","lung carcinoma",'-,GCST004748,5:1320132
+rs72899227-<b>A</b>,"6 x 10-6",,0.844833286,1.0766385,'-,[1.04-1.11],"JPT1P1, CDCA7","Lung cancer","lung carcinoma",'-,GCST004748,2:173373971
+rs10479542-<b>A</b>,"4 x 10-6",,0.391926772,1.0570045,'-,[1.032493546-1.082097319],RUFY1,"Lung cancer","lung carcinoma",'-,GCST004748,5:179554240
+rs55902839-<b>A</b>,"7 x 10-6",,0.473484973,1.0581545,'-,[1.032311012-1.08464492],TMEM237,"Lung cancer","lung carcinoma",'-,GCST004748,2:201641266
+rs72949976-<b>T</b>,"5 x 10-6",,0.381965863,1.057067,'-,[1.03226987-1.08245977],LINC01953,"Lung cancer","lung carcinoma",'-,GCST004748,2:213169380
+rs111308888-<b>T</b>,"7 x 10-6",,0.962901038,1.1643438,'-,[1.09-1.24],COPS8,"Lung cancer","lung carcinoma",'-,GCST004748,2:237162514
+rs11902506-<b>A</b>,"4 x 10-6",,0.315041553,1.0599538,'-,[1.034031535-1.086526017],NCOA1,"Lung cancer","lung carcinoma",'-,GCST004748,2:24535852
+rs2289393-<b>C</b>,"2 x 10-6",,0.267427487,1.064274,'-,[1.03704043-1.092222675],NCOA1,"Lung cancer","lung carcinoma",'-,GCST004748,2:24705710
+rs79368540-<b>T</b>,"6 x 10-7",,0.149195195,1.0928439,'-,[1.055370239-1.131648127],"SIX3, KRTCAP2P1","Lung cancer","lung carcinoma",'-,GCST004748,2:44962598
+rs1039766-<b>T</b>,"2 x 10-6",,0.154085285,1.0803672,'-,[1.046437714-1.115396944],"SPRED2, ACTR2","Lung cancer","lung carcinoma",'-,GCST004748,2:65293011
+rs11692700-<b>C</b>,"6 x 10-7",,0.030912376,1.1985873,'-,[1.116071723-1.287203553],"LINC01828, LINC01829","Lung cancer","lung carcinoma",'-,GCST004748,2:67283245
+rs3999544-<b>C</b>,"1 x 10-10",,0.438659584,1.0787952,'-,[1.054114572-1.104053769],"H4C8, H3C9P","Lung cancer","lung carcinoma",'-,GCST004748,6:26285639
+rs151124926-<b>T</b>,"1 x 10-7",,0.020451675,1.3037766,'-,[1.182231664-1.437817574],LINC01812,"Lung cancer","lung carcinoma",'-,GCST004748,2:67740157
+rs114624737-<b>A</b>,"8 x 10-6",,0.989806848,1.5175089,'-,[1.26-1.82],"COL6A5, COL6A6","Lung cancer","lung carcinoma",'-,GCST004748,3:130514497
+rs116551911-<b>T</b>,"7 x 10-19",,0.111976126,1.1789801,'-,[1.136911161-1.222605698],DDR1,"Lung cancer","lung carcinoma",'-,GCST004748,6:30896502
+rs115666025-<b>A</b>,"3 x 10-17",,0.10887002,1.1694008,'-,[1.127620107-1.212729654],"MUC22, MUC21","Lung cancer","lung carcinoma",'-,GCST004748,6:31009903
+rs3094222-<b>G</b>,"9 x 10-17",,0.108346341,1.1642892,'-,[1.123294727-1.206779842],"PSORS1C1, C6orf15","Lung cancer","lung carcinoma",'-,GCST004748,6:31113657
+rs116718137-<b>C</b>,"8 x 10-17",,0.108904233,1.1665717,'-,[1.125077092-1.209596695],"HCG27, HLA-C","Lung cancer","lung carcinoma",'-,GCST004748,6:31228777
+rs116822326-<b>G</b>,"5 x 10-19",,0.161169761,1.150182,'-,[1.115304881-1.18614991],HCP5,"Lung cancer","lung carcinoma",'-,GCST004748,6:31466334
+rs139789464-<b>G</b>,"9 x 10-19",,0.099056972,1.1843246,'-,[1.140746367-1.229567745],APOM,"Lung cancer","lung carcinoma",'-,GCST004748,6:31657087
+rs3131378-<b>G</b>,"3 x 10-18",,0.098896646,1.1810031,'-,[1.137601617-1.226060343],"MSH5, MSH5-SAPCD1","Lung cancer","lung carcinoma",'-,GCST004748,6:31757508
+rs8034191-<b>G</b>,"1 x 10-8",,NR,1.38,'-,[1.17-1.64],HYKK,"Lung cancer","lung carcinoma",'-,GCST000233,15:78513681
+"rs16832404-<b>G</b> x rs2562796-<b>T</b>","1 x 10-13",,'-,1.33,'-,[1.23-1.43],"No mapped genes x HIBCH","Lung cancer (SNP x SNP interaction)","lung carcinoma",'-,GCST006866,2:190248283
+rs75932146-<b>?</b>,"2 x 10-11",,NR,2.4191742,'-,[1.8704174425535-3.12892890932355],POT1,"Lung cancer","lung carcinoma",'-,GCST90013703,7:124846971
+rs75932146-<b>G</b>,"2 x 10-8",,0.028748516,2.2854435,'-,[1.710882561-3.052957942],POT1,"Lung cancer","lung carcinoma",'-,GCST90013777,7:124846971
+rs146832026-<b>T</b>,"6 x 10-7",,0.013938,1.6792612,'-,NR,CDH18,"Lung cancer","lung carcinoma",'-,GCST90011812,5:20374984
+rs118143944-<b>T</b>,"7 x 10-8",,0.020292,1.6697278,'-,NR,CCDC40,"Lung cancer","lung carcinoma",'-,GCST90011812,17:80089836
+rs146099759-<b>A</b>,"3 x 10-8",,0.023916,1.5586035,'-,NR,"LINC01194, LINC02220","Lung cancer","lung carcinoma",'-,GCST90011812,5:12883480
+rs190390792-<b>G</b>,"5 x 10-7",,0.037659,1.4074596,'-,NR,WDR92,"Lung cancer","lung carcinoma",'-,GCST90011812,2:68138181
+rs10863899-<b>A</b>,"2 x 10-8",,0.582904,1.1803,'-,NR,"RD3, SLC30A1","Lung cancer","lung carcinoma",'-,GCST90011812,1:211492876
+rs8042849-<b>C</b>,"8 x 10-10",,NR,1.2004,'-,NR,HYKK,"Lung cancer","lung carcinoma",'-,GCST90011812,15:78525587
+rs36019446-<b>A</b>,"1 x 10-7",,NR,1.2015,'-,NR,CLPTM1L,"Lung cancer","lung carcinoma",'-,GCST90011812,5:1339775
+rs12543486-<b>T</b>,"4 x 10-8",,0.83337,1.2627,'-,NR,DLC1,"Lung cancer","lung carcinoma",'-,GCST90011812,8:13154867
+rs380286-<b>A</b>,"4 x 10-16",,0.5831,1.2987013,'-,[1.22-1.38],CLPTM1L,"Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST008376,5:1320132
+rs4488809-<b>?</b>,"9 x 10-7",,NR,1.2195122,'-,NR,TP63,"Lung cancer in never smokers","lung carcinoma","smoking status measurement",GCST008376,3:189638472
+rs148421193-<b>?</b>,"5 x 10-6",,NR,2.91071,'-,[2.45-3.37],"CHURC1, GPX2, CHURC1-FNTB","Lung cancer","lung carcinoma",'-,GCST90027056,14:64939561
+rs12914385-<b>?</b>,"6 x 10-9",,NR,1.18515,'-,[1.13-1.24],CHRNA3,"Lung cancer","lung carcinoma",'-,GCST90027056,15:78606381
+rs57506338-<b>?</b>,"2 x 10-7",,NR,17.1578,'-,[16.08-18.23],"LINC00922, RNA5SP428","Lung cancer","lung carcinoma",'-,GCST90027056,16:66193631
+rs141851670-<b>?</b>,"4 x 10-6",,NR,2.22924,'-,[1.89-2.57],LAMA1,"Lung cancer","lung carcinoma",'-,GCST90027056,18:7016580
+rs117975938-<b>?</b>,"3 x 10-6",,NR,1.46854,'-,[1.31-1.63],"THEMIS3P, RN7SL50P","Lung cancer","lung carcinoma",'-,GCST90027056,18:8481340
+rs3745467-<b>?</b>,"2 x 10-7",,NR,51.2949,'-,[49.81-52.78],PODNL1,"Lung cancer","lung carcinoma",'-,GCST90027056,19:13937901
+chr19:54599348-<b>?</b>,"5 x 10-8",,NR,47.8384,'-,[46.45-49.23],'-,"Lung cancer","lung carcinoma",'-,GCST90027056,"Mapping not available"
+rs180755106-<b>?</b>,"3 x 10-6",,NR,101.639,'-,[99.7-103.58],"LIF-AS1, HORMAD2","Lung cancer","lung carcinoma",'-,GCST90027056,22:30187562
+rs144237495-<b>?</b>,"4 x 10-6",,NR,1.3162,'-,[1.2-1.43],"ANAPC15P1, NOLC1P1","Lung cancer","lung carcinoma",'-,GCST90027056,X:8873118
+rs4254535-<b>?</b>,"5 x 10-6",,NR,1.12,'-,[NR],"GKN1, GKN2","Lung cancer","lung carcinoma",'-,GCST000459,2:68971256
+rs4975616-<b>?</b>,"3 x 10-9",,NR,1.15,'-,[1.10-1.20],"MIR4457, CLPTM1L","Lung cancer","lung carcinoma",'-,GCST000459,5:1315545
+rs8034191-<b>?</b>,"3 x 10-26",,NR,1.29,'-,[1.23-1.35],HYKK,"Lung cancer","lung carcinoma",'-,GCST000459,15:78513681
+rs748404-<b>?</b>,"1 x 10-6",,NR,1.15,'-,[1.09-1.20],"TGM5, ATP5PDP1","Lung cancer","lung carcinoma",'-,GCST000459,15:43267033
+rs3117582-<b>?</b>,"4 x 10-10",,NR,1.24,'-,[1.16-1.33],APOM,"Lung cancer","lung carcinoma",'-,GCST000459,6:31652743
+rs1926203-<b>?</b>,"1 x 10-6",,NR,1.12,'-,[NR],"STAMBPL1, ACTA2","Lung cancer","lung carcinoma",'-,GCST000459,10:88967577
+rs1530057-<b>?</b>,"3 x 10-6",,NR,1.26,'-,[NR],"RBMS3, RBMS3-AS2","Lung cancer","lung carcinoma",'-,GCST000459,3:29533972
+rs4398410-<b>T</b>,"5 x 10-10",,0.325924437,'-,"0.14453214 unit decrease",[0.099-0.19],"TP63, TPRG1","Lung cancer","lung carcinoma",'-,GCST90018655,3:189626222
+rs2853677-<b>A</b>,"8 x 10-25",,0.694522805,'-,"0.24699317 unit decrease",[0.2-0.29],TERT,"Lung cancer","lung carcinoma",'-,GCST90018655,5:1287079
+rs4946256-<b>C</b>,"1 x 10-11",,0.480729597,'-,"0.14846595 unit decrease",[0.11-0.19],DCBLD1,"Lung cancer","lung carcinoma",'-,GCST90018655,6:117460113
+rs78860372-<b>T</b>,"5 x 10-9",,0.236112602,'-,"0.14972878 unit increase",[0.099-0.2],"MICC, UBQLN1P1","Lung cancer","lung carcinoma",'-,GCST90018655,6:30412589
+rs1794484-<b>C</b>,"5 x 10-10",,0.340651021,'-,"0.1469222 unit increase",[0.1-0.19],"HLA-DQB1, MTCO3P1","Lung cancer","lung carcinoma",'-,GCST90018655,6:32674706
+rs7088860-<b>G</b>,"5 x 10-9",,0.239220074,'-,"0.14957294 unit increase",[0.099-0.2],VTI1A,"Lung cancer","lung carcinoma",'-,GCST90018655,10:112727108
+rs11878604-<b>C</b>,"6 x 10-11",,0.394558582,'-,"0.14735392 unit decrease",[0.1-0.19],"CYP2A6, CYP2F2P","Lung cancer","lung carcinoma",'-,GCST90018655,19:40827379
+rs9786961-<b>?</b>,"1 x 10-6",,NR,1.15771,'-,[1.1-1.22],TP73,"Lung cancer","lung carcinoma",'-,GCST90027056,1:3711102
+chr3:50332607-<b>?</b>,"7 x 10-7",,NR,33.6609,'-,[32.28-35.05],'-,"Lung cancer","lung carcinoma",'-,GCST90027056,"Mapping not available"
+rs115317731-<b>?</b>,"7 x 10-7",,NR,15.1586,'-,[14.08-16.23],EPHB1,"Lung cancer","lung carcinoma",'-,GCST90027056,3:134795505
+rs139123280-<b>?</b>,"5 x 10-6",,NR,3.49424,'-,[2.96-4.03],"SDAD1-AS1, SDAD1","Lung cancer","lung carcinoma",'-,GCST90027056,4:75981419
+rs31489-<b>?</b>,"3 x 10-8",,NR,0.847455,'-,[0.79-0.91],CLPTM1L,"Lung cancer","lung carcinoma",'-,GCST90027056,5:1342599
+chr5:125912904-<b>?</b>,"2 x 10-6",,NR,32.0997,'-,[30.67-33.52],'-,"Lung cancer","lung carcinoma",'-,GCST90027056,"Mapping not available"
+rs140460765-<b>?</b>,"4 x 10-6",,NR,4.50135,'-,[3.86-5.14],DPP6,"Lung cancer","lung carcinoma",'-,GCST90027056,7:154853824
+rs7825346-<b>?</b>,"8 x 10-6",,NR,0.877195,'-,[0.82-0.93],GFRA2,"Lung cancer","lung carcinoma",'-,GCST90027056,8:21760751
+rs6981994-<b>?</b>,"4 x 10-6",,NR,1.54664,'-,[1.36-1.73],ZFAT,"Lung cancer","lung carcinoma",'-,GCST90027056,8:134660962
+chr10:46254845-<b>?</b>,"5 x 10-6",,NR,20.1343,'-,[18.85-21.42],'-,"Lung cancer","lung carcinoma",'-,GCST90027056,"Mapping not available"
+rs17695549-<b>?</b>,"9 x 10-6",,NR,1.36331,'-,[1.23-1.5],"RNA5SP318, PCDH15","Lung cancer","lung carcinoma",'-,GCST90027056,10:53575520
+rs1924105-<b>?</b>,"4 x 10-6",,NR,1.24813,'-,[1.15-1.34],CLYBL,"Lung cancer","lung carcinoma",'-,GCST90027056,13:99894535
+rs1977357-<b>A</b>,"5 x 10-9",,0.698971916,'-,"0.14552294 unit decrease",[0.097-0.194],FOXP4-AS1,"Lung cancer","lung carcinoma",'-,GCST90018655,6:41522314
+rs35139818-<b>G</b>,"1 x 10-10",,NR,'-,"0.1235 unit increase",[0.086-0.161],"TP63, TPRG1","Lung cancer","lung carcinoma",'-,GCST90018875,3:189629170
+rs2853677-<b>A</b>,"3 x 10-21",,NR,'-,"0.1597 unit decrease",[0.13-0.19],TERT,"Lung cancer","lung carcinoma",'-,GCST90018875,5:1287079
+rs6881773-<b>C</b>,"1 x 10-8",,NR,'-,"0.1235 unit decrease",[0.081-0.166],"MRPS30, HCN1","Lung cancer","lung carcinoma",'-,GCST90018875,5:45227398
+chr6:117780603-<b>A</b>,"7 x 10-10",,NR,'-,"0.1386 unit decrease",[0.095-0.183],'-,"Lung cancer","lung carcinoma",'-,GCST90018875,"Mapping not available"
+rs76241157-<b>T</b>,"1 x 10-8",,NR,'-,"0.1454 unit increase",[0.095-0.196],"TMPOP1, MICC","Lung cancer","lung carcinoma",'-,GCST90018875,6:30423814
+rs201414107-<b>A</b>,"8 x 10-10",,NR,'-,"0.1374 unit increase",[0.093-0.181],"MTCO3P1, HLA-DQB1","Lung cancer","lung carcinoma",'-,GCST90018875,6:32680089
+rs7088860-<b>G</b>,"5 x 10-9",,NR,'-,"0.1415 unit increase",[0.094-0.189],VTI1A,"Lung cancer","lung carcinoma",'-,GCST90018875,10:112727108
+rs368493076-<b>AAT</b>,"5 x 10-9",,NR,'-,"0.1656 unit increase",[0.11-0.22],"RPL36AP40, LUZP2","Lung cancer","lung carcinoma",'-,GCST90018875,11:25215908
+rs147560086-<b>T</b>,"7 x 10-9",,NR,'-,"0.121 unit decrease",[0.08-0.162],RAD52,"Lung cancer","lung carcinoma",'-,GCST90018875,12:945790
+rs17486278-<b>C</b>,"3 x 10-17",,NR,'-,"0.1456 unit increase",[0.11-0.18],CHRNA5,"Lung cancer","lung carcinoma",'-,GCST90018875,15:78575140
+rs11878604-<b>C</b>,"1 x 10-13",,NR,'-,"0.1475 unit decrease",[0.11-0.19],"CYP2A6, CYP2F2P","Lung cancer","lung carcinoma",'-,GCST90018875,19:40827379
+rs9865715-<b>G</b>,"2 x 10-9",,NR,'-,"0.15 unit increase",[-0.2812-0.5812],"KRBOX1, ACKR2, CYP8B1","Lung cancer","lung carcinoma",'-,GCST90134661,3:42875555
+rs12203592-<b>T</b>,"3 x 10-12",,NR,'-,"0.1 unit increase",[0.08-0.12],IRF4,"Lung cancer","lung carcinoma",'-,GCST90134661,6:396321
+rs17534632-<b>T</b>,"2 x 10-7",,NR,'-,"0.01 unit increase",[-0.0684-0.0884],PPIL6,"Lung cancer","lung carcinoma",'-,GCST90134661,6:109418898
+rs34102154-<b>A</b>,"1 x 10-9",,NR,'-,"0.05 unit decrease",[0.011-0.089],"HLA-DRB1, HLA-DQA1","Lung cancer","lung carcinoma",'-,GCST90134661,6:32604329
+rs1885281-<b>A</b>,"2 x 10-19",,NR,'-,"0.08 unit increase",[0.0016-0.1584],VTI1A,"Lung cancer","lung carcinoma",'-,GCST90134661,10:112733139
+rs11607355-<b>T</b>,"1 x 10-21",,NR,'-,"0.08 unit decrease",[0.06-0.1],JAML,"Lung cancer","lung carcinoma",'-,GCST90134661,11:118222832
+rs2413932-<b>T</b>,"7 x 10-20",,NR,'-,"0.08 unit increase",[0.06-0.1],"SECISBP2L, COPS2","Lung cancer","lung carcinoma",'-,GCST90134661,15:49091284
+rs34517439-<b>?</b>,"2 x 10-13",,NR,'-,"0.11 unit increase",[0.051-0.169],"GIPC2, DNAJB4","Lung cancer","lung carcinoma",'-,GCST90134661,1:77984833
+rs36108040-<b>?</b>,"5 x 10-35",,NR,'-,"0.1 unit decrease",[0.041-0.159],"TP63, TPRG1","Lung cancer","lung carcinoma",'-,GCST90134661,3:189618055
+rs2853677-<b>?</b>,"1 x 10-97",,NR,'-,"0.19 unit decrease",[0.13-0.25],TERT,"Lung cancer","lung carcinoma",'-,GCST90134661,5:1287079
+rs9374662-<b>?</b>,"5 x 10-15",,NR,'-,"0.07 unit decrease",[0.031-0.109],DCBLD1,"Lung cancer","lung carcinoma",'-,GCST90134661,6:117456641
+rs72477506-<b>?</b>,"6 x 10-11",,NR,'-,"0.12 unit decrease",[0.022-0.218],EPHX2,"Lung cancer","lung carcinoma",'-,GCST90134661,8:27536740
+rs7850447-<b>?</b>,"7 x 10-15",,NR,'-,"0.09 unit increase",[0.051-0.129],"RN7SL151P, MTAP","Lung cancer","lung carcinoma",'-,GCST90134661,9:21763749
+rs11571818-<b>?</b>,"2 x 10-13",,NR,'-,"0.32 unit increase",[0.18-0.46],BRCA2,"Lung cancer","lung carcinoma",'-,GCST90134661,13:32394673
+rs55781567-<b>?</b>,"6 x 10-106",,NR,'-,"0.19 unit increase",[0.15-0.23],CHRNA5,"Lung cancer","lung carcinoma",'-,GCST90134661,15:78565644
+rs56113850-<b>?</b>,"8 x 10-27",,NR,'-,"0.08 unit increase",[0.041-0.119],CYP2A6,"Lung cancer","lung carcinoma",'-,GCST90134661,19:40847202
+rs1454694-<b>C</b>,"9 x 10-8",,0.21,2.12,'-,[1.61-2.79],LINC02500,"Non-small cell lung cancer (recurrence rate)","event free survival time, non-small cell lung carcinoma",'-,GCST002412,4:181276794
+"rs10019279-<b>C</b>, rs17241910-<b>A</b>, rs1454694-<b>C</b>, rs5012808-<b>A</b>, rs28431436-<b>G</b>","4 x 10-6",,NR,2.09,'-,[1.53-2.87],"No mapped genes; No mapped genes; LINC02500 - N/A; No mapped genes; No mapped genes","Non-small cell lung cancer (recurrence rate)","event free survival time, non-small cell lung carcinoma",'-,GCST002412,4:181276794
+rs10023113-<b>A</b>,"3 x 10-7",,NR,2.3,'-,[1.67-3.17],CAMK2D,"Non-small cell lung cancer (survival)","survival time, non-small cell lung carcinoma",'-,GCST002577,4:113625548
+rs17305086-<b>?</b>,"6 x 10-6",,NR,2.14,'-,[1.54-2.98],TENM3-AS1,"Non-small cell lung cancer (survival)","survival time, non-small cell lung carcinoma",'-,GCST002577,4:182115761
+rs11733008-<b>?</b>,"3 x 10-6",,NR,1.76,'-,[1.39-2.23],"Y_RNA, CHCHD2P7","Non-small cell lung cancer (survival)","survival time, non-small cell lung carcinoma",'-,GCST002577,4:87750786
+rs34211819-<b>A</b>,"4 x 10-9",,0.35,0.73,'-,[0.66-0.81],TNS3,"Lung cancer prognosis in former smokers","non-small cell lung carcinoma, disease prognosis measurement","smoking status measurement",GCST90014045,7:47499913
+rs1143149-<b>G</b>,"1 x 10-8",,0.34,1.36,'-,[1.22-1.51],SEPTIN7,"Lung cancer prognosis in former smokers","non-small cell lung carcinoma, disease prognosis measurement","smoking status measurement",GCST90014045,7:35888665
+rs79297227-<b>C</b>,"1 x 10-7",,0.05,1.9,'-,[1.5-2.5],SLC16A7,"Non-small cell lung cancer x BMI trajectory interaction","longitudinal BMI measurement, non-small cell lung carcinoma",'-,GCST90132908,12:59663490
+rs2336652-<b>A</b>,"4 x 10-7",,0.06,1.7,'-,[1.4-2.1],LINC01811,"Non-small cell lung cancer x BMI trajectory interaction","longitudinal BMI measurement, non-small cell lung carcinoma",'-,GCST90132908,3:34477849
+rs16018-<b>G</b>,"4 x 10-7",,0.31,1.4,'-,[1.2-1.6],CACNA1A,"Non-small cell lung cancer x BMI trajectory interaction","longitudinal BMI measurement, non-small cell lung carcinoma",'-,GCST90132908,19:13300668
+rs4726760-<b>T</b>,"9 x 10-7",,0.13,0.62,'-,[0.5-0.75],SLC37A3,"Non-small cell lung cancer x BMI trajectory interaction","longitudinal BMI measurement, non-small cell lung carcinoma",'-,GCST90132908,7:140299086
+rs1505305-<b>T</b>,"4 x 10-6",,0.013,3.68,'-,[2.11-6.41],THRB,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,3:24297569
+rs10261278-<b>A</b>,"4 x 10-6",,0.041,2.71,'-,[1.77-4.15],UBE3C,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,7:157254944
+rs78003666-<b>A</b>,"5 x 10-6",,0.016,3.26,'-,[1.96-5.41],ELOVL5,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,6:53345474
+rs77582856-<b>C</b>,"5 x 10-6",,0.013,3.66,'-,[2.10-6.40],RNU6-1252P,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,4:52471499
+rs17539515-<b>C</b>,"5 x 10-6",,0.007,5.41,'-,[2.62-11.17],GABRB1,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,4:47274167
+rs183148163-<b>T</b>,"5 x 10-6",,0.008,5.2,'-,[2.56-10.58],GALNTL6,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,4:172496615
+rs141319665-<b>T</b>,"5 x 10-6",,0.023,3.34,'-,[1.99-5.62],HS2ST1,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,1:87066170
+rs2419134-<b>C</b>,"5 x 10-6",,0.027,3.57,'-,[2.06-6.17],"ZBBX, LINC01327","Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,3:167400057
+rs28625106-<b>A</b>,"5 x 10-6",,0.041,2.46,'-,[1.67-3.63],SVOPL,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,7:138667056
+rs147081078-<b>A</b>,"6 x 10-6",,0.016,3.51,'-,[2.04-6.04],SNTG2,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,2:959403
+rs148810922-<b>A</b>,"6 x 10-6",,0.003,9.48,'-,[3.58-25.12],CASC20,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,20:6416572
+rs113464626-<b>A</b>,"6 x 10-6",,0.016,3.13,'-,[1.91-5.13],SLC1A6,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,19:14970524
+rs78184724-<b>G</b>,"6 x 10-6",,0.013,4.68,'-,[2.40-9.13],"MYO1G, PURB","Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,7:44951906
+rs138656841-<b>A</b>,"6 x 10-6",,0.013,4.31,'-,[2.29-8.12],'-,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,2:150907280
+rs187107949-<b>G</b>,"6 x 10-6",,0.034,2.47,'-,[1.67-3.65],"TLX3, RN7SL339P","Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,5:171329358
+rs115593965-<b>T</b>,"6 x 10-6",,0.005,7.3,'-,[3.08-17.31],"GPR150, RFESD","Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,5:95629264
+rs73714723-<b>A</b>,"7 x 10-6",,0.004,9.94,'-,[3.65-27.08],PTK2,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,8:140678939
+rs183745979-<b>C</b>,"8 x 10-6",,0.004,5.06,'-,[2.48-10.33],ETFBKMT,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,12:31665598
+rs6714462-<b>T</b>,"8 x 10-6",,0.151,1.58,'-,[1.29-1.93],FAM124B,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,2:224398810
+rs118075513-<b>G</b>,"8 x 10-6",,0.033,2.49,'-,[1.67-3.72],RPL12P36,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,16:58895443
+rs193299119-<b>A</b>,"8 x 10-6",,0.009,5.6,'-,[2.62-11.96],SPI1,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,11:47356695
+rs150037323-<b>C</b>,"9 x 10-6",,0.015,3.77,'-,[2.10-6.79],GHR,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,5:42438811
+rs186390478-<b>C</b>,"9 x 10-6",,0.005,7.44,'-,[3.06-18.06],CICP28,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,7:56809122
+rs72741016-<b>A</b>,"9 x 10-6",,0.024,2.42,'-,[1.64-3.58],"ZNF484, SNX18P2","Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,9:92886295
+rs71603396-<b>A</b>,"2 x 10-9",,0.139,1.92,'-,[1.55-2.37],LCORL,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,4:18010412
+rs12686364-<b>G</b>,"6 x 10-9",,0.004,8.49,'-,[4.12-17.49],"H3P30, KHSRPP1","Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,9:21670088
+rs185373991-<b>A</b>,"3 x 10-8",,0.117,1.86,'-,[1.50-2.32],LCORL,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,4:17864241
+rs72754495-<b>A</b>,"8 x 10-8",,0.007,7.23,'-,[3.51-14.90],CENPP,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,9:92613166
+rs142604597-<b>T</b>,"1 x 10-7",,0.02,3.92,'-,[2.37-6.51],ESM1,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,5:54981998
+rs138712069-<b>T</b>,"1 x 10-7",,0.003,19.9,'-,[6.54-60.56],DCLK1,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,13:35897512
+rs181468389-<b>A</b>,"2 x 10-7",,0.005,9.09,'-,[3.97-20.78],"RPL27AP5, FAM169A","Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,5:74917726
+rs192388487-<b>G</b>,"2 x 10-7",,0.011,5.2,'-,[2.79-9.69],'-,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,5:42170776
+rs148767741-<b>A</b>,"2 x 10-7",,0.002,23.41,'-,[7.08-77.38],TARDBPP1,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,20:6230855
+rs188556805-<b>C</b>,"2 x 10-7",,0.005,9.14,'-,[3.95-21.15],IFNAR2,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,21:33224308
+rs147833373-<b>T</b>,"4 x 10-7",,0.006,6.77,'-,[3.22-14.23],DCUN1D4,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,4:51845211
+rs76247835-<b>C</b>,"4 x 10-7",,0.004,13.48,'-,[4.90-37.06],THRB,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,3:24465348
+rs116043036-<b>G</b>,"5 x 10-7",,0.006,5.61,'-,[2.87-10.99],"ZKSCAN4, ZSCAN9","Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,6:28237041
+rs189720575-<b>A</b>,"6 x 10-7",,0.006,8.67,'-,[3.70-20.29],PTCSC2,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,9:97787047
+rs140781040-<b>T</b>,"7 x 10-7",,0.008,5.69,'-,[2.86-11.33],FAM155A,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,13:107661103
+rs840781-<b>C</b>,"8 x 10-7",,0.019,3.74,'-,[2.21-6.33],"KRT18P33, VTRNA2-2P","Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,2:65605243
+rs150007688-<b>C</b>,"8 x 10-7",,0.013,4.38,'-,[2.43-7.91],GHR,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,5:42284854
+rs185815317-<b>T</b>,"1 x 10-6",,0.004,8.34,'-,[3.55-19.59],"IL1RL2, FAM183DP","Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,2:102241279
+rs112233273-<b>A</b>,"1 x 10-6",,0.007,5.75,'-,[2.84-11.64],"ITLN2, ITLN1","Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,1:160908636
+rs188460661-<b>A</b>,"1 x 10-6",,0.008,4.63,'-,[2.50-8.59],NF1,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,17:31366922
+rs148176174-<b>T</b>,"1 x 10-6",,0.008,4.6,'-,[2.48-8.52],NF1,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,17:31219525
+rs72855171-<b>C</b>,"1 x 10-6",,0.053,2.07,'-,[1.54-2.79],BTBD9,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,6:38604737
+rs191456353-<b>G</b>,"1 x 10-6",,0.004,11.97,'-,[4.35-32.95],PC,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,11:66872703
+rs112697296-<b>T</b>,"2 x 10-6",,0.02,3.15,'-,[1.97-5.03],WWOX,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,16:79187571
+rs118114607-<b>T</b>,"2 x 10-6",,0.007,7.55,'-,[3.31-17.23],"LINC02153, TMEM97P2","Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,8:20944066
+rs145369641-<b>T</b>,"2 x 10-6",,0.005,8.04,'-,[3.43-18.86],NBAS,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,2:15283365
+rs187806138-<b>T</b>,"2 x 10-6",,0.025,3.11,'-,[1.95-4.96],CHCHD6,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,3:126934568
+rs183710197-<b>C</b>,"2 x 10-6",,0.003,11.06,'-,[4.12-29.72],EZH2,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,7:148869599
+rs147852856-<b>G</b>,"2 x 10-6",,0.03,2.72,'-,[1.80-4.10],TMEM221,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,19:17445984
+rs8079117-<b>A</b>,"2 x 10-6",,0.004,8.98,'-,[3.63-22.23],"MFSD6L, SPDYE4","Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,17:8764431
+rs3908804-<b>A</b>,"2 x 10-6",,0.042,2.11,'-,[1.55-2.88],"SLC22A2, SLC22A3","Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,6:160282296
+rs11810103-<b>A</b>,"2 x 10-6",,0.002,20.85,'-,[5.92-73.51],PLD5,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,1:242442926
+rs17474439-<b>T</b>,"2 x 10-6",,0.045,2.2,'-,[1.59-3.05],'-,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,4:52228973
+rs149365710-<b>A</b>,"2 x 10-6",,0.01,5.13,'-,[2.60-10.12],DLG2,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,11:84335397
+rs138592693-<b>T</b>,"2 x 10-6",,0.011,4.63,'-,[2.44-8.76],MTHFD2P6,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,5:42052863
+rs117539856-<b>A</b>,"3 x 10-6",,0.005,7.98,'-,[3.34-19.03],MSANTD3-TMEFF1,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,9:100466630
+rs147995154-<b>A</b>,"3 x 10-6",,0.008,6.07,'-,[2.85-12.92],DLG2,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,11:84468604
+rs146278598-<b>C</b>,"3 x 10-6",,0.013,4.95,'-,[2.53-9.67],"RNU6-1224P, RPS12P15","Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,8:102523877
+rs186728352-<b>C</b>,"3 x 10-6",,0.011,5.09,'-,[2.57-10.08],RPS8P3,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,18:51837007
+rs79484241-<b>C</b>,"3 x 10-6",,0.008,4.46,'-,[2.38-8.36],GALNTL6,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,4:172120479
+rs147372168-<b>G</b>,"3 x 10-6",,0.01,4.17,'-,[2.29-7.60],GPD2,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,2:156497991
+rs72995588-<b>A</b>,"4 x 10-6",,0.021,3.91,'-,[2.19-6.97],LRP11,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,6:149836209
+rs12148012-<b>G</b>,"4 x 10-6",,0.128,1.62,'-,[1.32-1.99],NPAS3,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,14:33701036
+rs117123031-<b>T</b>,"4 x 10-6",,0.019,4.38,'-,[2.33-8.21],COBL,"Familial squamous cell lung carcinoma","squamous cell lung carcinoma, family history of lung cancer",'-,GCST006088,7:51008206
+rs4935904-<b>T</b>,"6 x 10-6",,0.129,1.45,'-,[1.23-1.70],TMEM218,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,11:125095237
+rs139941554-<b>G</b>,"7 x 10-6",,0.003,8.54,'-,[3.36-21.74],RNU6-675P,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,2:126742031
+rs151332832-<b>C</b>,"7 x 10-6",,0.012,3.58,'-,[2.05-6.25],TUB,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,11:8024858
+rs144553904-<b>C</b>,"7 x 10-6",,0.005,3.89,'-,[2.15-7.05],Y_RNA,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,12:17787666
+rs193123434-<b>A</b>,"8 x 10-6",,0.006,5.04,'-,[2.48-10.25],"RNY4, RN7SL569P","Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,7:148926574
+rs139235514-<b>C</b>,"9 x 10-6",,0.006,5.11,'-,[2.48-10.51],'-,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,4:111828356
+rs148944993-<b>A</b>,"6 x 10-7",,0.009,4.51,'-,[2.50-8.15],LINC01891,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,2:234452501
+rs17078110-<b>C</b>,"1 x 10-6",,0.01,3.9,'-,[2.24-6.76],SASH1,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,6:148185476
+rs191524990-<b>T</b>,"1 x 10-6",,0.004,6.4,'-,[3.00-13.64],C1D,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,2:68069083
+rs35144233-<b>A</b>,"2 x 10-6",,0.024,2.42,'-,[1.69-3.48],LMCD1-AS1,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,3:8012910
+rs116036142-<b>T</b>,"2 x 10-6",,0.019,3.04,'-,[1.93-4.79],FOXP1,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,3:71023449
+rs116723905-<b>A</b>,"2 x 10-6",,0.01,3.69,'-,[2.16-6.30],LINC02261,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,4:27155920
+rs13080016-<b>T</b>,"2 x 10-6",,0.056,1.73,'-,[1.38-2.16],UBE2E1-AS1,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,3:23768883
+rs145397878-<b>C</b>,"2 x 10-6",,0.005,5.81,'-,[2.80-12.09],NTM,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,11:132170004
+rs143004982-<b>G</b>,"3 x 10-6",,0.014,2.83,'-,[1.83-4.38],AKR1B10,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,7:134534288
+rs117634027-<b>T</b>,"1 x 10-7",,0.006,6.04,'-,[3.11-11.76],RNLS,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,10:88340394
+rs117151283-<b>G</b>,"2 x 10-7",,0.027,2.24,'-,[1.66-3.04],ERICH6B,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,13:45539328
+rs12761927-<b>G</b>,"3 x 10-6",,0.123,1.53,'-,[1.28-1.83],MALRD1,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,10:19065315
+rs149523908-<b>C</b>,"3 x 10-6",,0.009,4.54,'-,[2.40-8.59],NAALADL2,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,3:174493237
+rs140702452-<b>T</b>,"4 x 10-6",,0.005,4,'-,[2.22-7.19],"Y_RNA, MIR3974","Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,12:17685426
+rs74969320-<b>A</b>,"4 x 10-6",,0.008,3.8,'-,[2.16-6.70],"TMEM250, LHX3","Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,9:136137214
+rs187256094-<b>T</b>,"4 x 10-6",,0.008,3.95,'-,[2.20-7.09],'-,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,7:81321138
+rs11496368-<b>A</b>,"4 x 10-6",,0.131,1.48,'-,[1.25-1.76],"RN7SL151P, MTAP","Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,9:21753193
+rs138156272-<b>A</b>,"4 x 10-6",,0.019,2.68,'-,[1.76-4.08],TLDC2,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,20:36878388
+rs181961151-<b>G</b>,"5 x 10-6",,0.009,3.06,'-,[1.90-4.95],"TIMM17BP1, LINC02378","Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,12:17451289
+rs116400211-<b>G</b>,"5 x 10-6",,0.011,2.75,'-,[1.78-4.25],'-,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,1:199511387
+rs147146213-<b>A</b>,"5 x 10-6",,0.006,5.04,'-,[2.52-10.07],MTCO2P25,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,7:69305978
+rs77427247-<b>A</b>,"5 x 10-6",,0.004,5.29,'-,[2.58-10.83],'-,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,3:144560457
+rs186065237-<b>G</b>,"6 x 10-6",,0.006,5.52,'-,[2.64-11.54],"SATB1, TBC1D5","Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,3:18387870
+rs189451576-<b>A</b>,"6 x 10-6",,0.014,3,'-,[1.86-4.83],RPS3AP1,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,21:20487416
+rs9816551-<b>G</b>,"6 x 10-7",,0.494,1.34,'-,[1.20-1.51],LMCD1-AS1,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,3:8292844
+rs184697115-<b>G</b>,"1 x 10-6",,0.008,4.84,'-,[2.56-9.16],"RNA5SP178, FBXL7","Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,5:16005668
+rs62268951-<b>C</b>,"3 x 10-6",,0.026,2.21,'-,[1.58-3.09],ROBO2,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,3:76165047
+rs114807680-<b>A</b>,"2 x 10-7",,0.019,2.71,'-,[1.87-3.95],EPHB1,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,3:135085649
+rs79655816-<b>G</b>,"2 x 10-7",,0.008,3.47,'-,[2.17-5.54],LINC02392,"Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,12:90287370
+rs61176212-<b>A</b>,"2 x 10-7",,0.007,5.3,'-,[2.82-9.96],"ESF1, TASP1","Familial lung adenocarcinoma","lung adenocarcinoma, family history of lung cancer",'-,GCST006087,20:13654465
+rs17148028-<b>T</b>,"6 x 10-7",(EA),NR,0.48,'-,[0.36-0.64],DLG2,"Lung adenocarcinoma (survival time) in never smokers","survival time, lung adenocarcinoma","smoking status measurement",GCST011177,11:85156466
+rs17603438-<b>A</b>,"7 x 10-7",(EA),NR,0.5,'-,[0.38-0.66],NWD2,"Lung adenocarcinoma (survival time) in never smokers","survival time, lung adenocarcinoma","smoking status measurement",GCST011177,4:37251628
+rs214346-<b>A</b>,"6 x 10-7",(EA),NR,0.72,'-,[0.63-0.82],CAPZB,"Lung adenocarcinoma (survival time) in never smokers","survival time, lung adenocarcinoma","smoking status measurement",GCST011177,1:19355935
+rs6569-<b>A</b>,"6 x 10-7",(EA),NR,0.72,'-,[0.63-0.82],UBAC1,"Lung adenocarcinoma (survival time) in never smokers","survival time, lung adenocarcinoma","smoking status measurement",GCST011177,9:135933271
+rs10041935-<b>A</b>,"7 x 10-7",(EA),NR,0.73,'-,[0.65-0.83],LINC02225,"Lung adenocarcinoma (survival time) in never smokers","survival time, lung adenocarcinoma","smoking status measurement",GCST011177,5:57918990
+rs10247578-<b>A</b>,"8 x 10-8",(EA),NR,1.38,'-,[1.23-1.55],'-,"Lung adenocarcinoma (survival time) in never smokers","survival time, lung adenocarcinoma","smoking status measurement",GCST011177,7:8919743
+rs12875562-<b>T</b>,"4 x 10-8",(EA),NR,1.71,'-,[1.41-2.07],"LMO7DN, LINC00561","Lung adenocarcinoma (survival time) in never smokers","survival time, lung adenocarcinoma","smoking status measurement",GCST011177,13:75916747
+rs17158233-<b>A</b>,"4 x 10-7",(EA),NR,3.68,'-,[2.23-6.09],LINC02645,"Lung adenocarcinoma (survival time) in never smokers","survival time, lung adenocarcinoma","smoking status measurement",GCST011177,10:2385649
+rs13383928-<b>C</b>,"2 x 10-6",,0.04,'-,'-,'-,PTH2R,"Lung cancer (asbestos exposure interaction)","lung carcinoma, asbestos exposure measurement",'-,GCST001543,2:208713876
+rs9635542-<b>G</b>,"4 x 10-6",,0.10,'-,'-,'-,'-,"Lung cancer (asbestos exposure interaction)","lung carcinoma, asbestos exposure measurement",'-,GCST001543,"Mapping not available"
+rs4589502-<b>T</b>,"4 x 10-6",,'-,1.55,'-,[1.29-1.87],"LINC02206, SMAD6","Lung cancer (smoking interaction)","smoking status measurement, lung carcinoma",'-,GCST002392,15:66862731
+rs1316298-<b>T</b>,"7 x 10-6",,'-,1.41,'-,[1.2-1.71],GNG2,"Lung cancer (smoking interaction)","smoking status measurement, lung carcinoma",'-,GCST002392,14:51899056
+rs12201100-<b>G</b>,"1 x 10-7",,0.014,2.69,'-,[1.87-3.87],'-,"Familial lung cancer","lung carcinoma, family history of lung cancer",'-,GCST006086,6:141851652
+rs189441863-<b>A</b>,"4 x 10-7",,0.009,3.02,'-,[1.96-4.64],SDR9C7,"Familial lung cancer","lung carcinoma, family history of lung cancer",'-,GCST006086,12:56927621
+rs12964604-<b>C</b>,"7 x 10-7",,0.018,2.77,'-,[1.85-4.14],LINC01919,"Familial lung cancer","lung carcinoma, family history of lung cancer",'-,GCST006086,18:53635205
+rs8040868-<b>C</b>,"4 x 10-13",,0.42,1.33,'-,[1.23-1.43],CHRNA3,"Familial lung cancer","lung carcinoma, family history of lung cancer",'-,GCST006086,15:78618839
+rs35144233-<b>A</b>,"7 x 10-7",,0.024,1.97,'-,[1.50-2.57],LMCD1-AS1,"Familial lung cancer","lung carcinoma, family history of lung cancer",'-,GCST006086,3:8012910
+12:57498220-<b>C</b>,"1 x 10-6",,0.01,2.86,'-,[1.87-4.38],'-,"Familial lung cancer","lung carcinoma, family history of lung cancer",'-,GCST006086,"Mapping not available"
+rs11008347-<b>G</b>,"1 x 10-6",,0.128,1.35,'-,[1.20-1.53],MALRD1,"Familial lung cancer","lung carcinoma, family history of lung cancer",'-,GCST006086,10:19072094
+rs192597222-<b>T</b>,"1 x 10-6",,0.003,7.73,'-,[3.36-17.77],"MSX2, HIGD1AP3","Familial lung cancer","lung carcinoma, family history of lung cancer",'-,GCST006086,5:174713048
+rs115850253-<b>A</b>,"3 x 10-6",,0.014,3.67,'-,[2.13-6.32],"SYT12, C11orf86","Familial lung cancer","lung carcinoma, family history of lung cancer",'-,GCST006086,11:66980733
+rs181968893-<b>A</b>,"4 x 10-6",,0.006,3.69,'-,[2.12-6.44],PCSK2,"Familial lung cancer","lung carcinoma, family history of lung cancer",'-,GCST006086,20:17398511
+rs143843582-<b>T</b>,"4 x 10-6",,0.019,2.25,'-,[1.59-3.18],ADARB2,"Familial lung cancer","lung carcinoma, family history of lung cancer",'-,GCST006086,10:1313342
+rs76358930-<b>T</b>,"4 x 10-6",,0.007,2.91,'-,[1.84-4.60],GPATCH2,"Familial lung cancer","lung carcinoma, family history of lung cancer",'-,GCST006086,1:217588949
+rs184158217-<b>G</b>,"4 x 10-6",,0.004,5.19,'-,[2.57-10.51],LINC00703,"Familial lung cancer","lung carcinoma, family history of lung cancer",'-,GCST006086,10:4362212
+rs184986150-<b>A</b>,"5 x 10-6",,0.005,3.4,'-,[2.01-5.74],LINC01519,"Familial lung cancer","lung carcinoma, family history of lung cancer",'-,GCST006086,10:85156391
+rs117313366-<b>A</b>,"6 x 10-6",,0.082,1.37,'-,[1.19-1.57],"PM20D2, SRSF12","Familial lung cancer","lung carcinoma, family history of lung cancer",'-,GCST006086,6:89133984
+rs75510837-<b>G</b>,"7 x 10-6",,0.025,1.88,'-,[1.43-2.48],KIAA0753,"Familial lung cancer","lung carcinoma, family history of lung cancer",'-,GCST006086,17:6624556
+rs146776041-<b>G</b>,"8 x 10-6",,0.014,3.15,'-,[1.90-5.23],SNHG27,"Familial lung cancer","lung carcinoma, family history of lung cancer",'-,GCST006086,4:131748595
+rs151332832-<b>C</b>,"8 x 10-6",,0.012,2.78,'-,[1.77-4.37],TUB,"Familial lung cancer","lung carcinoma, family history of lung cancer",'-,GCST006086,11:8024858
+rs74053707-<b>C</b>,"8 x 10-6",,0.017,1.84,'-,[1.41-2.40],SYT9,"Familial lung cancer","lung carcinoma, family history of lung cancer",'-,GCST006086,11:7310177
+rs117943988-<b>G</b>,"9 x 10-6",,0.025,1.68,'-,[1.33-2.11],'-,"Familial lung cancer","lung carcinoma, family history of lung cancer",'-,GCST006086,7:84692321
+rs10911725-<b>?</b>,"5 x 10-6",,NR,4.7619047,'-,[2.38-9.09],"RNU7-183P, GS1-279B7.1","Lung cancer x radon exposure interaction (1df)","lung carcinoma, radon exposure measurement",'-,GCST006413,1:185426050
+rs6891344-<b>?</b>,"3 x 10-6",,NR,3.91,'-,[2.18-6.99],'-,"Lung cancer x radon exposure interaction (1df)","lung carcinoma, radon exposure measurement",'-,GCST006413,5:123800962
+rs11747272-<b>?</b>,"4 x 10-6",,NR,3.35,'-,[1.98-5.68],'-,"Lung cancer x radon exposure interaction (1df)","lung carcinoma, radon exposure measurement",'-,GCST006413,5:123844296
+rs17143938-<b>T</b>,"6 x 10-7",(EA),NR,0.58,'-,[0.47-0.72],"CHCHD3P1, KRT8P37","Lung cancer (survival time) in never smokers","lung carcinoma, survival time","smoking status measurement",GCST011178,10:8528665
+rs4978466-<b>A</b>,"5 x 10-7",(EA),NR,0.76,'-,[0.69-0.85],"SHOC1, RNU6-1013P","Lung cancer (survival time) in never smokers","lung carcinoma, survival time","smoking status measurement",GCST011178,9:111836768
+rs2911600-<b>T</b>,"6 x 10-7",(EA),NR,2.02,'-,[1.53-2.66],"LINC01555, CTBS","Lung cancer (survival time) in never smokers","lung carcinoma, survival time","smoking status measurement",GCST011178,1:84604353
+rs7822185-<b>A</b>,"6 x 10-7",(EA),NR,2.71,'-,[1.83-4.00],LINC00536,"Lung cancer (survival time) in never smokers","lung carcinoma, survival time","smoking status measurement",GCST011178,8:116287936
+rs2494938-<b>A</b>,"1 x 10-12","(All Cancers)",0.23,1.15,'-,[1.10-1.19],LRFN2,"Multiple cancers (lung cancer, gastric cancer, and squamous cell carcinoma)","lung carcinoma, squamous cell carcinoma, gastric carcinoma",'-,GCST001718,6:40568389
+rs2285947-<b>A</b>,"1 x 10-16","(All Cancers)",0.27,1.17,'-,[1.12-1.21],DNAH11,"Multiple cancers (lung cancer, gastric cancer, and squamous cell carcinoma)","lung carcinoma, squamous cell carcinoma, gastric carcinoma",'-,GCST001718,7:21544470

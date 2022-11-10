@@ -1,7 +1,3 @@
 .Rproj.user
-GWAS.data
 
-workingScripts
-./R/Debugging_APIcalls.R
-bootCalls.R
-R/Debugging_APIcall.R
+GWAS.data/all_11-6-2022
