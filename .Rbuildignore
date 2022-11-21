@@ -13,3 +13,4 @@
 ^workingScripts$
 ^\./R/Debugging_APIcalls\.R$
 ^bootScripts\.R$
+^data/debugging_raw_data$

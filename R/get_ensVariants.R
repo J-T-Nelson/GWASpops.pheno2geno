@@ -228,8 +228,11 @@ null2NA_ENSvariants <- function(rsOBJ){
   #converts NULL values to NA ...
   #NULL vals make many object manipulations (data transformations) impossible and thus must be culled
 
+    #using logical mask to grab any keys which have NULL values and then assigning them as NA instead
   rsOBJ[as.logical(lapply(rsOBJ, is.null))] <- NA
-  rsOBJ[["mappings"]][[1]][sapply(rsOBJ[["mappings"]][[1]], is.null)] <- NA
+
+    # logical masking to replace NULL values with NA within the "mappings" list which is within a given rsID list object
+  rsOBJ[["mappings"]][[1]][ sapply(rsOBJ[["mappings"]][[1]], is.null) ] <- NA
 
   return(rsOBJ)
 }
@@ -264,18 +267,27 @@ EnsVarList2row <- function(rsO_list){
     rsO_list$synonyms <- 'NONE'
   }
 
-  if (length(rsO_list$synonyms) > 1){ # converts many synonyms into a single string for convenient tabulation of data
+  if (length(rsO_list$synonyms) > 1 || length(rsO_list$clinical_significance) > 1){ # converts many synonyms into a single string for convenient tabulation of data
 
-    list_noSyn <-rsO_list[-which(names(rsO_list)=='synonyms')]
+    # CRITICAL: removing all elements which can be nested lists in the data set such that as_tibble() creates a single row.
+    list_noSyn <- rsO_list[-which(names(rsO_list) %in% c("synonyms", "evidence", "mappings", "clinical_significance"))]
+
     rsTib <- as_tibble(list_noSyn)
-    cleanedTBL <- select(rsTib, -c(evidence, mappings))
+
     # cleaning disorderly cols before rebinding into a tibble,
     # in this case synonyms list is also condensed into a single string just like evidence
     evidence <- rsO_list %>% pluck('evidence') %>% as.character() %>% str_flatten(collapse = "|")
     synonyms <- rsO_list %>% pluck('synonyms') %>% as.character() %>% str_flatten(collapse = "|")
+
     mappings <- as.data.frame(rsO_list$mappings)
 
-    return(as_tibble(cbind(evidence, synonyms, cleanedTBL[1,], mappings)))
+    if(length(rsO_list$clinical_significance) > 1){
+      clinical_significance <- rsO_list %>% pluck('clinical_significance') %>% as.character() %>% str_flatten(collapse = "|")
+    return(as_tibble(cbind(evidence, synonyms, rsTib[1,], mappings, clinical_significance)))
+    }
+
+    clinical_significance <- as.character(rsO_list$clinical_significance)
+    return(as_tibble(cbind(evidence, synonyms, rsTib[1,], mappings, clinical_significance)))
 
   } else {
 
