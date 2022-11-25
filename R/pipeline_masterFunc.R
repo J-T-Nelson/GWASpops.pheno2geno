@@ -37,6 +37,8 @@
 #' # The call above will take some time and thus serves best as an example
 #' # of how to use the function.
 #'
+#' @importFrom data.table merge.data.table
+#'
 #' @export
 createMT <- function(fileFolderPath,
                      varAnnotations = TRUE,

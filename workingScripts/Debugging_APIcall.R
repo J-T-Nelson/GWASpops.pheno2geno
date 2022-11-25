@@ -336,7 +336,7 @@ save(neuroticismAlldata, file = 'data/debugging_raw_data/neuroticismAlldata.rds'
 save(prostateCancerVars, file = 'data/debugging_raw_data/prostateCancerVars.rds')
 save(prostateCancerAlldata, file = 'data/debugging_raw_data/prostateCancerAlldata.rds')
 
-save(substanceAbuseVars, file = 'data/debugging_raw_data/substanceAbuseVars.rds')
+save(substanceAbuseVars, file = 'data/debugging_raw_data/substanceAbuseVars.rds')# MARKER... HERE IS WHERE NEW DATA CALLS STOPPED ... THINK I SAVED EVERYTHING, though theres some chance I didn't... SO assuming its all good but possibly these last two may not be.
 save(substanceAbuseAlldata, file = 'data/debugging_raw_data/substanceAbuseAlldata.rds')
 
 save(AirPollutionVars, file = 'data/debugging_raw_data/AirPollutionVars.rds')
@@ -607,6 +607,221 @@ sum(d) # 21 ... so even though we ensure only unique IDs are called for, some no
 alcConsumpVarTransformed <- dbugTransform(alcConsumpVars, popsData = F)
 # it worked... presumably removing the majority of duplicates from the variant data by not asking for so much duplicate data the merged table doesn't exceed the set threshold now.
 # As expected, the table has grown to some extent... which makes sense in the case of multiple mappings IIRC.. I do
+
+# Testing new tryCatch() block for initial merge failure...
+alcConsumpVarTransformedRAW <- dbugTransform(alcConsumpRawVars, popsData = F)
+# SUCCESS!! . Wonderful day. Now merging has a failsafe.
+# HOWEVER, the failsafe merge is > 2x the size of the merge where only unique vars was called for.
+
+
+# how to check for duplicated rows in R again? Checked my notes, and nothing matched... So I am not sure.. I don't immediately need to know which rows are and arent duplicates... I could write a function to do this.. I would be wise to at least search around a bit before doing so though... would be wiser to stay on task and not worry about number of duplicate rows until it actually matters.
+
+
+
+# testing transform for population data now: ------------------------------
+workHERE11_23 <- function(g){}
+
+library(data.table)
+
+load("data/debugging_raw_data/alcConsumpAlldata.rds")
+
+alcConsumpAllTransformed <- dbugTransform(alcConsumpAlldata, popsData = T)
+debug(dbugTransform)
+undebug(dbugTransform)
+
+load("data/debugging_raw_data/AirPollutionAlldata.rds")
+airPollutionAllTransformed <- dbugTransform(AirPollutionAlldata, popsData = T)
+airPollutionTempReturn <- dbugTransform(AirPollutionAlldata, popsData = T)
+# OK still getting error with finding merge.data.table... maybe I will just import `merge` as well?
+  # AFTER PUTTING DEBUG FUNCTIONS INSIDE OF THE PROJECT: still getting the infinite loop issue I think... Going to once again check for regular createMT efficiacy.. wondering if adding new scripts to the package may have imparted this infinite looping function on creatMT() as well? .. if this executes successfully. I will.. maybe... go in and look at the data.frame that is supposed to be returned by one loops of the lapply() causing issues.. what other leads exist?
+  #    # execution was successful for createMT()... So I am going to just let the transform run for 20 mins and see if its still going after that... presumably it is actually stuck in a loop as the total execution of transformation and API calling was less than 20 mins for createMT(). I suppose we can look at what is being returned by the infinite looping return in the case ... ok it just worked... took like 4.5 mins. I think this means we can go back to working on the ancestral allele issue from before... I also think we may want to do some benchmarking once all debugging is said and done.
+
+
+# BIG ISSUE ^^^: some kind of infinite loop.. or freezing occurring Upon the first(?) return of :
+# 'singlePop_alleleFreqDTs <- lapply(Populations$Population_Abbreviation, function(x) GWASpops.pheno2geno:::singlePopTransform(masterList[[2]], targetPopulation = x))'
+#   We are just having the function freeze to a halt... I don't know what is going on.... I think a restart and reproducing this bug comes first. maybe I can verify the normal pipelines behavior next by grabbing an install from github and running it for the airPoll data set .. then like debug it to spot any differences? ....
+
+# TESTING BASE FUNCTIONS...
+library(data.table)
+airPollTest <- createMT('exampleData/air_pollution', population_data = T) # THIS SUCCEEDED WITHOUT DEBUGGER, but GOT STUCK IN THE SAME INIFINITE LOOP AS OUR `dbugTransform()` WHEN IN THE DEBUGGER.
+
+debug(createMT)
+# ^^ this works fine. I am pretty confused about the freezing in my dbugTransfrom func. I just don't understand what conditions can lead to some indefinite processing. I don't see any loop repeatedly executing.. its upon hitting a return function that the freeze happens.. which is pretty strange. I feel pretty lost on this. My best lead right now is to compare the DS going into the function in my regular pipline vs the current dev pipeline.. any inconsistencies MAY possible point me to my issue... as the base call is the same at the line causing the freezing.
+#
+
+#OK . so without debugging it (createMT) worked fine. WITH debugging on, I got stuck in the same infinite freeze point as before.. at the same return for singlePopTransform. So I am wondering if something about the debugging environment is causing this issue. Something else I noticed, is that we aren't actually seeing any obvious differences in the data going into that function from our debug command compared to the creatMT version... so I don't think its the data in. Gonna try and run the dbugTransform WITHOUT debugger on.. and see if it can transform airpol data again.
+
+# it is looking like we are getting frozen at the same spot again. I don't know if there is any way to gather information about what the heck is happening under the hood to cause this freeze, which is bad, this is the worst sort of error, one where our system doesn't even sort of tell us what is causing it, where its happening, or what the system is doing amidst the error. No transparency error type. My only lead on how to manage this right now is to clean up my working envrionment... basically I want to edit bootCalls.R s.t. the chance for calling a func outside of the packages functions isn't possible... I am sure this will lead to other issues. but maybe cleaning the environment will avoid this weird infinite loop thing.
+
+# OK I PUT DEBUGGING FUNCS IN THE PACKAGE TEMPORARLY S.T. THEY HAVE ACCESS TO NON-EXPORTED FUNCS FOR DEBUGGING AND ENVIRONMENT CONSISTENCY PUROSES
+
+
+# error message below occurred for this function. Due to time I will now be generating the new, non duplicate filled data while doing other stuff today.
+
+# Error in `filter()`:
+#   ! Problem while computing `..1 = x$allele != attr(x, "Ancestral_Allele")`.
+# ✖ Input `..1` must be of size 1, not size 2.
+# Run `rlang::last_error()` to see where the error occurred.
+# Warning messages:
+#   1: Unknown or uninitialised column: `population`.
+# 2: Unknown or uninitialised column: `population`.
+# 3: In x$allele != attr(x, "Ancestral_Allele") :
+#   longer object length is not a multiple of shorter object length
+# 4: In x$allele != attr(x, "Ancestral_Allele") :
+#   longer object length is not a multiple of shorter object length
+# 5: In x$allele != attr(x, "Ancestral_Allele") :
+#   longer object length is not a multiple of shorter object length
+
+
+
+# 11-23-2022 --------------------------------------------------------------
+# DEBUGGING POPULATION DATA ISSUES..
+
+# seeking multiple mappings in alc data to understand how to deal with multiple ancestral alleles
+
+alcConsumpEnsData <- purrr::flatten(alcConsumpAlldata[[2]])
+mappingNum <- sapply(alcConsumpEnsData, \(x) length(x$mappings))
+mappingG2 <- mappingNum[mappingNum > 1]
+mappingG2indeces <- which(mappingNum > 1)
+mappingG2 # ok so we have a bunch which are actually 3 or more.. and two with 6 and 7 mappings.. woah.
+getWeirdMappings <- alcConsumpEnsData[mappingG2indeces[10:15]]
+getWeirdMappingsAll <- alcConsumpEnsData[mappingG2indeces]
+
+# inspecting ancestral alleles to get a feel for what I should account for with the assignment script
+# SEEING: some alleles only have NULL values.. (is this a problem? Should we be filling with some alternate default value?)
+
+onlyMappings <- lapply(getWeirdMappingsAll, \(x) x$mappings)
+onlyAA <- lapply(onlyMappings, \(x) for(ele in 1:length(x)){ })
+
+AAlist <- as.list(vector(length = 53))
+num = 0
+for(i in onlyMappings){ # would be nice to not need a whole for loop to access these nested elements and to get them packed into their own arrays for each element of the base list 'onlyMappings'
+  num = num + 1
+  subList <- list()
+  for(ele in 1:length(i)){
+    subList[ele] <- purrr::pluck(onlyMappings[[num]][[ele]], "ancestral_allele")
+  }
+  AAlist[[num]] <- subList
+ }
+
+warnings()
+
+a <- pluck(onlyMappings[[1]][[1]], 'ancestral_allele')
+?pluck
+
+fAAlist <- flatten(AAlist)
+
+#Not seeing any rsID with more than 1 ancestral allele, though there still exists the issue of NULL values. I think it would be wise to allow for assignment of multiple ancestral alleles... maybe by smashing them into a string with some divider character, and in the cases where there is only NULL AAs, we would instead assign some default value. Finally if there is already an AA and NULL values are encountered, we should discard the NULL value. Also I guess we need to deal with if we find a non-null value and the default value has already been assigned somehow.
+
+
+# why am I discarding ancestral alleles from population data once again? ... I think it is because its not interesting to look at ancestral alleles in graphs? Yeah... when graphing a set of variants for a single population... if we graph both the ancestral alleles as well as the alleles which are being reported by a given variantID (as variantIDs describe abnormalities in the genome, and thus a variants ancestral allele is the nucleiotide(s) being replaced.) then the graph doesn't really make sense right away.. as we should hypothetically have 100% of frequency for both ancestral allele and variant allele. Thus we just graph the variant frequency for each allele in a given population to see how frequent the occurence of that variant is in that population.
+#
+#
+
+# OK thinking I will just ensure there is only 1 ancestral allele per rsID... thus the line using it for comparison will execute succesfully.
+# If we encounter an issue where there is more than one reported ancestral allele in some data set.. maybe we think of a solution. Really not sure what would be best, there should only be one reported for any given variant.. we could just discard the row entirely? .... or try to find some way to suggest the actual AA. Or just choose at random and discard at random.. (not a valid solution imo)
+
+
+
+workHERE11_23_NUM2 <- function(g){}
+
+library(data.table)
+
+load("data/debugging_raw_data/alcConsumpAlldata.rds")
+
+alcConsumpAllTransformed <- dbugTransform(alcConsumpAlldata, popsData = T)
+debug(dbugTransform)
+undebug(dbugTransform)
+
+load("data/debugging_raw_data/AirPollutionAlldata.rds")
+airPollutionAllTransformed <- dbugTransform(AirPollutionAlldata, popsData = T)
+airPollutionTempReturn <- dbugTransform(AirPollutionAlldata, popsData = T)
+
+
+
+# we have identified where NAs are coming from to an extent in attr_ancestralAllele... will be attempting to fix
+# # THIS IS THE CODE TO REMOVE THE NA ROW FROM THE DF... fixMT <- uniqMasterT[!is.na(uniqMasterT$EnsVar_name), ]
+# Fixing the AncAllele problem allowed the code to execute successfully.. it was just FUCKING slow. So we will likely need to work on some optimization down the line.
+
+# post fix stated above ^^
+a <- alcConsumpAlldata[[2]][[1]]
+b <- alcConsumpAlldata[[2]][[2]]
+alcConsumpPopDataReduced <- list(a,b) # grabbing a single sublist.. reducing the amount of Ensembl data by 10x
+alcConsumpPopDataReduced <- list(alcConsumpAlldata[[1]],alcConsumpPopDataReduced)
+alcConsumpAllTransformed2 <- dbugTransform(alcConsumpPopDataReduced, popsData = T) # success.
+
+
+
+
+# RUNNING TRANSFORM FUNCS FOR DEBUGGING ON ALL DATA -----------------------
+
+
+
+source('bootCalls.R')
+
+load("data/debugging_raw_data/alcConsumpVars.rds")
+alcConsumpVarTrans <- dbugTransform(alcConsumpVars)
+load("data/debugging_raw_data/alcConsumpAlldata.rds")
+alcConsumpAllTrans <- dbugTransform(alcConsumpAlldata, popsData = T) # error here... once again, Ancestral Allele issue... weird. Wonder if I didn't save my progress last time...
+
+load("data/debugging_raw_data/bCarcinomaVars.rds")
+bCarcinomaVarTrans <- dbugTransform(bCarcinomaVars)
+load("data/debugging_raw_data/bCarcinomaAlldata.rds")
+alcConsumpAllTrans <- dbugTransform(bCarcinomaAlldata, popsData = T)
+
+load("data/debugging_raw_data/colorectalCancerVars.rds")
+colorectalCancerVarTrans <- dbugTransform(colorectalCancerVars)
+load("data/debugging_raw_data/colorectalCancerAlldata.rds")
+colorectalCancerAllTrans <- dbugTransform(colorectalCancerAlldata, popsData = T)
+
+load("data/debugging_raw_data/IBFVars.rds")
+IBFVarTrans <- dbugTransform(IBFpVars)
+load("data/debugging_raw_data/IBFAlldata.rds")
+IBFAllTrans <- dbugTransform(IBFAlldata, popsData = T)
+
+load("data/debugging_raw_data/IntVars.rds")
+IntVarTrans <- dbugTransform(IntVars)
+load("data/debugging_raw_data/IntAlldata.rds")
+IntAllTrans <- dbugTransform(IntAlldata, popsData = T)
+
+load("data/debugging_raw_data/lungCancerVars.rds")
+lungCancerVarTrans <- dbugTransform(lungCancerVars)
+load("data/debugging_raw_data/lungCancerAlldata.rds")
+lungCancerAllTrans <- dbugTransform(lungCancerAlldata, popsData = T)
+
+load("data/debugging_raw_data/malabsorptionSyndVars.rds")
+malabsorptionSyndVarTrans <- dbugTransform(malabsorptionSyndVars)
+load("data/debugging_raw_data/malabsorptionSyndAlldata.rds")
+malabsorptionSyndAllTrans <- dbugTransform(malabsorptionSyndAlldata, popsData = T)
+
+load("data/debugging_raw_data/neuroticismVars.rds")
+neuroticismVarTrans <- dbugTransform(neuroticismVars)
+load("data/debugging_raw_data/neuroticismAlldata.rds")
+neuroticismAllTrans <- dbugTransform(neuroticismAlldata, popsData = T)
+
+load("data/debugging_raw_data/prostateCancerVars.rds")
+prostateCancerVarTrans <- dbugTransform(prostateCancerVars)
+load("data/debugging_raw_data/prostateCancerAlldata.rds")
+prostateCancerAllTrans <- dbugTransform(prostateCancerAlldata, popsData = T)
+
+load("data/debugging_raw_data/substanceAbuseVars.rds")
+substanceAbuseVarTrans <- dbugTransform(substanceAbuseVars)
+load("data/debugging_raw_data/substanceAbuseAlldata.rds")
+substanceAbuseAllTrans <- dbugTransform(substanceAbuseAlldata, popsData = T)
+
+load("data/debugging_raw_data/AirPollutionVars.rds")
+AirPollutionVarTrans <- dbugTransform(AirPollutionVars)
+load("data/debugging_raw_data/AirPollutionAlldata.rds")
+AirPollutionAllTrans <- dbugTransform(AirPollutionAlldata, popsData = T)
+
+
+
+
+# -------------------------------------------------------------------------
+
+
+
+
 
 
 

@@ -85,3 +85,74 @@ tryCatchTest3 <- function(vector1){
 
 vec6 <- tryCatchTest3(vec1)
 
+
+
+
+# 11-21-2022 TESTING APPLIED USE FOR MERGE --------------------------------
+
+?data.table::merge
+# no faith in this working.. I just don't think you can execute code normally from the error portion of a tryCatch block... I don't really know how to use them generally.
+masterMerge <- function(list){
+
+  GWAS_DF <- list[[1]]
+  CONT_Table <- list[[2]]
+
+  tryCatch(
+    expr = {masterTable <- merge.data.table(GWAS_DF, CONT_Table, by.x = 'VariantID', by.y = 'EnsVar_name')},
+    error = function(e){
+              masterTable <- merge.data.table(GWAS_DF, CONT_Table, by.x = 'VariantID', by.y = 'EnsVar_name', allow.cartesian = T)}
+
+  )
+  return(masterTable)
+}
+
+
+testMM <- masterMerge(alcConsumpVarTransformed) # so this worked. Wasn't expecting success...
+
+
+# First lets make sure the call we want to execute works at all.
+library(data.table)
+masterTable <- data.table::merge(alcConsumpVarTransformed[[1]], alcConsumpVarTransformed[[2]], by.x = 'VariantID', by.y = 'EnsVar_name', allow.cartesian = T) # getting very strange error "Error: 'merge' is not an exported object from 'namespace:data.table'"
+
+masterTable <- merge(alcConsumpVarTransformed[[1]], alcConsumpVarTransformed[[2]], by.x = 'VariantID', by.y = 'EnsVar_name', allow.cartesian = T) # works SUCCESS?
+
+masterTableTEST <- merge(alcConsumpVarTransformed[[1]], alcConsumpVarTransformed[[2]], by.x = 'VariantID', by.y = 'EnsVar_name')
+# ^^ getting the same error as before... ... meaning we are def using the data.table version... the fact we cannot explicitely call it by its full name is super weird though.
+
+methods(merge)
+
+class(alcConsumpVarTransformed[[1]]) # data.table data.frame
+class(alcConsumpVarTransformed[[2]]) # tbl_df tbl data.frame
+# OK so I am assuming that we are seeing automatic calling of the data.table::merge() method instead of base::merge() because the first argument being passed to the call is in fact a data.table and there are some class methods occurring under the hood here which mediate preferences in function calls??? (no idea how classes are funcitoning for R under the hood.. because like... I don't ever really intentionally use them.)
+
+
+masterTable2 <- merge.data.table(alcConsumpVarTransformed[[1]], alcConsumpVarTransformed[[2]], by.x = 'VariantID', by.y = 'EnsVar_name', allow.cartesian = T) # SUCCESS
+masterTable3 <-  merge.data.frame(alcConsumpVarTransformed[[1]], alcConsumpVarTransformed[[2]], by.x = 'VariantID', by.y = 'EnsVar_name', allow.cartesian = T) # ? ALSO WORKS? wtf.. shouldnt the allow.cartesian be a data.table only thing? Maybe they both are routing to the same function based entirely off of class? .... seems the result is identical.
+
+
+
+data.table:::merge.data.table # this will print out the code behind this function.
+base:::merge
+
+getAnywhere("merge.data.table") # similarly we are printing out the code... but with some meta-data too?
+
+?getAnywhere
+
+# FROM DETAILS OF MAN PAGE FOR MERGE: merge is a generic function in base R. It dispatches to either the merge.data.frame method or merge.data.table method depending on the class of its first argument. Note that, unlike SQL, NA is matched against NA (and NaN against NaN) while merging.
+# ^^ this suggests my assumption about class based calling is indeed correct.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

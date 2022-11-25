@@ -200,7 +200,10 @@ AncestralAllele_attr <- function(masterTable, popFreqList){
 
     uniqMasterT <- masterTable[!duplicated(masterTable$EnsVar_name), ] #not sure if I am calling 'duplicated()' from data.table or not here... Need to import in the case this function is a failure point due to not importing data.table's version of 'duplicated()'
 
+    uniqueMasterT <- uniqMasterT[!is.na(uniqMasterT$EnsVar_name), ] # Removing NA rows that may be introduced, they crash later functions by having "Ancestral_Allele" attributes which contain 2 entries. (the second entry always being `NA`)
+
     for(variant in 1:length(popFreqList)){
+      # for this ancestral allele assignment, how are we sure we are getting the right allele when there are multiple mappings for a given rsID? ... Shouldn't we NOT use a unique master table and grab all ancestral allels for a given variant in all its mappings and attach them to the ancestral allele attribute? (possibly with some meta data to point towards source of diff mappings ideally?)
       attr(popFreqList[[variant]], 'Ancestral_Allele') <-
         uniqMasterT[uniqMasterT$EnsVar_name == names(popFreqList[variant]), ]$EnsVar_ancestral_allele
 

@@ -21,15 +21,15 @@ masterList <- testMasterList
 
 # Loading all files from package for immediate usage! ---------------------
 
-source('./R/data_retrivalFixingLoading.R')
-source('./R/get_ensVariants.R')
-source('./R/pipeline_masterFunc.R')
-source('./R/plotting_graphing.R')
-source('./R/pipeline_helperFuncs.R')
+# source('./R/data_retrivalFixingLoading.R')
+# source('./R/get_ensVariants.R')
+# source('./R/pipeline_masterFunc.R')
+# source('./R/plotting_graphing.R')
+# source('./R/pipeline_helperFuncs.R')
 
 # Loading debugging funcs:
 
-source('workingScripts/Debugging_APIcall_functions.R')
+# source('workingScripts/Debugging_APIcall_functions.R') # DEPRECATED
 
 #IDEAS:
 
