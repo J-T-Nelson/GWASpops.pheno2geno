@@ -113,10 +113,10 @@ list2table_associations_studies <- function(dfList){
 #' @noRd
 singlePopTransform <- function(popFreqList, targetPopulation = 'gnomADg:ALL', includeAncestralAlleles = FALSE){
 
-  filteredList <- lapply(popFreqList, \(x) filter(x,x$population == targetPopulation))
+  filteredList <- lapply(popFreqList, \(x) x[ x$population == targetPopulation, ]) # using mask instead of select.. and it is many time faster.
 
   if(!includeAncestralAlleles){ #removing ancestral allele rows by default.
-    filteredList <- lapply(filteredList, \(x) filter(x, x$allele != attr(x, 'Ancestral_Allele')))
+    filteredList <- lapply(filteredList, \(x) x[ x$allele != attr(x, 'Ancestral_Allele'), ])
   }
 
   singlePopTable <- bind_rows(filteredList, .id = 'VariantID') %>% distinct(.keep_all = FALSE)
@@ -124,7 +124,7 @@ singlePopTransform <- function(popFreqList, targetPopulation = 'gnomADg:ALL', in
   attr(singlePopTable, 'population') <- singlePopTable$population[1]
   attr(singlePopTable, 'Ancestral_Allele') <- NULL
   attr(singlePopTable, 'VariantID') <- NULL
-  singlePopTable <- select(singlePopTable, !population)
+  singlePopTable <- singlePopTable[ ,names(singlePopTable) != 'population' ]
 
   return(singlePopTable)
 }

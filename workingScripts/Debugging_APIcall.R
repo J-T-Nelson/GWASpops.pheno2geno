@@ -270,8 +270,6 @@ alcConsumpAlldata <- createMT2('GWAS.data/alcohol_consumption', processData = F,
 airPollutionAlldata <- createMT2('exampleData/air_pollution', processData = F, population_data = T)
 
 
-GWASdataSets
-
 alcConsumpVars <- createMT2(GWASdataSets[1], processData = F)
 alcConsumpAlldata <- createMT2(GWASdataSets[1], processData = F, population_data = T)
 
@@ -496,6 +494,9 @@ workHere <- function(HERE) {}
 devtools::install("YOUR FUCKING PACKAGE LOCATION/Path") # <- this is how you locally update your package.... its annoying and I think you should unattach it first to not break anything like I did the first time.
 unload('GWASpops.pheno2geno')
 devtools::install("D:\\Programming\\R_projects\\Kulathinal_Lab\\GWASpops.pheno2geno") # even after unloading my package... it was not able to reload without restarting RStudio.. kind of annoying, but relatively trivial if following best practices.
+
+# ALTERNATIVE MEANS OF INSTALLING PACKAGE AFTER UPDATING ITS CONTENTS: Build > More (dropdown) > Clean and Install
+
 
 load('data/debugging_raw_data/alcConsumpVars.rds') #loading my data
 
@@ -754,18 +755,31 @@ alcConsumpAllTransformed2 <- dbugTransform(alcConsumpPopDataReduced, popsData = 
 
 
 # RUNNING TRANSFORM FUNCS FOR DEBUGGING ON ALL DATA -----------------------
+# STRATEGY. Need to first ensure that all Vars calls are working in the transform function. Then I need to do the same for populations. This is essentially linear debugging where I will handle issue case by case... Not sure what to do about data inconsistencies which may arise outside of this tested data set.
 
+debug(dbugTransform)
+undebug(dbugTransform)
 
+options(error = browser)
+options(error = recover)
+options(error = NULL)
 
 source('bootCalls.R')
 
 load("data/debugging_raw_data/alcConsumpVars.rds")
 alcConsumpVarTrans <- dbugTransform(alcConsumpVars)
 load("data/debugging_raw_data/alcConsumpAlldata.rds")
-alcConsumpAllTrans <- dbugTransform(alcConsumpAlldata, popsData = T) # error here... once again, Ancestral Allele issue... weird. Wonder if I didn't save my progress last time...
+alcConsumpAllTrans <- dbugTransform(alcConsumpAlldata, popsData = T) # error here... once again, Ancestral Allele issue... weird. Wonder if I didn't save my progress last time...  (12-15-2022) Looks like I didn't manage to recomplie the package which is why the executed version of the dbugTransform() func doesn't contain the code I would expect it to. I really need to define startup and windown processes that are a necessary part of my workflow whenever I am working on code.
 
 load("data/debugging_raw_data/bCarcinomaVars.rds")
-bCarcinomaVarTrans <- dbugTransform(bCarcinomaVars)
+bCarcinomaVarTrans <- dbugTransform(bCarcinomaVars) # ERROR HERE: `Error in `*tmp*`[[1]] : subscript out of bounds` ... I believe this error is coming from a `failed` name:key pair being introduced in this call. Only 2 instances of it across ~1.3k lists. Thus its certainly uncommon. Going to discard this data, as it seems to represent variants which lack mappings onto reference genomes being called against within Ensembl's database, and thus the data is too incomplete to be considered.
+# FIXED ^^ The solution is to remove the entries in CONT_noMultiMapping after MultiMappings are removed (flattened out)... using a mask which is built by scanning each sublist in the superlist for names that match failed.
+# mask1 <- sapply(CONT_noMultiMapping, \(x) "failed" names(x))
+# badentries <- CONT_noMultiMapping[mask1]
+# goodEntries <- CONT_noMultiMapping[!mask1]
+# Orginal solution was sufficient. Deleting code of second solution (which was almost identical)
+
+
 load("data/debugging_raw_data/bCarcinomaAlldata.rds")
 alcConsumpAllTrans <- dbugTransform(bCarcinomaAlldata, popsData = T)
 
@@ -775,7 +789,7 @@ load("data/debugging_raw_data/colorectalCancerAlldata.rds")
 colorectalCancerAllTrans <- dbugTransform(colorectalCancerAlldata, popsData = T)
 
 load("data/debugging_raw_data/IBFVars.rds")
-IBFVarTrans <- dbugTransform(IBFpVars)
+IBFVarTrans <- dbugTransform(IBFVars)
 load("data/debugging_raw_data/IBFAlldata.rds")
 IBFAllTrans <- dbugTransform(IBFAlldata, popsData = T)
 
@@ -800,7 +814,9 @@ load("data/debugging_raw_data/neuroticismAlldata.rds")
 neuroticismAllTrans <- dbugTransform(neuroticismAlldata, popsData = T)
 
 load("data/debugging_raw_data/prostateCancerVars.rds")
-prostateCancerVarTrans <- dbugTransform(prostateCancerVars)
+prostateCancerVarTrans <- dbugTransform(prostateCancerVars) # FINAL ERROR FOR Var data -- ERROR HERE Error in dbugTransform(prostateCancerVars) :object 'masterTable' not found ...
+# FIXED ^^ . The issue was in my understanding of the behavior of tryCatch() blocks, specifically the somewhat strange activity of the `error = ...` portion.
+# The problem of these duplicate rich tables still exists however and is not trivial from my base judgement. I would need to determine if any of the merged tables posses any true duplicate rows and if they do I would need to learn where they were introduced and prevent that from occurring. Ideally my transformation should never fall back into the Cartesian expansion for the merging. So I guess I can write a function which is used to test tables for duplicate rows first... and then I can start debugging further. I really do think solving this issue is worth the time it will take, as otherwise downstream issues would be introduced.
 load("data/debugging_raw_data/prostateCancerAlldata.rds")
 prostateCancerAllTrans <- dbugTransform(prostateCancerAlldata, popsData = T)
 
@@ -815,11 +831,358 @@ load("data/debugging_raw_data/AirPollutionAlldata.rds")
 AirPollutionAllTrans <- dbugTransform(AirPollutionAlldata, popsData = T)
 
 
-
+# MAJOR PROGRESS. ALL VARIANT TRANSFORMATIONS NOW WORK. TIME TO MOVE ONTO WORKING ON POPULATION TRANSFORMATION ISSUES.
 
 # -------------------------------------------------------------------------
 
 
+# Testing scoping issue hypothesis for trycatch issue ---------------------
+
+dog <- list(LETTERS)
+
+tryCatch(
+  expr = {cat <-LETTERS},
+)
+# ^^ assignment works fine here
+#  cat <- <- fog  ..... this is a generic reproducible error
+
+
+cat <- LETTERS*2 # this produces: `Error in LETTERS * 2 : non-numeric argument to binary operator`
+
+catss <- c(1,2,3,4,6) # functions on its own no problem
+
+rm(cat, catss)
+tryCatch(
+  expr = {cat <- LETTERS*2},
+  error = function(e) {catss <- c(1,2,3,4,6); message('error has executed')}
+)
+# ^^ despite the error clearly executing I am not seeing any cats assignment occuring in my environment. I honestly thought we encountered this before and it was somehow fixed.
+
+
+tryCatch(
+  expr = {cat <- LETTERS*2},
+  error = function(e) {catss <- c(1,2,3,4,6); message('error has executed')},
+  finally = {return(catss)}
+)
+# ^^ : `Error in tryCatch(expr = { : object 'catss' not found`
+
+
+objectt <- tryCatch(
+  expr = {cat <- LETTERS*2},
+  error = function(e) {catss <- c(1,2,3,4,6); message('error has executed');return(catss)}
+)
+# ^^ this works. But honestly it is super weird. what about when cat does execute? what does object become?
+
+rm(objectt)
+objectt <- tryCatch(
+  expr = {cat <- LETTERS},
+  error = function(e) {catss <- c(1,2,3,4,6); message('error has executed');return(catss)}
+)
+
+# yep. objectt became the value of whatever is naturally returned by the tryCatch block. So it seems like its built into these try catch blocks that ... something is returned by them... and so they're a sort of 'handles one object only' sort of code block. Which should work for my purposes.
+
+# so do I need the return statement to return the object created in the code of the error block?
+rm(objectt, cat, dog)
+objectt <- tryCatch(
+  expr = {cat <- LETTERS*2},
+  error = function(e) {catss <- c(1,2,3,4,6); message('error has executed')}
+)
+# ^^ objectt was returned as NULL ... so YES we do need a return statement inside of the error block. I really need to learn more about error catching. sheesh.
+
+
+
+# 12-19-2022 WORKSPACE ----------------------------------------------------
+ # previous workspace is now notes dense, therefore I will be copying necessary bits over here and working off of it
+
+debug(dbugTransform)
+undebug(dbugTransform)
+
+options(error = browser)
+options(error = recover)
+options(error = NULL)
+
+source('bootCalls.R')
+library(tictoc)
+
+
+load("data/debugging_raw_data/alcConsumpVars.rds")
+alcConsumpVarTrans <- dbugTransform(alcConsumpVars)
+load("data/debugging_raw_data/alcConsumpAlldata.rds")
+alcConsumpAllTrans <- dbugTransform(alcConsumpAlldata, popsData = T) # error here... once again, Ancestral Allele issue... weird.
+#^^ FIXED .. runtime is over 15 mins though.
+
+load("data/debugging_raw_data/bCarcinomaVars.rds")
+bCarcinomaVarTrans <- dbugTransform(bCarcinomaVars)
+load("data/debugging_raw_data/bCarcinomaAlldata.rds")
+bCarcinomaAllTrans <- dbugTransform(bCarcinomaAlldata, popsData = T) # bug here. ... for some reason output was still produced here. NAMING ISSUE... resolved
+# FIXED ^^^ Same fix as lungCancer worked here.
+# Error in `filter()` at GWASpops.pheno2geno/R/pipeline_helperFuncs.R:119:4:
+#   ! Problem while computing `..1 = x$allele != attr(x, "Ancestral_Allele")`.
+# ✖ Input `..1` must be of size 1, not size 0.
+
+
+load("data/debugging_raw_data/colorectalCancerVars.rds")
+colorectalCancerVarTrans <- dbugTransform(colorectalCancerVars)
+load("data/debugging_raw_data/colorectalCancerAlldata.rds")
+colorectalCancerAllTrans <- dbugTransform(colorectalCancerAlldata, popsData = T) # works
+
+load("data/debugging_raw_data/IBFVars.rds")
+IBFVarTrans <- dbugTransform(IBFVars)
+load("data/debugging_raw_data/IBFAlldata.rds")
+IBFAllTrans <- dbugTransform(IBFAlldata, popsData = T) # works 50+ warnings again
+
+load("data/debugging_raw_data/IntVars.rds")
+IntVarTrans <- dbugTransform(IntVars)
+load("data/debugging_raw_data/IntAlldata.rds")
+IntAllTrans <- dbugTransform(IntAlldata, popsData = T) # works .. large data.. extremely slow. No warnings
+
+load("data/debugging_raw_data/lungCancerVars.rds")
+lungCancerVarTrans <- dbugTransform(lungCancerVars)
+load("data/debugging_raw_data/lungCancerAlldata.rds")
+lungCancerAllTrans <- dbugTransform(lungCancerAlldata, popsData = T) # ERROR
+# Error in `filter()` at GWASpops.pheno2geno/R/pipeline_helperFuncs.R:119:4:
+#   ! Problem while computing `..1 = x$allele != attr(x, "Ancestral_Allele")`.
+# ✖ Input `..1` must be of size 1, not size 0.
+# FIXED ^^^ added a line to AncestralAllele_Attr() which converts empty entries for the attribute to NA entries.
+
+load("data/debugging_raw_data/malabsorptionSyndVars.rds")
+malabsorptionSyndVarTrans <- dbugTransform(malabsorptionSyndVars)
+load("data/debugging_raw_data/malabsorptionSyndAlldata.rds")
+malabsorptionSyndAllTrans <- dbugTransform(malabsorptionSyndAlldata, popsData = T) # works
+
+load("data/debugging_raw_data/neuroticismVars.rds")
+neuroticismVarTrans <- dbugTransform(neuroticismVars)
+load("data/debugging_raw_data/neuroticismAlldata.rds")
+neuroticismAllTrans <- dbugTransform(neuroticismAlldata, popsData = T) # works
+
+load("data/debugging_raw_data/prostateCancerVars.rds")
+prostateCancerVarTrans <- dbugTransform(prostateCancerVars)
+load("data/debugging_raw_data/prostateCancerAlldata.rds")
+prostateCancerAllTrans <- dbugTransform(prostateCancerAlldata, popsData = T) # works
+
+load("data/debugging_raw_data/substanceAbuseVars.rds")
+substanceAbuseVarTrans <- dbugTransform(substanceAbuseVars)
+load("data/debugging_raw_data/substanceAbuseAlldata.rds")
+substanceAbuseAllTrans <- dbugTransform(substanceAbuseAlldata, popsData = T) # works
+
+load("data/debugging_raw_data/AirPollutionVars.rds")
+AirPollutionVarTrans <- dbugTransform(AirPollutionVars)
+load("data/debugging_raw_data/AirPollutionAlldata.rds")
+AirPollutionAllTrans <- dbugTransform(AirPollutionAlldata, popsData = T) # works
+
+
+
+
+
+#ERRRORS:
+# Error in `filter()` at GWASpops.pheno2geno/R/pipeline_helperFuncs.R:119:4:
+# ! Problem while computing `..1 = x$allele != attr(x, "Ancestral_Allele")`.
+# ✖ Input `..1` must be of size 1, not size 2.
+# Run `rlang::last_error()` to see where the error occurred.
+# Warning messages:
+#   1: Unknown or uninitialised column: `population`.
+# 2: Unknown or uninitialised column: `population`.
+# 3: In x$allele != attr(x, "Ancestral_Allele") :
+#   longer object length is not a multiple of shorter object length
+# 4: In x$allele != attr(x, "Ancestral_Allele") :
+#   longer object length is not a multiple of shorter object length
+# 5: In x$allele != attr(x, "Ancestral_Allele") :
+#   longer object length is not a multiple of shorter object length
+
+
+
+
+
+# Optimization work -------------------------------------------------------
+
+
+debug(dbugTransformOPT)
+undebug(dbugTransformOPT)
+
+source('bootCalls.R')
+library(tictoc)
+
+
+# VARIANT DATA TRANSFORMS
+
+load("data/debugging_raw_data/malabsorptionSyndVars.rds")
+malabsorptionSyndVarTrans <- dbugTransformOPT(malabsorptionSyndVars)
+
+load("data/debugging_raw_data/AirPollutionVars.rds")
+AirPollutionVarTrans <- dbugTransformOPT(AirPollutionVars)
+
+load("data/debugging_raw_data/prostateCancerVars.rds")
+prostateCancerVarTrans <- dbugTransformOPT(prostateCancerVars)
+
+load("data/debugging_raw_data/colorectalCancerVars.rds")
+colorectalCancerVarTrans <- dbugTransformOPT(colorectalCancerVars)
+
+load("data/debugging_raw_data/substanceAbuseVars.rds")
+substanceAbuseVarTrans <- dbugTransformOPT(substanceAbuseVars)
+
+load("data/debugging_raw_data/lungCancerVars.rds")
+lungCancerVarTrans <- dbugTransformOPT(lungCancerVars)
+
+load("data/debugging_raw_data/bCarcinomaVars.rds")
+bCarcinomaVarTrans <- dbugTransformOPT(bCarcinomaVars)
+
+load("data/debugging_raw_data/IBFVars.rds")
+IBFVarTrans <- dbugTransformOPT(IBFVars)
+
+load("data/debugging_raw_data/alcConsumpVars.rds")
+alcConsumpVarTrans <- dbugTransformOPT(alcConsumpVars)
+
+load("data/debugging_raw_data/neuroticismVars.rds")
+neuroticismVarTrans <- dbugTransformOPT(neuroticismVars)
+
+load("data/debugging_raw_data/IntVars.rds")
+IntVarTrans <- dbugTransformOPT(IntVars)
+
+
+
+
+# POPULATION DATA TRANSFORMS
+
+load("data/debugging_raw_data/malabsorptionSyndAlldata.rds")
+malabsorptionSyndAllTrans <- dbugTransformOPT(malabsorptionSyndAlldata, popsData = T)
+
+load("data/debugging_raw_data/AirPollutionAlldata.rds")
+AirPollutionAllTrans <- dbugTransformOPT(AirPollutionAlldata, popsData = T)
+
+load("data/debugging_raw_data/prostateCancerAlldata.rds")
+prostateCancerAllTrans <- dbugTransformOPT(prostateCancerAlldata, popsData = T)
+
+load("data/debugging_raw_data/colorectalCancerAlldata.rds")
+colorectalCancerAllTrans <- dbugTransformOPT(colorectalCancerAlldata, popsData = T)
+
+load("data/debugging_raw_data/substanceAbuseAlldata.rds")
+substanceAbuseAllTrans <- dbugTransformOPT(substanceAbuseAlldata, popsData = T)
+
+load("data/debugging_raw_data/lungCancerAlldata.rds")
+lungCancerAllTrans <- dbugTransformOPT(lungCancerAlldata, popsData = T)
+
+load("data/debugging_raw_data/bCarcinomaAlldata.rds")
+bCarcinomaAllTrans <- dbugTransformOPT(bCarcinomaAlldata, popsData = T) # 50+ warnings ... wonder if its connected to the name mismatches in GWASc table and popFreqLists
+
+load("data/debugging_raw_data/IBFAlldata.rds")
+IBFAllTrans <- dbugTransformOPT(IBFAlldata, popsData = T) # 50+ warnings
+
+load("data/debugging_raw_data/alcConsumpAlldata.rds")
+alcConsumpAllTrans <- dbugTransformOPT(alcConsumpAlldata, popsData = T)# 50+ warnings
+
+load("data/debugging_raw_data/neuroticismAlldata.rds")
+neuroticismAllTrans <- dbugTransformOPT(neuroticismAlldata, popsData = T)
+
+load("data/debugging_raw_data/IntAlldata.rds")
+IntAllTrans <- dbugTransformOPT(IntAlldata, popsData = T)
+
+
+
+
+# order of data to test:
+# 1. malabs
+# 2. airPol
+# 3. prostateCancer
+# 4. Colorectal
+# 5. SubstanceAbus
+# 6. lungCancer
+# 7. breastCarcinoma
+# 8. IBF
+# 9. alcConsump
+# 10. neuroticism
+# 11. Int
+
+
+
+
+# 12-22-2022
+#  Question to start today is to try and get rid of warnings first... or to just start reintegrating code? ... reintegrating code is more fundamentally important... If I thought the warnings were important to maintaining data integrity I would prioritize that. But I don't have a way of testing for data integrity to be honest, and it feels a bit beyond the current scope of my ability / this project in my mind. So I may just go straight into integration, and then I will think about the warnings at a later point maybe.
+
+# First test all functions against data for success.. Then begin reintegration... ensure any functions called (like createMT2() ) have their changes migrated over first... then change the names in debug functions to that... then reintegrate properly.? ... may take more planning.
+
+
+
+
+
+# Integration work:  ------------------------------------------------------
+
+
+debug(dbugTransformOPT)
+undebug(dbugTransformOPT)
+
+source('bootCalls.R')
+
+
+# VARIANT DATA TRANSFORMS
+
+load("data/debugging_raw_data/malabsorptionSyndVars.rds")
+malabsorptionSyndVarTrans <- ensListTransform(malabsorptionSyndVars)
+
+load("data/debugging_raw_data/AirPollutionVars.rds")
+AirPollutionVarTrans <- ensListTransform(AirPollutionVars)
+
+load("data/debugging_raw_data/prostateCancerVars.rds")
+prostateCancerVarTrans <- ensListTransform(prostateCancerVars)
+
+load("data/debugging_raw_data/colorectalCancerVars.rds")
+colorectalCancerVarTrans <- ensListTransform(colorectalCancerVars)
+
+load("data/debugging_raw_data/substanceAbuseVars.rds")
+substanceAbuseVarTrans <- ensListTransform(substanceAbuseVars)
+
+load("data/debugging_raw_data/lungCancerVars.rds")
+lungCancerVarTrans <- ensListTransform(lungCancerVars)
+
+load("data/debugging_raw_data/bCarcinomaVars.rds")
+bCarcinomaVarTrans <- ensListTransform(bCarcinomaVars)
+
+load("data/debugging_raw_data/IBFVars.rds")
+IBFVarTrans <- ensListTransform(IBFVars)
+
+load("data/debugging_raw_data/alcConsumpVars.rds")
+alcConsumpVarTrans <- ensListTransform(alcConsumpVars)
+
+load("data/debugging_raw_data/neuroticismVars.rds")
+neuroticismVarTrans <- ensListTransform(neuroticismVars)
+
+load("data/debugging_raw_data/IntVars.rds")
+IntVarTrans <- ensListTransform(IntVars)
+
+
+# POPULATION DATA TRANSFORMS
+
+load("data/debugging_raw_data/malabsorptionSyndAlldata.rds")
+malabsorptionSyndAllTrans <- ensListTransform(malabsorptionSyndAlldata, popsData = T)
+
+load("data/debugging_raw_data/AirPollutionAlldata.rds")
+AirPollutionAllTrans <- ensListTransform(AirPollutionAlldata, popsData = T)
+
+load("data/debugging_raw_data/prostateCancerAlldata.rds")
+prostateCancerAllTrans <- ensListTransform(prostateCancerAlldata, popsData = T)
+
+load("data/debugging_raw_data/colorectalCancerAlldata.rds")
+colorectalCancerAllTrans <- ensListTransform(colorectalCancerAlldata, popsData = T)
+
+load("data/debugging_raw_data/substanceAbuseAlldata.rds")
+substanceAbuseAllTrans <- ensListTransform(substanceAbuseAlldata, popsData = T)
+
+load("data/debugging_raw_data/lungCancerAlldata.rds")
+lungCancerAllTrans <- ensListTransform(lungCancerAlldata, popsData = T)
+
+load("data/debugging_raw_data/bCarcinomaAlldata.rds")
+bCarcinomaAllTrans <- ensListTransform(bCarcinomaAlldata, popsData = T)
+
+load("data/debugging_raw_data/IBFAlldata.rds")
+IBFAllTrans <- ensListTransform(IBFAlldata, popsData = T)
+
+load("data/debugging_raw_data/alcConsumpAlldata.rds")
+alcConsumpAllTrans <- ensListTransform(alcConsumpAlldata, popsData = T)
+
+load("data/debugging_raw_data/neuroticismAlldata.rds")
+neuroticismAllTrans <- ensListTransform(neuroticismAlldata, popsData = T)
+
+load("data/debugging_raw_data/IntAlldata.rds")
+IntAllTrans <- ensListTransform(IntAlldata, popsData = T)
 
 
 
@@ -829,11 +1192,55 @@ AirPollutionAllTrans <- dbugTransform(AirPollutionAlldata, popsData = T)
 
 
 
+# post integration testing ------------------------------------------------
 
+# I have attempted to integrate the changes by modifying the 3 key functions createMT(), get_ensVariants(), and ensListTransform() ... also multiAPIcall_variants() was modified as well. ... before all transformation was taking place inside of the master func as well as the API get calling func... now its happening in its own space entirely which is much better organizationally. The question is however, did I put all the pieces together correctly, does the path execute properly. Going to take some time to test, as I will be hitting the API as a part of the whole process now.
 
+# ERROR: Can't recycle `rs2161719` (size 10) to match `rs6900057` (size 11). FIXED###########
 
+debug(createMTfinal)
 
+AirPollutionVars <- createMTfinal('exampleData/air_pollution')
+# Error in rsO_list[[i]][["mappings"]] : subscript out of bounds .... looks like the data is being over flattened before processing in fixMultiMapping... FIXED
+#
+AirPollutionAlldata <- createMTfinal('exampleData/air_pollution', population_data = T)
 
+alcConsumpVars <- createMTfinal(GWASdataSets[1])
+alcConsumpAlldata <- createMTfinal(GWASdataSets[1], population_data = T)
+
+bCarcinomaVars <- createMTfinal(GWASdataSets[2])
+bCarcinomaAlldata <- createMTfinal(GWASdataSets[2], population_data = T)
+
+colorectalCancerVars <- createMTfinal(GWASdataSets[3])
+colorectalCancerAlldata <- createMTfinal(GWASdataSets[3], population_data = T)
+
+IBFVars <- createMTfinal(GWASdataSets[4])
+IBFAlldata <- createMTfinal(GWASdataSets[4], population_data = T)
+
+IntVars <- createMTfinal(GWASdataSets[5])
+IntAlldata <- createMTfinal(GWASdataSets[5], population_data = T)
+
+lungCancerVars <- createMTfinal(GWASdataSets[6])
+lungCancerAlldata <- createMTfinal(GWASdataSets[6], population_data = T)
+
+malabsorptionSyndVars <- createMTfinal(GWASdataSets[7])
+malabsorptionSyndAlldata <- createMTfinal(GWASdataSets[7], population_data = T) #  ERROR
+# Error in rsO_list[[i]] : subscript out of bounds
+# 3.
+# GWASpops.pheno2geno:::fixMultiMapping(CONT) at Debugging_APIcall_functions.R#553
+# 2.
+# ensListTransform(allData, popsData = T) at Debugging_APIcall_functions.R#676
+# 1.
+# createMTfinal(GWASdataSets[7], population_data = T)
+
+neuroticismVars <- createMTfinal(GWASdataSets[8])
+neuroticismAlldata <- createMTfinal(GWASdataSets[8], population_data = T)
+
+prostateCancerVars <- createMTfinal(GWASdataSets[9])
+prostateCancerAlldata <- createMTfinal(GWASdataSets[9], population_data = T)
+
+substanceAbuseVars <- createMTfinal(GWASdataSets[10])
+substanceAbuseAlldata <- createMTfinal(GWASdataSets[10], population_data = T)
 
 
 
