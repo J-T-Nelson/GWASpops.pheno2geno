@@ -1,17 +1,8 @@
 ^GWASpops\.pheno2geno\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
-^workingBootCalls\.R$
 ^data-raw$
 ^README\.md$
 ^README\.Rmd$
 ^exampleData$
 ^man/example_graphs$
-^data/sysdata\.rda$
-^\./GWAS\.data$
-^tutorialWorkspace\.R$
-^workingScripts$
-^\./R/Debugging_APIcalls\.R$
-^bootScripts\.R$
-^data/debugging_raw_data$
-^ThrowawayImages$
