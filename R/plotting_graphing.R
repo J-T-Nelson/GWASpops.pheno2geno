@@ -22,7 +22,7 @@
 #' @param file_name allows the user to specify the name of the file output if 'export' is set to TRUE
 #' @param graph_scale determines the scale of the graph for exported files, larger values generate higher resolution graphs
 #' @param sqrtYscale When TRUE, very small frequency values are made visible by elongating the lower range of the y-axis. sqrtYscale option will over-ride the 'yUpperLim' option
-#' @param yUpperLim sets the y-axis to a custom value, by default graphing function ggplot() automatically determines the y-axis limit.
+#' @param yUpperLim sets the y-axis to a custom value, by default the graphing function ggplot() automatically determines the y-axis limit within this function call.
 #'
 #' @return ggplot2 graph object
 #'
@@ -86,7 +86,7 @@ graph_varPopFrequencies <- function(popFreqTable,
 
   if(sqrtYscale){
     sqYscale <- expression(scale_y_sqrt())
-    if(yUpperLim){
+    if(!is.na(yUpperLim)){
       cat('WARNING: both yUpperLim and sqrtYscale are TRUE, yUpperLim will override sqrtYscale\n')
     }
   }

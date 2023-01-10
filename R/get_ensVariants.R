@@ -6,20 +6,20 @@
 
 #' get_ensVariants
 #'
-#' @description grabs ensVariants from API and converts to tabular form. Optionally grabs population data as well.
+#' @description grabs variant annotations from Ensembl API and converts to tabular form. Optionally grabs population data as well.
 #'
-#' @details Primary method to grab variant data from Ensembl REST API in the pipeline.
+#' @details function for grabbing variant data from Ensembl REST API.
 #'
 #' Use this function if you're interested in grabbing data on specific variants from Ensembl's Variants endpoint.
 #'
-#' Calls the variants POST endpoint, build into the function are several layers of processing which both ensure arbitrarily large calls are executed successfully, as well as that data returned is in a set of tabular semi-flat formatted objects.
+#' Calls the variants POST endpoint, built into the function is the ability to handle arbitrarily large calls (i.e. as many rsIDs(variant IDs) as one wishes to use), however, the API is realtively slow to serve data, and thus large requests may take some time to execute.
 #'
 #' Requesting population data will substantially increase the time this function takes to complete due to the increase in data being transferred.
 #'
 #' @param rsIDs vector of rsIDs (variant IDs of the rs00000000 form)
 #' @param population_data when TRUE, activates the option to grab population data for each variant in the request as well.
 #'
-#' @return list of data.frame(s) / data.table(s)
+#' @return list of sublists of list-form rsID (variantID) objects. (Nested lists of variant data)
 #'
 #' @examples
 #' variantData <- get_ensVariants(c("rs11137048","rs6866110", "rs62227671", "rs6122625", "rs57504074"), population_data = TRUE)
@@ -32,25 +32,24 @@
 #' @importFrom httr content
 #' @importFrom dplyr bind_rows
 #'
-#' @export
+#' @noRd
 get_ensVariants <- function(rsIDs, population_data = FALSE){
   #Returns a table of variant annotations from Ensembl POST variants API endpoint.
   #If population_data is TRUE and thus requested, a list is instead returned
   # due to incompatible data formats. The list contains the variant annotation table as well as a
   # list of the population data tables. There is 1 population table per rsID entered.
-
-  if(ensemblPing() == 0){ # check if service is up
-    cat("terminating function early, ping unsuccessful\n")
-    return(NULL)
+  cat("Pinging from get_ensVaraiants():  ")
+  if(GWASpops.pheno2geno:::ensemblPing() == 0){ # check if service is up
+    stop("terminating function early, ping unsuccessful\n")
   }
 
   if(length(rsIDs) > 101){
     # multiAPIcall_variants() splits up large rsID lists and returns the expected objects, as the API only tolerates calls of ~150 rsIDs despite their documentation specifying 1000 per POST call
 
     if(population_data){
-      masterCONT <- multiAPIcall_variants(rsIDs, popData = TRUE)
+      masterCONT <- GWASpops.pheno2geno:::multiAPIcall_variants(rsIDs, popData = TRUE)
     } else{
-      masterCONT <- multiAPIcall_variants(rsIDs)
+      masterCONT <- GWASpops.pheno2geno:::multiAPIcall_variants(rsIDs)
     }
     return(masterCONT)
   }
@@ -73,50 +72,26 @@ get_ensVariants <- function(rsIDs, population_data = FALSE){
 
   CONT <- content(response)
 
-  if(population_data){
-    # grabbing population data and converting into a list of tibbles.
-    popData <- sapply(CONT, function(x) x$populations)
-    popData <- lapply(popData, function(x) bind_rows(x))
-
-    CONT <- lapply(CONT, function(x) x[names(x) != 'populations'])
-    # ^^ removes populations from the response content so further operations proceed properly.
-  }
-
-  CONT_noMultiMapping <- fixMultiMapping(CONT)
-
-  CONT_noNULL <- lapply(CONT_noMultiMapping, null2NA_ENSvariants)
-
-  CONT_Table <- rsTable(CONT_noNULL)
-
-  #renaming cols so their source is evident in the master table.
-  names(CONT_Table) <- paste0('EnsVar_',names(CONT_Table))
-
-  if(population_data){
-    # setting ancestral allele atrribute on population frequency data.
-    popData <- AncestralAllele_attr(CONT_Table, popData)
-    masterList <- list(CONT_Table, popData)
-    return(masterList)
-  }
-
-  return(CONT_Table)
+  return(CONT)
 }
 
 
 # HELPER FUNCS: -------------------------------------------------------------------------------
 
 ## multiAPIcall_variants() splits up large rsID lists and returns the expected objects, as the API only tolerates calls of ~150 rsIDs despite their documentation specifying 1000 per POST call
+
 #' multiAPIcall_variants
 #'
-#' A helper func to get_ensVariants() which allows larger numbers of rsIDs to be used successfully in calling get_ensVariants()
+#' A helper func to `get_ensVariants()` which allows larger numbers of rsIDs to be used successfully in calling `get_ensVariants()`
 #'
-#' Ensembl API cannot tolerate calls with > ~140 rsID (variant IDs), which is much less than they specify in documentation. Thus this function exists purely to automate the process of making multiple get_ensVariants() calls within a single call of the get_ensVariants().
+#' Ensembl API cannot tolerate calls with > ~140 rsID (variant IDs), which is much less than they specify in documentation. Thus this function exists purely to automate the process of making multiple `get_ensVariants()` calls within a single call of the `get_ensVariants()`.
 #'
 #' @param rsIDs vector containing variant ids as strings in the form 'rs000000000'
-#' @param popData boolean value which inherits from the get_ensVariants() func calling this helper func. Changes behavior to account for extra data retrieved when popData is true.
+#' @param popData boolean value which inherits from the `get_ensVariants()` func calling this helper func. Changes behavior to account for extra data retrieved when popData is true.
 #'
 #' @example masterCONT <- multiAPIcall_variants(rsIDs, popData = TRUE)
 #'
-#' @return list of data.frame(s) / data.table(s); since this function calls get_ensVariants() it returns the exact same object types.
+#' @return list sublists each sublist containnig 100 or less rsID variant annotation lists which are later converted to rows of a table; since this function calls `get_ensVariants()` it returns the exact same object types.
 #'
 #' @importFrom dplyr bind_rows
 #' @importFrom purrr flatten
@@ -124,48 +99,29 @@ get_ensVariants <- function(rsIDs, population_data = FALSE){
 #' @noRd
 multiAPIcall_variants <- function(rsIDs, popData = FALSE) {
 
+  # splits the vector of rsIDs into sub-arrays of length 100, all sub-arrays are held in a list
   splitList <- maxVecLength(rsIDs, 100)
   holder <- as.list(vector(length = length(splitList)))
 
+  #the for() loops below are where the API is repeatedly called.
   if(popData){
 
     for(i in 1:length(splitList)){
       holder[[i]] <- get_ensVariants(splitList[[i]], population_data = TRUE)
-
-      #FIXING DATA FOR BINDING LATER ... not all synonyms or clin_sig come out as lists or chars
-      holder[[i]][[1]]$EnsVar_synonyms <- as.character(holder[[i]][[1]]$EnsVar_synonyms)
-      holder[[i]][[1]]$EnsVar_clinical_significance <- as.character(holder[[i]][[1]]$EnsVar_clinical_significance)
     }
-
-    #code block below is extracting the tables and population allele frequency lists into separate objects and flattening the results of the multiple calls before returning a list of both a masterTable and a popFreqList
-    varTableList <- as.list(vector(length = length(holder)))
-    populationList <- as.list(vector(length = length(holder)))
-    for(j in 1:length(holder)){
-      varTableList[[j]] <- holder[[j]][[1]]
-      populationList[[j]] <- holder[[j]][[2]]
-    }
-    varTable <- bind_rows(varTableList)
-    populationList <- purrr::flatten(populationList)
-    masterList <- list(varTable, populationList)
-
-    return(masterList)
-
+    return(holder)
 
   } else {
 
     for(i in 1:length(splitList)){
       holder[[i]] <- get_ensVariants(splitList[[i]])
-
-      #FIXING DATA FOR BINDING LATER ... not all synonyms or clin_sig come out as lists or chars
-      holder[[i]]$EnsVar_synonyms <- as.character(holder[[i]]$EnsVar_synonyms)
-      holder[[i]]$EnsVar_clinical_significance <- as.character(holder[[i]]$EnsVar_clinical_significance)
     }
 
-    varAnnotationTable <- bind_rows(holder)
-
-    return(varAnnotationTable)
+    return(holder)
   }
 }
+
+
 
 #' AncestralAllele_attr
 #'
@@ -198,13 +154,21 @@ AncestralAllele_attr <- function(masterTable, popFreqList){
 
   }else{
 
-    uniqMasterT <- masterTable[!duplicated(masterTable$EnsVar_name), ] #not sure if I am calling 'duplicated()' from data.table or not here... Need to import in the case this function is a failure point due to not importing data.table's version of 'duplicated()'
+    uniqMasterT <- masterTable[!duplicated(masterTable$EnsVar_name), ]
+
+    uniqMasterT <- uniqMasterT[!is.na(uniqMasterT$EnsVar_name), ] # Removing NA rows that may be introduced, they crash later functions by having "Ancestral_Allele" attributes which contain 2 entries. (the second entry always being `NA`) #not sure if this was why doubles were introduced now...
 
     for(variant in 1:length(popFreqList)){
+      # for this ancestral allele assignment, how are we sure we are getting the right allele when there are multiple mappings for a given rsID? ... Shouldn't we NOT use a unique master table and grab all ancestral alleles for a given variant in all its mappings and attach them to the ancestral allele attribute? (possibly with some meta data to point towards source of diff mappings ideally?)
       attr(popFreqList[[variant]], 'Ancestral_Allele') <-
         uniqMasterT[uniqMasterT$EnsVar_name == names(popFreqList[variant]), ]$EnsVar_ancestral_allele
 
-      attr(popFreqList[[variant]], 'VariantID') <- attr(popFreqList[variant], 'name')
+      #DEBUG CODE FOR TEMP USE: IF THIS WORKS ADD IT TO THE ABOVE ALT PATH FOR THIS FUNCTION AS WELL
+      if(length(attr(popFreqList[[variant]], 'Ancestral_Allele')) == 0){ #eliminating empty entries which cause issues in transformations.
+        attr(popFreqList[[variant]], 'Ancestral_Allele') <- NA
+      }
+
+      attr(popFreqList[[variant]], 'VariantID') <- attr(popFreqList[variant], 'name') #adding name attribute to each table as well for graphing titles
     }
     return(popFreqList)
   }
@@ -228,8 +192,11 @@ null2NA_ENSvariants <- function(rsOBJ){
   #converts NULL values to NA ...
   #NULL vals make many object manipulations (data transformations) impossible and thus must be culled
 
+    #using logical mask to grab any keys which have NULL values and then assigning them as NA instead
   rsOBJ[as.logical(lapply(rsOBJ, is.null))] <- NA
-  rsOBJ[["mappings"]][[1]][sapply(rsOBJ[["mappings"]][[1]], is.null)] <- NA
+
+    # logical masking to replace NULL values with NA within the "mappings" list which is within a given rsID list object
+  rsOBJ[["mappings"]][[1]][ sapply(rsOBJ[["mappings"]][[1]], is.null) ] <- NA
 
   return(rsOBJ)
 }
@@ -264,18 +231,27 @@ EnsVarList2row <- function(rsO_list){
     rsO_list$synonyms <- 'NONE'
   }
 
-  if (length(rsO_list$synonyms) > 1){ # converts many synonyms into a single string for convenient tabulation of data
+  if (length(rsO_list$synonyms) > 1 || length(rsO_list$clinical_significance) > 1){ # converts many synonyms into a single string for convenient tabulation of data
 
-    list_noSyn <-rsO_list[-which(names(rsO_list)=='synonyms')]
+    # CRITICAL: removing all elements which can be nested lists in the data set such that as_tibble() creates a single row.
+    list_noSyn <- rsO_list[-which(names(rsO_list) %in% c("synonyms", "evidence", "mappings", "clinical_significance"))]
+
     rsTib <- as_tibble(list_noSyn)
-    cleanedTBL <- select(rsTib, -c(evidence, mappings))
+
     # cleaning disorderly cols before rebinding into a tibble,
     # in this case synonyms list is also condensed into a single string just like evidence
     evidence <- rsO_list %>% pluck('evidence') %>% as.character() %>% str_flatten(collapse = "|")
     synonyms <- rsO_list %>% pluck('synonyms') %>% as.character() %>% str_flatten(collapse = "|")
+
     mappings <- as.data.frame(rsO_list$mappings)
 
-    return(as_tibble(cbind(evidence, synonyms, cleanedTBL[1,], mappings)))
+    if(length(rsO_list$clinical_significance) > 1){
+      clinical_significance <- rsO_list %>% pluck('clinical_significance') %>% as.character() %>% str_flatten(collapse = "|")
+    return(as_tibble(cbind(evidence, synonyms, rsTib[1,], mappings, clinical_significance)))
+    }
+
+    clinical_significance <- as.character(rsO_list$clinical_significance)
+    return(as_tibble(cbind(evidence, synonyms, rsTib[1,], mappings, clinical_significance)))
 
   } else {
 

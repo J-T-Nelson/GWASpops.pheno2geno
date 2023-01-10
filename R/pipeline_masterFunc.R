@@ -22,8 +22,9 @@
 #' @param fileFolderPath directory path where one or more GWAS tables are stored.
 #' @param varAnnotations TRUE by default. When TRUE Ensembl Variation API endpoint is called to retrieve genetic variant data
 #' @param population_data FALSE by default. When TRUE population allele frequency data will be retrieved in addition to basic variant data from variation endpoint
+#' @param processData TRUE by defualt. When TRUE data returned will be a list of flat tables. When FALSE data returned will be nested lists which are derived from the JSON objects returned by calling the REST API with `get_ensVariants()`.
 #'
-#' @returns A list or data.frame
+#' @returns A list of data.frames OR a nested list of lists (depending on param: processData).
 #'
 #' * When varAnnotations & population_data are FALSE a data.frame is returned.
 #' * When either or both arguments are TRUE instead, a list containing different data tables will be returned.
@@ -37,32 +38,48 @@
 #' # The call above will take some time and thus serves best as an example
 #' # of how to use the function.
 #'
+#' @importFrom data.table merge.data.table
+#'
 #' @export
 createMT <- function(fileFolderPath,
                      varAnnotations = TRUE,
-                     population_data = FALSE){
+                     population_data = FALSE,
+                     processData = TRUE){
 
   #importing GWAS data and smashing into single data.frame
-  GWAS_DF_list <- importGWAS_DataTables(fileFolderPath)
-  GWAS_DF <- list2table_associations_studies(GWAS_DF_list)
+  GWAS_DF_list <- GWASpops.pheno2geno:::importGWAS_DataTables(fileFolderPath)
+  GWAS_DF <- GWASpops.pheno2geno:::list2table_associations_studies(GWAS_DF_list)
+  uniqueVariantIDs <- unique(GWAS_DF$VariantID) #calling API with repeated IDs is a waste of time as it will be returning the same data multiple times.
 
   if(!varAnnotations && population_data){ #simplifying user experience by not allowing invalid input and informing them about invalid input.
     warning("varAnnotations must be True to retrieve population data\nSetting varAnnotations to TRUE and proceeding to retreive data.")
     varAnnotations = TRUE
   }
 
+  # allows createMT to grab untransformed data from Ensembl API (which are just lists)
+  if(!processData){
+    if(varAnnotations && population_data){
+      raw_data <- get_ensVariants(uniqueVariantIDs, population_data = TRUE)
+
+    } else {
+      if(varAnnotations){
+        raw_data <- get_ensVariants(uniqueVariantIDs)
+
+      } else {
+        return(GWAS_DF)
+      }
+    }
+    MTandRawData <- list(GWAS_DF, raw_data)
+    return(MTandRawData)
+  }
+
+
   # calling Ensembl API for both variant and population allele frequency data
   if(varAnnotations && population_data){
-    var_pop_list <- get_ensVariants(GWAS_DF$VariantID, population_data = TRUE)
-    masterTable <- merge(GWAS_DF, var_pop_list[[1]], by.x = 'VariantID', by.y = 'EnsVar_name')
-
-    # Transforming data for single population based data tables
-    singlePop_alleleFreqDTs <- lapply(Populations$Population_Abbreviation,
-                                       function(x) singlePopTransform(var_pop_list[[2]], targetPopulation = x))
-    names(singlePop_alleleFreqDTs) <- Populations$Population_Abbreviation
-
-    masterList <- list(masterTable, var_pop_list[[2]], singlePop_alleleFreqDTs)
-    names(masterList) <- c('masterTable', 'PopAlleleFreqData', 'singlePop_alleleFreqDTs')
+    varPop_dataLists <- get_ensVariants(uniqueVariantIDs, population_data = TRUE)
+    cat('API calling complete. Data Transformation beginning.\n')
+    allData <- list(GWAS_DF, varPop_dataLists)
+    masterList <- ensListTransform(allData, popsData = T)
 
     return(masterList)
   }
@@ -71,15 +88,16 @@ createMT <- function(fileFolderPath,
   if(varAnnotations){
 
     #create variant-annotation table and merge into master table
-    variant_Anno_Table <- get_ensVariants(GWAS_DF$VariantID)
-    masterTable <- merge(GWAS_DF, variant_Anno_Table, by.x = 'VariantID', by.y = 'EnsVar_name')
+    variant_dataLists <- get_ensVariants(uniqueVariantIDs)
+    cat('API calling complete. Data Transformation begining.')
+    allData <- list(GWAS_DF, variant_dataLists)
+    masterTable <- ensListTransform(allData, popsData = F)
 
-  } else{
-      masterTable <- GWAS_DF #if annotation isn't desired, the master table IS the GWAS data.frame
+  } else {
+    masterTable <- GWAS_DF # if variant annotation isn't desired, the master table IS the GWAS data.frame
   }
 
   return(masterTable)
-
 }
 
 

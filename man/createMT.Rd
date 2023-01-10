@@ -4,7 +4,12 @@
 \alias{createMT}
 \title{createMT}
 \usage{
-createMT(fileFolderPath, varAnnotations = TRUE, population_data = FALSE)
+createMT(
+  fileFolderPath,
+  varAnnotations = TRUE,
+  population_data = FALSE,
+  processData = TRUE
+)
 }
 \arguments{
 \item{fileFolderPath}{directory path where one or more GWAS tables are stored.}
@@ -12,9 +17,11 @@ createMT(fileFolderPath, varAnnotations = TRUE, population_data = FALSE)
 \item{varAnnotations}{TRUE by default. When TRUE Ensembl Variation API endpoint is called to retrieve genetic variant data}
 
 \item{population_data}{FALSE by default. When TRUE population allele frequency data will be retrieved in addition to basic variant data from variation endpoint}
+
+\item{processData}{TRUE by defualt. When TRUE data returned will be a list of flat tables. When FALSE data returned will be nested lists which are derived from the JSON objects returned by calling the REST API with \code{get_ensVariants()}.}
 }
 \value{
-A list or data.frame
+A list of data.frames OR a nested list of lists (depending on param: processData).
 \itemize{
 \item When varAnnotations & population_data are FALSE a data.frame is returned.
 \item When either or both arguments are TRUE instead, a list containing different data tables will be returned.
