@@ -530,8 +530,8 @@ dbugTransformOPT <- function(dataList, popsData = F ) {
 #' NA
 #'
 #'
-#' @export
-ensListTransform <- function(dataList, popsData = F) {
+#' @noRd
+ensListTransform_ORIGINAL <- function(dataList, popsData = F) {
   # dataList is a list with 2 elements, dataList[[1]] = GWAS data table ; dataList[[2]] = Ensembl API data in R list form
 
   CONT <- purrr::flatten(dataList[[2]]) #removing nested structure such that all sublists are combined into one list within dataList[[2]]

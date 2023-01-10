@@ -36,7 +36,7 @@ graph_varPopFrequencies(
 
 \item{sqrtYscale}{When TRUE, very small frequency values are made visible by elongating the lower range of the y-axis. sqrtYscale option will over-ride the 'yUpperLim' option}
 
-\item{yUpperLim}{sets the y-axis to a custom value, by default graphing function ggplot() automatically determines the y-axis limit.}
+\item{yUpperLim}{sets the y-axis to a custom value, by default the graphing function ggplot() automatically determines the y-axis limit within this function call.}
 }
 \value{
 ggplot2 graph object

@@ -1246,6 +1246,92 @@ substanceAbuseAlldata <- createMTfinal(GWASdataSets[10], population_data = T)
 
 
 
+# 1-7-23 Saving data for graphing -----------------------------------------
+
+save(AirPollutionVars, file = 'data/transformed_data_for_graphing/airPollution.rds')
+save(AirPollutionAlldata, file = 'data/transformed_data_for_graphing/airPollutionPops.rds')
+
+save(alcConsumpVars , file = 'data/transformed_data_for_graphing/alcConsump.rds')
+save(alcConsumpAlldata  , file = 'data/transformed_data_for_graphing/alcConsumpPops.rds')
+
+save(bCarcinomaVars , file = 'data/transformed_data_for_graphing/bCarcinoma.rds')
+save(bCarcinomaAlldata  , file = 'data/transformed_data_for_graphing/bCarcinomaPops.rds') # an error arose while this was executing.. saving anyway...
+
+save(colorectalCancerVars , file = 'data/transformed_data_for_graphing/colorectalCancer.rds')
+save(colorectalCancerAlldata  , file = 'data/transformed_data_for_graphing/colorectalCancerPops.rds')
+
+save(IBFVars , file = 'data/transformed_data_for_graphing/IBF.rds')
+save(IBFAlldata  , file = 'data/transformed_data_for_graphing/IBFPops.rds')
+
+save(IntVars , file = 'data/transformed_data_for_graphing/Int.rds') # START BACK HERE
+save(IntAlldata  , file = 'data/transformed_data_for_graphing/IntPops.rds')
+
+save(lungCancerVars , file = 'data/transformed_data_for_graphing/lungCancer.rds')
+save(lungCancerAlldata  , file = 'data/transformed_data_for_graphing/lungCancerPops.rds')
+
+save(malabsorptionSyndVars , file = 'data/transformed_data_for_graphing/malabsorptionSynd.rds')
+save(malabsorptionSyndAlldata  , file = 'data/transformed_data_for_graphing/malabsorptionSyndPops.rds')
+
+save(neuroticismVars , file = 'data/transformed_data_for_graphing/neuroticism.rds')
+save(neuroticismAlldata  , file = 'data/transformed_data_for_graphing/neuroticismPops.rds')
+
+save(prostateCancerVars , file = 'data/transformed_data_for_graphing/prostateCancer.rds')
+save(prostateCancerAlldata  , file = 'data/transformed_data_for_graphing/prostateCancerPops.rds')
+
+save(substanceAbuseVars , file = 'data/transformed_data_for_graphing/substanceAbuse.rds')
+save(substanceAbuseAlldata, file = 'data/transformed_data_for_graphing/substanceAbusePops.rds')
+
+
+
+
+
+# NOVEL ERROR from API call? on "bCarcinomaVars <- createMTfinal(GWASdataSets[2])"
+# Error in curl::curl_fetch_memory(url, handle = handle) :
+# Operation was aborted by an application callback
+# 9.
+# curl::curl_fetch_memory(url, handle = handle)
+# 8.
+# request_fetch.write_memory(req$output, req$url, handle)
+# 7.
+# request_fetch(req$output, req$url, handle)
+# 6.
+# request_perform(req, hu$handle$handle)
+# 5.
+# POST(baseURL, content_type("application/json"), accept("application/json"),
+#      body = rsID_Array) at Debugging_APIcall_functions.R#743
+# 4.
+# get_ensVariantsFinal(splitList[[i]]) at Debugging_APIcall_functions.R#841
+# 3.
+# GWASpops.pheno2geno:::multiAPIcall_variantsFinal(rsIDs) at Debugging_APIcall_functions.R#730
+# 2.
+# get_ensVariantsFinal(uniqueVariantIDs) at Debugging_APIcall_functions.R#685
+# 1.
+# createMTfinal(GWASdataSets[2])
+
+# IMPORTANT NOTE ^^^^^ this error didn't replicate upon a second run of the call... therefore there really is potential for the underlying functions I have built upon to be points of failure on an inconsistent basis, and that should be documented for users
+
+# 2nd novel error from API calling:
+# Error in get(helpTopicsName, envir = .rs.toolsEnv()) :
+# object '.completions.helpTopics' not found
+# In addition: Warning message:
+#   Expected 2 pieces. Additional pieces discarded in 14 rows [65, 120, 121, 122, 123, 125, 126, 127, 128, 129, 130, 131, 132, 1945].
+
+
+
+
+
+# NOVEL UNEXPECTED WARNINGS:  ---------------------------------------------
+
+# CALL: colorectalCancerVars <- createMTfinal(GWASdataSets[3])
+# Warning message:
+# Expected 2 pieces. Additional pieces discarded in 18 rows [203, 675, 676, 690, 691, 692, 693, 694, 695, 696, 925, 926, 927, 928, 929, 930, 954, 955].
+
+
+# CALL: colorectalCancerAlldata <- createMTfinal(GWASdataSets[3], population_data = T)
+# Warning messages:
+# 1: Expected 2 pieces. Additional pieces discarded in 18 rows [203, 675, 676, 690, 691, 692, 693, 694, 695, 696, 925, 926, 927, 928, 929, 930, 954, 955].
+# 2: In doTryCatch(return(expr), name, parentenv, handler) :
+#   restarting interrupted promise evaluation
 
 
 
@@ -1255,13 +1341,21 @@ substanceAbuseAlldata <- createMTfinal(GWASdataSets[10], population_data = T)
 
 
 
+# FINAL INTEGRATION -------------------------------------------------------
+
+# need to check that integration is successful. Ideally we would once again run through every data set, however I will settle for just a hand full.. as the very exact same code SHOULD exist between the current '*final()' funcs and thus we just need to put things where they go, rebuild the package and verify a few quick test cases.
 
 
 
 
 
+AirPollutionVars <- createMT('exampleData/air_pollution')
+AirPollutionAlldata <- createMT('exampleData/air_pollution', population_data = T)
 
+alcConsumpVars <- createMT(GWASdataSets[1])
+alcConsumpAlldata <- createMT(GWASdataSets[1], population_data = T)
 
-
+bCarcinomaVars <- createMT(GWASdataSets[2])
+bCarcinomaAlldata <- createMT(GWASdataSets[2], population_data = T)
 
 

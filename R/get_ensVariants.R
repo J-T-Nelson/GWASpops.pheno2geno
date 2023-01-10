@@ -6,20 +6,20 @@
 
 #' get_ensVariants
 #'
-#' @description grabs ensVariants from API and converts to tabular form. Optionally grabs population data as well.
+#' @description grabs variant annotations from Ensembl API and converts to tabular form. Optionally grabs population data as well.
 #'
-#' @details Primary method to grab variant data from Ensembl REST API in the pipeline.
+#' @details function for grabbing variant data from Ensembl REST API.
 #'
 #' Use this function if you're interested in grabbing data on specific variants from Ensembl's Variants endpoint.
 #'
-#' Calls the variants POST endpoint, build into the function are several layers of processing which both ensure arbitrarily large calls are executed successfully, as well as that data returned is in a set of tabular semi-flat formatted objects.
+#' Calls the variants POST endpoint, built into the function is the ability to handle arbitrarily large calls (i.e. as many rsIDs(variant IDs) as one wishes to use), however, the API is realtively slow to serve data, and thus large requests may take some time to execute.
 #'
 #' Requesting population data will substantially increase the time this function takes to complete due to the increase in data being transferred.
 #'
 #' @param rsIDs vector of rsIDs (variant IDs of the rs00000000 form)
 #' @param population_data when TRUE, activates the option to grab population data for each variant in the request as well.
 #'
-#' @return list of data.frame(s) / data.table(s)
+#' @return list of sublists of list-form rsID (variantID) objects. (Nested lists of variant data)
 #'
 #' @examples
 #' variantData <- get_ensVariants(c("rs11137048","rs6866110", "rs62227671", "rs6122625", "rs57504074"), population_data = TRUE)
@@ -32,25 +32,24 @@
 #' @importFrom httr content
 #' @importFrom dplyr bind_rows
 #'
-#' @export
+#' @noRd
 get_ensVariants <- function(rsIDs, population_data = FALSE){
   #Returns a table of variant annotations from Ensembl POST variants API endpoint.
   #If population_data is TRUE and thus requested, a list is instead returned
   # due to incompatible data formats. The list contains the variant annotation table as well as a
   # list of the population data tables. There is 1 population table per rsID entered.
-
-  if(ensemblPing() == 0){ # check if service is up
-    cat("terminating function early, ping unsuccessful\n")
-    return(NULL)
+  cat("Pinging from get_ensVaraiants():  ")
+  if(GWASpops.pheno2geno:::ensemblPing() == 0){ # check if service is up
+    stop("terminating function early, ping unsuccessful\n")
   }
 
   if(length(rsIDs) > 101){
     # multiAPIcall_variants() splits up large rsID lists and returns the expected objects, as the API only tolerates calls of ~150 rsIDs despite their documentation specifying 1000 per POST call
 
     if(population_data){
-      masterCONT <- multiAPIcall_variants(rsIDs, popData = TRUE)
+      masterCONT <- GWASpops.pheno2geno:::multiAPIcall_variants(rsIDs, popData = TRUE)
     } else{
-      masterCONT <- multiAPIcall_variants(rsIDs)
+      masterCONT <- GWASpops.pheno2geno:::multiAPIcall_variants(rsIDs)
     }
     return(masterCONT)
   }
@@ -73,32 +72,7 @@ get_ensVariants <- function(rsIDs, population_data = FALSE){
 
   CONT <- content(response)
 
-  if(population_data){
-    # grabbing population data and converting into a list of tibbles.
-    popData <- sapply(CONT, function(x) x$populations)
-    popData <- lapply(popData, function(x) bind_rows(x))
-
-    CONT <- lapply(CONT, function(x) x[names(x) != 'populations'])
-    # ^^ removes populations from the response content so further operations proceed properly.
-  }
-
-  CONT_noMultiMapping <- fixMultiMapping(CONT)
-
-  CONT_noNULL <- lapply(CONT_noMultiMapping, null2NA_ENSvariants)
-
-  CONT_Table <- rsTable(CONT_noNULL)
-
-  #renaming cols so their source is evident in the master table.
-  names(CONT_Table) <- paste0('EnsVar_',names(CONT_Table))
-
-  if(population_data){
-    # setting ancestral allele atrribute on population frequency data.
-    popData <- AncestralAllele_attr(CONT_Table, popData)
-    masterList <- list(CONT_Table, popData)
-    return(masterList)
-  }
-
-  return(CONT_Table)
+  return(CONT)
 }
 
 
@@ -108,16 +82,16 @@ get_ensVariants <- function(rsIDs, population_data = FALSE){
 
 #' multiAPIcall_variants
 #'
-#' A helper func to get_ensVariants() which allows larger numbers of rsIDs to be used successfully in calling get_ensVariants()
+#' A helper func to `get_ensVariants()` which allows larger numbers of rsIDs to be used successfully in calling `get_ensVariants()`
 #'
-#' Ensembl API cannot tolerate calls with > ~140 rsID (variant IDs), which is much less than they specify in documentation. Thus this function exists purely to automate the process of making multiple get_ensVariants() calls within a single call of the get_ensVariants().
+#' Ensembl API cannot tolerate calls with > ~140 rsID (variant IDs), which is much less than they specify in documentation. Thus this function exists purely to automate the process of making multiple `get_ensVariants()` calls within a single call of the `get_ensVariants()`.
 #'
 #' @param rsIDs vector containing variant ids as strings in the form 'rs000000000'
-#' @param popData boolean value which inherits from the get_ensVariants() func calling this helper func. Changes behavior to account for extra data retrieved when popData is true.
+#' @param popData boolean value which inherits from the `get_ensVariants()` func calling this helper func. Changes behavior to account for extra data retrieved when popData is true.
 #'
 #' @example masterCONT <- multiAPIcall_variants(rsIDs, popData = TRUE)
 #'
-#' @return list of data.frame(s) / data.table(s); since this function calls get_ensVariants() it returns the exact same object types.
+#' @return list sublists each sublist containnig 100 or less rsID variant annotation lists which are later converted to rows of a table; since this function calls `get_ensVariants()` it returns the exact same object types.
 #'
 #' @importFrom dplyr bind_rows
 #' @importFrom purrr flatten
@@ -125,48 +99,29 @@ get_ensVariants <- function(rsIDs, population_data = FALSE){
 #' @noRd
 multiAPIcall_variants <- function(rsIDs, popData = FALSE) {
 
+  # splits the vector of rsIDs into sub-arrays of length 100, all sub-arrays are held in a list
   splitList <- maxVecLength(rsIDs, 100)
   holder <- as.list(vector(length = length(splitList)))
 
+  #the for() loops below are where the API is repeatedly called.
   if(popData){
 
     for(i in 1:length(splitList)){
       holder[[i]] <- get_ensVariants(splitList[[i]], population_data = TRUE)
-
-      #FIXING DATA FOR BINDING LATER ... not all synonyms or clin_sig come out as lists or chars
-      holder[[i]][[1]]$EnsVar_synonyms <- as.character(holder[[i]][[1]]$EnsVar_synonyms)
-      holder[[i]][[1]]$EnsVar_clinical_significance <- as.character(holder[[i]][[1]]$EnsVar_clinical_significance)
     }
-
-    #code block below is extracting the tables and population allele frequency lists into separate objects and flattening the results of the multiple calls before returning a list of both a masterTable and a popFreqList
-    varTableList <- as.list(vector(length = length(holder)))
-    populationList <- as.list(vector(length = length(holder)))
-    for(j in 1:length(holder)){
-      varTableList[[j]] <- holder[[j]][[1]]
-      populationList[[j]] <- holder[[j]][[2]]
-    }
-    varTable <- bind_rows(varTableList)
-    populationList <- purrr::flatten(populationList)
-    masterList <- list(varTable, populationList)
-
-    return(masterList)
-
+    return(holder)
 
   } else {
 
     for(i in 1:length(splitList)){
       holder[[i]] <- get_ensVariants(splitList[[i]])
-
-      #FIXING DATA FOR BINDING LATER ... not all synonyms or clin_sig come out as lists or chars
-      holder[[i]]$EnsVar_synonyms <- as.character(holder[[i]]$EnsVar_synonyms)
-      holder[[i]]$EnsVar_clinical_significance <- as.character(holder[[i]]$EnsVar_clinical_significance)
     }
 
-    varAnnotationTable <- bind_rows(holder)
-
-    return(varAnnotationTable)
+    return(holder)
   }
 }
+
+
 
 #' AncestralAllele_attr
 #'

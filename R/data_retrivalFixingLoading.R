@@ -1,6 +1,6 @@
 # AUTHOR: Jon Tanner Nelson
 # LAST UPDATED: 9-28-2022
-# CONTENTS: write_csv_listOf_DFs(), consequential_mTable(),
+# CONTENTS: write_csv_listOf_DFs(), consequential_mTable(), ensListTransform()
 # PURPOSE: Data retrieval and fixing functions which support the manipulation of GWAS catalog and Ensembl data.
 
 
@@ -128,6 +128,107 @@ consequential_mTable <- function(mTable) {
 # -------------------------------------------------------------------------
 
 
+
+#' ensListTransform
+#'
+#' @description Transforms list-form data which is produced by `get_ensVariants()` and `createMT(processData = FALSE)` into flat a list of flat tables which can then be used for graphing or viewing data in tabular form.
+#'
+#' @details
+#'
+#'
+#' @param dataList Data to be transformed. Must be in list format such that a GWAS data table is the first element and the respective data produced from calling Ensembl's REST API Variants endpoint with get_ensVariants() is the second element within the list. Position in the list is critical to successful execution of this function
+#' @param popsData populations data transformation option. when TRUE function runs assuming variants from Ensembl REST API have been called with populations option activated, resulting output is different due to this extra population data.
+#'
+#' @return data.frame or list of data.frames
+#'
+#' @examples NA
+#'
+#' @export
+ensListTransform <- function(dataList, popsData = F) {
+  # dataList is a list with 2 elements, dataList[[1]] = GWAS data table ; dataList[[2]] = Ensembl API data in R list form
+
+  CONT <- purrr::flatten(dataList[[2]]) #removing nested structure such that all sublists are combined into one list within dataList[[2]]
+  CONT <- purrr::compact(CONT) # removing empty elements introduced by:
+  ## multiAPIcall_variants2 (?)... I think its one of the for loops that are fixing these data elements: EnsVar_synonyms and EnsVar_Clinical_significance.
+
+  GWAS_DF <- dataList[[1]] #storing GWAS data from GWAS files for later.. (similar to createMT())
+
+  if(popsData){
+    # grabbing population data and converting into a list of tibbles.
+    popData <- sapply(CONT, function(x) x$populations) #OPTIMIZATION: this may be more efficient with masking.. not sure though
+    popData <- lapply(popData, function(x) bind_rows(x)) # OPTIMIZATION: check if this can run without the anonymous function in lapply() .. I imagine its increasing operations for this call.
+
+    # removes populations from the response content so further operations proceed properly.
+    CONT <- lapply(CONT, function(x) x[names(x) != 'populations']) # OPTIMIZATION: Check for function which removes and returns elements from lists... as this call may removed if the original popData <- sapply() call removed and returned
+  }
+
+  # removing multimapping by flattening the lists out. (some rsIDs posses multiple mappings against the reference genome(?) or against different data within Ensembl's API databases(?) )
+  CONT <- GWASpops.pheno2geno:::fixMultiMapping(CONT)
+  CONT <- CONT[!sapply(CONT, is.null)] # this is a quick and dirty solution to the fact that fixMultiMapping() is producing null list entries at the end of its list output. I don't know why this is happening. OPTIMIZATION: DEBUG THE ISSUE MENTIONED IN THIS LINE FOR fixMultiMapping()  .... OPTIMIZATION 2: look to the comment below about $failed mappings being introduced occassionally, check for them within fixMultiMapping if possible and remove the need for additional code out here.
+
+  # infrequently a `$failed` key:value pair is being introduced into lists after flattening out mappings, this indicates that a mapping doesn't map to the reference genome in Ensembl's data base, thus we are removing such entries.
+  hasFailed <- sapply(CONT, \(x) rlang::has_name(x, "failed")) # MAKES Boolean mask
+  CONT <- CONT[!hasFailed] # USES Boolean mask to filter out entries with `failed` key:value pairs
+
+  CONT <- lapply(CONT, GWASpops.pheno2geno:::null2NA_ENSvariants)
+
+  CONT_Table <- GWASpops.pheno2geno:::rsTable(CONT) #CONT_Table at this point is just EnsVariants. No GWAS data or Pop data.
+
+  #renaming cols so their source is evident in the master table.
+  names(CONT_Table) <- paste0('EnsVar_',names(CONT_Table))
+
+  if(popsData){
+    # setting ancestral allele attribute on population frequency data.
+    popData <- GWASpops.pheno2geno:::AncestralAllele_attr(CONT_Table, popData)
+    masterList <- list(CONT_Table, popData)
+
+    # Merging Ensembl variant and GWAS data tables
+    masterTable <- tryCatch(
+      expr = {
+        masterTable <- data.table:::merge.data.table(GWAS_DF, CONT_Table, by.x = 'VariantID', by.y = 'EnsVar_name')
+      },
+
+      error = function(e){ # in the case of too many duplicate rows causing the merge to
+        # fail initially this option will allow for the merge to proceed.
+        masterTable <- data.table:::merge.data.table(GWAS_DF, CONT_Table, by.x = 'VariantID', by.y = 'EnsVar_name', allow.cartesian = T);
+        message("merge.data.table performed with `allow.cartesian = TRUE`, therefore many extra rows may be produced. Duplicated rows have been removed");
+        masterTable$EnsVar_synonyms <- as.character(masterTable$EnsVar_synonyms);
+        masterTable <- masterTable[!duplicated(masterTable)]; #removing many duplicated rows created.
+        return(masterTable)
+      }
+    )
+    # Transforming data for single population based data tables
+    singlePop_alleleFreqDTs <- lapply(Populations$Population_Abbreviation,
+                                      function(x) GWASpops.pheno2geno:::singlePopTransform(masterList[[2]], targetPopulation = x))
+
+    # Populations is a data object that comes with the package. (see ?Populations for more information or inspect the object itself.)
+    names(singlePop_alleleFreqDTs) <- Populations$Population_Abbreviation
+
+    masterListFinal <- list(masterTable, masterList[[2]], singlePop_alleleFreqDTs)
+    names(masterListFinal) <- c('masterTable', 'PopAlleleFreqData', 'singlePop_alleleFreqDTs')
+
+    return(masterListFinal) ######## END for pops
+  }
+
+  #------------- only variant data ------------------------
+
+  # Merging Ensembl variant and GWAS data tables
+  masterTable <- tryCatch(
+    expr = {
+      masterTable <- data.table:::merge.data.table(GWAS_DF, CONT_Table, by.x = 'VariantID', by.y = 'EnsVar_name')
+    },
+
+    error = function(e){ # in the case of too many duplicate rows causing the merge to
+      # fail initially this option will allow for the merge to proceed.
+      masterTable <- data.table:::merge.data.table(GWAS_DF, CONT_Table, by.x = 'VariantID', by.y = 'EnsVar_name', allow.cartesian = T);
+      message("merge.data.table performed with `allow.cartesian = TRUE`, therefore many extra rows may be produced. Duplicated rows have been removed");
+      masterTable$EnsVar_synonyms <- as.character(masterTable$EnsVar_synonyms);
+      masterTable <- masterTable[!duplicated(masterTable)]; #removing many duplicated rows created.
+      return(masterTable)
+    }
+  )
+  return(masterTable) ######### END for vars
+}
 
 
 
