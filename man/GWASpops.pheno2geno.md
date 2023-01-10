@@ -1,27 +1,32 @@
 GWASpops.pheno2geno
 ================
 
--   <a href="#usage-overview" id="toc-usage-overview">Usage Overview:</a>
--   <a href="#browing-gwas-catalog-for-a-trait-of-interest"
-    id="toc-browing-gwas-catalog-for-a-trait-of-interest">Browing GWAS
-    Catalog for a Trait of Interest:</a>
--   <a href="#grabbing-data-from-ensembl"
-    id="toc-grabbing-data-from-ensembl">Grabbing Data from Ensembl:</a>
--   <a href="#using-the-aggregated-data"
-    id="toc-using-the-aggregated-data">Using The Aggregated Data:</a>
-    -   <a href="#graph_varpopfrequencies-demo"
-        id="toc-graph_varpopfrequencies-demo">graph_varPopFrequencies()
-        Demo:</a>
-    -   <a href="#graph_singlepopallelefreq-demo"
-        id="toc-graph_singlepopallelefreq-demo">graph_singlePopAlleleFreq()
-        Demo:</a>
-    -   <a href="#writing-tables-to-csvs"
-        id="toc-writing-tables-to-csvs">Writing Tables to CSVs</a>
--   <a href="#this-packages-premade-data-objects"
-    id="toc-this-packages-premade-data-objects">This Packages Premade Data
-    Objects</a>
+- <a href="#usage-overview" id="toc-usage-overview">Usage Overview</a>
+- <a href="#browing-gwas-catalog-for-a-trait-of-interest"
+  id="toc-browing-gwas-catalog-for-a-trait-of-interest">Browing GWAS
+  Catalog for a Trait of Interest</a>
+- <a href="#grabbing-data-from-ensembl"
+  id="toc-grabbing-data-from-ensembl">Grabbing Data from Ensembl</a>
+- <a href="#using-the-aggregated-data"
+  id="toc-using-the-aggregated-data">Using The Aggregated Data:</a>
+  - <a href="#graph_varpopfrequencies-demo"
+    id="toc-graph_varpopfrequencies-demo">graph_varPopFrequencies()
+    Demo:</a>
+  - <a href="#graph_singlepopallelefreq-demo"
+    id="toc-graph_singlepopallelefreq-demo">graph_singlePopAlleleFreq()
+    Demo:</a>
+  - <a href="#writing-tables-to-csvs"
+    id="toc-writing-tables-to-csvs">Writing Tables to CSVs</a>
+- <a href="#premade-data-objects" id="toc-premade-data-objects">Premade
+  Data Objects</a>
+- <a href="#known-errors-warnings-and-limitations"
+  id="toc-known-errors-warnings-and-limitations">Known Errors, Warnings
+  and Limitations</a>
+  - <a href="#errors" id="toc-errors">Errors:</a>
+  - <a href="#warnings" id="toc-warnings">Warnings:</a>
+  - <a href="#limitations" id="toc-limitations">Limitations</a>
 
-## Usage Overview:
+## Usage Overview
 
 Using this package begins with:
 
@@ -39,7 +44,7 @@ flat file storage.
 GWASpops.pheno2geno package. The document is meant to be terse yet
 digestible for an efficient introduction to the packages capabilities*
 
-## Browing GWAS Catalog for a Trait of Interest:
+## Browing GWAS Catalog for a Trait of Interest
 
 This package is going to assume that you have some trait of interest
 which has been researched in GWA studies and thus can be found on the
@@ -73,7 +78,7 @@ for the** `createMT()` **call to function properly**.
 After downloading the tables for a trait of interest from the GWAS
 catalog you are ready to move into R and begin use of the package.
 
-## Grabbing Data from Ensembl:
+## Grabbing Data from Ensembl
 
 This step assumes you already have the package downloaded and installed,
 if you do not, then go over to the
@@ -162,7 +167,7 @@ functions.
 **Importantly** I will not go into extensive detail about the optional
 arguments which can be used to create a variety of different graphs in
 this tutorial, as \*users can simply type `?graph_singlePopAlleleFreq`
-into an R console to bring up manual pages within R studio, where
+into the R console to bring up manual pages within R studio, where
 details on each function are fully documented.
 
 *Users familiar with R and its plotting capabilities may prefer to
@@ -175,17 +180,16 @@ expedite the process of visual data exploration.*
 ``` r
 library(GWASpops.pheno2geno)
 masterList <- testMasterList
-interestingSNP <- masterList[[2]][[10]] #picking a random SNP 
+interestingSNP <- masterList[[2]][[10]] #picking a SNP which I am interested in
 
 
 # Graph 1:
 graph_varPopFrequencies(interestingSNP)
 
 # Graph 2:
-
 graph_varPopFrequencies(interestingSNP, ascending = T , yUpperLim = .25)
 
-interestingSNP2 <- masterList[[2]][[23]] 
+interestingSNP2 <- masterList[[2]][[23]] #picking a different SNP of interest
 
 # Graph 3:
 graph_varPopFrequencies(interestingSNP2, ascending = T , yUpperLim = .25, graph_style = 'point')
@@ -212,10 +216,10 @@ all1Kgenomes <- masterList[[3]][[1]]
 graph_singlePopAlleleFreq(masterList[[1]], all1Kgenomes)
 
 # Graph 5: 
-graph_singlePopAlleleFreq(masterList[[1]], All1kGenomes, numVariants = 10, graph_style = 'bar', orderless = T)
+graph_singlePopAlleleFreq(masterList[[1]], all1kGenomes, numVariants = 10, graph_style = 'bar', orderless = T)
 
 # Graph 6: 
-graph_singlePopAlleleFreq(masterList[[1]], All1kGenomes, facet_graph = T, pValAsSize = T, orderless = T)
+graph_singlePopAlleleFreq(masterList[[1]], all1kGenomes, facet_graph = T, pValAsSize = T, orderless = T)
 ```
 
 **Graph 4** <img src='Tutorial_images/7.PNG'/>
@@ -223,27 +227,25 @@ graph_singlePopAlleleFreq(masterList[[1]], All1kGenomes, facet_graph = T, pValAs
 **Graph 5** <img src='Tutorial_images/8.PNG'/>
 
 **Graph 6** <img src='Tutorial_images/9.PNG'/> *This last graph may be
-difficult to see, though I simply wanted to show some of variance in
-graphs which can be produced by this function, as different options
-allow the user to learn about otherwise hidden aspects of their data
-visually.*
+difficult to see, though I wanted to show some of variance in graphs
+which can be produced by this function, as different options allow the
+user to learn about otherwise hidden aspects of their data visually.*
 
 ### Writing Tables to CSVs
 
 While the action of writing tables to CSVs in R is trivial for
-experienced users, I figured a simple function to help newer users would
-be appreciated in the case an individual wasn’t interested in learning
-more R than they needed to for a given task which required its use.
+experienced users, I created a simple function to help newer users with
+this task.
 
 Here is a quick example of how to use `write_csv_listOf_DFs()`. I am
-using dummy data which is built in to R to demonstrate this function, as
-any list of tables is a suitable subject for `write_csv_listOf_DFs()`.
+using dummy data which is built into R to demonstrate this function, as
+any list of tables is a suitable object for `write_csv_listOf_DFs()`.
 
 ``` r
 # attaching GWASpops.pheno2geno 
 library(GWASpops.pheno2geno)
 
-# Creating List of data.frames
+# Creating list of data.frames, `trees` is a data set which is automatically built into most R downloads. 
 A <- trees 
 dummyList <- list()
 for(i in 1:10){
@@ -251,8 +253,10 @@ for(i in 1:10){
 }
 
 #setting valid names for the tables in the list, these names can easily be set to numbers as well, 
-#however having no name at OR having invalid characters within the names can cause the function to fail. 
+#however having no name at all OR, having invalid characters within the names can cause the function to fail. 
 names(dummyList) <- LETTERS[1:10]
+
+#writing our data frames to a specified location. One CSV is produced per table within 'dummyList'
 write_csv_listOf_DFs(dummyList, destinationFolder = './dummy')
 ```
 
@@ -262,7 +266,7 @@ get flat file versions of the data tables created by this package.
 
 <img src='Tutorial_images/6.PNG'/>
 
-## This Packages Premade Data Objects
+## Premade Data Objects
 
 There are 3 data objects which may be useful.
 
@@ -280,3 +284,72 @@ source used to create the table.
 2.  `testMasterList` See `?testMasterList` to learn more.
 
 3.  `GWAS.asso.study.data` see `?GWAS.asso.study.data` to learn more.
+
+## Known Errors, Warnings and Limitations
+
+Some issues have arisen in testing this package which have not been
+resolved, either because they are not critical to the packages use, or
+because they are considered edge-cases which aren’t worth development
+time currently. If your issue does not show up here, please reach out to
+me at *<jon.tanner.nelson@temple.edu>* with relevant details and I will
+try to get back to you about it and update documentation ASAP.
+
+### Errors:
+
+1.  **When plotting large data sets with `save = TRUE` for
+    `graph_singlePopAlleleFreq()`**
+
+> Error in seq_len(n) : argument must be coercible to non-negative
+> integer
+
+*This error occurred consistently when plotting my largest 4 test data
+sets. I consider it minor, as there are several options for getting a
+plot exported beyond the build in option in the function and otherwise
+the graphing function works without issue on these data sets.*
+
+2.  **When using `createMT()` to grab data from Ensembl via API calls**
+
+> 1.  Error in get(helpTopicsName, envir = .rs.toolsEnv()) : object
+>     ‘.completions.helpTopics’ not found
+
+> 2.  Error in curl::curl_fetch_memory(url, handle = handle) : Operation
+>     was aborted by an application callback
+
+*These errors are unrelated to the package itself and instead a failing
+of the functions used to call the Ensembl API for data retrieval* TO
+FIX: Simply attempt your `createMT()` call again. These errors were not
+encountered frequently in development of the package.
+
+### Warnings:
+
+Currently many warnings are produced by various calls throughout the
+package, they are to be investigated when time/resources permit but have
+not been perceived to damage core package function as it stands and thus
+are a relatively low priority. Most if not all warnings encountered have
+to do with discarding incomplete data automatically as I understand
+them.
+
+> EXAMPLES: Warning message: Expected 2 pieces. Additional pieces
+> discarded in 18 rows \[203, 675, 676, 690, 691, 692, 693, 694, 695,
+> 696, 925, 926, 927, 928, 929, 930, 954, 955\].
+
+### Limitations
+
+**The pipeline has not been tested against all data from the GWAS
+catalog/Ensembl and thus is prone to have issues when novel data fields
+are introduced by untested data sets. The core transformation function
+responsible for converting nested-lists into flat tables may fail is
+these cases.** The pipeline at this point has been tested against 11
+distinct data sets associated with 11 distinct search terms in the GWAS
+catalog. See `./exampleData` contents to see the tested data sets for
+yourself.
+
+In the case you find a data set you’re quite interested in which is
+unsuccessfully transformed you can try the `processData = FALSE` option
+for `createMT()` which will result in your GWAS data being imported into
+a list and used to retrieve annotation and population data from Ensembl,
+but the data will not be transformed into flat tables. From this point
+you can either attempt to manually work with the data from there or use
+the `ensListTransform()` function on the untransformed data.
+(`ensListTransform()` is the function called within `createMT()` when
+`processData = TRUE`).
