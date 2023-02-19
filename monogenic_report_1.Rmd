@@ -1,0 +1,204 @@
+---
+title: "Monogenic GWAS search"
+author: "Jon Tanner Nelson"
+date: "2023-01-25"
+output:
+  html_document:
+    df_print: paged
+---
+
+# Monogenic GWAS Catalog Search
+
+## Results
+
+A list of 33 monogenic diseases was procured for search in the GWAS Catalog (GWASc). This list was chosen due to their social importance and literature presence as determined by Anastasia N. et al. (2022) in "Monogenic rare diseases in biomedical databases and text mining". The diseases targeted are:
+
+```{r makeDiseaseList, echo=FALSE}
+DiseaseNames <- c("Cystic Fibrosis ",
+              "Hemophilia A",
+              "Retinitis pigmentosa",
+              "Hemophilia B",
+              "Hereditary breast and ovarian cancer syndrome",
+              "Huntington disease",
+              "Neurofibromatosis type-1",
+              "Duchenne muscular dystrophy",
+              "Sickle cell anemia",
+              "Tuberous sclerosis complex",
+              "Charcot-Marie-Tooth disease / Hereditary motor",
+              "Marfan syndrome",
+              "Fanconi anemia",
+              "Titin-related limb-girdle muscular dystrophy R10",
+              "ataxia-telangiectasia",
+              "Severe combined immunodeficiency",
+              "Lynch syndrome",
+              "Congenital hypothyroidism",
+              "Familial adenomatous polyposis",
+              "Phenylketonuria",
+              "Rett syndrome",
+              "Microphthalmia-anophthalmia-coloboma",
+              "Joubert syndrome",
+              "Primary ciliary dyskinesia",
+              "Autosomal dominant polycystic kidney disease",
+              "Wilson disease",
+              "Limb-girdle muscular dystrophy",
+              "Arryhthmogenic right entricular cardiomyopathy",
+              "Chronic granulomatous disease",
+              "Hereditary spastic paraplegia",
+              "Familial thoracic aortic aneurysm and",
+              "Early infantile epileptic encephalopathy",
+              "Alport Syndrome")
+```
+
+```{r print list}
+DiseaseNames
+```
+
+The complete data frame of Associations from GWASc was downloaded and searched against for all 33 monogenic diseases, abbreviations and alternate names were used as well for each disease. Specifically two features/variables `MAPPED_TRAIT` and `DISEASE/TRAIT` were searched against using regular expressions within R in order to comprehensively search for these disease terms within the table.
+
+-   Several terms were double checked against the GWASc in order to verify search results were accurate within the programmatic search.
+-   Duplicate rows were removed from each search result which may have been produced from overlapping hits against the two searched features
+-   Regex patterns used can be seen in "[Search Methods Details]" below
+
+The search results found sparse hits, with reasonably large numbers of associations for a handful of traits:
+
+```{r show results1, echo=FALSE}
+numHits <- c(158,   0,  63,   0,   0,  22,   2,  94, 156,   0,   0,   4,   0,   0,   0,   0,   0,   0,   0,  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   3)
+names(numHits) <- DiseaseNames
+sort(numHits, decreasing = TRUE)
+```
+
+Within the 8 monogenic diseases which produced hits the sub-traits of each can be seen below.
+
+```{r subtraits, echo=FALSE}
+load("subTraitsList.rds")
+testSave
+```
+
+## Project Direction / Implications
+
+Though the list of monogenic diseases used to search was by no means exhaustive, I do believe many of the best candidates have been identified and searched. Further searching would be more expeditious at this point now that the method has been developed and would require:
+
+1.  acquiring new target diseases,
+2.  developing appropriate regex search patterns
+3.  running through the function developed for this search. Whether or not this number of associations to diseases is worthy of further inquiry should be discussed with advisers.
+
+Later project goals may be affected by this venture into the data, as most of the sub-traits shown above are evidently reporting on aspects and effects of diseases which have no obvious connection to incidence of these diseases. This realization has drawn me to question whether or not the second major report detailed in the project proposal is a reasonable goal still and thus may require some tailoring/modification. As comparing incidence of disease per population to incidence of associated SNPs per population would necessitate that the SNPs being compared had some association with incidence of the disease itself, and not some downstream effect of the disease. For example within the traits found under a `cystic fibrosis` search there is "cystic fibrosis-related diabetes", and under `sickle cell anemia` there is "hemoglobin A2 measurement". Neither of these traits with their respective SNP associations would be informative with respect to incidence of the disease, and thus comparing incidence of disease to incidence of SNPs like these would not be meaningful I believe.
+
+Some elaboration on the plan to make such comparisons would be valuable for determining the direction of early stage actions in the process of analyzing this data with respect to this concern. I believe there may still be a potential for this comparison, however the SNPs of interest will have to be hand picked for their relevance regarding the comparison.
+
+```{r , echo=FALSE}
+#<a id="Search_Method_Details"></a 
+##[Search Methods Details](#Search_Method_Details)
+```
+
+
+## Feasability of Processing Entire GWAS Catalog
+
+I ran some calculations in order to understand what would be required to process the full amount of data from the GWASc:
+
+```{r timeCost}
+# Number of unique SNP ids within all Associations of GWASc
+uniqueSNPs <- 249792
+
+# Number of unique SNP ids within all 11 test data sets pipeline is validated against
+knownSNPs <- 11013
+
+# Percentage of SNPs processed successfully:
+knownSNPs / uniqueSNPs
+
+```
+
+As it can be seen 4.4% of the total unique SNPs within the GWASc have been tested. Further, based on my experience when testing this data after finishing the pipeline update I estimate it took between 3.5-5 hrs to simply receive all of the populations and variant annotations data from Ensembl. There is no way to reduce this wait time that I know of, as it is factor of their servers speed, which I believe is fixed for a user like myself. 
+
+Further the factor by which this range would be multiplied by would be: 
+
+```{r timeCost2}
+multFactor <- 1/.044
+multFactor
+
+APIcall_TimeEstimate <- round(multFactor*c(3.5, 5), digits = 2)
+APIcall_TimeEstimate
+
+```
+
+Thus it would take between ~80-120 hrs to call for all populations data for the entirety of the GWASc, assuming there are no server issues during that time span and excluding additional legwork which would be necessary to ensure all calls go through successfully. 
+
+This amount of effort/time investment is a bit beyond what I believe is reasonable for the scope of my semester and the project itself. Which has lead me to believe selecting some reasonably sized subset of the GWASc would be a better target. 
+
+### Alternate Method for 1K-Genomes Data:
+
+After speaking with Albert I learned that I could indeed download the VCF files directly by chromosome for some 2.5k individual samples. Processing this data by chromosome would likely be feasible with my personal resources. Though processing the entirety of the GWASc would still surely present unforeseen difficulties which may disrupt timelines substantially. 
+
+I have unfortunately not worked with VCF files before, though I am of course interested in learning if it is needed, however, the time to learn novel techniques would also incur some extra time cost upon the efforts and I just want to be careful about which approach is settled upon considering the very real time constraints of this spring semester. This all being stated as I am unclear regarding the difficulty of calling for and organizing the data we would be targeting in the manner which would occur by use of VCF files. 
+
+## Search Methods Details
+
+```{r makeRegexList, echo=FALSE}
+regexPatterns <- list("cystic.?fibrosis",
+               "hemophilia.?A",
+               "retinitis.?pigmentosa",
+               "Hemophilia.?B",
+               c("H?e?r?e?d?i?t?a?r?y?.?breast.??a?n?d?.??ovarian.?cancer.?syndrome",
+               "HBOC"),
+               "Huntington.?disease",
+               "Neurofibromatosis.?type.?1?",
+               "Duchenne.?muscular.?dystrophy",
+               "sickle.?cell.?a?n?e?m?i?a?",
+               c("Tuberous.?sclerosis.?c?o?m?p?l?e?x?",
+               "TSC"),
+               c("Charcot.?Marie.?Tooth.?disease",
+               "CMT"),
+               "Marfan.?syndrome",
+               "Fanconi.?anemia",
+               "Titin.?related.?l?i?m?b?.?g?i?r?d?l?e?.?muscular.?dystrophy.?R?1?0?",
+               "ataxia.?telangiectasia",
+               c("Severe.?combined.?immunodeficiency",
+               "SCID"),
+               c("Lynch.?syndrome",
+               "HNPCC",
+               "h?e?r?e?d?i?t?a?r?y?.?nonpolyposis.?colorectal.?cancer"),
+               "Congenital.?hypothyroidism",
+               c("Familial.?adenomatous.?polyposis",
+               "FAP"),
+               c("Phenylketonuria",
+               "PKU"),
+               c("Rett.?syndrome",
+               "RTS",
+               "cerebroatrophic.?hyperammonemia"),
+               c("Microphthalmia.?anophthalmia.?coloboma",
+               "MAC"),
+               "Joubert.?syndrome",
+               c("Primary.?ciliary.?dyskinesia",
+               "PCD"),
+               c("Autosomal.?dominant.?polycystic.?kidney.?disease",
+               "ADPKD"),
+               c("Wilson.?disease",
+               "[Hh]epatolenticular.?[Dd]egeneration"),
+               c("Limb.?girdle.?muscular.?dystrophy",
+               "LGMD"),
+               c("Arryhthmogenic.?right.?entricular.?cardiomyopathy",
+               "ARVC"),
+               c("Chronic.?granulomatous.?d?i?s?e?a?s?e?",
+               "CGD"),
+               c("Hereditary.?spastic.?paraplegia",
+               "HSP"),
+               c("Familial.?thoracic.?aortic.?aneurysm.?and.?dissection",
+               "f?a?m?i?l?i?a?l?.?TAAD"),
+               c("E?a?r?l?y?.?infantile.?epileptic.?encephalopathy",
+               "EIEE",
+               "ohtahara.?syndrome"),
+               "Alport.?Syndrome")
+```
+
+```{r printregexlist}
+regexPatterns
+```
+
+
+### Citations / Sources
+
+-   Monogenetic rare diseases in biomedical databases and text mining Anastasia Nesterova, Eugene Klimov, Sergey Sozin, Vladimir Sobolev, Peter Linsley, Pavel Golovatenko-Abramov medRxiv 2022.04.07.22273575; doi: <https://doi.org/10.1101/2022.04.07.22273575>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```

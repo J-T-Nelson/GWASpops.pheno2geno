@@ -5,7 +5,41 @@ source("bootCalls2.R")
 load("./WorkingData/GwasAssocitions.rda")
 library(GWASpops.pheno2geno)
 
+# getPopsData working version... Second version below is for code edits / func updates.
+getPopsData <- function(rsIDChunkList, nChunks, startingChunk, reportNumErrors = TRUE){
+  # end chunk = nChunks+startingChunk and will be the next starting chunk and will not be called for in a given run. The final ending chunk must thus be 2499
+  retList <- list()
 
+  for (i in 1:nChunks){
+    chunk <- (startingChunk + i - 1)
+    chnkName <- paste0("Chunk_", chunk, "_CONT")
+
+    retList[[chnkName]] <- tryCatch(
+      expr = {
+        GWASpops.pheno2geno:::get_ensVariants(rsIDChunkList[[chunk]], population_data = TRUE)
+      },
+
+      error = function(e){
+        warning(paste0("Error occured for ", chnkName))
+        return(chnkName) # this should just return a character vector instead of a list which will be our means of identifying error counts
+      }
+    )
+  }
+
+  fileName <- paste0("chunk", startingChunk, "-", (startingChunk+nChunks-1) , ".rds")
+
+  setwd("D:\\Programming\\R_projects\\Kulathinal_Lab\\GWASpops.pheno2geno\\workingData\\unprocessedChunks")
+  save(retList, file = fileName)
+  setwd("../")
+
+  if(reportNumErrors){
+    numErrors <- sum(sapply(retList, is.character))
+    message(paste0("Number of empty chunks returned: ", numErrors))
+    message("\nEmpty chunks are returned as character vectors when an error is caught, or when the API fails to return expected data.\n")
+  }
+
+  return(retList)
+}
 
 # Load GWAS data, save as data object
 asso <- data.table::fread("D:\\Kulathinal_files\\GWASc_All_Data_20230114\\gwas_catalog_v1.0.2-associations_e108_r2023-01-14.tsv")
@@ -170,6 +204,10 @@ getwd()
 # 3. countErrors needs to function properly
 #
 
+# getPopsData w/ error catching -------------------------------------------
+
+
+
 getPopsData <- function(rsIDChunkList, nChunks, startingChunk, reportNumErrors = TRUE){
   # end chunk = nChunks+startingChunk and will be the next starting chunk and will not be called for in a given run. The final ending chunk must thus be 2499
   retList <- list()
@@ -177,7 +215,17 @@ getPopsData <- function(rsIDChunkList, nChunks, startingChunk, reportNumErrors =
   for (i in 1:nChunks){
     chunk <- (startingChunk + i - 1)
     chnkName <- paste0("Chunk_", chunk, "_CONT")
-    retList[[chnkName]] <- GWASpops.pheno2geno:::get_ensVariants(rsIDChunkList[[chunk]], population_data = TRUE)
+
+    retList[[chnkName]] <- tryCatch(
+      expr = {
+        GWASpops.pheno2geno:::get_ensVariants(rsIDChunkList[[chunk]], population_data = TRUE)
+      },
+
+      error = function(e){
+        warning(paste0("Error occured for ", chnkName))
+        return(chnkName) # this should just return a character vector instead of a list which will be our means of identifying error counts
+      }
+    )
   }
 
   fileName <- paste0("chunk", startingChunk, "-", (startingChunk+nChunks-1) , ".rds")
@@ -187,26 +235,41 @@ getPopsData <- function(rsIDChunkList, nChunks, startingChunk, reportNumErrors =
   setwd("../")
 
   if(reportNumErrors){
-    numErrors <- countErrors(retList)
-    cat(paste0("numErrors: ", numErrors))
+    numErrors <- sum(sapply(retList, is.character))
+    message(paste0("Number of empty chunks returned: ", numErrors))
+    message("\nEmpty chunks are returned as character vectors when an error is caught, or when the API fails to return expected data.\n")
   }
 
   return(retList)
 }
 
 
+####### Wrapper Func #############
 
-# countErrors function will be run to count the number of unfilled List from getPopsData--------
+grabChunks <- function(data, StartChunk = 1,chunksPerCall = 100, numCalls = 240){
+  #numCalls at default of 240 should mean that by default this would just call for all of the data
 
+  allrsID_ch10 <- data
 
-countErrors <- function(popDataList){
-  nErr <- 0
-  #TODO Finish this func... need a successful return first.. and I can add dummy entry if needed to verify working state
+  for(i in 1:numCalls){
+    startPoint <- (StartChunk + (i - 1)*chunksPerCall) # incrementally updates starting chunk relative to starting point
 
-  return(nErr)
+    if(startPoint > 23300){
+      message("All chunks should be grabbed except the last few")
+      return()
+    }
+
+    getPopsData(allrsID_ch10, nChunks = chunksPerCall, startPoint, reportNumErrors = FALSE)
+  }
+
+  message("call finished without automatic termination; i.e. not all chunks grabbed yet, but specified amount should be saved.")
+  return()
 }
 
 
+### grab chunks test call
+
+grabChunks(allrsID_ch10, StartChunk = 501, 1)
 
 # DRAFT SPACE -------------------------------------------------------------
 
@@ -344,14 +407,80 @@ BAsetDiff #"rs211468"   "rs34724414" "rs3134977"  "rs1054026"  "rs9267123"  "rs3
 
 
 
+# Test: Error catching ----------------------------------------------------
+
+
+getErr_ch2 <- allrsID_ch10
+getErr_ch2[[2]][2] <- "WILL?.th\"i+_-s Get \\Error\\?"
+
+errorProductionTest <- getPopsData(getErr_ch2, nChunks = 2, startingChunk = 1, reportNumErrors = F)# First error catch.. we should get a successful return with the appropriate default value back if error catching works. also should see an error message.
+
+# SUCCESS. Error has been caught. Default element went in. Warning message printed. Now to make our error checker function
+
+
+errorProductionTest_2 <- getPopsData(getErr_ch2, nChunks = 3, startingChunk = 1) # added in reporting on how many errors / empty returns occur per call for visibility of the process. Want to verify efficacy now.
+
+
+# Test: Data saving
+#  1. test manual calls
+#  2. test source of the same calls
+#  3. test saving within for loop (using wrapper function)
+
+# CALL THESE MANUALLY, THEN CALL IN 'testDataSaving.R' ... watch for when new data is actually added to dedicated folder
+dataSaving_1 <- getPopsData(allrsID_ch10, nChunks = 2, startingChunk = 1)
+dataSaving_2 <- getPopsData(allrsID_ch10, nChunks = 2, startingChunk = 3)
+dataSaving_3 <- getPopsData(allrsID_ch10, nChunks = 2, startingChunk = 5)
+dataSaving_4 <- getPopsData(allrsID_ch10, nChunks = 2, startingChunk = 7)
+dataSaving_5 <- getPopsData(allrsID_ch10, nChunks = 2, startingChunk = 9)
+
+
+gChunksTest_1 <- grabChunks(allrsID_ch10, StartChunk = 1, chunksPerCall = 1, numCalls = 5) # we expect to see chunks 1-5 called for from this, all saved as their own rds files.. do we see them save as the function runs?
+
+gChunksTest_1 <- grabChunks(allrsID_ch10, StartChunk = 1, chunksPerCall = 5, numCalls = 5) # we expect to see chunks 1-25 called for from this saved in 5 .rds files
+
+
 
 # Data Collection ---------------------------------------------------------
 
-size10_1000chunks <- getPopsData(allrsID_ch10, nChunks = 1000, startingChunk = 1, reportNumErrors = F)
+size10_1000chunks <- getPopsData(allrsID_ch10, nChunks = 1000, startingChunk = 1, reportNumErrors = F) # encountered memory error... Need to determine how to allocate a certain amount of immovable memory to R and how to gaurentee I will have enough memory to retrieve a maximum chunk size.
 
 
+# Sesh 4 benchmarking and solving memory issues
+#
+size10Bench_1 <- system.time(getPopsData(allrsID_ch10, nChunks = 100, startingChunk = 1, reportNumErrors = F))
+size10Bench_2 <- system.time(getPopsData(allrsID_ch10, nChunks = 100, startingChunk = 101, reportNumErrors = F))
+size10Bench_3 <- system.time(getPopsData(allrsID_ch10, nChunks = 100, startingChunk = 201, reportNumErrors = F))
+size10Bench_4 <- system.time(getPopsData(allrsID_ch10, nChunks = 100, startingChunk = 301, reportNumErrors = F))
+size10Bench_5 <- system.time(getPopsData(allrsID_ch10, nChunks = 100, startingChunk = 401, reportNumErrors = F))
 
-# Session End Notes: ------------------------------------------------------
+size10Bench_1
+size10Bench_2
+size10Bench_3
+size10Bench_4
+size10Bench_5
+
+
+# Using grab chunks to grab maximal amount of data.
+
+grabChunks(allrsID_ch10, StartChunk = 1201) # this should just grab data until the cows come home. Will duplicate teh 1301-1400 chunk
+
+
+grabChunks(allrsID_ch10, StartChunk = 1901)
+
+grabChunks(allrsID_ch10, StartChunk = 2301) # windows decided it wanted to update without permission and killed my process.
+
+grabChunks(allrsID_ch10, StartChunk = 3701)
+
+grabChunks(allrsID_ch10, StartChunk = 5901)
+
+grabChunks(allrsID_ch10, StartChunk = 11901)
+
+grabChunks(allrsID_ch10, StartChunk = 12901)
+
+grabChunks(allrsID_ch10, StartChunk = 16101)
+
+
+36# Session End Notes: ------------------------------------------------------
 
 #Sesh1:
 #TODO tomorrow: use get_ensVariants() to do test runs.. workout the error catching code and use bad iDs to test for errors or that scenario. Do a small test run of like 10 chunks and maybe more if time to get a sense for how long each chunk takes on average.. obviously work out the error counting function... and by night get this script calling for data over night / when you're away from home until all data is collected
@@ -409,8 +538,9 @@ size10_1000chunks <- getPopsData(allrsID_ch10, nChunks = 1000, startingChunk = 1
 #             reportNumErrors = F)
 #
 
+#  ^^^ the above error seems to occur consistently when I cancel calls to the API. The reason why I cancel though, is because sometimes the calls just freeze, where the function in still running, but for some reason things are frozen. Not sure its a memory issue at this point. Not sure why the freeze is happening. Not honestly clear on how to gain insight into this sort of bug either... would need to read into API trouble shooting.. if I could somehow view the stage of data requesting my machine is freezed at, whether its saving something in RAM temporarily and lacking space, or waiting for a lost response that is never coming in with no default means of managing such lost responses... I am not sure what all could go wrong, and thus would need to think more, read more and maybe consult Ben if I wanted to get to the bottom of this.
 
-
+# SESH 4:
 
 
 

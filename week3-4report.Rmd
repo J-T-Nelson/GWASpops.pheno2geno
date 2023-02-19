@@ -1,0 +1,57 @@
+---
+title: "Process and Progress Report"
+author: "Jon Tanner Nelson"
+date: "2023-02-11"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Overview and Schedule
+
+Currently the work is a bit behind schedule due to difficulties accessing populations data for all of the GWAS catalog. Within the problem of retrieving all population data needed for future tasks there are two apparent paths which both can work, though each have different advantages and disadvantages. 
+
+The first approach is to use and modify tools constructed within the development of the GWASpops.p2g package in order to call Ensembl's API directly for population data. The second approach is to download data directly from the IGSR FTP servers. IGSR is the International Genome Sample Resource, which hosts the 1000 Genomes study data, and other similar population genetic's data sets. 
+
+The key advantage to downloading data directly is that the challenges of interacting with an API are bypassed and the data is more complete, (as samples are traced back to individuals with participant IDs associated). The disadvantages however are that the volume of data is too large to manipulate quickly and easily without large cluster/cloud computing aid and that the data isn't preprocessed like that of the Ensemble API derived data. The data is so large that only fractions of chromosomes could be processed at a time, which would require some significant code-engineering to achieve. In searching the FTP server from IGSR I was able to locate a [phased high coverage form](http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20220422_3202_phased_SNV_INDEL_SV/) of the 1000 Genomes study data which is stored by chromosome. This is the data I have decided would suit the project best as the variation of each chromosome is better represented in the phased data which was generated and uploaded for public use in 2022. 
+
+The advantage of grabbing data from Ensembl's REST API is that the data is preprocessed, and the tools to do so are familiar to me already. The data is not complete in the sense individuals within populations are not reported on in the data served by the API, only allele frequencies per SNP per population are available, which can be seen below: 
+
+```{r}
+library(GWASpops.pheno2geno)
+testMasterList$singlePop_alleleFreqDTs[[1]]
+```
+
+The lack of individual chromosome/human resolution for the allele frequency data means that calculating some versions of an Fst statistic are unavailable to my knowledge. To this end I am still learning and researching the best option for calculating Fst statistics for meaningful differentiation within the sample populations. The fact that only SNPs highlighted withing the GWAS catalog are of interest, changes the nature of calculating Fst to some extent as well and given there is not one single way to compute Fst as a measure of population differentiation I believe further investigation into the subject is warranted. Dr. Pond informed me that I may find talking to Dr. Hey who is experienced in population genetics to be insightful regarding this challenge. At this point I have attempted to get his attention on the matter and will be continuing data retrieval in the meantime. 
+
+At this time I have (with help from Dr. Kulathinal) decided to use Ensembl's API to get the populations data and progress towards this end can be seen below in [Ongoing Tasks].
+
+
+## Subjects Researched
+
+Fst as a population genetics statistic has been researched in some detail, ongoing learning is still underway, as upon investigation I have learned that there is not a single way to calculate Fst, and instead there may be more and less appropriate means of deriving a population differentiation statistic for this project. Some examples of different computational methods would be 1. [Writes F-Statistics](https://en.wikipedia.org/wiki/Fixation_index) and 2.  [Weir & Cockerham's F-Statistics](https://www.jstor.org/stable/2408641). 
+
+Looking into clustering analysis to be paired with the Fst analysis is still in its early stages, but I have become aware of the broad set of approaches available to individuals interested in clustering analysis as well as some of the most basic and common forms. Clustering analysis is a common form of exploratory data analysis where observations are divided into groups which share characteristics by some clustering process. My current idea of how to apply clustering analysis is still nascent regarding our analysis of populations, as there is not a single method to apply which will naturally group our populations meaningfully. In contacting Dr. Hey I have requested for advise on this subject specifically as well. 
+
+## Ongoing Tasks
+
+Data retrieval via API is my primary task right now. 
+
+All associations from the GWAS catalog are being loaded in, then the SNPs filtered down to those which can be effectively used to call the API, as some SNP's are reported in non-standard formats. (where the accetable format for a SNP id is 'rs999999' for example)
+
+Then the list of unique, acceptable SNP id's is being split into chunks of 10. The number 10 was settled on because chunks of size 100 were problematic due to some unknown API behavior. Entire chunks (i.e. 100 SNP IDs) were coming back with no data at all, where when cross checked against their server by website access, all IDs present in these chunks would be available within the server. Thus smaller chunks ensure that any missing data is minimized. Further, a scheme which details which chunks have missing data has been devised such that upon successful retrieval of all chunks the missing data can be retrieved by instead calling for the SNP IDs within the missing chunks on a single SNP id basis, which I have found to mitigate the problem of data not being returned where it otherwise should from the API. This workaround was selected as it is relatively easy to implement, and maintain across the process of grabbing all data which will take about a week of calling the API and saving the Populations data locally. 
+
+Finally a novel problem which is currently being addressed arose, where calling for too much data at once from their server resulted in a failed call, as my local system ran short on write space for incoming data. This is an issue because calling for data while not at my PC is the main method of actually retrieving data since my system is fairly inoperable while this is ongoing due to RAM usage, and further calling for data just takes time as their servers aren't transferring at a very quick rate. Thus understanding a the maximum amount of chunks I can call for is useful in completing data retrieval in a timely manner. 
+
+In the case the one wishes to see the working code used to call for data my (messy) work space script can be found [here](https://github.com/J-T-Nelson/GWASpops.pheno2geno/blob/Dev/workingScripts/PopulationsDataCollection.R)
+
+## Future Plans
+
+Retrieving all data from Ensembl should be done by the end of the week barring other unpredicted issues. 
+
+Contact with Dr. Hey should help in determining specific plans and tools to be used in the process of Fst and clustering analysis. 
+
+
