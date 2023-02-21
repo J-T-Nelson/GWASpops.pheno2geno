@@ -228,25 +228,111 @@ HudsonFst <- function(n1, n2, p1, p2){
 
 
 
+# Developing options for perAlleleFst_transform ---------------------------
+
+perAlleleFst_transform <- function(alleleDF, populations, deleteRedundants = FALSE){
+
+  # Extract data of interest from alleleDF
+  ancestralAllele <- attr(alleleDF, "Ancestral_Allele")
+  alleleDF <- alleleDF[alleleDF$population %in% populations$Population_Abbreviation & alleleDF$allele != ancestralAllele , ]
+
+  # Digest DF in to create DF out:
+
+  DF_rows <- nrow(alleleDF) # number for efficient pairwise iteration
+  rowHolder <- list()
+  for(i in 1:(DF_rows-1)){ # i correlates to a population
+    for(j in (1+i):DF_rows){ # j correlates to the second population used to pair with i's population
+      rName <- paste0(alleleDF$population[i], "-X-",alleleDF$population[j])
+      row <- c(rName,
+               populations[populations$Population_Abbreviation == alleleDF$population[i]]$Sample_Count,
+               alleleDF$frequency[i],
+               populations[populations$Population_Abbreviation == alleleDF$population[j]]$Sample_Count,
+               alleleDF$frequency[j])
+
+      rowHolder[[rName]] <- row
+    }
+  }
+
+  #setup return DF, name cols, fix col types, assign attributes
+  retDF <- as.data.frame(t(dplyr::bind_rows(rowHolder)))
+
+  names(retDF) <- c("pop_pair", 'n1', "p1", 'n2', 'p2')
+  retDF['n1'] <- as.numeric(retDF[['n1']])
+  retDF['n2'] <- as.numeric(retDF[['n2']])
+  retDF['p1'] <- as.numeric(retDF[['p1']])
+  retDF['p2'] <- as.numeric(retDF[['p2']])
+
+  attr(retDF, "Ancestral_Allele") <- ancestralAllele
+  attr(retDF, "VariantID") <- attr(alleleDF, "VariantID")
+
+  fstVec <- numeric(nrow(retDF))
+  for(i in 1:nrow(retDF)){
+    fstVec[i] <- HudsonFst(retDF[i,2],retDF[i,4],retDF[i,3],retDF[i,5])
+  }
+  retDF['Fst_Hudson'] <- fstVec
+
+  if(deleteRedundants){ #removing all but population pairs and Fst value to save memory
+    retDF <- retDF[,c(1,6)]
+  }
+
+  return(retDF)
+}
+
+
+# Test calculating Fst against new table.
+
+fstCol <- sapply(hudmoPrep, \(x) HudsonFst(x$n1, x$n2, x$p1, x$p2))
+fstCol <- apply(hudmoPrep, 1, \(x) HudsonFst(x[,2], x[,4], x[,3], x[,5])) # neither type of referencing is working properly... I wonder if there is a way to get this to go... chatGPT gave me a suggestion to use a rapper that changes the means of referencing inherently so I will try that
+
+hudmoPrep[1,2]
+hudmoPrep[1,1]
+class(hudmoPrep[1,1])
+rowSubset <- hudmoPrep[1,]
+str(rowSubset)
+rowSubset[2] # names of col and row are attached
 
 
 
+#   Positional arguments for sake of apply usage.. ERROR... doesn't work
+hFst_applyWrapper <- function(alleleDF_row) {
+  return(HudsonFst(alleleDF_row[2], alleleDF_row[4], alleleDF_row[3], alleleDF_row[5]))
+}
 
 
 
+fstCol <- apply(hudmoPrep, 1, hFst_applyWrapper)
+?apply
+
+tret <- hFst_applyWrapper(hudmoPrep[1,])
+class(tret)
+tHudsFST <- HudsonFst(hudmoPrep[1,2],hudmoPrep[1,4],hudmoPrep[1,3],hudmoPrep[1,5])
+tHudsFST # properly returning just a number.. however it is a negative number which makes me wonder if my function has been written correctly
+
+
+# trying to use apply is wasting time... lets use  for loop
+
+fstVec <- numeric(nrow(hudmoPrep))
+for(i in 1:nrow(hudmoPrep)){
+  fstVec[i] <- HudsonFst(hudmoPrep[i,2],hudmoPrep[i,4],hudmoPrep[i,3],hudmoPrep[i,5])
+}
+
+?append
+
+
+# TEST hudson FST addition ------------------------------------------------
+
+debug(perAlleleFst_transform)
+hudsonTest2 <- perAlleleFst_transform(perAllele_1, thousGenPops)
+
+# test dropping cols
+
+less <- hudsonTest2[,c(1,6)]
 
 
 
+# Developing: Wrapper to process list of perAllele tables  ----------------
 
-
-
-
-
-
-
-
-
-
+# list of DFs in, list of DFs out.
 
 
 

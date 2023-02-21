@@ -2,7 +2,7 @@
 
 HudsonFst_slow <- function(n1, n2, p1, p2){
 
-  numerator <- ((p1-p2)**2 - (p1*(1-p1))/(n1-1) - (p2*(1-p2))/(n2-1))
+  numerator <- ( ((p1-p2)**2) - (p1*(1-p1))/(n1-1) - (p2*(1-p2))/(n2-1) )
 
   denominator <- (p1*(1-p2) + p2*(1-p1))
 
@@ -11,7 +11,7 @@ HudsonFst_slow <- function(n1, n2, p1, p2){
 
 # no assignment should make for faster calculation on large data sets.
 HudsonFst <- function(n1, n2, p1, p2){
-  return( ((p1-p2)**2 - (p1*(1-p1))/(n1-1) - (p2*(1-p2))/(n2-1)) / (p1*(1-p2) + p2*(1-p1)) )
+  return( ( ((p1-p2)**2) - (p1*(1-p1))/(n1-1) - (p2*(1-p2))/(n2-1)) / (p1*(1-p2) + p2*(1-p1)) )
 }
 
 # checking distribution rules in R
