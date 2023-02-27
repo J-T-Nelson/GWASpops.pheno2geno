@@ -480,6 +480,12 @@ grabChunks(allrsID_ch10, StartChunk = 12901)
 grabChunks(allrsID_ch10, StartChunk = 16101)
 
 
+
+# finishing data collection 2-25 ------------------------------------------
+
+getPopsData(allrsID_ch10, 130, 23301)
+
+
 36# Session End Notes: ------------------------------------------------------
 
 #Sesh1:

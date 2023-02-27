@@ -156,7 +156,7 @@ ensListTransform <- function(dataList, popsData = F) {
   if(popsData){
     # grabbing population data and converting into a list of tibbles.
     popData <- sapply(CONT, function(x) x$populations) #OPTIMIZATION: this may be more efficient with masking.. not sure though
-    popData <- lapply(popData, function(x) bind_rows(x)) # OPTIMIZATION: check if this can run without the anonymous function in lapply() .. I imagine its increasing operations for this call.
+    popData <- lapply(popData, function(x) dplyr::bind_rows(x)) # OPTIMIZATION: check if this can run without the anonymous function in lapply() .. I imagine its increasing operations for this call.
 
     # removes populations from the response content so further operations proceed properly.
     CONT <- lapply(CONT, function(x) x[names(x) != 'populations']) # OPTIMIZATION: Check for function which removes and returns elements from lists... as this call may removed if the original popData <- sapply() call removed and returned

@@ -1,0 +1,252 @@
+---
+title: "Fst Calculation & Data Retrieval"
+author: "Jon Tanner Nelson"
+date: "2023-02-21"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Process Update:
+
+### Fst Calculation
+
+Due to inexperience with population genetics writ large and Fst specifically as an insightful estimated metric describing genetic distances between and within populations I took time to speak with Dr. Hey and Phil Baldassari (of the Kulathinal lab) in order to develop my understanding. Phil pointed me towards *"Bhatia G, Patterson N, Sankararaman S, Price AL. Estimating and interpreting FST: the impact of rare variants"*, and suggested using the Hudson Fst metric for its simplicity and its efficacy for samples of populations within the range found in the 1000 Genomes data set being used.
+
+I developed a small set of functions which can take data structures that are produced by the GWASpops.pheno2geno package *in*, and produce Hudson estimator Fst values *out*. Fst values are calculated pairwise, so where alleles contain complete data for all 1000 Genomes populations (32) we see (32**C**2) = 496 rows in the output. 
+
+*The code responsible for this calculation can be seen in [Fst Calculation Code].*
+
+### Data Retrieval, Transformation, & Analyses
+
+Data retrieval was a nontrivial task as the Ensembl REST API is slow to transfer and has some unpredictable behavior which required some work around engineering of code. In brief I initially wanted to grab chunks of data in sets of 100 variant IDs at a time, but this proved to be highly susceptible to losing entire chunks of data for unknown reasons. Reducing the chunk size to 10 was a quick solution which allowed less data to be lost when the API mysteriously returned nothing. 
+
+I tested and cross checked through manual website search (Ensembl's site) to identify why some chunks were coming back empty. For an empty size-10 chunk returned I found that all variant ID's existed on their server and had associated population data. This lead me to make calls for each variant individually to see if any individual calls failed. All succeeded. This inconsistent behavior simply implied that shrinking API requests would be necessary after all chunks were called for once (~23,400 chunks of size-10 in total) in order to fill in the gaps in the data which had been successfully retrieved. 
+
+At this point the first full pass on data retrieval has been completed, and grabbing the rest should be relatively quick. Following complete data retrieval transformation of the data in to a workable format will be done. Finally data will be filtered down to the SNPs which are of interest (presumably disease SNPs, i.e. excluding non-disease associated SNPs), and fed into the code-tools developed for Fst calculation and clustering analysis. 
+
+*The code/functions used for data retrieval can be seen below in [Data Retrieval Code].* 
+
+## Code:
+
+### Fst Calculation Code
+
+All code for Fst calculation works directly with the data structures produced by GWASpops.pheno2geno package. Below is a script containing the functions which allow for efficient calculation of Hudson Fst
+
+```{r}
+# Fst calculating functions:
+
+# -------------------------------------------------------------------------
+
+HudsonFst <- function(n1, n2, p1, p2){
+  return( ((p1-p2)**2 - (p1*(1-p1))/(n1-1) - (p2*(1-p2))/(n2-1)) / (p1*(1-p2) + p2*(1-p1)) )
+}
+
+# -------------------------------------------------------------------------
+
+# hudsonFst_alleleList() - accepts an allele list of the form returned by GWASpops.pheno2geno::createMT() as "PopAlleleFreqData",
+#                          returns a list of DFs which contain calculated hudson Fst as well as the values used to do the calculation in each row. Each row is per population pair.
+#                          `deleteRedundants` deletes the data used to calculate Fst, leaving only the population pair indicator and the value itself. This is useful for saving memory, as the values are highly redundant. (I have not come up with a way to store them more efficiently yet, as I lack sufficient insight into the future use of this data)
+
+hudsonFst_alleleList <- function(alleleList, populationsDF, deleteRedundants = FALSE){
+
+  captureList <- list()
+
+  for(i in 1:length(alleleList)){
+    tableName <- names(alleleList[i])
+    captureList[[tableName]] <- perAlleleFst_transform(alleleList[[i]], populationsDF, deleteRedundants)
+  }
+
+  return(captureList)
+}
+
+# -------------------------------------------------------------------------
+
+perAlleleFst_transform <- function(alleleDF, populations, deleteRedundants = FALSE){
+
+  # Extract data of interest from alleleDF
+  ancestralAllele <- attr(alleleDF, "Ancestral_Allele")
+
+  if(is.na(ancestralAllele)){ # sometimes ancestral Allele is NA, which makes the rest of this function impossible to execute. Calculating ancestral allele by finding allele with highest frequency.
+    ancestralAllele <- calc_ancestralAllele(alleleDF)
+  }
+
+  alleleDF <- alleleDF[alleleDF$population %in% populations$Population_Abbreviation & alleleDF$allele != ancestralAllele , ]
+
+  # Digest DF in to create DF out:
+
+  DF_rows <- nrow(alleleDF) # number for efficient pairwise iteration
+
+  if(DF_rows == 0){ # when no pops of interest exist for a given variant, we just cancel the function and return nothing
+    return(NULL)
+  }
+
+  rowHolder <- list()
+  for(i in 1:(DF_rows-1)){ # i correlates to a population
+    for(j in (1+i):DF_rows){ # j correlates to the second population used to pair with i's population
+      rName <- paste0(alleleDF$population[i], "-X-",alleleDF$population[j])
+      row <- c(rName,
+               populations[populations$Population_Abbreviation == alleleDF$population[i]]$Sample_Count,
+               alleleDF$frequency[i],
+               populations[populations$Population_Abbreviation == alleleDF$population[j]]$Sample_Count,
+               alleleDF$frequency[j])
+
+      rowHolder[[rName]] <- row
+    }
+  }
+
+  #setup return DF, name cols, fix col types, assign attributes
+  retDF <- as.data.frame(t(dplyr::bind_rows(rowHolder)))
+
+  names(retDF) <- c("pop_pair", 'n1', "p1", 'n2', 'p2')
+  retDF['n1'] <- as.numeric(retDF[['n1']])
+  retDF['n2'] <- as.numeric(retDF[['n2']])
+  retDF['p1'] <- as.numeric(retDF[['p1']])
+  retDF['p2'] <- as.numeric(retDF[['p2']])
+
+  attr(retDF, "Ancestral_Allele") <- ancestralAllele
+  attr(retDF, "VariantID") <- attr(alleleDF, "VariantID")
+
+  fstVec <- numeric(nrow(retDF))
+  for(i in 1:nrow(retDF)){
+    fstVec[i] <- HudsonFst(retDF[i,2],retDF[i,4],retDF[i,3],retDF[i,5])
+  }
+  retDF['Fst_Hudson'] <- fstVec
+
+  if(deleteRedundants){ #removing all but population pairs and Fst value to save memory
+    retDF <- retDF[,c(1,6)]
+  }
+
+  return(retDF)
+}
+
+# -------------------------------------------------------------------------
+
+calc_ancestralAllele <- function(population_alleleDF){
+
+  A_mag <- sum(population_alleleDF[population_alleleDF$allele == "A", ]$frequency)
+  C_mag <- sum(population_alleleDF[population_alleleDF$allele == "C", ]$frequency)
+  G_mag <- sum(population_alleleDF[population_alleleDF$allele == "G", ]$frequency)
+  T_mag <- sum(population_alleleDF[population_alleleDF$allele == "T", ]$frequency)
+  tempVec <- c(A_mag, C_mag, G_mag, T_mag)
+
+  ancestralAllele <- switch(which.max(tempVec),
+                            '1' = "A",
+                            '2' = "C",
+                            '3' = "G",
+                            '4' = "T")
+  return(ancestralAllele)
+}
+
+# -------------------------------------------------------------------------
+
+```
+
+*The formula used for Hudson Fst was found within reference 1 - "Estimating and interpreting Fst: The impact of rare variants"* 
+
+#### Data In 
+
+**Two example tables of the data being used to calculate Hudson Fst**
+
+```{r, echo=FALSE}
+library(GWASpops.pheno2geno)
+tml <- testMasterList
+example_1 <- tml[[2]]
+example_2 <- example_1[[1]]
+example_1[1:2]
+```
+
+#### Data Out 
+
+```{r}
+pops <- Populations
+thousGenPops <- pops[grep("1000GENOMES",pops$Population_Abbreviation)]
+exOut <- hudsonFst_alleleList(example_1[1:2], thousGenPops)
+exOut[[1]][1:2, c(2:6)]
+```
+
+### Data Retrieval Code
+
+```{r}
+# get pops Data Funcs
+# -------------------------------------------------------------------------
+
+getPopsData <- function(rsIDChunkList, nChunks, startingChunk, reportNumErrors = TRUE){
+
+  retList <- list()
+
+  for (i in 1:nChunks){
+    chunk <- (startingChunk + i - 1)
+    chnkName <- paste0("Chunk_", chunk, "_CONT")
+
+    retList[[chnkName]] <- tryCatch(
+      expr = {
+        GWASpops.pheno2geno:::get_ensVariants(rsIDChunkList[[chunk]], population_data = TRUE)
+      },
+
+      error = function(e){
+        warning(paste0("Error occured for ", chnkName))
+        return(chnkName) # this should just return a character vector instead of a list which will be our means of identifying error counts
+      }
+    )
+  }
+
+  fileName <- paste0("chunk", startingChunk, "-", (startingChunk+nChunks-1) , ".rds")
+
+  setwd("D:\\Programming\\R_projects\\Kulathinal_Lab\\GWASpops.pheno2geno\\workingData\\unprocessedChunks")
+  save(retList, file = fileName)
+  setwd("../")
+
+  if(reportNumErrors){
+    numErrors <- sum(sapply(retList, is.character))
+    message(paste0("Number of empty chunks returned: ", numErrors))
+    message("\nEmpty chunks are returned as character vectors when an error is caught, or when the API fails to return expected data.\n")
+  }
+
+  return(retList)
+}
+
+
+# -------------------------------------------------------------------------
+
+# grabChunks() is a wrapper for getPopsData which will continuously call for chunks until hitting the num calls limit, or until it has reached the spcified stopping point which comes when all chunks are retrieved.
+
+grabChunks <- function(data, StartChunk = 1,chunksPerCall = 100, numCalls = 240){
+  #numCalls at default of 240 should mean that by default this would just call for all of the data
+
+  allrsID_ch10 <- data
+
+  for(i in 1:numCalls){
+    startPoint <- (StartChunk + (i - 1)*chunksPerCall) # incrementally updates starting chunk relative to starting point
+
+    if(startPoint > 23300){
+      message("All chunks should be grabbed except the last few")
+      return()
+    }
+
+    getPopsData(allrsID_ch10, nChunks = chunksPerCall, startPoint, reportNumErrors = FALSE)
+  }
+
+  message("call finished without automatic termination; i.e. not all chunks grabbed yet, but specified amount should be saved.")
+  return()
+}
+
+# -------------------------------------------------------------------------
+```
+
+## Questions: 
+
+1. Should we narrow the data of the GWAS catalog to only include disease associated variants? Disease incidence associated variants? Where do we draw the line and why? 
+
+2. What recommendations on clustering analysis do you have? I have found several resources on the subject, YouTube tutorial on clustering, papers which perform Fst and clustering analysis wrt population genomics inquiries, but believe it would benefit me to hear directly what you had in mind in terms of process. 
+
+- 2.1 Specifically wrt our data, what analysis makes the most sense to you and what is an outline for the steps in that process? 
+
+
+## References
+
+1. Bhatia G, Patterson N, Sankararaman S, Price AL. Estimating and interpreting FST: the impact of rare variants. Genome Res. 2013 Sep;23(9):1514-21. doi: 10.1101/gr.154831.113. Epub 2013 Jul 16. PMID: 23861382; PMCID: PMC3759727.
+
+2. Hudson RR, Slatkin M, Maddison WP. Estimation of levels of gene flow from DNA sequence data. Genetics. 1992 Oct;132(2):583-9. doi: 10.1093/genetics/132.2.583. PMID: 1427045; PMCID: PMC1205159.

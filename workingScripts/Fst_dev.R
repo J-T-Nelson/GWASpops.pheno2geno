@@ -330,9 +330,93 @@ less <- hudsonTest2[,c(1,6)]
 
 
 
+# Develop Ancestral_Allele filling ----------------------------------------
+
+testCase <- testAlleleList[[5]]
+
+Avals <- sum(testCase[testCase$allele == "A", ]$frequency)
+Cvals <- sum(testCase[testCase$allele == "C", ]$frequency)
+Gvals <- sum(testCase[testCase$allele == "G", ]$frequency)
+Tvals <- sum(testCase[testCase$allele == "T", ]$frequency)
+
+which.max(c(Avals, Cvals, Gvals, Tvals))
+
+switchTest <- switch(which.max(c(Avals, Cvals, Gvals, Tvals)),
+                     '1' = "A", '2' = "C", '3' = "G", '4' = "T")
+
+calc_ancestralAllele <- function(population_alleleDF){
+
+  A_mag <- sum(population_alleleDF[population_alleleDF$allele == "A", ]$frequency)
+  C_mag <- sum(population_alleleDF[population_alleleDF$allele == "C", ]$frequency)
+  G_mag <- sum(population_alleleDF[population_alleleDF$allele == "G", ]$frequency)
+  T_mag <- sum(population_alleleDF[population_alleleDF$allele == "T", ]$frequency)
+  tempVec <- c(A_mag, C_mag, G_mag, T_mag)
+
+  ancestralAllele <- switch(which.max(tempVec),
+                            '1' = "A",
+                            '2' = "C",
+                            '3' = "G",
+                            '4' = "T")
+  return(ancestralAllele)
+}
+
+tCalc <- calc_ancestralAllele(testCase) # works
+
+# -------------------------------------------------------------------------
+
+
+
 # Developing: Wrapper to process list of perAllele tables  ----------------
 
+testAlleleList <- tml[[2]]
+names(testAlleleList[1])
 # list of DFs in, list of DFs out.
+testAlleleList[1]
+testAlleleList[[1]]
+
+
+hudsonFst_alleleList <- function(alleleList, populationsDF, deleteRedundants = FALSE){
+
+  captureList <- list()
+
+  for(i in 1:length(alleleList)){
+    tableName <- names(alleleList[i])
+    captureList[[tableName]] <- perAlleleFst_transform(alleleList[[i]], populationsDF, deleteRedundants)
+  }
+
+  return(captureList)
+}
+
+# TESTING hudsonFst_alleleLIst
+
+hudTest3 <- perAlleleFst_transform(testAlleleList[[2]], thousGenPops)
+hudTest4 <- perAlleleFst_transform(testAlleleList[[3]], thousGenPops) # both work, variable numbers of obs. out (rows) .. must just be related to a variable number of valid pairs... so far all outputs are odd values.. which is curious.. I wonder if there is any meaning behind that.
+
+
+
+debug(hudsonFst_alleleList)
+undebug(hudsonFst_alleleList)
+tHAL <- hudsonFst_alleleList(testAlleleList, thousGenPops) # after solving the two issues noted just below this executed relatively quickly at around 10 seconds?
+tHAL <- system.time(hudsonFst_alleleList(testAlleleList, thousGenPops))
+tHAL
+# user  system elapsed     so ... about 16 seconds to complete on ~200 variants for the 1000k Genomes.. this seems like a fast enough rate for future processing.
+# 15.04    0.24   15.53
+
+debug(perAlleleFst_transform)
+undebug(perAlleleFst_transform)
+
+# ERROR:1
+tPAF <- perAlleleFst_transform(testAlleleList[[14]], thousGenPops)
+# for this one, we are actually seeing that there are no populations of interest (thousand genomes populations), and thus there are some interesting issues cropping up.. will have to check for this case and discard tables which fail to have any data of interest.
+
+# ^^ returning NULL works standalone... lest see if it works in the wrapper .. it should. FIXED
+
+
+# ERROR:2
+tPAF <- perAlleleFst_transform(testAlleleList[[5]], thousGenPops)
+# we are seeing an issue where ancestral alleles can be NA, which totally ruins the function. Best quick solution I can imagine is to sum the various alleles frequencies and to assign the highest one as the major (ancestral) allele...
+
+# FIXED. lets find the next bug lol
 
 
 
@@ -345,21 +429,10 @@ less <- hudsonTest2[,c(1,6)]
 
 
 
+# -------------------------------------------------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+head(tHAL[[1]], 2)
+tHAL[[1]][1:2, c(2:6)]
 
 
 
