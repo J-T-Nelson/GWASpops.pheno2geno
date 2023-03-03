@@ -12,60 +12,70 @@
 
 
 
-
 # read data from memory,
 # transform data using modified package transform func (only modify adhoc)
 # calculate fst stats for that chunk
 # save as object to memory
 
-# transform_fst_save() takes in the large GWAS assocation table, a number of chunks, and starting chunk and transforms the lists within the chunks into a list of DFs and lists OF DFs.. 4 objects specified above. Fst will be calculated within then the object will be saved.
-transform_fst_save <- function(GWAS_associations, numChunks, startChunk = 1){
+# transform_fst_save() takes in the large GWAS association table, a number of chunks, and starting chunk and transforms the lists within the chunks into a list of DFs and lists OF DFs.. 4 objects specified above. Fst will be calculated within then the object will be saved.
+transform_fst_save <- function(GWAS_associations,
+                               numChunks,
+                               startChunk = 1,
+                               Fst_populations,
+                               return_DS = FALSE,
+                               saveData = TRUE){
 
+  # load data from memory and flatten for processing
+  variantList <- load_n_flatten(numChunks = numChunks, startSuperChunk = startChunk)
 
+  # compose list then tranform into GWASpops.geno2pheno masterList format
+  dataList <- list(GWAS_associations, variantList)
+  masterList <- ensListTransform_mod(dataList, TRUE)
+
+  # calculate Fst, delete redudant data vals, and discard multiallelic sites
+  fstList <- hudsonFst_alleleList(masterList[[2]], Fst_populations, deleteRedundants = TRUE, discardMultiAllelic =  TRUE)
+
+  # make single table of Fst Value list, then bind to masterList data structure
+
+  fstList <- fill_rows(fstList) # making all sublists compatible for binding together as data.frame
+  names <- names(fstList)
+  fstDF <- cbind.data.frame(fstList)
+  colnames(fstDF) <- names
+  fstDF <- as.data.frame(t(fstDF)) # transpose s.t. rows are alleles, cols are population-pairs
+
+  masterList[['Fst_per_allele']] <- fstDF
+
+  # save new data structure in memory
+  if(saveData){
+    setwd("D:\\Programming\\R_projects\\Kulathinal_Lab\\GWASpops.pheno2geno\\workingData\\fst_GWAS_annotation_lists")
+    fileName <- paste0('fullData_', numChunks, '_', startChunk)
+    save(masterList, file = fileName)
+    setwd("D:\\Programming\\R_projects\\Kulathinal_Lab\\GWASpops.pheno2geno")
+  }
+
+  # return nothing if desired, or resulting data structure if desired.
+  if(return_DS){
+    return(masterList)
+  } else{
+    return()
+  }
 }
 
-
-# setup env ---------------------------------------------------------------
-
-getwd()
-setwd("D:/Programming/R_projects/Kulathinal_Lab/GWASpops.pheno2geno/")
-
-source("bootCalls2.R")
-load("./WorkingData/GwasAssocitions.rda")
-library(GWASpops.pheno2geno)
-
-
-# planning inspecting .... ------------------------------------------------
-
-load("./workingData/unprocessedChunks/chunk1-100.rds")
-
-chuk2 <- load("./workingData/unprocessedChunks/chunk101-200.rds") # doesn't work for renamming
-
-?load
-# make small script to read in all chunks and rename them.. unless there is some option to load objects with custom name? (no option... )
-
-# flatten chunk list into single list of rsIDs (get rid of empty entries )
-# filter 'asso' (MT) according to names of list elements (variants within a single flat list)
-# combine filtered 'asso' (fAsso) with flattened list of rsIDs .... [fAsso element 1 ; variant list element 2]
-# pass into transform func.
-#
-# .... probably create modifed transform func which trucates data forcibly in order to ensure successful transforms.
-#
-#  After all above done, compose transform_fst_save which perfroms steps above and will reasonably create the 4 specified data structures needed for analyses.
-#
 
 
 # load_n_flatten() --------------------------------------------------------
 
 # realized an error in my processing of the data.. I actually didn't need to rename anything! as I can assign names to the loaded objects adhoc within a list as loading them in... so I will have to manage the first 13 chunks manually somehow... maybe rename manually before processing through here.
 
-load_n_flatten <- function(numChunks, startChunk = 1) {
+load_n_flatten <- function(numChunks, startSuperChunk = 1) {
 
   setwd("D:\\Programming\\R_projects\\Kulathinal_Lab\\GWASpops.pheno2geno\\workingData\\unprocessedChunks")
   ret_list <- list()
 
+  startPoint <- (startSuperChunk - 1)*100 + 1
+
   for(i in 1:numChunks){
-    s <- startChunk + (i-1)*100
+    s <- startPoint + (i-1)*100
     end <- s + 99
     dataName <- paste0("chunk", s, "-", end, ".rds")
     load(dataName)
@@ -77,82 +87,7 @@ load_n_flatten <- function(numChunks, startChunk = 1) {
   return(ret_list)
 }
 
-
 # -------------------------------------------------------------------------
-
-
-# test flattening
-tl <- list()
-
-load("./workingData/unprocessedChunks/chunk1-100.rds")
-tl[["ret1"]] <- retList
-load("./workingData/unprocessedChunks/chunk101-200.rds")
-tl[["ret2"]] <- retList
-
-tl2 <- purrr::flatten(tl) # first layer of flattening
-tl2 <- purrr::flatten(tl2) # second. both succeeded
-
-
-
-testLNF <- load_n_flatten(numChunks = 3) # looks good. runs fast.
-
-# now to filter asso and transform
-
-fAsso <- asso[asso$SNPS %in% names(testLNF)] # down to 3523 obs
-
-# tranform
-dList <- list(fAsso, testLNF)
-tTransform <- ensListTransform_mod(dList, T) # notably no failure of transformation
-debug(ensListTransform_mod)
-undebug(ensListTransform_mod)
-
-fassoCOPY <- fAsso
-data.table::setnames(fassoCOPY, old = 'SNPS', new = 'VariantID') # cannot use normal syntax to reference names on a data.table. 'DF['colname']'
-names(fassoCOPY)
-
-# After transform we calculate Fst per SNP, we bind all snps into one DF, transpose and append to the list before saving
-setwd("..")
-getwd()
-source("./R/fst_funcs.R")
-
-fstTest <- hudsonFst_alleleList(tTransform[[2]], Populations, TRUE) # taking a long time ... might be having some issue with populations including those without listed sample_count
-#      many warnings stating that "NAs introduced by coercion"
-
-thousGenPops <- Populations[grep("1000GENOMES", Populations$Population_Abbreviation)]
-fstTest <- hudsonFst_alleleList(tTransform[[2]], thousGenPops, TRUE) # started at 3:20 finish at 3:26 .. so 6 mins for 3 100 size chunks rn. w/ 234 chunks that 468 mins for just these transform w/o anything else.. not terrible 7.8 hrs for total time for calculating Hudson Fst... though we want Wrights.. which should be the same time probably?
-
-fstTest <- hudsonFst_alleleList(tTransform[[2]][1:100], thousGenPops, TRUE)
-fstTest <- do.call(cbind, fstTest) # rbind isn't the call we want.. we want the rows to be matched up, issue is there are many missing values.. so would be necessary to fill missing values with NULL or NA .. maybe dplyr has this built in?
-
-
-tTransform[['fstTest']] <- fstTest
-
-# -------------------------------------------------------------------------
-
-# DETERMINE HOW TO GET NAMED VEC FROM perAlleleFst_transform()
-
-namedVec <- perAlleleFst_transform(tTransform[[2]]$rs6921580, thousGenPops, F)
-
-nVec <- namedVec[,6, drop = FALSE] # this is it!
-##############################################################
-
-
-
-# fill rows func test: ----------------------------------------------------
-
-filledTest <- fill_rows_gpt(fstTest) # error
-debug(fill_rows_gpt)
-
-# ISSUE: Seeing a row with 515 unique names.. meaning there must be some names where the order is swapped making for 2x possible unique names... need to ensure this cannot happen in code that generates rownames. 496 is the max number that CAN exist for the 32C2 set of name combinations
-
-# START HERE 2-26 ---------------------------------------------------------
-#  working towards complete data transformation and fst calculation for all data thus far...
-#  finished calling for data, ignoring missing data for now (probably thorughout the rest of the proj.)
-#  need to make formula / func for Wrights fst.. reading from wiki is a bit difficult but with a calm mind and some determination I am sure I can work something out
-#  need to finish test run of the transformation func 'transform_fst_save()' ... currently hung up on issue detailed just above ... need to ensure that I cannot produce more than the true max number of rows when calculating Fst... seems a bit of a tough one to crack.. as it was only produced once in the test data set I think, and beyond that I am wondering why so many were exactly the right number if this one somehow slipped through the cracks. .. will need a bit of brainstroming for debug strategies.
-#  After the first test run of commands works I need to build out transform_fst_save() and run it against the first 24th of the data... see how long it takes.. and see if transformation fails at any point.. do debugging... then hopefully just run the rest of it through and finally see if all the data can be stored in one huge list with the 4 items of data forms desired.
-
-
 
 # fillRows func dev ----------------------------------------------------------------
 
@@ -160,19 +95,20 @@ debug(fill_rows_gpt)
 #
 # making generalized func that can fill in missing rows for DFs with named rows
 
-# chatGPT wrote this version:
-fill_rows_gpt <- function(DF_list){
+# chatGPT wrote this version, its been edited to actually work by me:
+fill_rows <- function(DF_list){
 
   # find largest row
   max_rows <- max(sapply(DF_list, nrow))
 
   # get names of largest row as rowNames
-  rowNames <- names(which.max(sapply(DF_list, nrow)))
+  rowNames <- row.names(DF_list[[which.max(sapply(DF_list, nrow))]])
 
   # for each DF in DF_list add missing rows with NA filled in using rowNames
   for (i in seq_along(DF_list)) {
     if (nrow(DF_list[[i]]) < max_rows) {
       missing_rows <- data.frame(matrix(NA, nrow = max_rows - nrow(DF_list[[i]]), ncol = ncol(DF_list[[i]])))
+      colnames(missing_rows) <- "Fst_Hudson"
       row.names(missing_rows) <- setdiff(rowNames, row.names(DF_list[[i]]))
       DF_list[[i]] <- rbind(DF_list[[i]], missing_rows)
     }
@@ -180,32 +116,6 @@ fill_rows_gpt <- function(DF_list){
 
   return(DF_list)
 }
-
-# refactored for efficiency version:
-
-fill_rows <- function(DF_list){
-
-  largestRowIndex <- which.max(sapply(DF_list, nrow))
-
-  # find largest row
-  max_rows <- nrow(DF_list[[largestRowIndex]])
-
-  # get names of largest row as rowNames
-  rowNames <- names(DF_list[[largestRowIndex]])
-
-  # for each DF in DF_list add missing rows with NA filled in using rowNames
-  for (i in seq_along(DF_list)) {
-    if (nrow(DF_list[[i]]) < max_rows) {
-
-      # create DF with NA values, then name the rows, then bind with the DF before reassigning to the DF_list
-      missing_rows <- data.frame(matrix(NA, nrow = max_rows - nrow(DF_list[[i]]), ncol = ncol(DF_list[[i]])))
-      row.names(missing_rows) <- setdiff(rowNames, row.names(DF_list[[i]]))
-      DF_list[[i]] <- rbind(DF_list[[i]], missing_rows)
-    }
-  }
-  return(DF_list)
-}
-
 
 
 # modifed Transform -------------------------------------------------------
@@ -240,7 +150,11 @@ ensListTransform_mod <- function(dataList, popsData = F) {
   ## multiAPIcall_variants2 (?)... I think its one of the for loops that are fixing these data elements: EnsVar_synonyms and EnsVar_Clinical_significance.
 
   GWAS_DF <- dataList[[1]] #storing GWAS data from GWAS files for later.. (similar to createMT())
-  data.table::setnames(GWAS_DF, old = 'SNPS', new = 'VariantID')
+
+  if(is.null(GWAS_DF[['VariantID']])){ # renaming col for compatibility of pipeline functions
+    data.table::setnames(GWAS_DF, old = 'SNPS', new = 'VariantID')
+
+  }
 
   if(popsData){
     # grabbing population data and converting into a list of tibbles.
@@ -325,8 +239,16 @@ ensListTransform_mod <- function(dataList, popsData = F) {
 
 
 
+# Disorganized working notes:  --------------------------------------------
 
+# ISSUE: Seeing a row with 515 unique names.. meaning there must be some names where the order is swapped making for 2x possible unique names... need to ensure this cannot happen in code that generates rownames. 496 is the max number that CAN exist for the 32C2 set of name combinations
 
+# START HERE 2-26 ---------------------------------------------------------
+#  working towards complete data transformation and fst calculation for all data thus far...
+#  finished calling for data, ignoring missing data for now (probably throughout the rest of the proj.)
+#  need to make formula / func for Wrights fst.. reading from wiki is a bit difficult but with a calm mind and some determination I am sure I can work something out
+#  need to finish test run of the transformation func 'transform_fst_save()' ... currently hung up on issue detailed just above ... need to ensure that I cannot produce more than the true max number of rows when calculating Fst... seems a bit of a tough one to crack.. as it was only produced once in the test data set I think, and beyond that I am wondering why so many were exactly the right number if this one somehow slipped through the cracks. .. will need a bit of brainstroming for debug strategies.
+#  After the first test run of commands works I need to build out transform_fst_save() and run it against the first 24th of the data... see how long it takes.. and see if transformation fails at any point.. do debugging... then hopefully just run the rest of it through and finally see if all the data can be stored in one huge list with the 4 items of data forms desired.
 
 
 
@@ -391,139 +313,6 @@ ensListTransform_mod <- function(dataList, popsData = F) {
 
 
 
-# DEPRECATED.... SAVING CODE BELOW WORKSPACE NOW::
-
-# read, rename script dev -------------------------------------------------
-
-
-renameData <- function(numChunk, startChunk = 1) {
-
-  setwd("D:\\Programming\\R_projects\\Kulathinal_Lab\\GWASpops.pheno2geno\\workingData\\unprocessedChunks")
-
-  for(i in 1:numChunk){
-    s <- startChunk + (i-1)*100
-    end <- s + 99
-    dataName <- paste0("chunk", s, "-", end, ".rds")
-    load(dataName)
-    newObj <- paste0("chunk", s, "-", end)
-    assign(newObj , retList)
-    save(list = newObj, file = dataName) # assign() should properly rename objects which all will have the name 'retList'
-  }
-
-  setwd("D:/Programming/R_projects/Kulathinal_Lab/GWASpops.pheno2geno/")
-
-}
-
-
-# -------------------------------------------------------------------------
-
-names(tl2[1])
-
-names(tl2)[1:20]
-# testing save to see what names gets stored when saving objects of a list
-
-save(tl2[1], file = "testSave.rds")
-# Error in save(tl2[1], file = "testSave.rds") : object ‘tl2[1]’ not found
-
-# so no we cannot save elements from a list like this ... lets check save options to see if we can modify the object name
-?save
-save(list = names(tl2), file = "testSave.rds") # getting error, because its trying to take this character vec as a list of object names... I am trying to specify the name of the object saved.
-
-?assign # this is what I want.
-
-assign(names(tl2[1]), tl2[1]) # it fuckin worked. That is the good shit.
-
-
-# testing rename func DEPRECATED!!!!!!!!! -----------------------------------------------------
-debug(renameData)
-renameData(1) # works now
-
-load("./workingData/unprocessedChunks/chunk1-100.rds")
-
-renameData(233)
-#ERROR Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection ... some seem to work... having problems with others..
-
-getwd()
-load("chunk2001-2100.rds") # still ret list
-load("chunk1501-1600.rds")
-load("chunk1401-1500.rds")
-load("chunk1401-1500.rds")
-
-
-# missing chunk 1301-1400 .. this is our issue.
-
-grabChunks(allrsID_ch10, 1301, numCalls = 1)
-
-renameData(220, startChunk = 1301) # restarting after grabbing missing chunk
-
-# Don't think I need to rename data.. think it was unnecessary from the start... mistakes are ok.
-#
-# Renaming wrong named chunks
-setwd('./unprocessedChunks/')
-load("chunk1-100.rds")
-load("chunk101-200.rds")
-load("chunk201-300.rds")
-load("chunk301-400.rds")
-load("chunk401-500.rds")
-load("chunk501-600.rds")
-load("chunk601-700.rds")
-load("chunk701-800.rds")
-load("chunk801-900.rds")
-load("chunk901-1000.rds")
-load("chunk1001-1100.rds")
-load("chunk1101-1200.rds")
-load("chunk1201-1300.rds")
-load("chunk1301-1400.rds")
-
-
-retList <- `chunk1-100`
-save(retList, file = "chunk1-100.rds")
-retList <- `chunk101-200`
-save(retList, file = "chunk101-200.rds")
-retList <- `chunk201-300`
-save(retList, file = "chunk201-300.rds")
-retList <- `chunk301-400`
-save(retList, file = "chunk301-400.rds")
-retList <- `chunk401-500`
-save(retList, file = "chunk401-500.rds")
-retList <- `chunk501-600`
-save(retList, file = "chunk501-600.rds")
-retList <- `chunk601-700`
-save(retList, file = "chunk601-700.rds")
-retList <- `chunk701-800`
-save(retList, file = "chunk701-800.rds")
-retList <- `chunk801-900`
-save(retList, file = "chunk801-900.rds")
-retList <- `chunk901-1000`
-save(retList, file = "chunk901-1000.rds")
-retList <- `chunk1001-1100`
-save(retList, file = "chunk1001-1100.rds")
-retList <- `chunk1101-1200`
-save(retList, file = "chunk1101-1200.rds")
-retList <- `chunk1201-1300`
-save(retList, file = "chunk1201-1300.rds")
-
-
-rm(`chunk1-100`,
-`chunk101-200`,
-`chunk201-300`,
-`chunk301-400`,
-`chunk401-500`,
-`chunk501-600`,
-`chunk601-700`,
-`chunk701-800`,
-`chunk801-900`,
-`chunk901-1000`,
-`chunk1001-1100`,
-`chunk1101-1200`,
-`chunk1201-1300`,
-`chunk1301-1400`)
-
-# EVERYTHING NAMED retList again.
-#
-#
-
-# -------------------------------------------------------------------------
 
 
 

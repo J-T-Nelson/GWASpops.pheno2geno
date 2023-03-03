@@ -28,13 +28,17 @@ WrightFst <- function(){
 #                          returns a list of DFs which contain calculated hudson Fst as well as the values used to do the calculation in each row. Each row is per population pair.
 #                          `deleteRedundants` deletes the data used to calculate Fst, leaving only the population pair indicator and the value itself. This is useful for saving memory, as the values are highly redundant. (I have not come up with a way to store them more efficiently yet, as I lack sufficient insight into the future use of this data)
 
-hudsonFst_alleleList <- function(alleleList, populationsDF, deleteRedundants = FALSE){
+hudsonFst_alleleList <- function(alleleList, populationsDF, deleteRedundants = FALSE, discardMultiAllelic = TRUE){
 
   captureList <- list()
 
   for(i in 1:length(alleleList)){
     tableName <- names(alleleList[i])
     captureList[[tableName]] <- perAlleleFst_transform(alleleList[[i]], populationsDF, deleteRedundants)
+  }
+  if(discardMultiAllelic){
+    # discarding entries which were multiallelic in the capture list
+    captureList <- purrr::discard(captureList, is.logical)
   }
 
   return(captureList)
@@ -47,6 +51,10 @@ hudsonFst_alleleList <- function(alleleList, populationsDF, deleteRedundants = F
 
 perAlleleFst_transform <- function(alleleDF, populations, deleteRedundants = FALSE){
 
+  if(length(unique(alleleDF$allele)) > 2){ # no calculations for multiallelic sites. This method of Fst calculation isn't suitable to non-biallelic sites.
+    return(NA)
+  }
+
   # Extract data of interest from alleleDF
   ancestralAllele <- attr(alleleDF, "Ancestral_Allele")
 
@@ -54,7 +62,12 @@ perAlleleFst_transform <- function(alleleDF, populations, deleteRedundants = FAL
     ancestralAllele <- calc_ancestralAllele(alleleDF)
   }
 
-  alleleDF <- alleleDF[alleleDF$population %in% populations$Population_Abbreviation & alleleDF$allele != ancestralAllele , ]
+  if( !(ancestralAllele %in% unique(alleleDF$allele)) ) { # reassign AA if assignment of AA is somehow wrong, (ancestral allele not found in data.frame)
+    ancestralAllele <- calc_ancestralAllele(alleleDF)     #  Wrong assignment can come directly from data sources, not necessarily my own code
+  }
+
+  alleleDF <- alleleDF[alleleDF$population %in% populations$Population_Abbreviation & alleleDF$allele != ancestralAllele , ] # filtering down to minor allele.
+  # ^^ here we discard non 'ancestral alleles' because we are really looking for the minor alleles to compare fst wrt to.
 
   # Digest DF in to create DF out:
 
@@ -107,24 +120,44 @@ perAlleleFst_transform <- function(alleleDF, populations, deleteRedundants = FAL
 
 # -------------------------------------------------------------------------
 
-
 calc_ancestralAllele <- function(population_alleleDF){
 
-  A_mag <- sum(population_alleleDF[population_alleleDF$allele == "A", ]$frequency)
-  C_mag <- sum(population_alleleDF[population_alleleDF$allele == "C", ]$frequency)
-  G_mag <- sum(population_alleleDF[population_alleleDF$allele == "G", ]$frequency)
-  T_mag <- sum(population_alleleDF[population_alleleDF$allele == "T", ]$frequency)
-  tempVec <- c(A_mag, C_mag, G_mag, T_mag)
+  alleleSet <- unique(population_alleleDF$allele)
 
-  ancestralAllele <- switch(which.max(tempVec),
-                            '1' = "A",
-                            '2' = "C",
-                            '3' = "G",
-                            '4' = "T")
-  return(ancestralAllele)
+  highestSum <- 0
+  AA <- ''
+  for(allele_character in alleleSet){
+    tempSum <- sum(population_alleleDF[population_alleleDF$allele == allele_character, ]$frequency)
+    if(tempSum > highestSum){
+      highestSum <- tempSum
+      AA <- allele_character
+    }
+  }
+  return(AA)
 }
 
 
+
+
+# Old calc_ancestralAllele ------------------------------------------------
+# this version is just poorly written. Wasn't thinking clearly about the needs of the func when I wrote it.
+
+#
+# calc_ancestralAllele <- function(population_alleleDF){
+#
+#   A_mag <- sum(population_alleleDF[population_alleleDF$allele == "A", ]$frequency)
+#   C_mag <- sum(population_alleleDF[population_alleleDF$allele == "C", ]$frequency)
+#   G_mag <- sum(population_alleleDF[population_alleleDF$allele == "G", ]$frequency)
+#   T_mag <- sum(population_alleleDF[population_alleleDF$allele == "T", ]$frequency)
+#   tempVec <- c(A_mag, C_mag, G_mag, T_mag)
+#
+#   ancestralAllele <- switch(which.max(tempVec),
+#                             '1' = "A",
+#                             '2' = "C",
+#                             '3' = "G",
+#                             '4' = "T")
+#   return(ancestralAllele)
+# }
+
+
 # -------------------------------------------------------------------------
-
-
