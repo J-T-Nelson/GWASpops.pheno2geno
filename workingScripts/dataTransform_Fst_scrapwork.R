@@ -530,4 +530,147 @@ min_hudson # -0.01626984 ... nearly 0 anyway... which I suppose means we can jus
 debug(transform_fst_save) # debugging to see what the heck is going on inside
 testMany_3 <- transform_fst_save(asso, 5, 1, thousGenPops, TRUE, TRUE)
 
+
 # continue debugging next sesh. Step into HusonFst calculation to see where the discarding is happening, ensure it is correct and take note of it.
+#
+# 3-6 Session start:
+testMany_4 <- transform_fst_save(asso, 5, 1, thousGenPops, TRUE, TRUE)
+undebug(transform_fst_save)
+
+# TESTING perallele func edits GOOD.
+testMany_4.5 <- transform_fst_save(asso, 1, 1, thousGenPops, TRUE, TRUE) # legit same number of returns as doing 5 chunks (733) ... lets see chunk 2 on its own... maybe I am looking at the wrong part of the picture for this bug.
+
+testMany_5 <- transform_fst_save(asso, 1, 2, thousGenPops, TRUE, TRUE) # also 733 ... weird
+
+#checking the rsIDs within
+
+idSet_1 <- rownames(testMany_4.5[[4]])
+idSet_2 <- rownames(testMany_5[[4]])
+identical(idSet_1, idSet_2) # TRUE ... so we are having an issue related to grabbing the right chunks.
+
+
+testMany_6 <- transform_fst_save(asso, 5, 1, thousGenPops, TRUE, TRUE)
+# confirmed a suspicion.. I have bad data initially, where many chunks appear to be duplicated chunks with the wrong name...
+
+fullFlatten <- load_n_flatten(233) # too much data at once it seems... gonna have to do in smaller portions
+
+fullFlatten <- load_n_flatten(100) # 10+GB on its own... whew. ... maybe .rds files are compressed?
+names <- names(fullFlatten)
+rm(fullFlatten)
+fullFlatten2 <- load_n_flatten(99, 101)
+names2 <- names(fullFlatten2)
+rm(fullFlatten2)
+fullFlatten3 <- load_n_flatten(33, 201) # data totals to ~23 GBs
+names3 <- names(fullFlatten3)
+rm(fullFlatten3)
+allNames <- append(names, c(names2, names3))
+# 220866 names in total here
+
+uniqueNames <- unique(allNames)
+# 207839 unique names... not too bad
+
+207839/220866 # .941 ... so most of my chunks are good. ... lets find the range of bad chunks now.. we already know that 2-5 are bad
+
+dupeIndex <- which(duplicated(allNames))
+# looks like we have 13027 duplicated indecies.. each stored chunk has ~1000 names... with less always because some chunks are missed so looks like ~14-15 chunks have been missed in all likelihood.
+
+?range
+range(dupeIndex) # 980 220826 ... ok this is a huge range which sucks. ... maybe I can graph dupe index to see where the values fall.
+
+dupeList <- split(dupeIndex,ceiling( seq_along(dupeIndex)/1000 ))
+# DUPELIST SHOWS WHAT CHUNKS ARE MISSING ^^
+
+# NEXT SESSION, RETRIEVE MISSING CHUNKS, THEN START THE TRANSFORM AGAIN... I THINK EVERYTHING SHOULD BE PRETTY IRONED OUT NOW. CAN PROBABLY IGNORE THE HIGHER DUPLICATED names AS THEY SEEM TO BE SELDOM AND LIKELY A RESULT OF SYNONYMS
+
+
+# Re collected data... now to test for duplication once again
+
+testMany_5 <- transform_fst_save(asso, 1, 2, thousGenPops, TRUE, TRUE)
+
+
+
+fullFlatten <- load_n_flatten(15)
+namesFF <- names(fullFlatten) # 14572
+uNamesFF <- unique(namesFF) # 13590 .... more duplication than I want.. something like 1 whole chunk... but not bad.
+
+dupeIndex2 <- which(duplicated(namesFF))
+dupeIndex2
+
+
+fullFlatten_22 <- load_n_flatten(20) # 19459
+namesFF22 <- names(fullFlatten_22)
+uNamesFF22 <- unique(namesFF22) # 18473
+
+dupeIndex22 <- which(duplicated(namesFF22))
+dupeIndex22 # even after novel grabs... the same range is looking bad.. 13.5 to 14.5k ... not sure.. won't worry about it too much. Just going to consider it part of the SNPs that naturally didn't make it through filtering.
+
+
+grabChunks(allrsID_ch10, StartChunk = 1701, numCalls = 4) # will take like 2 hrs I think..
+
+
+testMany_5 <- transform_fst_save(asso, 5, 2, thousGenPops, TRUE, TRUE) # going to test this call to see if # fst out is closer to what is expected. ... we don't want to see 733 again.
+# 3635 results ^^ which is what we wanted I think! Nice!!!
+
+# 3-8-23: Time to start converting data .. will check results to make sure things look decent, but I am pretty sure there is not a large fraction of duplications any longer, and any which exist can be discarded as bad data.
+
+# Cleaning environment:
+rm(testMany_1, testMany_2,testMany_5, testRun_1, testRun_2, testRun_3, testRun_4)
+rm(fst_ret, fstPer, fullFlatten, fullFlatten_22)
+rm(a, pops, dupeIndex2, dupeIndex22, max_hudson, min_hudson, namesFF, namesFF22, uNamesFF, uNamesFF22)
+
+
+# Not going to round values now, will do so when generating graphs, as I think preserving original values of calculation is meaningful and rounding should be no issue when performing graphing.
+
+
+
+testMany <- transform_fst_save(asso, 20, 1, thousGenPops, return_DS = TRUE, saveData = TRUE)
+# 13956 of 19459 names.. which considering the duplicated values that I couldn't seem to fix when grabbing new data seems about correct when accounting for multiallelic sites.
+
+rm(testMany)
+
+# continue grabbing data without returning objects now. Grabbig in groups of 10.. total of 234 chunks... think I need a to do some custom calling for the final chunk because its irregular name.
+
+transform_fst_save(asso, numChunks = 10, startChunk = 21, thousGenPops, return_DS = FALSE, saveData = TRUE)
+transform_fst_save(asso, numChunks = 10, startChunk = 31, thousGenPops, return_DS = FALSE, saveData = TRUE)
+transform_fst_save(asso, numChunks = 10, startChunk = 41, thousGenPops, return_DS = FALSE, saveData = TRUE)
+transform_fst_save(asso, numChunks = 10, startChunk = 51, thousGenPops, return_DS = FALSE, saveData = TRUE)
+transform_fst_save(asso, numChunks = 10, startChunk = 61, thousGenPops, return_DS = FALSE, saveData = TRUE)
+transform_fst_save(asso, numChunks = 10, startChunk = 71, thousGenPops, return_DS = FALSE, saveData = TRUE)
+transform_fst_save(asso, numChunks = 10, startChunk = 81, thousGenPops, return_DS = FALSE, saveData = TRUE)
+transform_fst_save(asso, numChunks = 10, startChunk = 91, thousGenPops, return_DS = FALSE, saveData = TRUE)
+transform_fst_save(asso, numChunks = 10, startChunk = 101, thousGenPops, return_DS = FALSE, saveData = TRUE)
+
+
+transform_fst_save(asso, numChunks = 10, startChunk = 111, thousGenPops, return_DS = FALSE, saveData = TRUE)
+transform_fst_save(asso, numChunks = 10, startChunk = 121, thousGenPops, return_DS = FALSE, saveData = TRUE)
+transform_fst_save(asso, numChunks = 10, startChunk = 131, thousGenPops, return_DS = FALSE, saveData = TRUE)
+transform_fst_save(asso, numChunks = 10, startChunk = 141, thousGenPops, return_DS = FALSE, saveData = TRUE)
+transform_fst_save(asso, numChunks = 10, startChunk = 151, thousGenPops, return_DS = FALSE, saveData = TRUE)
+transform_fst_save(asso, numChunks = 10, startChunk = 161, thousGenPops, return_DS = FALSE, saveData = TRUE)
+transform_fst_save(asso, numChunks = 10, startChunk = 171, thousGenPops, return_DS = FALSE, saveData = TRUE)
+transform_fst_save(asso, numChunks = 10, startChunk = 181, thousGenPops, return_DS = FALSE, saveData = TRUE)
+transform_fst_save(asso, numChunks = 10, startChunk = 191, thousGenPops, return_DS = FALSE, saveData = TRUE)
+transform_fst_save(asso, numChunks = 10, startChunk = 201, thousGenPops, return_DS = FALSE, saveData = TRUE)
+
+
+transform_fst_save(asso, numChunks = 10, startChunk = 211, thousGenPops, return_DS = FALSE, saveData = TRUE)
+transform_fst_save(asso, numChunks = 10, startChunk = 221, thousGenPops, return_DS = FALSE, saveData = TRUE)
+transform_fst_save(asso, numChunks = 3, startChunk = 231, thousGenPops, return_DS = FALSE, saveData = TRUE)
+
+
+
+# after completing transformation, for times sake we will not worry about any missing values, and will simply accept the data we have and move forward with it as if it was correct and not missing anything of importance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -479,6 +479,9 @@ grabChunks(allrsID_ch10, StartChunk = 12901)
 
 grabChunks(allrsID_ch10, StartChunk = 16101)
 
+grabChunks(allrsID_ch10, StartChunk = 101, numCalls = 15) # re-grabbing duplicated data
+
+grabChunks(allrsID_ch10, StartChunk = 401, numCalls = 13) # calls froze...
 
 
 # finishing data collection 2-25 ------------------------------------------
@@ -547,99 +550,6 @@ getPopsData(allrsID_ch10, 130, 23301)
 #  ^^^ the above error seems to occur consistently when I cancel calls to the API. The reason why I cancel though, is because sometimes the calls just freeze, where the function in still running, but for some reason things are frozen. Not sure its a memory issue at this point. Not sure why the freeze is happening. Not honestly clear on how to gain insight into this sort of bug either... would need to read into API trouble shooting.. if I could somehow view the stage of data requesting my machine is freezed at, whether its saving something in RAM temporarily and lacking space, or waiting for a lost response that is never coming in with no default means of managing such lost responses... I am not sure what all could go wrong, and thus would need to think more, read more and maybe consult Ben if I wanted to get to the bottom of this.
 
 # SESH 4:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -48,7 +48,7 @@ transform_fst_save <- function(GWAS_associations,
   # save new data structure in memory
   if(saveData){
     setwd("D:\\Programming\\R_projects\\Kulathinal_Lab\\GWASpops.pheno2geno\\workingData\\fst_GWAS_annotation_lists")
-    fileName <- paste0('fullData_', numChunks, '_', startChunk)
+    fileName <- paste0('fullData_', startChunk, '_', startChunk+numChunks-1)
     save(masterList, file = fileName)
     setwd("D:\\Programming\\R_projects\\Kulathinal_Lab\\GWASpops.pheno2geno")
   }

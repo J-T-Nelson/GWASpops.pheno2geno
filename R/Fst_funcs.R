@@ -60,10 +60,11 @@ perAlleleFst_transform <- function(alleleDF, populations, deleteRedundants = FAL
 
   if(is.na(ancestralAllele)){ # sometimes ancestral Allele is NA, which makes the rest of this function impossible to execute. Calculating ancestral allele by finding allele with highest frequency.
     ancestralAllele <- calc_ancestralAllele(alleleDF)
-  }
+  } else {
 
-  if( !(ancestralAllele %in% unique(alleleDF$allele)) ) { # reassign AA if assignment of AA is somehow wrong, (ancestral allele not found in data.frame)
+      if( !(ancestralAllele %in% unique(alleleDF$allele)) ) { # reassign AA if assignment of AA is somehow wrong, (ancestral allele not found in data.frame)
     ancestralAllele <- calc_ancestralAllele(alleleDF)     #  Wrong assignment can come directly from data sources, not necessarily my own code
+      }
   }
 
   alleleDF <- alleleDF[alleleDF$population %in% populations$Population_Abbreviation & alleleDF$allele != ancestralAllele , ] # filtering down to minor allele.
@@ -74,15 +75,15 @@ perAlleleFst_transform <- function(alleleDF, populations, deleteRedundants = FAL
   DF_rows <- nrow(alleleDF) # number for efficient pairwise iteration
 
   if(DF_rows == 0){ # when no pops of interest exist for a given variant, we just cancel the function and return nothing
-    return(NULL)
+    return(NA)
   }
 
   rowHolder <- list()
   for(i in 1:(DF_rows-1)){ # i correlates to a population
     for(j in (1+i):DF_rows){ # j correlates to the second population used to pair with i's population
       rName <- paste0(alleleDF$population[i], "-X-",alleleDF$population[j])
-      row <- c(rName,
-               populations[populations$Population_Abbreviation == alleleDF$population[i]]$Sample_Count,
+
+      row <- c(populations[populations$Population_Abbreviation == alleleDF$population[i]]$Sample_Count,
                alleleDF$frequency[i],
                populations[populations$Population_Abbreviation == alleleDF$population[j]]$Sample_Count,
                alleleDF$frequency[j])
@@ -94,7 +95,7 @@ perAlleleFst_transform <- function(alleleDF, populations, deleteRedundants = FAL
   #setup return DF, name cols, fix col types, assign attributes
   retDF <- as.data.frame(t(dplyr::bind_rows(rowHolder)))
 
-  names(retDF) <- c("pop_pair", 'n1', "p1", 'n2', 'p2')
+  names(retDF) <- c('n1', "p1", 'n2', 'p2')
   retDF['n1'] <- as.numeric(retDF[['n1']])
   retDF['n2'] <- as.numeric(retDF[['n2']])
   retDF['p1'] <- as.numeric(retDF[['p1']])
@@ -105,12 +106,12 @@ perAlleleFst_transform <- function(alleleDF, populations, deleteRedundants = FAL
 
   fstVec <- numeric(nrow(retDF))
   for(i in 1:nrow(retDF)){
-    fstVec[i] <- HudsonFst(retDF[i,2],retDF[i,4],retDF[i,3],retDF[i,5])
+    fstVec[i] <- HudsonFst(retDF[i,1],retDF[i,3],retDF[i,2],retDF[i,4])
   }
   retDF['Fst_Hudson'] <- fstVec
 
   if(deleteRedundants){ #removing all but population pairs and Fst value to save memory, populations pairs are stored as row names
-    retDF <- retDF[,6, drop = FALSE] # drop = FALSE ensures we don't lose the row names in coercion
+    retDF <- retDF[,5, drop = FALSE] # drop = FALSE ensures we don't lose the row names in coercion
   }
 
   return(retDF)
