@@ -34,6 +34,16 @@ seq_along(dupeIndex) # creates an index vector, 1 index value for each element i
 
 
 
+# learning to inspect objects in memeory to compare for sameness.  --------
+
+
+.Internal(inspect(i)) # @0x000001ce37a47cc0 13 INTSXP g1c1 [MARK,REF(8)] (len=1, tl=0) 23
+a <- i
+.Internal(inspect(a))# @0x000001ce37a47cc0 13 INTSXP g1c1 [MARK,REF(8)] (len=1, tl=0) 23
+inspect(i) # not a func on its own.. hm ... what does .Internal do?
+
+
+
 
 
 

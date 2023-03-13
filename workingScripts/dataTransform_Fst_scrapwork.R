@@ -657,15 +657,54 @@ transform_fst_save(asso, numChunks = 10, startChunk = 211, thousGenPops, return_
 transform_fst_save(asso, numChunks = 10, startChunk = 221, thousGenPops, return_DS = FALSE, saveData = TRUE)
 transform_fst_save(asso, numChunks = 3, startChunk = 231, thousGenPops, return_DS = FALSE, saveData = TRUE)
 
-
+# MAKE SURE EVERYTHING IS FULLY TRANSFORMED LAST CHUNK MAY NEED CUSTOM TREATMENT
 
 # after completing transformation, for times sake we will not worry about any missing values, and will simply accept the data we have and move forward with it as if it was correct and not missing anything of importance.
 
 
 
 
+# 3-10-23 Grab final chunk and transform and save ---------------------------------
+
+# CLEANING ENVIRONMENT FIRST
+
+# BELOW WE ARE JUST USING THE DECOMPOSED FUNCTION FOR TRANSFORM_FST_SAVE:
+#
+#
+# load data from memory and flatten for processing
+#variantList <- load_n_flatten(numChunks = numChunks, startSuperChunk = startChunk)
+load('./workingData/unprocessedChunks/chunk23301-23430.rds')
+variantList <- purrr::flatten(retList)
 
 
+# compose list then tranform into GWASpops.geno2pheno masterList format
+dataList <- list(asso, variantList)
+masterList <- ensListTransform_mod(dataList, TRUE)
+
+# calculate Fst, delete redudant data vals, and discard multiallelic sites
+fstList <- hudsonFst_alleleList(masterList[[2]], thousGenPops, deleteRedundants = TRUE, discardMultiAllelic =  TRUE)
+
+# make single table of Fst Value list, then bind to masterList data structure
+
+fstList <- fill_rows(fstList) # making all sublists compatible for binding together as data.frame
+names <- names(fstList)
+fstDF <- cbind.data.frame(fstList)
+colnames(fstDF) <- names
+fstDF <- as.data.frame(t(fstDF)) # transpose s.t. rows are alleles, cols are population-pairs
+
+masterList[['Fst_per_allele']] <- fstDF
+
+# save new data structure in memory
+
+  setwd("D:\\Programming\\R_projects\\Kulathinal_Lab\\GWASpops.pheno2geno\\workingData\\fst_GWAS_annotation_lists")
+  fileName <- paste0('fullData_', '234')
+  save(masterList, file = fileName)
+  setwd("D:\\Programming\\R_projects\\Kulathinal_Lab\\GWASpops.pheno2geno")
+
+
+# success in getting last bit of data transformed.
+#
+# MOVING ONTO NEW SCRIPT TO BEGIN THE PROCESS OF ANALYSIS AND DATA INTEGRATION
 
 
 
