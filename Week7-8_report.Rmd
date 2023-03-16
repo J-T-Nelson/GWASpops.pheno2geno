@@ -1,0 +1,310 @@
+---
+title: "Data Transformation - Early Fst Analysis"
+author: "Jon Tanner Nelson"
+date: "2023-03-13"
+output: html_document
+---
+
+## Progress Update 
+
+Some major progress has been made now that a complete Fst table has been created and all data has been transformed. Analyzing this data can now be done at length with relative ease. There have been some significant challenges along the way to calculating Fst and transforming the large amount of data, I will discuss those most significant here after, to see the results thus far skip to [Analysis]. 
+
+When meeting with Dr. Kulathinal on March 2nd he decided that the clustering analysis was not as important as focusing on the Fst analysis alone, thus the objective of clustering analysis is being set aside in favor of narrowing focus into Fst analysis and subsequent follow up analyses.  
+
+
+
+### Fst Calculation Decisions & Challenges
+
+Several points of uncertainty were confronted in calculating Fst for all SNPs in this large data set. 
+
+1. Notably many SNPs are not biallelic sites, and are instead multiallelic, which is unfit for the Fst estimator used within this project. Multiallelic sites were thus discarded upon their discovery within the processing data. 
+
+2. The selected Fst estimator, the Hudson Estimator^1^ produces negative values, which is undesirable and left without comment regarding interpretation in the paper describing the mathematical function I have used within this code-base. In order to avoid negative values erroneously affecting Fst sums used to compare relative impact of SNPs on population differentiation I rounded all negative values to 0, that way the range of estimation within this project is from 0-1, just as it is with Wright's Fst estimator. 
+
+3. Deletions and insertions are found throughout our data set, and while they are not typical SNPs in the sense that they aren't substitutions they are still interesting in terms of comparing genetic distances, thus the ability to derive Fst from sites with insertions or deletions has been enabled thorugh some small code modifications to allow for a greater number of variants within the data to be analyzed. 
+
+
+
+### Data Transformation Challenges
+
+1. Upon initially calculating Fst I was seeing much fewer returned values than expected, and was forced to investigate why so many samples were being discarded. I discovered in my data that ~ 6% of my stored data (from the Ensembl API) was duplicated. Perhaps an error in early calls to the API produced this as upon investigating I found that duplicated data was only found within the first few calls to the API. Thus I resolved this issue by simply re-retrieving those data chunks. 
+
+
+
+## Analysis 
+
+Early analyses look promising, use of Fst summing has produced clear standout variants. 
+
+![FIGURE 1 - Fst Sum accross all 496 population-pairs, horizontal lines indicate the top 1%, 5%, 10% of variants. Those which have the highest sums and thus highest Fst across all population-pairs](D:\Programming\R_projects\Kulathinal_Lab\GWASpops.pheno2geno\presentation_plots\FstSum_top1_5_10_percent.PNG)
+
+Using the same data set a density plot was produced, which shows that the majority of samples have low Fst and are generally fixed amongst populations, however there is a distinct tail where the top 1% of samples lie. 
+
+![FIGURE 2 - Density plot, the vertical lines indicate the top 1% (green), 5% (blue) and 10% (red) of summed variants across all population-pairs](D:\Programming\R_projects\Kulathinal_Lab\GWASpops.pheno2geno\presentation_plots\Fst_density_plot_percentages.PNG)
+
+
+### Methods: Fst Summing 
+
+In order to differentiate SNPs/variants in terms of their relative contribution to genetic distance some special processing is necessary. As Fst is a typically a pairwise value, which compares only two populations, where as we want to compare all 32 populations from the 1000 Genomes study. Thus by summing across all population pairs (496 total), we are able to producing meaningful differentiation between the large number of variants within our data. 
+
+![FIGURE 3 - A small example of the Fst data frame used to hold Fst values for all population pairs (cols) and variants (rows). By summing across rows each variant can have its overall Fst evaluated](D:\Programming\R_projects\Kulathinal_Lab\GWASpops.pheno2geno\presentation_plots\calcFstSum.PNG)
+
+
+## Future Analysis Plans
+
+A key point of filtering has yet to take place which will substantially shrink the variant sample set in future analyses, which is that of separating the disease associated variants from the non-diseases associated variants. I have looked for clear indications of this quality within the GWAS Catalog and associated Ensembl annotation data, however there is unfortunately no clear data feature to look to in discerning the disease associated variants from the non-disease associated. I will be working towards an efficient means of filtering the data in this way preceding further analysis. 
+
+Separately from the filtering that needs to take place, currently Fst summing analysis has only been done for the case of all populations which does not yet help answer a key research question: *"Are there genes involved in human phenotypes/disease harboring SNPs which are population-specific?"*, as there is no clear variant-set established for each sub population through this method. Thus the next analysis to be performed will similarly use an Fst sum, however each population will have its respective population-pair columns split off into their own tables which can then be analyzed separately.  
+
+With sets of population specific high impact variants, comparisons of intersections can be performed in order to determine which variants may be most interesting as key variants in population-specific genomic disease architecture.
+
+
+## Code
+
+Novel code was necessary for transformation of data gathered from Ensembl via API calls. Given the slow transfer speed of data coming in it was most reasonable to leave data in an untransformed state (R lists) until all data had been collected. In order to perform analyses a table like form such as a data.frame is desirable, thus the need for transformation. The following code is what has been used to transform data into (mostly) flat data.frames and lists of data.frames. 
+
+*Some code has been recycled from the package I developed and modified slightly for the purposes of this less generalized task of transformation* 
+
+```{r}
+# transform_fst_save() takes in the large GWAS association table, a number of chunks, and starting chunk and transforms the lists within the chunks into a list of DFs and lists OF DFs.. 4 objects specified above. Fst will be calculated within then the object will be saved.
+transform_fst_save <- function(GWAS_associations,
+                               numChunks,
+                               startChunk = 1,
+                               Fst_populations,
+                               return_DS = FALSE,
+                               saveData = TRUE){
+
+  # load data from memory and flatten for processing
+  variantList <- load_n_flatten(numChunks = numChunks, startSuperChunk = startChunk)
+
+  # compose list then tranform into GWASpops.geno2pheno masterList format
+  dataList <- list(GWAS_associations, variantList)
+  masterList <- ensListTransform_mod(dataList, TRUE)
+
+  # calculate Fst, delete redudant data vals, and discard multiallelic sites
+  fstList <- hudsonFst_alleleList(masterList[[2]], Fst_populations, deleteRedundants = TRUE, discardMultiAllelic =  TRUE)
+
+  # make single table of Fst Value list, then bind to masterList data structure
+
+  fstList <- fill_rows(fstList) # making all sublists compatible for binding together as data.frame
+  names <- names(fstList)
+  fstDF <- cbind.data.frame(fstList)
+  colnames(fstDF) <- names
+  fstDF <- as.data.frame(t(fstDF)) # transpose s.t. rows are alleles, cols are population-pairs
+
+  masterList[['Fst_per_allele']] <- fstDF
+
+  # save new data structure in memory
+  if(saveData){
+    setwd("D:\\Programming\\R_projects\\Kulathinal_Lab\\GWASpops.pheno2geno\\workingData\\fst_GWAS_annotation_lists")
+    fileName <- paste0('fullData_', startChunk, '_', startChunk+numChunks-1)
+    save(masterList, file = fileName)
+    setwd("D:\\Programming\\R_projects\\Kulathinal_Lab\\GWASpops.pheno2geno")
+  }
+
+  # return nothing if desired, or resulting data structure if desired.
+  if(return_DS){
+    return(masterList)
+  } else{
+    return()
+  }
+}
+
+
+
+# load_n_flatten() --------------------------------------------------------
+
+# Loads data chunks from memory, flattens them into desirable single level list structure
+
+load_n_flatten <- function(numChunks, startSuperChunk = 1) {
+
+  setwd("D:\\Programming\\R_projects\\Kulathinal_Lab\\GWASpops.pheno2geno\\workingData\\unprocessedChunks")
+  ret_list <- list()
+
+  startPoint <- (startSuperChunk - 1)*100 + 1
+
+  for(i in 1:numChunks){
+    s <- startPoint + (i-1)*100
+    end <- s + 99
+    dataName <- paste0("chunk", s, "-", end, ".rds")
+    load(dataName)
+    ret_list[[dataName]] <- retList
+  }
+
+  ret_list <- purrr::flatten(ret_list)
+  ret_list <- purrr::flatten(ret_list)
+  return(ret_list)
+}
+
+# -------------------------------------------------------------------------
+
+# fillRows func dev ----------------------------------------------------------------
+
+# fills in missing values (with 'NA') of the complete fst data.frame containing Fst calculations for all 496 population-pairs against all valid SNPs
+
+fill_rows <- function(DF_list){
+
+  # find largest row
+  max_rows <- max(sapply(DF_list, nrow))
+
+  # get names of largest row as rowNames
+  rowNames <- row.names(DF_list[[which.max(sapply(DF_list, nrow))]])
+
+  # for each DF in DF_list add missing rows with NA filled in using rowNames
+  for (i in seq_along(DF_list)) {
+    if (nrow(DF_list[[i]]) < max_rows) {
+      missing_rows <- data.frame(matrix(NA, nrow = max_rows - nrow(DF_list[[i]]), ncol = ncol(DF_list[[i]])))
+      colnames(missing_rows) <- "Fst_Hudson"
+      row.names(missing_rows) <- setdiff(rowNames, row.names(DF_list[[i]]))
+      DF_list[[i]] <- rbind(DF_list[[i]], missing_rows)
+    }
+  }
+
+  return(DF_list)
+}
+
+
+# modifed Transform -------------------------------------------------------
+
+# Specialized version of package function for list to data.frame transformation of Ensembl SNP annotation and population allele frequency data
+
+#' ensListTransform_mod
+#'
+#' @description Transforms list-form data which is produced by `get_ensVariants()` and `createMT(processData = FALSE)` into flat a list of flat tables which can then be used for graphing or viewing data in tabular form.
+#'
+#' @details
+#'
+#'
+#' @param dataList Data to be transformed. Must be in list format such that a GWAS data table is the first element and the respective data produced from calling Ensembl's REST API Variants endpoint with get_ensVariants() is the second element within the list. Position in the list is critical to successful execution of this function
+#' @param popsData populations data transformation option. when TRUE function runs assuming variants from Ensembl REST API have been called with populations option activated, resulting output is different due to this extra population data.
+#'
+#' @return data.frame or list of data.frames
+#'
+#' @examples NA
+#'
+#' @export
+ensListTransform_mod <- function(dataList, popsData = F) {
+  # dataList is a list with 2 elements, dataList[[1]] = GWAS data table ; dataList[[2]] = Ensembl API data in R list form
+
+  if(!requireNamespace("GWASpops.pheno2geno", quietly = TRUE)){
+    library(GWASpops.pheno2geno)
+  }
+  Populations <- Populations
+  #CONT <- purrr::flatten(dataList[[2]]) #removing nested structure such that all sublists are combined into one list within dataList[[2]]
+
+  CONT <- dataList[[2]]
+  CONT <- purrr::compact(CONT) # removing empty elements introduced by:
+  ## multiAPIcall_variants2 (?)... I think its one of the for loops that are fixing these data elements: EnsVar_synonyms and EnsVar_Clinical_significance.
+
+  GWAS_DF <- dataList[[1]] #storing GWAS data from GWAS files for later.. (similar to createMT())
+
+  if(is.null(GWAS_DF[['VariantID']])){ # renaming col for compatibility of pipeline functions
+    data.table::setnames(GWAS_DF, old = 'SNPS', new = 'VariantID')
+
+  }
+
+  if(popsData){
+    # grabbing population data and converting into a list of tibbles.
+    popData <- sapply(CONT, function(x) x$populations) #OPTIMIZATION: this may be more efficient with masking.. not sure though
+    popData <- lapply(popData, function(x) dplyr::bind_rows(x)) # OPTIMIZATION: check if this can run without the anonymous function in lapply() .. I imagine its increasing operations for this call.
+
+    # removes populations from the response content so further operations proceed properly.
+    CONT <- lapply(CONT, function(x) x[names(x) != 'populations']) # OPTIMIZATION: Check for function which removes and returns elements from lists... as this call may removed if the original popData <- sapply() call removed and returned
+  }
+
+  # removing multimapping by flattening the lists out. (some rsIDs posses multiple mappings against the reference genome(?) or against different data within Ensembl's API databases(?) )
+  CONT <- GWASpops.pheno2geno:::fixMultiMapping(CONT)
+  CONT <- CONT[!sapply(CONT, is.null)] # this is a quick and dirty solution to the fact that fixMultiMapping() is producing null list entries at the end of its list output. I don't know why this is happening. OPTIMIZATION: DEBUG THE ISSUE MENTIONED IN THIS LINE FOR fixMultiMapping()  .... OPTIMIZATION 2: look to the comment below about $failed mappings being introduced occassionally, check for them within fixMultiMapping if possible and remove the need for additional code out here.
+
+  # infrequently a `$failed` key:value pair is being introduced into lists after flattening out mappings, this indicates that a mapping doesn't map to the reference genome in Ensembl's data base, thus we are removing such entries.
+  hasFailed <- sapply(CONT, \(x) rlang::has_name(x, "failed")) # MAKES Boolean mask
+  CONT <- CONT[!hasFailed] # USES Boolean mask to filter out entries with `failed` key:value pairs
+
+  CONT <- lapply(CONT, GWASpops.pheno2geno:::null2NA_ENSvariants)
+
+  CONT_Table <- GWASpops.pheno2geno:::rsTable(CONT) #CONT_Table at this point is just EnsVariants. No GWAS data or Pop data.
+
+  #renaming cols so their source is evident in the master table.
+  names(CONT_Table) <- paste0('EnsVar_',names(CONT_Table))
+
+  if(popsData){
+    # setting ancestral allele attribute on population frequency data.
+    popData <- GWASpops.pheno2geno:::AncestralAllele_attr(CONT_Table, popData)
+    masterList <- list(CONT_Table, popData)
+
+    # Merging Ensembl variant and GWAS data tables
+    masterTable <- tryCatch(
+      expr = {
+        masterTable <- data.table:::merge.data.table(GWAS_DF, CONT_Table, by.x = 'VariantID', by.y = 'EnsVar_name')
+      },
+
+      error = function(e){ # in the case of too many duplicate rows causing the merge to
+        # fail initially this option will allow for the merge to proceed.
+        masterTable <- data.table:::merge.data.table(GWAS_DF, CONT_Table, by.x = 'VariantID', by.y = 'EnsVar_name', allow.cartesian = T);
+        message("merge.data.table performed with `allow.cartesian = TRUE`, therefore many extra rows may be produced. Duplicated rows have been removed");
+        masterTable$EnsVar_synonyms <- as.character(masterTable$EnsVar_synonyms);
+        masterTable <- masterTable[!duplicated(masterTable)]; #removing many duplicated rows created.
+        return(masterTable)
+      }
+    )
+    # Transforming data for single population based data tables
+    singlePop_alleleFreqDTs <- lapply(Populations$Population_Abbreviation,
+                                      function(x) GWASpops.pheno2geno:::singlePopTransform(masterList[[2]], targetPopulation = x))
+
+    # Populations is a data object that comes with the package. (see ?Populations for more information or inspect the object itself.)
+    names(singlePop_alleleFreqDTs) <- Populations$Population_Abbreviation
+
+    masterListFinal <- list(masterTable, masterList[[2]], singlePop_alleleFreqDTs)
+    names(masterListFinal) <- c('masterTable', 'PopAlleleFreqData', 'singlePop_alleleFreqDTs')
+
+    return(masterListFinal) ######## END for pops
+  }
+
+  #------------- only variant data ------------------------
+
+  # Merging Ensembl variant and GWAS data tables
+  masterTable <- tryCatch(
+    expr = {
+      masterTable <- data.table:::merge.data.table(GWAS_DF, CONT_Table, by.x = 'VariantID', by.y = 'EnsVar_name')
+    },
+
+    error = function(e){ # in the case of too many duplicate rows causing the merge to
+      # fail initially this option will allow for the merge to proceed.
+      masterTable <- data.table:::merge.data.table(GWAS_DF, CONT_Table, by.x = 'VariantID', by.y = 'EnsVar_name', allow.cartesian = T);
+      message("merge.data.table performed with `allow.cartesian = TRUE`, therefore many extra rows may be produced. Duplicated rows have been removed");
+      masterTable$EnsVar_synonyms <- as.character(masterTable$EnsVar_synonyms);
+      masterTable <- masterTable[!duplicated(masterTable)]; #removing many duplicated rows created.
+      return(masterTable)
+    }
+  )
+  return(masterTable) ######### END for vars
+}
+
+
+
+
+# Refined calc_ancestralAllele func-------------------------------------------------------------------------
+
+# previously this function was only designed to handle alleles of 'A', 'C', 'G', 'T' form. Now it can handle insertions, deletions, and multi-nucleotide substitutions as well. 
+
+calc_ancestralAllele <- function(population_alleleDF){
+
+  alleleSet <- unique(population_alleleDF$allele)
+
+  highestSum <- 0
+  AA <- ''
+  for(allele_character in alleleSet){
+    tempSum <- sum(population_alleleDF[population_alleleDF$allele == allele_character, ]$frequency)
+    if(tempSum > highestSum){
+      highestSum <- tempSum
+      AA <- allele_character
+    }
+  }
+  return(AA)
+}
+
+
+```
+
+## References
+
+1. Bhatia G, Patterson N, Sankararaman S, Price AL. Estimating and interpreting FST: the impact of rare variants. Genome Res. 2013 Sep;23(9):1514-21. doi: 10.1101/gr.154831.113. Epub 2013 Jul 16. PMID: 23861382; PMCID: PMC3759727.
