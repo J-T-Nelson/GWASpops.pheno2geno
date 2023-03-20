@@ -48,7 +48,11 @@ hudsonFst_alleleList <- function(alleleList, populationsDF, deleteRedundants = F
 # -------------------------------------------------------------------------
 
 
-
+# updated 3-17-23: deals with ancestral alleles of frequency = 1.0 properly now by adding rows for the minor allele with 0.0 frequency.
+#                   - also rounds all negative Fst to 0,
+#                   - as well as register fst as 0 where NaN is generated.
+#                   (NaN generated when two pops have 0.0 for minor allele freq)
+#
 perAlleleFst_transform <- function(alleleDF, populations, deleteRedundants = FALSE){
 
   if(length(unique(alleleDF$allele)) > 2){ # no calculations for multiallelic sites. This method of Fst calculation isn't suitable to non-biallelic sites.
@@ -62,19 +66,32 @@ perAlleleFst_transform <- function(alleleDF, populations, deleteRedundants = FAL
     ancestralAllele <- calc_ancestralAllele(alleleDF)
   } else {
 
-      if( !(ancestralAllele %in% unique(alleleDF$allele)) ) { # reassign AA if assignment of AA is somehow wrong, (ancestral allele not found in data.frame)
-    ancestralAllele <- calc_ancestralAllele(alleleDF)     #  Wrong assignment can come directly from data sources, not necessarily my own code
-      }
+    if( !(ancestralAllele %in% unique(alleleDF$allele)) ) { # reassign AA if assignment of AA is somehow wrong, (ancestral allele not found in data.frame)
+      ancestralAllele <- calc_ancestralAllele(alleleDF)     #  Wrong assignment can come directly from data sources, not necessarily my own code
+    }
+  }
+
+  # adding rows where they are missing when an allele's ancestral allele is fixed at 1.0
+  if(any( (alleleDF$frequency == 1) & (alleleDF$allele == ancestralAllele) )){
+    nonAncestralAllele <- unique(alleleDF$allele[ alleleDF$allele != ancestralAllele ] )
+    if(length(nonAncestralAllele) == 0){ # some data doesn't actually report on the non-ancestral allele... rs1555226898 specifically. Due to complexity of adding in new rows, (and difficulties predicting downstream affects) I am removing such examples
+      return(NA)
+    }
+    mutateRows <- alleleDF[ alleleDF$frequency == 1 , ]
+    mutateRows$frequency <- 0
+    mutateRows$allele_count <- 0
+    mutateRows$allele <- nonAncestralAllele
+    alleleDF <- rbind.data.frame(alleleDF, mutateRows)
   }
 
   alleleDF <- alleleDF[alleleDF$population %in% populations$Population_Abbreviation & alleleDF$allele != ancestralAllele , ] # filtering down to minor allele.
-  # ^^ here we discard non 'ancestral alleles' because we are really looking for the minor alleles to compare fst wrt to.
+  # ^^  discard non 'ancestral alleles' because we are looking for the minor alleles to compare fst wrt to.
 
   # Digest DF in to create DF out:
 
   DF_rows <- nrow(alleleDF) # number for efficient pairwise iteration
 
-  if(DF_rows == 0){ # when no pops of interest exist for a given variant, we just cancel the function and return nothing
+  if(DF_rows < 2){ # when no pops of interest exist for a given variant or only 1 row remains, cancel the function and return nothing
     return(NA)
   }
 
@@ -108,6 +125,9 @@ perAlleleFst_transform <- function(alleleDF, populations, deleteRedundants = FAL
   for(i in 1:nrow(retDF)){
     fstVec[i] <- HudsonFst(retDF[i,1],retDF[i,3],retDF[i,2],retDF[i,4])
   }
+
+  fstVec[is.nan(fstVec)] <- 0 # for cases where p1 and p2 are 0 we get NaN out of 'HudsonFst()'
+  fstVec[fstVec < 0] <- 0 # bringing all negatives up to 0 for accurate averaging and realistic Fst values
   retDF['Fst_Hudson'] <- fstVec
 
   if(deleteRedundants){ #removing all but population pairs and Fst value to save memory, populations pairs are stored as row names
