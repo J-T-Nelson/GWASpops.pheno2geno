@@ -365,6 +365,157 @@ sort(table(asso$STUDY), decreasing = T)[1:200] # no default terms revealed
 # LEAVING THE FILTERING ISSUE FOR NOW... DOCUMENTED REASONABLY WELL.. ITS TIME TO DO MORE ACTIVELY PRODUCTIVE TASKS NOW
 
 
+# Resuming filtering task 3-20 --------------------------------------------
+
+#importing novel EFO term table
+EFO_term_mapping <- data.table::fread("./workingData/gwas_catalog_trait-mappings_r2023-03-11.tsv")
+
+uniParentTerms <- unique(EFO_term_mapping$`Parent term`)
+length(uniParentTerms) # 17
+uniParentTerms
+# Some seem vague.. but there are 7 obvious terms I could use which presumably would be capturing disease traits.
+# 1. Cancer, 2. Other disease, 3. Digestive system disorder, 4. Cardiovascular disease, 5. Neurological disorder, 6. Immune system disorder, 7. Metabolic disorder
+#
+
+# these parent terms will be the starting point of next session. We will be merging them with our full_SNP annotation table, then filtering that table down to find the SNP sets of each bucket of interest. Then on the different subsets of data we can focus on the analyses of interest! ... Should be a fruitful week from here I think.
+
+
+
+# 3-21-23 -----------------------------------------------------------------
+
+# merge parent terms into SNP annotation table.
+# Split out disease parent terms
+# perform analyses:
+#   1. Fst sum on all pop-pairs for all SNPs and just disease SNPs, Generate visualization for top 1,5,10% ; generate and save table for top 1,5,10%
+#   2. Fst Sum on all pops against 1000Genomes:All population, for all SNPs and just disease SNPs, Generate visualization for top 1,5,10% ; generate and save table for top 1,5,10%
+#   3. Fst sum for all pops split up into 32 groups :: for all SNPs and just disease SNPs, Generate visualization for top 1,5,10% ; generate and save table for top 1,5,10%
+#   4. Brainstorm on further reportings / findings... figure out how to share info more meaningfully... figure out how to represent the intersection data of which SNPs are most significant to which populations ... Consider what sorts of reports best address your specific research questions
+
+
+uni_parent_URI <- unique(EFO_term_mapping$`Parent URI`)
+length(uni_parent_URI) # 18
+uni_parent_URI
+uniParentTerms
+
+
+
+?merge
+
+getwd()
+load("./workingData/full_data_for_analysis/full_SNP_Annotations_GWASc_Ensembl.rds")
+colnames(full_SNP_Annotations_GWASc_Ensembl) # 430,083 obs, 56 variables
+colnames(EFO_term_mapping)
+
+# going to attempt merge by 'Disease trait' first... if it doesn't work.. Maybe Mapped_Trait_URI & EFO URI?
+mergeFrame <- EFO_term_mapping[, c('Disease trait', 'Parent term',"Parent URI")] # mismatch in URI to Parent term unique values... meaning binding will produce many extra cols.
+
+SNPanno_GWAS_ensembl <- merge(full_SNP_Annotations_GWASc_Ensembl, mergeFrame, by.x = "DISEASE/TRAIT", by.y = "Disease trait") # too many rows produced.. ERROR
+
+
+mergeFrame <- EFO_term_mapping[, c('Disease trait', 'Parent term')]
+SNPanno_GWAS_ensembl <- merge(full_SNP_Annotations_GWASc_Ensembl, mergeFrame, by.x = "DISEASE/TRAIT", by.y = "Disease trait")
+# Error in vecseq(f__, len__, if (allow.cartesian || notjoin || !anyDuplicated(f__, :                                                                    Join results in 1,400,993 rows; more than 492444 = nrow(x)+nrow(i).
+
+SNPanno_GWAS_ensembl <- merge(full_SNP_Annotations_GWASc_Ensembl, mergeFrame, by.x = "DISEASE/TRAIT", by.y = "Disease trait",
+                                all.x = T, all.y = F)
+
+# maybe I need to filter down the table before a merge.
+
+filter <- EFO_term_mapping$`Disease trait` %in% full_SNP_Annotations_GWASc_Ensembl$`DISEASE/TRAIT`
+sum(filter) # 23,856 True entries. ... looking below we see there is only 19095 unique matches... I doubt we will see all 19095 unique terms in each of these.. meaning we may have chosen a bad col for merging.. why? where is my understanding of the relation of these fields wrong? Or is the data just kind of bad again? (lack of standardization from my data source that is)
+
+length(unique(full_SNP_Annotations_GWASc_Ensembl$`DISEASE/TRAIT`)) # 19095
+length(unique(full_SNP_Annotations_GWASc_Ensembl$MAPPED_TRAIT)) # 7061
+length(unique(EFO_term_mapping$`Disease trait`)) # 55952
+
+matchedTermsFromEFO <- EFO_term_mapping$`Disease trait`[filter]
+
+uniTermMatches <- unique(full_SNP_Annotations_GWASc_Ensembl$`DISEASE/TRAIT`) %in% matchedTermsFromEFO
+sum(uniTermMatches) # 19092 ... ok so most of them are in fact within .. which means we can use this without losing substantial amounts of data.. hardly any.. which is good enough.
+
+##### Lets filter down the EFO table to only contain rows matching terms from our key col, then see how the merge goes
+
+mergeFrame <- mergeFrame[ mergeFrame$`Disease trait` %in% unique(full_SNP_Annotations_GWASc_Ensembl$`DISEASE/TRAIT`), ] # down to 23856 rows... Think I want to make it all unique now.
+
+mergeFrame <- unique(mergeFrame) # 20781 rows... so we do have some
+dupeDisease_traitsMergeFrame <- duplicated(mergeFrame$`Disease trait`)
+sum(dupeDisease_traitsMergeFrame) # 1689 ... yeah.. there are some terms which belong to more than a single parent term. Thus we have the issue of producing too many rows. We do not want to see this multimapping here... it really defeats the process of categorization. Maybe we won't see this when using 'EFO term'... lets give it a look then.
+
+mergeFrame <- EFO_term_mapping[, c('EFO term', 'Parent term')]
+
+sum(unique(full_SNP_Annotations_GWASc_Ensembl$MAPPED_TRAIT) %in% unique(EFO_term_mapping$`EFO term`)) # 5103
+sum(unique(full_SNP_Annotations_GWASc_Ensembl$MAPPED_TRAIT) %in% EFO_term_mapping$`EFO term`) # 5103
+length(unique(full_SNP_Annotations_GWASc_Ensembl$MAPPED_TRAIT)) # 7061
+
+# ^^ OK ... we have a substantial number of missing values. Meaning the data is bad I think. This shouldn't be the case could caps be an issue?
+sum(tolower(unique(full_SNP_Annotations_GWASc_Ensembl$MAPPED_TRAIT)) %in% tolower(unique(EFO_term_mapping$`EFO term`))) # 5267
+# a couple more terms were found... still inconsistent. Why is this discrepancy extant? These data are both from the same source and I am using them for the purpose I believe they specifically exist for.
+
+length(unique(full_SNP_Annotations_GWASc_Ensembl$MAPPED_TRAIT_URI)) # 7061 -- consistent with the mapped_traits
+sum(unique(full_SNP_Annotations_GWASc_Ensembl$MAPPED_TRAIT_URI) %in% unique(EFO_term_mapping$`EFO URI`)) # 5318 ... once again, a very large discrepancy.
+
+sum(unique(tolower(full_SNP_Annotations_GWASc_Ensembl$MAPPED_TRAIT_URI)) %in% unique(tolower(EFO_term_mapping$`EFO URI`))) # 5318
+
+missingMappedTraits <-  unique(full_SNP_Annotations_GWASc_Ensembl$MAPPED_TRAIT)[!(tolower(unique(full_SNP_Annotations_GWASc_Ensembl$MAPPED_TRAIT)) %in% tolower(unique(EFO_term_mapping$`EFO term`)))]
+#
+missingMappedTraits # many relevant traits being ommitted by this matching.. meaning its just not the right choice. URI col matches it too, so we are left with the first one checked as that one is most salvagable.
+
+length(missingMappedTraits) # 1794
+
+20781 - 19095 # 1686 ... close ... wondering if there is some strange connection between dupes of DISEASE/TRAIT and the missing values in MAPPED_TRAITS ... don't imagine this is anything but coincidence.
+
+# OK maybe what we do for the sake of still having the categorical strength of the parent terms we just do the merge by the DISEASE/TRIATS cols.. filter down to the most unique row set for the mergeFrame before doing so... and when filtering results based on any categorical term we just explain there may be some unavoidable overlap and do whatever post processing is necessary to deal with this annoying overlap.
+#
+#
+
+
+mergeFrame <- EFO_term_mapping[, c('Disease trait', 'Parent term')]
+mergeFrame <- mergeFrame[ mergeFrame$`Disease trait` %in% unique(full_SNP_Annotations_GWASc_Ensembl$`DISEASE/TRAIT`), ]
+mergeFrame <- unique(mergeFrame) # 20781 rows => ~1686 extra mappings. Expect to see somewhat bigger frame output on merge but not as insanely large as before
+
+SNPanno_GWAS_ensembl <- merge(full_SNP_Annotations_GWASc_Ensembl, mergeFrame, by.x = "DISEASE/TRAIT", by.y = "Disease trait")
+# Error in vecseq(f__, len__, if (allow.cartesian || notjoin || !anyDuplicated(f__, :
+#             Join results in 522,956 rows; more than 450864 = nrow(x)+nrow(i).
+522956/430083 # 1.215942 => ~ 22% more rows... reasonably small amount of cross over between categories... acceptable
+
+SNPanno_GWAS_ensembl <- merge(full_SNP_Annotations_GWASc_Ensembl, mergeFrame, by.x = "DISEASE/TRAIT", by.y = "Disease trait",
+                                allow.cartesian = T)
+
+# saving novel DF:
+full_SNP_Anno_withParentalTerms <- SNPanno_GWAS_ensembl
+getwd()
+setwd('./workingData/full_data_for_analysis/')
+save(full_SNP_Anno_withParentalTerms, file= 'full_SNP_Anno_withParentalTerms.rds')
+
+
+# CRITICAL NOTE:  ---------------------------------------------------------
+#  With the imperfect merge we need to ensure to remove duplicate rows when relevant after splitting our data set by parental terms ... not sure when this will apply in the future but it is essential to remember this duplication event in our data.
+
+
+# begin analyses in fst_analysis_2.R --------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
