@@ -158,6 +158,7 @@ diseaseFst_popsVsalltopTables <- lapply(diseaseFst_popsVsall_quantiles, function
 allFst_allPops_list_quantiles <- lapply(allFst_allPops_list_sum, function(x){ return(quantile(x, probs=c(.99,.95,.90)))})
 diseaseFst_allPops_list_quantiles <- lapply(diseaseFst_allPops_list_sum, function(x){ return(quantile(x, probs=c(.99,.95,.90)))})
 
+names(diseaseFst_allPops_list_quantiles) <- names(diseaseFst_allPops_list_sum)
 
 # top tables for list of per pop subsets
 
@@ -322,6 +323,267 @@ quantile(as.matrix(diseaseFst_popsVSall), probs = c(.999, .99, .95, .90, .75, .5
 
 summary_diseaseFst_popsVSall <- summary(as.matrix(diseaseFst_popsVSall))
 summary_diseaseFst_popsVSall # we can see just a handfull of values breach .5 but there are some real standouts per population.
+
+L_diseaseFst_popsVSall <- split(diseaseFst_popsVSall, colnames(diseaseFst_popsVSall)) # split it row-wise
+
+L_diseaseFst_popsVSall <- lapply(diseaseFst_popsVSall, as.list) # this does it.
+## lapply(1:length(L_diseaseFst_popsVSall), function(x){ names(L_diseaseFst_popsVSall[[x]]) <- rownames(diseaseFst_popsVSall)})  # lapply just not a full replacement to 'for()' loops.
+##
+for(i in 1:length(L_diseaseFst_popsVSall)) {names(L_diseaseFst_popsVSall[[i]]) <- rownames(diseaseFst_popsVSall)} # worked
+
+
+L_diseaseFst_popsVSall_topSnps <- lapply(L_diseaseFst_popsVSall, function(x){ return(x[x > .4])})
+
+
+n <- names(L_diseaseFst_popsVSall_topSnps)
+n <- gsub('1000GENOMES:phase_3:ALL', '', n)
+n <- gsub('-X-', '', n)
+
+
+k <- sapply(L_diseaseFst_popsVSall_topSnps, length)
+topSnps_popsVSall <- cbind(n,k)
+tsp <- merge(topSnps_popsVSall, pops, by.x = 'n', by.y = 'Population_Abbreviation')
+topSnps_popsVSall <- tsp
+
+
+# naming hard...
+names(topSnps_popsVSall$n) <- 'population_abbreviation' # wrong.
+
+colnames(topSnps_popsVSall)[colnames(topSnps_popsVSall)== 'n'] <- 'population_abbreviation'
+colnames(topSnps_popsVSall)[colnames(topSnps_popsVSall)== 'k'] <- 'numSnps_>_0.4'
+
+
+colnames(topSnps_popsVSall) <- c("population_abbreviation", 'numSnps_>_0.4', "Sample_Count","Pop_Ancestry","PopAnces_Graph_Labels") # effective for multiple renames .. grab names.. reenter what you want, rename everything
+
+topSnps_popsVSall <- topSnps_popsVSall[order(as.numeric(topSnps_popsVSall$`numSnps_>_0.4`), decreasing = T), ]
+
+sort(topSnps_popsVSall$`numSnps_>_0.4`)
+
+# lowering threshold to see how many SNPs we capture.. lets try .35
+L_diseaseFst_popsVSall_topSnps_35 <- lapply(L_diseaseFst_popsVSall, function(x){ return(x[x > .35])})
+
+# considering how to find degree of intersection for each SNP and unique SNPs for each population...
+#
+# could find uniques by intersecting each pop with each other, and then compiling a novel vector containing all SNPs found in an intersection,
+# then by taking those out of each of our vectors we would reveal all SNPs unqiue to a single population
+#
+# The issue of getting the degree of intersection per snp still exists however... I suppose the way to find this would then be to take this list of intersection positive SNPs and to look for each one across all populations and to count the number of times it comes up.. could additonally mark which populations we see it in within a separate vector.. thus capturing the information we want.
+
+
+# testing some Gpt4 code for the job :
+
+n <- names(L_diseaseFst_popsVSall_topSnps)
+n[1]
+n <- gsub("1000GENOMES:phase_3:ALL",'',n)
+n <- gsub("-X-",'',n)
+n[1:10]
+
+names(L_diseaseFst_popsVSall_topSnps) <- n
+names(L_diseaseFst_popsVSall_topSnps) # good
+
+
+# Generate all possible pairs of indices
+index_pairs <- combn(length(L_diseaseFst_popsVSall_topSnps), 2, simplify = FALSE)
+?combn
+index_pairs
+
+intersection_results <- purrr::map(index_pairs, ~dplyr::intersect(L_diseaseFst_popsVSall_topSnps[[.x[1]]],
+                                                                  L_diseaseFst_popsVSall_topSnps[[.x[2]]]))
+
+
+n1 <- names(L_diseaseFst_popsVSall_topSnps[[30]])
+n2 <- names(L_diseaseFst_popsVSall_topSnps[[31]])
+n1_2intersect <- dplyr::intersect(n1,n2)
+n1_2intersect
+# looking at the intersection of names to verify we are getting real matches.. as its currently the fst values being compared. Real matches indeed.
+
+#naming the intersections:
+pop_n <- gsub("1000GENOMES:phase_3:",'',names(L_diseaseFst_popsVSall_topSnps))
+
+intersect_names <- purrr::map(index_pairs, ~paste0(pop_n[.x[1]], "_", pop_n[.x[2]]))
+?purrr::map
+intersect_names[1:10]
+
+names(intersection_results) <- intersect_names
+names(intersection_results) # good
+
+# Removing intersections with value of 0, seeking multiple intersections:
+
+
+intResultsFiltered <- intersection_results[ sapply(intersection_results, length) > 0 ]
+
+sum(sapply(intersection_results, length)) # 48 ... so 48 SNPs which have SOME intersection across all pop-pairs
+
+# checking for higher degree of intersection
+allIntersections <- purrr::flatten(intResultsFiltered)
+length(allIntersections) # 48
+length(unique(allIntersections)) # 22 .. so we see several multi-intersectional SNPs.. Lets count up how many times we see them
+allIntersections <- names(allIntersections) # grabbing just the SNP names now
+allIntTable <- table(allIntersections)
+allIntTable
+#rs10873298 rs10873299 rs11114149 rs11692588  rs12075 rs12297948 rs12479436 rs13003464   rs143384  rs2058619   rs228768  rs2643826 rs35085068
+# 1          1          3          3         10          3          3          1          1          1          1          6          1
+# rs3741353  rs4553272  rs4565870  rs4842266 rs56335113 rs61826828  rs7575465  rs8181996   rs943451
+# 3          1          1          3          1          1          1          1          1
+
+# ^^ and above we have identified the degree of intersecting SNPs.. one is totally dominant at 10 shared groups.. while the next highest is at 6. Others are mostly 3 or 1.. and the majority of SNPs generally are uniquely high for one population against the metapopulation... lets see that count and enumerate those?
+
+
+sum(sapply(L_diseaseFst_popsVSall_topSnps, length)) # 1207 for SNPs greater than .4
+
+sum(sapply(L_diseaseFst_popsVSall_topSnps_35, length)) # 2746 for SNPs greater than .35
+
+
+# 3-26 start:
+#
+uniIntersectingVariants <- unique(allIntersections)
+uniIntersectingVariants
+
+names(L_diseaseFst_popsVSall_topSnps) <- pop_n
+
+# check for each term in each pop, if pop contains, paste pop name to vector.
+
+intVariantPopulations <- list()
+for(i in 1:length(uniIntersectingVariants)){
+  temp <- character()
+  for(j in 1:length(L_diseaseFst_popsVSall_topSnps)){
+    if(uniIntersectingVariants[i] %in% names(L_diseaseFst_popsVSall_topSnps[[j]])){
+      temp <- paste0(temp,"_", names(L_diseaseFst_popsVSall_topSnps)[j])
+    }
+
+  }
+  intVariantPopulations[[ uniIntersectingVariants[i] ]] <- temp
+}
+
+uniIntersectingVariants[1]
+
+names(L_diseaseFst_popsVSall_topSnps[[2]])
+
+# refining names for readability
+names(diseaseFst_allPops_list_quantiles) <- gsub("1000GENOMES:phase_3:",'',names(diseaseFst_allPops_list_quantiles))
+
+# extract top 1% of each, then compare to top SNPs against the metapopulation
+
+disFst_ap_top1percent <- lapply(diseaseFst_allPops_list_quantiles, function(x){ x[1]}) # looks like my initial grab of the data wasn't any good actually.. lets just grab the top 1% now then.
+
+# Grabbing top .5% of values as top 1% is 361 values per population which may be too inclusive for comparison to top values found in comparing to metapopulation
+disFst_ap_top1percent <- lapply(diseaseFst_allPops_list_sum, function(x){
+  tempQuant <- quantile(x, .995);
+  return(x[x>tempQuant])})
+
+names(disFst_ap_top1percent) <- gsub("1000GENOMES:phase_3:",'',names(disFst_ap_top1percent))
+
+disFst_ap_top1percent <- disFst_ap_top1percent[-1]
+
+comp_top1_above.4 <- lapply(1:length(L_diseaseFst_popsVSall_topSnps), function(x){
+    names(L_diseaseFst_popsVSall_topSnps[[x]]) %in% names(disFst_ap_top1percent[[names(L_diseaseFst_popsVSall_topSnps[x])]])
+  })
+
+names(comp_top1_above.4) <- names(disFst_ap_top1percent)
+
+# revealing any values not in top .5% compared to above .4 vs all
+sapply(comp_top1_above.4, sum)
+sapply(comp_top1_above.4, length)
+
+# naming truth vector
+for(i in 1:length(comp_top1_above.4)){
+  names(comp_top1_above.4[[i]]) <- names(L_diseaseFst_popsVSall_topSnps[[i]])
+}
+
+#get variant IDs of interest. Against big table, grab rows and cols of interest. Then add to it with the Fst and further data on SNPs of interest... 2 tables for the two sets of SNPs
+
+names(comp_top1_above.4)
+above.4_variants <- purrr::flatten(lapply(L_diseaseFst_popsVSall_topSnps, function(x){names(x)}))
+above.4_variants <- as.character(above.4_variants)
+
+top.5percent_variants <- as.character(purrr::flatten(lapply(disFst_ap_top1percent, function(x){names(x)})))
+
+length(above.4_variants) # 1207
+length(top.5percent_variants) # 5611
+length(unique(above.4_variants)) # 477
+length(unique(top.5percent_variants)) # 1876
+# not nearly as many unique as I would have thought... hm.... specifically in the above.4_variants I wouldn't expect to see that many non unique names.. maybe our earlier intersection comparison was inadequate.
+
+# going to redo the intersection analysis with names instead of values to be sure
+above.4_names <- lapply(L_diseaseFst_popsVSall_topSnps, function(x){names(x)})
+
+intersection_results <- purrr::map(index_pairs, ~dplyr::intersect(above.4_names[[.x[1]]],
+                                                                  above.4_names[[.x[2]]]))
+
+
+sum(sapply(purrr::flatten(intersection_results), length)) # 1677 intersections total.
+sum(sapply( unique(purrr::flatten(intersection_results)) , length)) # 277 unique intersecting variants.
+
+# lets get the new list of intersecting values and the degree of intersection now:
+
+uniIntersectingVariants <- unique(as.character(purrr::flatten(intersection_results)))
+length(uniIntersectingVariants) # 277
+uniIntersectingVariants[1:20]
+
+
+variantIntersectDegreeTable <- table(as.character(purrr::flatten(intersection_results)))
+variantIntersectDegreeTable[1:10] # looks good.
+variantIntersectDegreeTable
+max(variantIntersectDegreeTable) # 45
+summary(variantIntersectDegreeTable)
+# rs10007784  rs10035291   rs1009840   rs1012621  rs10245867    rs103294  rs10551501  rs10714879  rs10761659  rs10772040  rs10858374  rs10873298
+# 6          10           6           6           3           1           1           3           1          15           1          10
+# rs10873299  rs10884064  rs10929757  rs10935182  rs10935185  rs11038927  rs11114149  rs11150602  rs11249906  rs11250135  rs11263955   rs1129038
+# 10           1           1           1           1          15           6           1          10           3           1           3
+# rs1151988  rs11590283  rs11611680  rs11673591  rs11675358  rs11680058  rs11692588 rs116945310  rs11814448  rs11845134  rs12040273   rs1205863
+# 6           3           6          15           3          10           3          10          15           1           6          15
+# rs12068879  rs12074934     rs12075  rs12171500  rs12263288  rs12297948  rs12425451  rs12479436  rs12548184  rs12621647  rs12913832  rs12959570
+# 3          10          45           1           6           6          21           3           1           1           3           3
+#######............. ...
+
+sum(!(unique(above.4_variants) %in% uniIntersectingVariants)) # 200 variants which are unique to a given population.
+
+# at this point all the groundwork is laid out to make sense of the data when reporting on it.. I don't think I will reasonably get a report done today without sacrificing time spent elsewhere.. thus I am going to just do 45 mins of report writing and focus on finishing it tomorrow morning.
+
+
+singlePop_above.4_vars <- above.4_variants[!(unique(above.4_variants) %in% uniIntersectingVariants)]
+length(unique(singlePop_above.4_vars))
+
+
+above.4_names[1]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,314 @@
+---
+title: "Population Differentiation Analysis 1"
+author: "Jon Tanner Nelson"
+date: "2023-03-27"
+output: html_document
+---
+
+## Progress Update
+
+SUMMARIZE PROGRESS THUS FAR HERE... DO IT AFTER WRITING OTHER SECTIONS
+
+
+### Recalculation of Fst
+
+Previously I shared that Fst would need to be recalculated due to an unexpected inconsistency in the data with Dr. Kulathinal during my presentation on the early analysis of the initial Fst values. This was because wherever an allele was fixed at 1.0 in frequency within a population there was no complementary entry within the respective data frame displaying a value of 0 for the alternative allele at that site. This resulted in many `NA` values appearing in the original set of calculated Fst values. (~18% of total values calculated).
+
+By updating the function responsible for calculating Fst I was able to remove all such NA values from the output. Previously when comparing the summed Fst values I decided to normalize values according to the ratio of missing values in order to get better approximations of the relative fixation of various alleles due to the large amount of missing values. After the code update I had no missing values at all and thus no such normalization is required for analysis of summed Fst. 
+
+The updated function--`perAlleleFst_transform`--can be seen in the [Code] section. 
+
+
+### Filtering Out Non-disease Variants
+
+Given the [research questions] driving this project, filtering down to only disease associated variants is critical. In order to achieve this several possible strategies were considered, as there are ~19k unique terms associated with the variants we are analyzing, and some strategies would be rather laborious if undertaken. Dr. Kulathinal suggested seeking an associated ontology to do this sort of filtering, which proved to be an efficient strategy. 
+
+The GWAS Catalog uses the Experimental Factor Ontology (EFO) in order to organize their many different trait/phenotype terms. Within a table of EFO terms and their mappings to GWAS Catalog `Disease/Trait` terms there was a `Parent term` column which sufficiently divided traits into reasonably distinct buckets. There was no perfect one to one mapping, as some `Disease/Trait`s were found within multiple `Parent term` buckets, though I was able to minimize duplications in a table merge with some extra work. 
+
+The parent terms broadly are: 
+
+1. *Cancer*
+2. *Other disease*
+3. *Digestive system disorder*
+4. *Cardiovascular disease*
+5. *Neurological disorder*
+6. *Immune system disorder*
+7. *Metabolic disorder*
+8. Other trait
+9. Other measurement
+10. Cardiovascular measurement
+11. hematological measurement
+12. Body measurement
+13. Lipid or lipoprotein measurement
+14. Inflammatory measurement
+15. Liver enzyme measurement
+16. Biological process
+17. NR
+
+The first 7 parent terms above were those selected as disease categories. Though this strategy of bucketing the data broadly is surely imperfect, I believe we will see a fairly accurate extraction of the disease associated traits from the non-disease associated traits. The number of disease associated traits extracted from traits with viable Fst calculations can be seen below in [Filtering of Variants].
+
+
+### Filtering of Variants
+
+Many stages of filtering or data loss have occurred throughout this analysis, in this section I will attempt to account for all points of narrowing within the data. I won't go into any detail about how each data structure was made beyond the first, (the `asso` data.frame) though I can explain any details upon request.
+
+First we can look to see the original set of variant ID's found within the association table downloaded from the GWAS catalog. This table contains all current SNPs found within the [GWAS catalog](https://www.ebi.ac.uk/gwas/docs/file-downloads) with many other data features included.
+```{r}
+load("./WorkingData/GwasAssocitions.rda")
+length(unique(asso$SNPS))
+```
+
+Next looking at the successfully retrieved data from our calls the Ensembl's API for variant annotations as well as population allele-frequency data: 
+```{r}
+load("./WorkingData/full_data_for_analysis/full_SNP_Annotations_GWASc_Ensembl.rds")
+length(unique(full_SNP_Annotations_GWASc_Ensembl$VariantID))
+
+paste0(round(209455/249792, digits = 4)*100, '%')
+```
+We can see that a significant portion of unique variants have been lost at this stage. The sources of data loss here are 2 fold: 
+
+1. is that the API is inconsistent; even when it has data on variants called for, it will sometimes fail to return anything. The reason for this was never fully understood, as time spent on this early stage was substantial due to the technical challenges associated with collecting data initially. 
+2. is that the API does its own filtering of variants called for. Where any synonyms of a given variant will return just one single variant. Without substantial effort I would not be able to determine just how many variants got narrowed into different synonyms this way, though I did run some basic tests to verify this behavior when setting up the code to make API calls. 
+
+Unfortunately many of these losses were due to the inconsistency of the API, and while I can go through data stored to find the packets of variants which were missed for re-retrieval, I decided against it due to the slow speed of the API and the substantial amount of time I had already spent on this very early stage. If I were not already a bit behind the scheduled goals for this project I would have made the effort to complete the data set by calling for these missing packets of variants. 
+
+The next point of filtration occurs when calculating Fst. Where for a few reasons many variants cannot have Fst estimated. Some the largest contribution comes from multiallelic sites, where the biallelic estimator used is simply unable to offer insight into fixation. Secondly some inconsistencies within the data made it unclear whether all insertions and deletions were formatted in the same way, however I can confirm some have been used as sites of differentiation, while others (due to strange data format/character usage) were not able to be used. I decided to use insertions and deletions because like biallelic sites, they are binary. Obviously insertions may not be binary, in which case they would be disqualified from Fst estimation as well by my function `perAlleleFst_transform`. 
+```{r}
+load("./WorkingData/full_data_for_analysis/full_fst_fixed.rds")
+nrow(full_fst_fixed)
+
+paste0(round(159271/209455, digits = 4)*100, '%')
+```
+As can be seen here, another significant portion (~24%) of potential variants to analyze are shaved away at this juncture. 
+
+Next filtering out the disease associated variants from those not disease associated substantially reduced the number of variants to be analyzed. 
+```{r}
+load('./workingData/full_data_for_analysis/diseaseFst_fixed.rds')
+
+# each row accounts for a single variant ID
+length(unique(rownames(diseaseFst_fixed)))
+paste0(round(36097/159271, digits = 4)*100, '%')
+```
+From this point on any further filtering is done per analysis and thus these 36,097 variants represent the core data for analysis.  
+
+
+### Addressing Research Questions
+
+First with the novel estimation of Fst I will replot the variant sums and the respective density plot for all variants across all population-pairs, then I will do the same for just the disease traits across all population-pairs.
+
+#### Visualization of all Fst Sums across all Population-pairs
+
+
+```{r  echo=FALSE, fig.align='center', fig.height=9, fig.width=16}
+load("./workingData/fst_sums/allSNPfst_sum.rds") # its a numeric object! (maybe why I couldn't find it at first)
+
+
+q99 <- quantile(allSNPfst_sum, 0.99)
+q95 <- quantile(allSNPfst_sum, 0.95)
+q90 <- quantile(allSNPfst_sum, 0.90)
+
+# pch = point character, cex = character expand
+plot(allSNPfst_sum, main = "All Fst Sums, All Population Pairs", ylab = "Sum of Variant Fst", xlab = "Index of Sample", pch = 20, cex = .7)
+
+abline(h = q99, col = 'green', lwd = 2)
+abline(h = q95, col = 'blue', lwd = 2)
+abline(h = q90, col = 'red', lwd = 2)
+
+text(-4000, y = q99, "1%", pos = 3, offset = .5, col = 'darkgreen')
+text(-4000, y = q95, "5%", pos = 3, offset = .5, col = 'darkblue')
+text(-4000, y = q90, "10%", pos = 3, offset = .5, col = 'darkred')
+
+
+dens_allSNPfst <- density(allSNPfst_sum)
+plot(dens_allSNPfst, main = "Density of All SNPs All Pop-Pairs")
+
+abline(v = q99, col = 'green', lwd = 2)
+abline(v = q95, col = 'blue', lwd = 2)
+abline(v = q90, col = 'red', lwd = 2)
+sumSts <- c("Mean: 27.44", "Median: 20.88", "Standard Deviation: 24.25", "Min: 0.00", "Max: 197.02")
+legend("topright", inset = 0.02, legend = sumSts, bg = "white", cex = .80, text.font = 4, box.lwd = 0)
+```
+
+
+
+```{r  echo=FALSE, fig.align='center', fig.height=9, fig.width=16}
+load("./workingData/fst_sums/allDiseaseSNPfst_sum.rds") # its a numeric object! (maybe why I couldn't find it at first)
+q99 <- quantile(allDiseaseSNPfst_sum, 0.99)
+q95 <- quantile(allDiseaseSNPfst_sum, 0.95)
+q90 <- quantile(allDiseaseSNPfst_sum, 0.90)
+
+# pch = point character, cex = character expand
+plot(allDiseaseSNPfst_sum, main = "All Disease Fst Sums w/ All Population Pairs", ylab = "Sum of Variant Fst", xlab = "Index of Sample", pch = 20, cex = .7)
+
+abline(h = q99, col = 'green', lwd = 2)
+abline(h = q95, col = 'blue', lwd = 2)
+abline(h = q90, col = 'red', lwd = 2)
+
+text(-4000, y = q99, "1%", pos = 3, offset = .5, col = 'darkgreen')
+text(-4000, y = q95, "5%", pos = 3, offset = .5, col = 'darkblue')
+text(-4000, y = q90, "10%", pos = 3, offset = .5, col = 'darkred')
+# Beautiful
+
+
+dens_allDiseaseSNPfst <- density(allDiseaseSNPfst_sum)
+plot(dens_allDiseaseSNPfst, main = "Density of All Disease SNPs w/ All Pop-Pairs")
+
+abline(v = q99, col = 'green', lwd = 2)
+abline(v = q95, col = 'blue', lwd = 2)
+abline(v = q90, col = 'red', lwd = 2)
+sumSts <- c("Mean: 28.08", "Median: 21.68", "Standard Deviation: 23.96", "Min: 0.00", "Max: 165.72")
+legend("topright", inset = 0.02, legend = sumSts, bg = "white", cex = .80, text.font = 4, box.lwd = 0)
+```
+
+
+These graphs reveal a very similar broad shape of the data regardless of filtering down to disease traits or not. A familiar shape within the density plot suggests there will be some standout SNPs which act as markers of differentiation across populations. 
+
+### Visualization of all Populations Against the Metapopulation
+
+Within the 1000 Genomes data there is a metapopulation termed `1000GENOMES:phase_3:ALL`. By looking at the Fst values generated for each population against this metapopulation a grouping of standout SNPs can be found. The data here differs from the above visualizations as those graphs used summed Fst, where as here we are looking at a single Fst value. 
+
+Following Dr. Kulathinal's suggestion I filtered the respective Fst values for those above 0.4.
+
+![Within this image the number of SNPs above 0.4 Fst against the metapopulation can be seen. This is a visualized R list data structure](D:\Programming\R_projects\Kulathinal_Lab\GWASpops.pheno2geno\presentation_plots\report9_10\point4PNG.PNG)
+
+Further analyses on these interesting top SNPs against the metapopulation, as well as top SNPs from Fst sums across each population against each other population are soon to come, however, digesting the data and generating compelling visualizations is still underway. From this set of SNPs those unique to a given population can be identified and used for future visualization and interpretation. 
+
+
+## Code
+
+```{r}
+# updated 3-17-23: deals with ancestral alleles of frequency = 1.0 properly now by adding rows for the minor allele with 0.0 frequency.
+#                   - also rounds all negative Fst to 0,
+#                   - as well as register fst as 0 where NaN is generated.
+#                   (NaN generated when two pops have 0.0 for minor allele freq)
+#
+perAlleleFst_transform <- function(alleleDF, populations, deleteRedundants = FALSE){
+
+  if(length(unique(alleleDF$allele)) > 2){ # no calculations for multiallelic sites. This method of Fst calculation isn't suitable to non-biallelic sites.
+    return(NA)
+  }
+
+  # Extract data of interest from alleleDF
+  ancestralAllele <- attr(alleleDF, "Ancestral_Allele")
+
+  if(is.na(ancestralAllele)){ # sometimes ancestral Allele is NA, which makes the rest of this function impossible to execute. Calculating ancestral allele by finding allele with highest frequency.
+    ancestralAllele <- calc_ancestralAllele(alleleDF)
+  } else {
+
+    if( !(ancestralAllele %in% unique(alleleDF$allele)) ) { # reassign AA if assignment of AA is somehow wrong, (ancestral allele not found in data.frame)
+      ancestralAllele <- calc_ancestralAllele(alleleDF)     #  Wrong assignment can come directly from data sources, not necessarily my own code
+    }
+  }
+
+  # adding rows where they are missing when an allele's ancestral allele is fixed at 1.0
+  if(any( (alleleDF$frequency == 1) & (alleleDF$allele == ancestralAllele) )){
+    nonAncestralAllele <- unique(alleleDF$allele[ alleleDF$allele != ancestralAllele ] )
+    if(length(nonAncestralAllele) == 0){ # some data doesn't actually report on the non-ancestral allele... rs1555226898 specifically. Due to complexity of adding in new rows, (and difficulties predicting downstream affects) I am removing such examples
+      return(NA)
+    }
+    mutateRows <- alleleDF[ alleleDF$frequency == 1 , ]
+    mutateRows$frequency <- 0
+    mutateRows$allele_count <- 0
+    mutateRows$allele <- nonAncestralAllele
+    alleleDF <- rbind.data.frame(alleleDF, mutateRows)
+  }
+
+  alleleDF <- alleleDF[alleleDF$population %in% populations$Population_Abbreviation & alleleDF$allele != ancestralAllele , ] # filtering down to minor allele.
+  # ^^  discard non 'ancestral alleles' because we are looking for the minor alleles to compare fst wrt to.
+
+  # Digest DF in to create DF out:
+
+  DF_rows <- nrow(alleleDF) # number for efficient pairwise iteration
+
+  if(DF_rows < 2){ # when no pops of interest exist for a given variant or only 1 row remains, cancel the function and return nothing
+    return(NA)
+  }
+
+  rowHolder <- list()
+  for(i in 1:(DF_rows-1)){ # i correlates to a population
+    for(j in (1+i):DF_rows){ # j correlates to the second population used to pair with i's population
+      rName <- paste0(alleleDF$population[i], "-X-",alleleDF$population[j])
+
+      row <- c(populations[populations$Population_Abbreviation == alleleDF$population[i]]$Sample_Count,
+               alleleDF$frequency[i],
+               populations[populations$Population_Abbreviation == alleleDF$population[j]]$Sample_Count,
+               alleleDF$frequency[j])
+
+      rowHolder[[rName]] <- row
+    }
+  }
+
+  #setup return DF, name cols, fix col types, assign attributes
+  retDF <- as.data.frame(t(dplyr::bind_rows(rowHolder)))
+
+  names(retDF) <- c('n1', "p1", 'n2', 'p2')
+  retDF['n1'] <- as.numeric(retDF[['n1']])
+  retDF['n2'] <- as.numeric(retDF[['n2']])
+  retDF['p1'] <- as.numeric(retDF[['p1']])
+  retDF['p2'] <- as.numeric(retDF[['p2']])
+
+  attr(retDF, "Ancestral_Allele") <- ancestralAllele
+  attr(retDF, "VariantID") <- attr(alleleDF, "VariantID")
+
+  fstVec <- numeric(nrow(retDF))
+  for(i in 1:nrow(retDF)){
+    fstVec[i] <- HudsonFst(retDF[i,1],retDF[i,3],retDF[i,2],retDF[i,4])
+  }
+
+  fstVec[is.nan(fstVec)] <- 0 # for cases where p1 and p2 are 0 we get NaN out of 'HudsonFst()'
+  fstVec[fstVec < 0] <- 0 # bringing all negatives up to 0 for accurate averaging and realistic Fst values
+  retDF['Fst_Hudson'] <- fstVec
+
+  if(deleteRedundants){ #removing all but population pairs and Fst value to save memory, populations pairs are stored as row names
+    retDF <- retDF[,5, drop = FALSE] # drop = FALSE ensures we don't lose the row names in coercion
+  }
+
+  return(retDF)
+}
+```
+
+## Research Questions
+
+1. Are there genes involved in human phenotypes/disease harboring SNPs which are population-specific?
+
+2. Do the handful of known human examples (e.g., sickle-cell in African Americans, EPAS1 in Tibetans) validate our results? (i.e., Are our results consistent with current scientific literature on monogenic / single SNP driven phenotypes?
+
+3. Do diseases associated with population-specific SNPs show significant disparities between populations?
+
+
+## Future Plans
+
+1. Reporting on set of SNPs unique to each population for SNPs with high Fst against the metapopulation. These SNPs thusly act as clear markers distinguishing each population from the mean-population wrt to some disease associated trait. Further, genes and disease traits linked to these SNPs will be reported visually in some fashion to aid in results interpretation down the line. 
+2. Reporting on the pressence of monogenic SNPs within the top SNPs found by analyzing Fst data for disease associated SNPs. Determining if there is any significant population differentation with respect to monogenic disease associated SNPs directly addresses one of our research questions and is within reach now. 
+3. A high-fst-tree view graph (proposed by Kulathinal) will be worked on in this coming week. The idea is to use the EFO parent terms in order to create a phylogeny-like tree which captures the top SNPs within thier respective parent term branches and links them to a population. This may help visually see if different broad categories of SNPs (according to ontological categorization) show population preference.
+4. (Possibly) Clustering analysis with respect to each of 7 disease associated parent terms. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
