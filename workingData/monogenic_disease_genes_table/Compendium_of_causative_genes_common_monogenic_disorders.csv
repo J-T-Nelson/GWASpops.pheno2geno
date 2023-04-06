@@ -1,0 +1,73 @@
+﻿ORPHA-NET #,Disease or group of diseases,"Prevalence (per 100,000)a,b",Mode of inheritancec,Known causative genes,Majority gene (with # of causative nonsense/mis-sense mutations),Encoded protein name,UNIPROT number,Protein class,% cases caused by majority gene,References,Majority Gene (alone)
+"90,794",Adrenal hyperplasia due to 21-hydroxylase deficiency (21-OHD CAH),7,Recessive,CYP21A2,CYP21A2 (196),Cytochrome P450 family 21 subfamily A member 2,P08686,Enzyme,1.00,45-49,CYP21A2
+51,Aicardi-Goutières syndrome encephalopathy,10.0*,Recessive,ADAR; IFIH1; RNASEH2A; RNASEH2B; RNASEH2C; SAMHD1; TREX1,RNASEH2B (28),Ribonuclease H2 subunit B,Q5TBB1,Enzyme,0.36,"50, 51",RNASEH2B
+60,Alpha-1-antitrypsin (A1AT) deficiency (AATD),20.0*,Recessive,SERPINA1,SERPINA1 (83),Serpin family A member 1,P01009,Enzyme inhibitor,1.00,"52, 53",SERPINA1
+247,"Arrhythmogenic right ventricular cardiomyopathy/dysplasia (ARVC, ARVD)",20,Dominant or recessive,"13 different genes linked to this disorder, so far.",PKP2 (138),Plakophilin 2,Q99959,Adhesion protein in junctions and intermediate filaments.,0.00,54,PKP2
+730,Autosomal dominant polycystic kidney disease (ADPKD),39.6*,Dominant,BICC1; GANAB; PKD1; PKD2,PKD1 (1154),Polycystin 1,P98161,Subunit of ion channel complex,0.78,55,PKD1
+130,Brugada syndrome ventricular fibrillation,20.0*,Dominant,"22 different genes linked to this disorder, so far",SCN5A (725),Sodium voltage-gated channel alpha subunit 5,Q14524,Ion channel,0.00,"56, 57",SCN5A
+"3,286",Catecholaminergic polymorphic ventricular tachycardia (CPVT),10.0*,Dominant,CALM1; CALM2; CALM3; CASQ2; RYR2; TECRL; TRDN,RYR2 (288),Ryanodine receptor 2,Q92736,Ion channel,0.55,"58, 59",RYR2
+166,Charcot–Marie-Toothd disease/Hereditary motor and sensory neuropathy,40.0*,"Dominant, recessive or X-linked","75 different genes linked to this disorder, so far.",PMP22 (63),Peripheral myelin protein 22d,Q01453,Ill-defined role in myelin and Schwann cells,0.79,"34, 36, 60-64",PMP22
+418,Congenital adrenal hyperplasia (CAH),"10.0*, 6.7 (BP)*",Recessive,CYP11B1; CYP17A1; CYP21A2; HSD3B2; POR; STAR,CYP21A2 (214),Cytochrome P450 family 21 subfamily A member 2,P08686,Enzyme,0.95,"46, 47",CYP21A2
+"35,122",Congenital sucrase-isomaltase deficiency (CSID),20.0*,Recessive,SI,SI (23),Sucrase-isomaltase,P14410,Enzyme,1.00,"65, 66",SI
+48,Congenital bilateral absence of vas deferens,50.0*,Recessive,CFTR; ADGRG2,CFTR (120),Cystic fibrosis transmembrane conductance regulator,Q20BH0,Ion channel,0.78,67,CFTR
+586,Cystic fibrosis,7.4*,Recessive,CFTR; CLCA4; DCTN4; STX1A; TGFB1,CFTR (1053),Cystic fibrosis transmembrane conductance regulator,Q20BH0,Ion channel,1.00,"15, 16, 68",CFTR
+214,Cystinuria-lysinuria syndrome/Cystinuria,14,Recessive,SLC3A1; SLC7A9,SLC7A9 (83),Solute carrier family 7 member 9,P82251,Membrane transporter,0.53,69-71,SLC7A9
+"95,702",Cytomegalic congenital adrenal hypoplasia (AHC) (subtype of congenital adrenal hypoplasia),8,X-linked,NR0B1,NR0B1 (112),Nuclear receptor subfamily 0 group B member 1,P51843,Nuclear receptor,1.00,72,NR0B1
+"49,042",Dentinogenesis imperfecta (DGI) (all types),14.5*,Dominant,DSPP,DSPP (11),Dentin sialophospho-protein,Q9NZW4,"Seeds biomineral-ization, Dentinogenesis",1.00,"73, 74",DSPP
+"98,896",Duchenne muscular dystrophy (DMD),15.1* (BP),X-linked,DMD; LTBP4,DMD (830),Dystrophin,P11532,Structural protein,1.00,"75, 76",DMD
+412,Dysbetalipoproteinemia/Hyperliproteinemia type 3,10,Recessive,APOE,APOE (42),Apolipoprotein E,P02649,"Lipid carrier, lipoprotein",1.00,77,APOE
+287,Ehlers-Danlos syndrome,12.5*,Dominant,COL1A1; COL5A1; COL5A2,COL5A1 (106),"Collagen type V alpha 1 chain, collagen type V alpha 2 chain","P20908, P05997",Structural protein,0.75,78-80,COL5A1
+733,Familial adenomatous polyposis (FAP),6.0*,Dominant,APC; MUTYH,APC (539),Adenomatous polyposis coli protein,P25054,"Tumor suppressor, regulatory protein",0.70,81-85,APC
+"79,665",Gardner syndrome (subtype of familial adenomatous polyposis),9.1 (BP),Dominant,APC,APC (539),Adenomatous polyposis coli protein,P25054,"Tumor suppressor, associated with microtublules",1.00,81,APC
+"221,061",Familial cerebral cavernous malformation,15,Dominant,CCM2; KRIT1; PDCD10,KRIT1 (80),Krev interaction trapped protein 1,O00522,Regulatory protein,0.53,86-93,KRIT1
+"93,372",Familial hypocalciuric hypercalcemia type 1 (FHH),5.5,Dominant,CASR,CASR (373),Calcium sensing receptor,P41180,G protein-coupled receptor,1.00,"94, 95",CASR
+No entry,Famililal hypercholesterolemia,400,Dominant,APOB; LDLR; LDLRAP1; PCSK,LDLR (1254),Low density lipoprotein receptor,P01130,Lipoprotein receptor,0.60,"96, 97",LDLR
+154,Familial isolated dilated cardiomyopathy,17.5*,Dominant (most often) or X-linked,"45 different genes linked to this disorder, so far.",TTN (672),Titin,Q8WZ42,Muscle protein,0.25,"98, 99",TTN
+768,"Familial long QT syndrome (LQTS), including Romano-Ward syndrome",40.0*,Dominant (most often) or recessive,"19 different genes linked to this disorder, so far.",KCNQ1 (448),Potassium voltage-gated channel subfamily Q member 1,P51787,Ion Channel,0.50,"37, 100-102",KCNQ1
+908,Fragile X syndrome/Martin-bell syndrome,32.5,X-linked,FMR1,FMR1 (7),Fragile X mental retardation 1,Q06787,Regulator of mRNA biology,1.00,"103, 104",FMR1
+No entry,Glucose-6-phosphate dehydrogenase deficiency,"5,000",X-linked,G6PD,G6PD (218),Glucose-6-phosphate 1 dehydrogenase,P11413,Enzyme,1.00,105,G6PD
+"79,201",Glycogen storage disease,10,Recessive,"27 different genes linked to this disorder, so far.",AGL (117),Glycogen debranching enzyme,P35573,Enzyme,0.25,106,AGL
+"309,152",GM2 gangliosidosis,5.0*,Recessive,GM2A; HEXA; HEXB,HEXA (124),Hexosaminidase subunit alpha,P06865,Enzyme,0.73,107-110,HEXA
+"220,489",Hemochromatosis,500,Dominant or recessive,BMP6; HAMP; HFE; HJV; SLC40A1; TFR2,HFE (43),Hereditary hemochromatosis protein,Q30201,Binds transferrin receptor,0.85,111,HFE
+766,Hemolytic anemia due to red cell pyruvate kinase deficiency,5.0*,Recessive,PKLR,PKLR (237),Pyruvate kinase,P30613,Enzyme,1.00,"112, 113",PKLR
+448,Hemophilia A and B,7.7*,X-linked,F8; F9,F8 (1898),Coagulation factor VIII,P00451,Cofactor for factor IXa,0.80,114-116,F8
+"98,878",Hemophilia A,11.25 (BP),X-linked,F8,F8 (3364),Coagulation factor VIII,P00451,Cofactor for factor IXa,1.00,114-116,F8
+774,Hemorrhagic telangiectasia/Osler Weder Rendu disease,16.0*,Dominant,ACVRL1; ENG; GDF2; SMAD4,ENG (187),Endoglin,P17813,Regulation of angiogenesis,0.35,117-120,ENG
+"91,378",Hereditary angioedema (HAE)/Angioneurotic edema,5.0*,Dominant,ANGPT1; F12; PLG; SERPING1,SERPING1 (252),Serpin family G member 1,P05155,Enzyme inhibitor,0.95,121,SERPING1
+145,Hereditary breast and ovarian cancer syndrome,25*,Dominant,14 different genes linked to this disorder so far.,BRCA1 (1262),Breast cancer type 1 susceptibility protein,P38398,E3 ubiquitin-protein ligase,0.66,122,BRCA1
+469,Hereditary fructose intolerance/Fructosemia,5.0*,Recessive,ALDOB,ALDOB (32),"Aldolase, fructose-bisphosphate B",P05062,Enzyme,1.00,123,ALDOB
+"3,467",Hereditary xanthinuria/Xanthine stone disease,9.05* (I),Recessive,MOCOS; XDH,MOCOS (8); XDH (17),"Molybdenum cofactor sulfurase, xanthine dehydrogenase","Q9C5X8, P47989",Enzymes,0.00,124,MOCOS
+"238,468",Hypohidrotic ectodermal dysplasia (HED),6.7*,X-linked,"10 different genes linked to this disorder, so far.",EDA (199),Ectodysplasin A,Q92838,Cytokine,0.70,125-132,EDA
+"42,062",Iminoglycinuria,6.68*,Recessive,SLC36A2; SLC6A18; SLC6A19; SLC6A20,SLC36A2 (1),Solute carrier family 36 member 2,Q495M3,Membrane transporter,1.00,133,SLC36A2
+524,"Li-Fraumeni syndrome sarcoma, breast, leukemia, and adrenal gland (SBLA) syndrome",6,Dominant,CDKN2A; CHEK2; MDM2; TP53,TP53 (417),Tumor protein p53,P04637,"Tumor suppressor, gene regulation",0.91,134,TP53
+5,Long chain 3-hydroxyacyl-CoA dehydrogenase deficiency (LCHAD),8.0*,Recessive,HADHA,HADHA (35),Hydroxyacyl-CoA dehydrogenase trifunctional multienzyme complex subunit alpha,P40939,Enzyme,1.00,135,HADHA
+144,Lynch syndrome,125,Dominant,11 different genes linked to this disorder so far,MSH2 (34),DNA mismatch repair protein Msh2,P43246,"DNA repair, binds DNA, ATPase",0.20,136,MSH2
+558,Marfan syndrome,15,Dominant,FBN1; TGFBR2,FBN1 (1893),Fibrillin 1,P35555,"Structural protein, extracellular matrix",0.90,137-139,FBN1
+"2,209",Maternal phenylketonuria/Phenylketonuric embryopathy,10.0* (I),Recessive,PAH,PAH (690),Phenylalanine hydroxylase,P00439,Enzyme,1.00,140,PAH
+42,Medium chain acyl-CoA dehydrogenase deficiency (MCADD),"6.85, 12.0*",Recessive,ACADM,ACADM (136),Acyl-CoA dehydrogenase medium chain,P11310,Enzyme,1.00,141,ACADM
+"423,461",Mucolipidosis type III (ML3) alpha/beta,13,Recessive,GNPTAB,GNPTAB (68),"N-acetylglucosamine 1 phosphate transferase, Subunits alpha and beta",Q3T906,Enzyme,1.00,142,GNPTAB
+"309,297",Mucopolysaccharidosis type 4A (MPS4A)/Morquio disease type A,15.0*,Recessive,GALNS,GALNS (269),Galactosamine (N-acetyl)-6-sulfatase,P34059,Enzyme,1.00,143,GALNS
+653,Multiple endocrine neoplasia type 2,7,Dominant,RET,RET (130),Ret proto-oncogene receptor tyrosine kinase,P07949,Receptor tyrosine kinase,1.00,144,RET
+251,Multiple epiphyseal dysplasia (MED),5.0*,Dominant (most often) or recessive,COL2A1; COL9A1; COL9A2; COL9A3/collagen type IX alpha 3 chain; COMP; KIF7; MATN3; SLC26A2,COMP (155),Cartilage oligomeric matrix protein,P49747,Structural protein,0.81,145-148,COMP
+636,Neurofibromatosis type 1 (NF1)/Von Recklinghausen disease,"21.3*, 33.3",Dominant,NF1,NF1 (1208),Neurofibromin 1,P21359,Regulator of Ras GTPase activity,1.00,149,NF1
+55,Oculocutaneous albinism (OCA),5.9,Recessive,LRMDA; MC1R; OCA2; SLC24A5; SLC45A2; TYR; TYRP1,TYR (352),Tyrosinase,P14679,Enzyme,0.50,150-153,TYR
+666,Osteogenesis imperfecta/brittle bone disease,10.0*,Dominant,"15 different genes linked to this disorder, so far.",COL1A1 (547); COL1A2 (466),"Collagen type I alpha 1 chain, collagen type I alpha 2 chain","P02452, P08123",Structural protein,0.85,154-157,COL1A1
+705,Pendred syndrome (PDS)/Deafness with goiter,7.0*,Recessive,FOXI1; KCNJ10; SLC26A4,SLC26A4 (404),Solute carrier family 26 member 4,O43511,Membrane transporter,0.90,158-166,SLC26A4
+716,Phenylketonuria (PKU)/Phenylalanine hydroxylase deficiency (PAH deficiency),10.0*,Recessive,PAH,PAH (690),Phenylalanine hydroxylase,P00439,Enzyme,1.00,167,PAH
+70,Proximal spinal muscular atrophy (SMA),20.0*,Recessive,NAIP; SMN1; SMN2,SMN1 (47),Survival motor neuron protein,Q16637,RNA splicing,1.00,168-175,SMN1
+791,Retinitis Pigmentosa (RP),26.7,"Dominant (most often), recessive or X-linked","82 different genes linked to this disorder, so far.",RHO (204),Rhodopsin,P08100,G-protein coupled receptor,0.20,176-179,RHO
+461,Recessive X-linked ichthyosis (XLI),16.6*,X-linked,STS,STS (28),Steroid sulfatase,P08842,Enzyme,1.00,180,STS
+790,Retinoblastoma (RB bilateral (40% of cases) and unilateral (60% of cases—de novo mutation),6,Dominant,NMYC; RB1,RB1 (292),RB transcriptional corepressor 1,P06400,"Tumor suppressor, cell cycle regulation",0.98,181,RB1
+778,Rett syndrome,10.0*,X-linked,MECP2,MECP2 (246),Methyl-CpG binding protein 2,P51608,"Binds to methylated DNA, gene regulation",0.90,182-184,MECP2
+232,Sickle cell anemia,10.0*,Recessive,HBB,HBB (433),Hemoglobin subunit beta,P68871,Oxygen carrier,1.00,185,HBB
+821,Sotos syndrome/cerebral gigantism,7.1,Dominant,APC2; NSD1; SETD2,NSD1 (228),Nuclear receptor binding SET domain protein 1,Q96L73,Enzyme,0.95,186-190,NSD1
+827,Stargardt disease/Fundus flavimaculatus,13.0*,Recessive,ABCA4; CNGB3; ELOVL4; PROM1; PRPH2,ABCA4 (789),ATP binding cassette subfamily A member 4,P78363,Membrane transporter,0.95,191-193,ABCA4
+828,Stickler syndrome/ hereditary progressive arthroophthalmopathy,12.2,Dominant (most often) or recessive,COL11A1; COL2A1; COL11A2; COL9A1; COL9A2; COL9A3; LOXL3,COL2A1 (335),Collagen type II alpha 1 chain,P02458,Structural protein,0.80,194-196,COL2A1
+"3,193",Supravalvular aortic stenosis (SVAS),13.3*,Dominant,ELN,ELN (25),Elastin,P15502,Structural protien,1.00,197,ELN
+848,β-Thalassemia,"1,500",Dominant or recessive,HBB,HBB (434),Hemoglobin B chain,P68871,Oxygen carrier,1.00,198,HBB
+609,Tibial muscular dystrophy/Upp myopathy,6.0*,Dominant,TTN,TTN (53),Titin,Q8WZ42,Muscle protein,1.00,199,TTN
+805,Tuberous sclerosis complex/Bourneville syndrome,10.0*,Dominant,TSC1; TSC2,TSC2 (518),Tuberin,P49815,"Tumor suppressor, Regulation of mTORC1 signaling",0.69,200-205,TSC2
+892,Von-Hippel Lindau disease,6,Dominant,VHL,VHL (218),Von Hippel–Lindau tumor suppressor,P40337,"Tumor suppressor, role in E3 ubiquitin ligase complex",1.00,206,VHL
+903,Von Willebrand disease,12.5,Dominant (most often) or recessive,VWF,VWF (636),Von Willebrand factor,P04275,"Collagen binding, chaperone for coagulation factor VIII",1.00,207,VWF
+43,X-linked adrenoleukodystrophy (ALD),5,X-linked,ABCD1,ABCD1 (425),ATP binding cassette subfamily D member 1,P33897,Membrane transporter,1.00,208,ABCD1
+792,X-linked retinoschisis (XLRS),5,X-linked,RS1,RS1 (203),Retinoschisin 1,O15537,"Membrane binding, cell–cell adhesion",1.00,209,RS1

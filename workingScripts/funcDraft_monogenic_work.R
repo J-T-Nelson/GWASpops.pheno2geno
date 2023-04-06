@@ -113,7 +113,7 @@ filterByTrait <- function(assoTable, regexList = "none", nameList) {
 library(tidyverse)
 
 test1 <- filterByTrait(A, regexList = regexList,DnameList)
-t1UNI <- lapply(test1, base::unique)# errors... werid coercion of dates was causing issues. fixed
+t1UNI <- lapply(test1, base::unique)# errors... weird coercion of dates was causing issues. fixed
 t11 <- test1[[1]]
 t11UNI <- unique(t11)
 debug(filterByTrait)
