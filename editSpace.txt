@@ -1,0 +1,1 @@
+The reads which did map onto the reference genome were all of similar form, that is they were all almost entirely repeating A sequences, which mapped onto the very end of the SARS-CoV-2 refernce genome (NC_045512). Further, this region of the geneome does not contain any

@@ -1,0 +1,234 @@
+,VariantID,MAPPED_GENE,EnsVar_most_severe_consequence,DISEASE/TRAIT,MAPPED_TRAIT,Parent term,population_labels_mono,Fst_per_population
+1,rs10031265,PKD2,intron_variant,Serum creatinine levels,creatinine measurement,Other measurement,CEU|CLM|ESN|GBR,0.2316|0.1771|0.3568|0.2268
+2,rs10151945,ATXN3,3_prime_UTR_variant,Lung function (FVC),vital capacity,Other measurement,AMR|PEL,0.1065|0.3051
+3,rs10154834,GLB1,intron_variant,Medication use (glucocorticoids),Glucocorticoid use measurement,Other measurement,CLM|ITU,0.2468|0.192
+4,rs10533065,CASR,intron_variant,Eosinophil counts,eosinophil count,Hematological measurement,ASW,0.2245
+5,rs10744953,FBN1,intron_variant,Ascending aorta minimum area,aortic measurement,Cardiovascular measurement,EUR|PJL|PUR,0.2747|0.1734|0.1734
+6,rs10744953,FBN1,intron_variant,Ascending aorta minimum area,aortic measurement,Cardiovascular measurement,EUR|PJL|PUR,0.2747|0.1734|0.1734
+7,rs1076160,TSC1,non_coding_transcript_exon_variant,Psoriasis,psoriasis,Immune system disorder,ACB|AFR|ESN|LWK|MSL|YRI,0.2691|0.3032|0.369|0.3485|0.327|0.3536
+8,rs10934578,CASR,intron_variant,Eosinophil percentage of white cells,eosinophil percentage of leukocytes,Hematological measurement,ASW,0.1967
+9,rs10934578,CASR,intron_variant,Eosinophil counts,eosinophil count,Hematological measurement,ASW,0.1967
+10,rs11066301,PTPN11,intron_variant,Aspartate aminotransferase levels,aspartate aminotransferase measurement,Liver enzyme measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+11,rs11066301,PTPN11,intron_variant,Serum total protein level,blood protein measurement,Hematological measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+12,rs11066301,PTPN11,intron_variant,Low density lipoprotein cholesterol levels,low density lipoprotein cholesterol measurement,Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+13,rs11066301,PTPN11,intron_variant,Hematological parameters,platelet count,Hematological measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+14,rs11066301,PTPN11,intron_variant,Glycated hemoglobin levels,HbA1c measurement,Hematological measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+15,rs11066301,PTPN11,intron_variant,Alanine aminotransferase levels,serum alanine aminotransferase measurement,Liver enzyme measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+16,rs11066301,PTPN11,intron_variant,Serum alkaline phosphatase levels,alkaline phosphatase measurement,Liver enzyme measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+17,rs11066301,PTPN11,intron_variant,Total cholesterol levels,total cholesterol measurement,Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+18,rs11066301,PTPN11,intron_variant,Peripheral artery disease,peripheral arterial disease,Cardiovascular disease,EUR|GIH|MXL,0.2152|0.1847|0.2676
+19,rs11066301,PTPN11,intron_variant,High density lipoprotein cholesterol levels,high density lipoprotein cholesterol measurement,Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+20,rs11066301,PTPN11,intron_variant,Systemic seropositive rheumatic diseases (Systemic sclerosis or systemic lupus erythematosus or rheumatoid arthritis or idiopathic inflammatory myopathies),"systemic scleroderma, rheumatoid arthritis, myositis, obsolete_systemic lupus erythematosus",Immune system disorder,EUR|GIH|MXL,0.2152|0.1847|0.2676
+21,rs11066301,PTPN11,intron_variant,Non-albumin protein levels,serum non-albumin protein measurement,Other measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+22,rs11066301,PTPN11,intron_variant,Serum albumin levels,serum albumin measurement,Other measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+23,rs11066301,PTPN11,intron_variant,Cystatin C levels,cystatin C measurement,Other measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+24,rs11066301,PTPN11,intron_variant,Platelet count,platelet count,Hematological measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+25,rs11066301,PTPN11,intron_variant,Mean arterial pressure,mean arterial pressure,Other measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+26,rs11066301,PTPN11,intron_variant,Direct bilirubin levels,bilirubin measurement,Other measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+27,rs11066301,PTPN11,intron_variant,Peripheral artery disease,peripheral arterial disease,Cardiovascular disease,EUR|GIH|MXL,0.2152|0.1847|0.2676
+28,rs11066301,PTPN11,intron_variant,Cystatin C plasma levels,cystatin C measurement,Other measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+29,rs11066301,PTPN11,intron_variant,Total bilirubin levels,bilirubin measurement,Other measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+30,rs11066301,PTPN11,intron_variant,Eosinophil counts,eosinophil count,Hematological measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+31,rs11066301,PTPN11,intron_variant,Systemic seropositive rheumatic diseases (Systemic sclerosis or systemic lupus erythematosus or rheumatoid arthritis or idiopathic inflammatory myopathies),"systemic scleroderma, rheumatoid arthritis, myositis, obsolete_systemic lupus erythematosus",Cardiovascular disease,EUR|GIH|MXL,0.2152|0.1847|0.2676
+32,rs11066301,PTPN11,intron_variant,Serum total protein level,blood protein measurement,Other measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+33,rs11066301,PTPN11,intron_variant,Urate levels,urate measurement,Metabolic disorder,EUR|GIH|MXL,0.2152|0.1847|0.2676
+34,rs11066301,PTPN11,intron_variant,Apolipoprotein B levels,apolipoprotein B measurement,Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+35,rs11066301,PTPN11,intron_variant,Urate levels,urate measurement,Other measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+36,rs11066301,PTPN11,intron_variant,Apolipoprotein A1 levels,apolipoprotein A 1 measurement,Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+37,rs11066301,PTPN11,intron_variant,Medication use (beta blocking agents),Beta blocking agent use measurement,Other measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+38,rs11066301,PTPN11,intron_variant,Serum phosphate levels,blood phosphate measurement,Other measurement,EUR|GIH|MXL,0.2152|0.1847|0.2676
+39,rs11066320,PTPN11,intron_variant,Uterine leiomyoma or breast cancer (pleiotropy),"Uterine leiomyoma, breast carcinoma",Other trait,EUR|GIH|MXL,0.2152|0.1894|0.2777
+40,rs11066320,PTPN11,intron_variant,Uterine leiomyoma or breast cancer (pleiotropy),"Uterine leiomyoma, breast carcinoma",Cancer,EUR|GIH|MXL,0.2152|0.1894|0.2777
+41,rs11066320,PTPN11,intron_variant,Cholesterol levels in large LDL,"total cholesterol measurement, low density lipoprotein cholesterol measurement",Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+42,rs11066320,PTPN11,intron_variant,Free cholesterol levels in medium LDL,"free cholesterol measurement, low density lipoprotein cholesterol measurement",Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+43,rs11066320,PTPN11,intron_variant,Right ventricular end systolic volume,right ventricular systolic volume measurement,Cardiovascular measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+44,rs11066320,PTPN11,intron_variant,Total lipid levels in large LDL,"low density lipoprotein cholesterol measurement, lipid measurement",Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+45,rs11066320,PTPN11,intron_variant,Total lipid levels in lipoprotein particles,"lipid measurement, lipoprotein measurement",Other measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+46,rs11066320,PTPN11,intron_variant,LDL cholesterol levels,low density lipoprotein cholesterol measurement,Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+47,rs11066320,PTPN11,intron_variant,Free cholesterol levels in small LDL,"free cholesterol measurement, low density lipoprotein cholesterol measurement",Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+48,rs11066320,PTPN11,intron_variant,Total lipid levels in large LDL,"low density lipoprotein cholesterol measurement, lipid measurement",Other measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+49,rs11066320,PTPN11,intron_variant,Phospholipid levels in large LDL,"low density lipoprotein cholesterol measurement, phospholipid measurement",Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+50,rs11066320,PTPN11,intron_variant,Free cholesterol levels in large LDL,"free cholesterol measurement, low density lipoprotein cholesterol measurement",Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+51,rs11066320,PTPN11,intron_variant,Polyunsaturated fatty acid levels,polyunsaturated fatty acid measurement,Other measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+52,rs11066320,PTPN11,intron_variant,Clinical LDL cholesterol levels,low density lipoprotein cholesterol measurement,Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+53,rs11066320,PTPN11,intron_variant,Total cholesterol minus HDL-C levels,total cholesterol measurement,Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+54,rs11066320,PTPN11,intron_variant,Linoleic acid levels,linoleic acid measurement,Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+55,rs11066320,PTPN11,intron_variant,Phospholipid levels in small LDL,"low density lipoprotein cholesterol measurement, phospholipid measurement",Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+56,rs11066320,PTPN11,intron_variant,Polyunsaturated fatty acid levels,polyunsaturated fatty acid measurement,Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+57,rs11066320,PTPN11,intron_variant,Total lipid levels in LDL,"low density lipoprotein cholesterol measurement, lipid measurement",Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+58,rs11066320,PTPN11,intron_variant,HDL cholesterol levels,high density lipoprotein cholesterol measurement,Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+59,rs11066320,PTPN11,intron_variant,Apolipoprotein A1 levels,apolipoprotein A 1 measurement,Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+60,rs11066320,PTPN11,intron_variant,Multiple sclerosis,multiple sclerosis,Immune system disorder,EUR|GIH|MXL,0.2152|0.1894|0.2777
+61,rs11066320,PTPN11,intron_variant,Cholesteryl ester levels in large LDL,"cholesteryl ester measurement, low density lipoprotein cholesterol measurement",Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+62,rs11066320,PTPN11,intron_variant,Right ventricular stroke volume (MTAG),right ventricular stroke volume measurement,Cardiovascular measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+63,rs11066320,PTPN11,intron_variant,Reaction time,reaction time measurement,Other measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+64,rs11066320,PTPN11,intron_variant,Medication use (thyroid preparations),Thyroid preparation use measurement,Other measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+65,rs11066320,PTPN11,intron_variant,Total lipid levels in LDL,"low density lipoprotein cholesterol measurement, lipid measurement",Other measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+66,rs11066320,PTPN11,intron_variant,Phospholipid levels in LDL,"low density lipoprotein cholesterol measurement, phospholipid measurement",Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+67,rs11066320,PTPN11,intron_variant,Right ventricular end diastolic volume,right ventricular diastolic volume measurement,Cardiovascular measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+68,rs11066320,PTPN11,intron_variant,Free cholesterol levels in LDL,"free cholesterol measurement, low density lipoprotein cholesterol measurement",Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+69,rs11066320,PTPN11,intron_variant,Cholesteryl ester levels in LDL,"cholesteryl ester measurement, low density lipoprotein cholesterol measurement",Lipid or lipoprotein measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+70,rs11066320,PTPN11,intron_variant,Systolic blood pressure,systolic blood pressure,Other measurement,EUR|GIH|MXL,0.2152|0.1894|0.2777
+71,rs11160037,ATXN3,intron_variant,FEV1,forced expiratory volume,Other measurement,AMR|PEL,0.1073|0.3019
+72,rs11160037,ATXN3,intron_variant,Lung function (FVC),vital capacity,Other measurement,AMR|PEL,0.1073|0.3019
+73,rs11161465,ACADM,intron_variant,Brain region volumes,brain volume measurement,Other measurement,CDX,0.3364
+74,rs112443247,SLC36A2,intron_variant,Metabolite peak levels (QI8963),metabolite measurement,Other measurement,ACB|CEU|EAS|GIH,0.2168|0.3279|0.294|0.3169
+75,rs112443247,SLC36A2,intron_variant,Metabolite peak levels (QI7228),metabolite measurement,Other measurement,ACB|CEU|EAS|GIH,0.2168|0.3279|0.294|0.3169
+76,rs117047270,SLC26A4,intron_variant,Serum alkaline phosphatase levels,alkaline phosphatase measurement,Liver enzyme measurement,BEB,0.1554
+77,rs11867465,NF1,intron_variant,Nonsyndromic orofacial cleft x sex interaction,"orofacial cleft, sex interaction measurement",Other disease,TSI,0.2513
+78,rs11867465,NF1,intron_variant,Nonsyndromic orofacial cleft x sex interaction (2df),"orofacial cleft, sex interaction measurement",Other disease,TSI,0.2513
+79,rs11867465,NF1,intron_variant,Nonsyndromic orofacial cleft x sex interaction,"orofacial cleft, sex interaction measurement",Other measurement,TSI,0.2513
+80,rs11867465,NF1,intron_variant,Nonsyndromic orofacial cleft x sex interaction (2df),"orofacial cleft, sex interaction measurement",Other measurement,TSI,0.2513
+81,rs12188164,"AHRR, PDCD6-AHRR",intron_variant,Cystic fibrosis severity,obsolete_cystic fibrosis,NR,GBR,0.228
+82,rs12229892,PTPN11,intron_variant,Nonsyndromic cleft lip with cleft palate,"Cleft palate, cleft lip",Other trait,CDX|CEU|CHB|CLM|EUR,0.3046|0.2592|0.3066|0.2854|0.2459
+83,rs12297049,PAH,intron_variant,Phenylalanine levels,phenylalanine measurement,Other measurement,CDX|CHB|CHS|EAS|JPT|KHV,0.4472|0.4061|0.4167|0.4043|0.3913|0.3595
+84,rs1251075,ACADM,intron_variant,Urinary metabolite levels in chronic kidney disease,urinary metabolite measurement,Other measurement,JPT|KHV,0.2745|0.2948
+85,rs1251075,ACADM,intron_variant,Urinary metabolite levels in chronic kidney disease,urinary metabolite measurement,Other measurement,JPT|KHV,0.2745|0.2948
+86,rs1251075,ACADM,intron_variant,Urinary metabolite levels in chronic kidney disease,urinary metabolite measurement,Other measurement,JPT|KHV,0.2745|0.2948
+87,rs13059382,CASR,intron_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,CDX|IBS|ITU,0.2984|0.178|0.161
+88,rs13333747,PKD1,intron_variant,Waist-hip ratio,waist-hip ratio,Body measurement,PJL,0.1708
+89,rs13333747,PKD1,intron_variant,Waist-hip ratio,waist-hip ratio,Other measurement,PJL,0.1708
+90,rs13333747,PKD1,intron_variant,Neutrophil count,neutrophil count,Hematological measurement,PJL,0.1708
+91,rs141259107,CASR,intron_variant,Medication use (drugs used in diabetes),Drugs used in diabetes use measurement,Other measurement,ASW,0.2085
+92,rs141474441,MVK,intron_variant,Mean platelet volume,mean platelet volume,Hematological measurement,GWD,0.3439
+93,rs142728549,VHL,3_prime_UTR_variant,Hip circumference adjusted for BMI,BMI-adjusted hip circumference,Body measurement,AMR|MXL|PJL|PUR|SAS|STU,0.1395|0.198|0.198|0.198|0.198|0.198
+94,rs1498694,PAH,intron_variant,Phenylalanine levels,phenylalanine measurement,Other measurement,CDX|CHB|CHS|EAS|JPT|KHV,0.4157|0.3741|0.3848|0.3723|0.3592|0.3273
+95,rs1498694,PAH,intron_variant,Phenylalanine levels,phenylalanine measurement,Other measurement,CDX|CHB|CHS|EAS|JPT|KHV,0.4157|0.3741|0.3848|0.3723|0.3592|0.3273
+96,rs149944146,GLB1,intron_variant,Eosinophil counts,eosinophil count,Hematological measurement,ACB|AMR|CEU|CHB|CLM|EUR|FIN|GIH|GWD|IBS|ITU|JPT|KHV|LWK|MSL|MXL|PEL|PJL|PUR|SAS|STU|TSI|YRI,0.2342|0.4295|0.4257|0.3882|0.1786|0.256|0.1871|0.4303|0.4402|0.4402|0.4402|0.4402|0.4402|0.4402|0.4402|0.4402|0.4402|0.4402|0.4402|0.4402|0.4402|0.4402|0.4402
+97,rs1669539,NA - ECRG4,intergenic_variant,Systolic blood pressure in sickle cell anemia,systolic blood pressure,Other measurement,CLM,0.1883
+98,rs1678983,FBN1,intron_variant,Descending thoracic aortic diameter,descending aortic diameter,Cardiovascular measurement,AFR|ESN|GWD|MSL,0.2771|0.3557|0.3455|0.3474
+99,rs1718309,PAH,intron_variant,Gamma-glutamylphenylalanine levels,gamma-glutamylphenylalanine measurement,Other measurement,CDX|CHB|CHS|EAS|JPT|KHV,0.4511|0.402|0.4207|0.4067|0.3953|0.3635
+100,rs1718309,PAH,intron_variant,Phenylalanine levels,phenylalanine measurement,Other measurement,CDX|CHB|CHS|EAS|JPT|KHV,0.4511|0.402|0.4207|0.4067|0.3953|0.3635
+101,rs1718309,PAH,intron_variant,Phenylalanine levels,phenylalanine measurement,Other measurement,CDX|CHB|CHS|EAS|JPT|KHV,0.4511|0.402|0.4207|0.4067|0.3953|0.3635
+102,rs1722383,PAH,non_coding_transcript_exon_variant,Postprandial phenylalanine,phenylalanine measurement,Other measurement,CDX|CHB|CHS|EAS|JPT|KHV,0.4478|0.4068|0.4174|0.405|0.392|0.3602
+103,rs1722383,PAH,non_coding_transcript_exon_variant,Serum metabolite levels (CMS),serum metabolite measurement,Other measurement,CDX|CHB|CHS|EAS|JPT|KHV,0.4478|0.4068|0.4174|0.405|0.392|0.3602
+104,rs1722383,PAH,non_coding_transcript_exon_variant,Serum metabolite levels,serum metabolite measurement,Other measurement,CDX|CHB|CHS|EAS|JPT|KHV,0.4478|0.4068|0.4174|0.405|0.392|0.3602
+105,rs1734787,MECP2,non_coding_transcript_exon_variant,Systemic lupus erythematosus,obsolete_systemic lupus erythematosus,Immune system disorder,ACB|ASW|BEB|CHB|CHS|EAS|GBR,0.2419|0.2113|0.1876|0.3448|0.3151|0.2789|0.2334
+106,rs17747449,PKHD1,intron_variant,Unilateral cleft lip and palate,"Cleft palate, cleft lip",Other trait,AMR|MXL,0.1268|0.3288
+107,rs1801133,MTHFR,missense_variant,Age at menopause,age at menopause,Other measurement,CLM,0.164
+108,rs1801133,MTHFR,missense_variant,Age at menopause,age at menopause,Other measurement,CLM,0.164
+109,rs1801133,MTHFR,missense_variant,Hip index,BMI-adjusted hip circumference,Body measurement,CLM,0.164
+110,rs1801133,MTHFR,missense_variant,Homocysteine levels,homocysteine measurement,Cardiovascular measurement,CLM,0.164
+111,rs1801133,MTHFR,missense_variant,Homocysteine levels,homocysteine measurement,Cardiovascular measurement,CLM,0.164
+112,rs1801133,MTHFR,missense_variant,Homocysteine levels,homocysteine measurement,Cardiovascular measurement,CLM,0.164
+113,rs1801133,MTHFR,missense_variant,Homocysteine levels,homocysteine measurement,Cardiovascular measurement,CLM,0.164
+114,rs1801133,MTHFR,missense_variant,Estimated glomerular filtration rate (creatinine),glomerular filtration rate,Other measurement,CLM,0.164
+115,rs1801133,MTHFR,missense_variant,High altitude adaptation,high altitude adaptation,Biological process,CLM,0.164
+116,rs1801133,MTHFR,missense_variant,Glycine levels,glycine measurement,Other measurement,CLM,0.164
+117,rs1801133,MTHFR,missense_variant,Mean reticulocyte volume,mean reticulocyte volume,Hematological measurement,CLM,0.164
+118,rs1801133,MTHFR,missense_variant,Vertex-wise cortical thickness,cortical thickness,Other measurement,CLM,0.164
+119,rs1801133,MTHFR,missense_variant,Leprosy,leprosy,Neurological disorder,CLM,0.164
+120,rs1801133,MTHFR,missense_variant,Plasma homocysteine levels,homocysteine measurement,Cardiovascular measurement,CLM,0.164
+121,rs1801133,MTHFR,missense_variant,Serine levels,serine measurement,Other measurement,CLM,0.164
+122,rs1801133,MTHFR,missense_variant,Serum folate levels,folic acid measurement,Other measurement,CLM,0.164
+123,rs1801133,MTHFR,missense_variant,Multiple sclerosis,multiple sclerosis,Immune system disorder,CLM,0.164
+124,rs1801133,MTHFR,missense_variant,X-24337 levels,X-24337 measurement,Other measurement,CLM,0.164
+125,rs1801133,MTHFR,missense_variant,Serum folate levels,folic acid measurement,Other measurement,CLM,0.164
+126,rs1801133,MTHFR,missense_variant,Red cell distribution width,red blood cell distribution width,Hematological measurement,CLM,0.164
+127,rs1801133,MTHFR,missense_variant,Early-onset schizophrenia,schizophrenia,Neurological disorder,CLM,0.164
+128,rs1844334,TTN,intron_variant,Estimated glomerular filtration rate (creatinine),glomerular filtration rate,Other measurement,GBR|IBS,0.2182|0.2314
+129,rs1844334,TTN,intron_variant,Estimated glomerular filtration rate (creatinine),glomerular filtration rate,Other measurement,GBR|IBS,0.2182|0.2314
+130,rs1884953,PKHD1,intron_variant,Body mass index,body mass index,Body measurement,AMR|PEL,0.1118|0.3385
+131,rs1884953,PKHD1,intron_variant,Body mass index,body mass index,Other measurement,AMR|PEL,0.1118|0.3385
+132,rs1895582,TBX5,intron_variant,P wave duration,P wave duration,Cardiovascular measurement,PEL,0.2909
+133,rs2025747,PKHD1,intron_variant,Brain morphology (MOSTest),neuroimaging measurement,Other measurement,ACB|AFR|ESN|LWK,0.2716|0.2833|0.316|0.316
+134,rs2025747,PKHD1,intron_variant,Vertex-wise sulcal depth,brain measurement,Other measurement,ACB|AFR|ESN|LWK,0.2716|0.2833|0.316|0.316
+135,rs2025747,PKHD1,intron_variant,Cortical surface area,cortical surface area measurement,Other measurement,ACB|AFR|ESN|LWK,0.2716|0.2833|0.316|0.316
+136,rs2025747,PKHD1,intron_variant,Whole brain restricted directional diffusion (multivariate analysis),brain measurement,Other measurement,ACB|AFR|ESN|LWK,0.2716|0.2833|0.316|0.316
+137,rs2036100,SLC26A9,intron_variant,Meconium Ileus in Cystic Fibrosis (adjusted for Cystic Fibrosis-Related Diabetes),cystic fibrosis associated meconium ileus,Digestive system disorder,MXL|TSI,0.2007|0.3032
+138,rs2036100,SLC26A9,intron_variant,Meconium ileus in cystic fibrosis,cystic fibrosis associated meconium ileus,Digestive system disorder,MXL|TSI,0.2007|0.3032
+139,rs2036100,SLC26A9,intron_variant,Cystic fibrosis-related diabetes in cystic fibrosis,cystic fibrosis-related diabetes,Digestive system disorder,MXL|TSI,0.2007|0.3032
+140,rs2036100,SLC26A9,intron_variant,Cystic Fibrosis-Related Diabetes in Cystic Fibrosis (adjusted for Meconium Ileus),cystic fibrosis-related diabetes,Digestive system disorder,MXL|TSI,0.2007|0.3032
+141,rs2129108,TTN,intron_variant,Weight gain in amisulpride-treated first-episode psychosis,"longitudinal BMI measurement, response to amisulpride",Biological process,CEU|EUR|FIN|GBR|IBS|TSI,0.297|0.2429|0.2243|0.2125|0.2507|0.2267
+142,rs2129108,TTN,intron_variant,Weight gain in amisulpride-treated first-episode psychosis,"longitudinal BMI measurement, response to amisulpride",Body measurement,CEU|EUR|FIN|GBR|IBS|TSI,0.297|0.2429|0.2243|0.2125|0.2507|0.2267
+143,rs2208049,PTPRT,intron_variant,Venous thromboembolism adjusted for sickle cell variant rs77121243-T,venous thromboembolism,Cardiovascular disease,PEL,0.2619
+144,rs2297676,COL16A1,intron_variant,Severe aortic features in Marfan syndrome,thoracic aortic aneurysm,Cardiovascular disease,IBS,0.1751
+145,rs2435357,RET,intron_variant,Hirschsprung disease,Hirschsprung disease,Digestive system disorder,SAS|STU|TSI,0.2423|0.2423|0.2423
+146,rs2549677,PKD1,missense_variant,Cortical surface area,cortical surface area measurement,Other measurement,ESN|GIH|ITU|MXL|PJL|PUR,0.3733|0.2961|0.1567|0.2746|0.1832|0.1832
+147,rs2549677,PKD1,missense_variant,Brain morphology (MOSTest),neuroimaging measurement,Other measurement,ESN|GIH|ITU|MXL|PJL|PUR,0.3733|0.2961|0.1567|0.2746|0.1832|0.1832
+148,rs2549677,PKD1,missense_variant,Vertex-wise cortical surface area,cortical surface area measurement,Other measurement,ESN|GIH|ITU|MXL|PJL|PUR,0.3733|0.2961|0.1567|0.2746|0.1832|0.1832
+149,rs2549677,PKD1,missense_variant,Waist circumference adjusted for body mass index,BMI-adjusted waist circumference,Body measurement,ESN|GIH|ITU|MXL|PJL|PUR,0.3733|0.2961|0.1567|0.2746|0.1832|0.1832
+150,rs2725207,PKD2,intron_variant,Breast cancer,breast carcinoma,Cancer,FIN,0.19
+151,rs2725234,PKD2,intron_variant,Urate levels,urate measurement,Metabolic disorder,MXL,0.2039
+152,rs2725234,PKD2,intron_variant,Urate levels,urate measurement,Other measurement,MXL,0.2039
+153,rs2728102,PKD2,intron_variant,Serum alkaline phosphatase levels,alkaline phosphatase measurement,Liver enzyme measurement,CEU,0.2168
+154,rs2728104,PKD2,intron_variant,Renal overload gout,gout,Metabolic disorder,ITU,0.1704
+155,rs2728107,PKD2,intron_variant,Brain region volumes,brain volume measurement,Other measurement,ITU,0.1547
+156,rs2728113,PKD2,intron_variant,Tryptophan levels in elite athletes,tryptophan measurement,Other measurement,MXL,0.2001
+157,rs2813164,NEK7 - ATP6V1G3,non_coding_transcript_exon_variant,CFTR mutation F508del heterozygosity in cystic fibrosis,CFTR mutation carrier status,Other measurement,CEU|EUR|GBR|IBS|TSI,0.3153|0.2548|0.2641|0.2751|0.2429
+158,rs2813164,NEK7 - ATP6V1G3,non_coding_transcript_exon_variant,CFTR mutation F508del heterozygosity in cystic fibrosis,CFTR mutation carrier status,Other measurement,CEU|EUR|GBR|IBS|TSI,0.3153|0.2548|0.2641|0.2751|0.2429
+159,rs2854322,NF1,intron_variant,Total cholesterol levels,total cholesterol measurement,Lipid or lipoprotein measurement,ASW|YRI,0.2062|0.3303
+160,rs2854322,NF1,intron_variant,Lipid traits (pleiotropy) (HIPO component 2),"total cholesterol measurement, triglyceride measurement, low density lipoprotein cholesterol measurement, high density lipoprotein cholesterol measurement",Lipid or lipoprotein measurement,ASW|YRI,0.2062|0.3303
+161,rs2854322,NF1,intron_variant,Low density lipoprotein cholesterol levels,low density lipoprotein cholesterol measurement,Lipid or lipoprotein measurement,ASW|YRI,0.2062|0.3303
+162,rs28610092,PKD1,non_coding_transcript_exon_variant,Vertex-wise cortical thickness,cortical thickness,Other measurement,EUR|PJL|PUR|SAS|STU,0.3465|0.2187|0.2187|0.2187|0.2187
+163,rs28610092,PKD1,non_coding_transcript_exon_variant,Height,body height,Other measurement,EUR|PJL|PUR|SAS|STU,0.3465|0.2187|0.2187|0.2187|0.2187
+164,rs28610092,PKD1,non_coding_transcript_exon_variant,Cortical thickness,cortical thickness,Other measurement,EUR|PJL|PUR|SAS|STU,0.3465|0.2187|0.2187|0.2187|0.2187
+165,rs28610092,PKD1,non_coding_transcript_exon_variant,Whole brain restricted directional diffusion (multivariate analysis),brain measurement,Other measurement,EUR|PJL|PUR|SAS|STU,0.3465|0.2187|0.2187|0.2187|0.2187
+166,rs28610092,PKD1,non_coding_transcript_exon_variant,Height,body height,Body measurement,EUR|PJL|PUR|SAS|STU,0.3465|0.2187|0.2187|0.2187|0.2187
+167,rs2872736,MECP2,intron_variant,Schizophrenia,schizophrenia,Neurological disorder,EUR|FIN|GBR|IBS,0.2329|0.2513|0.2799|0.2776
+168,rs2877372,SCN4A,intron_variant,Hip circumference adjusted for BMI,BMI-adjusted hip circumference,Body measurement,ACB|AFR|ASW|BEB|ESN|MSL|YRI,0.2202|0.3133|0.2172|0.1417|0.3966|0.3594|0.3945
+169,rs2877372,SCN4A,intron_variant,Hip circumference adjusted for BMI,BMI-adjusted hip circumference,Body measurement,ACB|AFR|ASW|BEB|ESN|MSL|YRI,0.2202|0.3133|0.2172|0.1417|0.3966|0.3594|0.3945
+170,rs291428,HIBCH,intron_variant,Ethylmalonate levels,ethylmalonate measurement,Other measurement,CHS,0.265
+171,rs3027933,MECP2,intron_variant,Non-albumin protein levels,serum non-albumin protein measurement,Other measurement,BEB|CHB|CHS|FIN|GBR,0.1531|0.3249|0.2956|0.1847|0.2433
+172,rs34123233,PKD1,intron_variant,Heel bone mineral density,heel bone mineral density,Other measurement,GIH|PJL|PUR|SAS|STU|TSI,0.1967|0.2283|0.2283|0.2283|0.2283|0.2283
+173,rs34123233,PKD1,intron_variant,Heel bone mineral density,heel bone mineral density,Other measurement,GIH|PJL|PUR|SAS|STU|TSI,0.1967|0.2283|0.2283|0.2283|0.2283|0.2283
+174,rs34123233,PKD1,intron_variant,Heel bone mineral density,heel bone mineral density,Other measurement,GIH|PJL|PUR|SAS|STU|TSI,0.1967|0.2283|0.2283|0.2283|0.2283|0.2283
+175,rs35888506,NF1,splice_donor_variant,Drinks per week,alcohol consumption measurement,Other measurement,AFR|ESN|LWK|MSL|YRI,0.2864|0.324|0.3036|0.3399|0.3581
+176,rs368784545,PAH,intron_variant,Phenylalanine levels,phenylalanine measurement,Other measurement,CDX|CHB|CHS|EAS|JPT|KHV,0.4511|0.4101|0.4207|0.41|0.3953|0.3716
+177,rs3804590,CASR,intron_variant,Eosinophil counts,eosinophil count,Hematological measurement,ASW,0.1965
+178,rs4654971,ALPL,intron_variant,Serum alkaline phosphatase levels,alkaline phosphatase measurement,Liver enzyme measurement,IBS|PUR,0.2787|0.1824
+179,rs4767860,PTPN11,non_coding_transcript_exon_variant,Low-carbohydrate diet (LCD) score,carbohydrate intake measurement,Other measurement,CDX|CEU|CHB|CLM|IBS|ITU,0.31|0.2686|0.3541|0.3053|0.3221|0.254
+180,rs4876783,EXT1,intron_variant,Educational attainment,educational attainment,Other measurement,GIH|STU|TSI,0.1922|0.2247|0.2247
+181,rs504082,FANCG,non_coding_transcript_exon_variant,Mean platelet volume,mean platelet volume,Hematological measurement,AMR|CLM|JPT,0.1613|0.1627|0.3
+182,rs504082,FANCG,non_coding_transcript_exon_variant,Platelet count,platelet count,Hematological measurement,AMR|CLM|JPT,0.1613|0.1627|0.3
+183,rs504082,FANCG,non_coding_transcript_exon_variant,Platelet count,platelet count,Hematological measurement,AMR|CLM|JPT,0.1613|0.1627|0.3
+184,rs533344,SMC4P1 - THSD7B,intergenic_variant,CFTR mutation F508del heterozygosity in cystic fibrosis,CFTR mutation carrier status,Other measurement,LWK,0.2766
+185,rs57346042,SLC26A4,intron_variant,Protein quantitative trait loci (liver),protein measurement,Other measurement,AMR,0.128
+186,rs58235019,PTPN11,intron_variant,Acetate levels,acetate measurement,Other measurement,GIH|MXL,0.1974|0.256
+187,rs58235019,PTPN11,intron_variant,Hip circumference adjusted for BMI,BMI-adjusted hip circumference,Body measurement,GIH|MXL,0.1974|0.256
+188,rs587118,FANCG,splice_region_variant,Mean corpuscular hemoglobin,mean corpuscular hemoglobin concentration,Hematological measurement,AMR|CEU|CLM|GIH|ITU|SAS|STU|TSI,0.1549|0.2076|0.2099|0.1978|0.1947|0.2199|0.2199|0.2199
+189,rs6500446,FANCA,intron_variant,C-reactive protein levels,C-reactive protein measurement,Inflammatory measurement,EAS|KHV|TSI,0.275|0.2928|0.2673
+190,rs6736607,"SLC8A1, SLC8A1-AS1",intron_variant,Age at loss of ambulation in Duchenne muscular dystrophy,"Duchenne muscular dystrophy, disease progression measurement",Cardiovascular disease,IBS,0.2772
+191,rs6736607,"SLC8A1, SLC8A1-AS1",intron_variant,Age at loss of ambulation in Duchenne muscular dystrophy,"Duchenne muscular dystrophy, disease progression measurement",Other measurement,IBS,0.2772
+192,rs685091,FBN1,intron_variant,Pulse pressure,pulse pressure measurement,Cardiovascular measurement,EUR|PJL|PUR,0.272|0.1754|0.1754
+193,rs6882169,"CTB-178M22.2, TENM2",intron_variant,Huntington's disease progression,"Huntington disease, disease progression measurement",Neurological disorder,GIH,0.2087
+194,rs6882169,"CTB-178M22.2, TENM2",intron_variant,Huntington's disease progression,"Huntington disease, disease progression measurement",Other measurement,GIH,0.2087
+195,rs6977665,CFTR,intron_variant,Triglycerides,triglyceride measurement,Lipid or lipoprotein measurement,GWD|LWK,0.3326|0.3035
+196,rs7185040,PKD1,intron_variant,Low hand grip strength (60 years and older) (EWGSOP),grip strength measurement,Other measurement,ACB|AFR|BEB|CHS|EAS|ESN|GWD|JPT|LWK|MSL|YRI,0.3229|0.3351|0.1606|0.2715|0.2715|0.3338|0.419|0.2715|0.2966|0.3801|0.3814
+197,rs7312625,TBX5,intron_variant,PR interval,PR interval,Cardiovascular measurement,PEL,0.2743
+198,rs7312625,TBX5,intron_variant,P wave duration,P wave duration,Cardiovascular measurement,PEL,0.2743
+199,rs7646283,GLB1,intron_variant,Eosinophil counts,eosinophil count,Hematological measurement,CLM,0.1404
+200,rs7646283,GLB1,intron_variant,Eosinophil counts,eosinophil count,Hematological measurement,CLM,0.1404
+201,rs7646283,GLB1,intron_variant,Eosinophil percentage of white cells,eosinophil percentage of leukocytes,Hematological measurement,CLM,0.1404
+202,rs7646283,GLB1,intron_variant,Eosinophil counts,eosinophil count,Hematological measurement,CLM,0.1404
+203,rs7646283,GLB1,intron_variant,Hay fever and/or eczema,"Eczema, allergic rhinitis",Immune system disorder,CLM,0.1404
+204,rs7646283,GLB1,intron_variant,Eosinophil counts,eosinophil count,Hematological measurement,CLM,0.1404
+205,rs7646283,GLB1,intron_variant,Hay fever and/or eczema,"Eczema, allergic rhinitis",Other trait,CLM,0.1404
+206,rs76610457,FBN1,intron_variant,Height,body height,Body measurement,BEB,0.1445
+207,rs76610457,FBN1,intron_variant,Height,body height,Other measurement,BEB,0.1445
+208,rs8012666,ATXN3,intron_variant,Waist circumference adjusted for body mass index,BMI-adjusted waist circumference,Body measurement,AMR|PEL,0.1061|0.3047
+209,rs8050755,TSC2,intron_variant,Major depressive disorder,unipolar depression,Neurological disorder,GWD|MSL,0.3773|0.3361
+210,rs8052280,MEFV,intron_variant,Mean corpuscular volume,mean corpuscular volume,Hematological measurement,FIN,0.1836
+211,rs8052280,MEFV,intron_variant,Mean corpuscular hemoglobin concentration,mean corpuscular hemoglobin concentration,Hematological measurement,FIN,0.1836
+212,rs8052280,MEFV,intron_variant,Mean corpuscular hemoglobin,mean corpuscular hemoglobin,Hematological measurement,FIN,0.1836
+213,rs8109875,ZNF536,intron_variant,Severe malaria (adjusted for sickle cell variant rs334),malaria,Digestive system disorder,STU,0.2405
+214,rs8109875,ZNF536,intron_variant,Severe malaria,malaria,Digestive system disorder,STU,0.2405
+215,rs920184,FBN1,intron_variant,Cortical thickness,cortical thickness,Other measurement,AFR|ASW|GWD,0.2793|0.2065|0.3385
+216,rs9308174,GYPB,intron_variant,Venous thromboembolism adjusted for sickle cell variant rs77121243-T,venous thromboembolism,Cardiovascular disease,BEB|GBR|KHV|PJL|SAS,0.1317|0.2277|0.3043|0.1742|0.2593
+217,rs932428,LINC01734 - ATG3P1,intergenic_variant,Huntington's disease progression,"Huntington disease, disease progression measurement",Other measurement,PEL,0.262
+218,rs932428,LINC01734 - ATG3P1,intergenic_variant,Huntington's disease progression,"Huntington disease, disease progression measurement",Neurological disorder,PEL,0.262
+219,rs9455973,FRMD1 - CTAGE13P,regulatory_region_variant,CFTR mutation F508del heterozygosity in cystic fibrosis,CFTR mutation carrier status,Other measurement,FIN,0.1927
+220,rs9591177,RB1,intron_variant,3-methoxytyrosine levels in elite athletes,3-methoxytyrosine measurement,Other measurement,ACB|AFR|ASW|BEB|CEU|ESN|FIN|GBR|GWD|LWK|MSL|YRI,0.3267|0.4465|0.2583|0.1527|0.2156|0.5142|0.2156|0.1996|0.4645|0.4927|0.4975|0.4983
+221,rs9647582,APC,intron_variant,Vertex-wise sulcal depth,brain measurement,Other measurement,ACB|AFR|ESN|GWD|LWK|MSL|YRI,0.2873|0.3193|0.3853|0.3828|0.2828|0.3428|0.3803
+222,rs9651118,MTHFR,intron_variant,Moyamoya disease,Moyamoya disease,Cardiovascular disease,PUR|SAS|STU,0.2131|0.2131|0.2131
+223,rs9651118,MTHFR,intron_variant,Red cell distribution width,red blood cell distribution width,Hematological measurement,PUR|SAS|STU,0.2131|0.2131|0.2131
+224,rs975722,CFTR,intron_variant,Coronary artery disease,coronary artery disease,Cardiovascular disease,YRI,0.3309
+225,rs9926128,TSC2,non_coding_transcript_exon_variant,Mean corpuscular hemoglobin concentration,mean corpuscular hemoglobin concentration,Hematological measurement,ACB|AFR|ASW|BEB|FIN|GWD|ITU|LWK|MSL|PJL|SAS|YRI,0.2831|0.359|0.1906|0.1842|0.1842|0.5088|0.1842|0.3383|0.413|0.1842|0.1842|0.3806
+226,rs9926128,TSC2,non_coding_transcript_exon_variant,Mean corpuscular hemoglobin,mean corpuscular hemoglobin,Hematological measurement,ACB|AFR|ASW|BEB|FIN|GWD|ITU|LWK|MSL|PJL|SAS|YRI,0.2831|0.359|0.1906|0.1842|0.1842|0.5088|0.1842|0.3383|0.413|0.1842|0.1842|0.3806
+227,rs9926128,TSC2,non_coding_transcript_exon_variant,Mean corpuscular volume,mean corpuscular volume,Hematological measurement,ACB|AFR|ASW|BEB|FIN|GWD|ITU|LWK|MSL|PJL|SAS|YRI,0.2831|0.359|0.1906|0.1842|0.1842|0.5088|0.1842|0.3383|0.413|0.1842|0.1842|0.3806
+228,rs9926296,FANCA,intron_variant,Vitiligo,Vitiligo,Immune system disorder,CDX|CHS|EAS|JPT|KHV,0.321|0.301|0.3087|0.3006|0.3218
+229,rs9928278,PKD1,splice_polypyrimidine_tract_variant,Hypertrophic cardiomyopathy (MTAG),hypertrophic cardiomyopathy,Cardiovascular disease,BEB,0.1309
+230,rs9928278,PKD1,splice_polypyrimidine_tract_variant,Brain shape (segment 1),brain measurement,Other measurement,BEB,0.1309
+231,rs9934488,PKD1,intron_variant,Vertex-wise sulcal depth,brain measurement,Other measurement,FIN|ITU|PUR|SAS|STU,0.3465|0.2426|0.2284|0.2187|0.2187
+232,rs9975725,EIF4A1P1 - RPL10P1,intron_variant,Age at loss of ambulation in Duchenne muscular dystrophy,"Duchenne muscular dystrophy, disease progression measurement",Other measurement,PEL,0.2567
+233,rs9975725,EIF4A1P1 - RPL10P1,intron_variant,Age at loss of ambulation in Duchenne muscular dystrophy,"Duchenne muscular dystrophy, disease progression measurement",Cardiovascular disease,PEL,0.2567

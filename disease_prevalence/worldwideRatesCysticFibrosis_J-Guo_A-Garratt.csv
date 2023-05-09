@@ -1,0 +1,117 @@
+﻿Country,CF patient population,Total population (thousands),"Estimated CF prevalence (per 10,000)",Diagnosed source,Reference,Continent
+Austria,816,8791,0.928,Registry,1,Europe
+Belgium,1314,11560,1.137,Registry,1,Europe
+Bulgaria,193,7057,0.273,Registry,1,Europe
+Cyprus,26,1267,0.205,Registry,1,Europe
+Czechia,636,10683,0.595,Registry,1,Europe
+Denmark,528,5809,0.909,Registry,1,Europe
+France,6940,67382,1.03,Registry,1,Europe
+Germany,6361,80383,0.791,Registry,1,Europe
+Greece,611,10669,0.573,Registry,1,Europe
+Hungary,498,9810,0.508,Registry,1,Europe
+Ireland,1288,5066,2.542,Registry,1,Europe
+Italy,5531,62187,0.889,Registry,1,Europe
+Latvia,42,1924,0.218,Registry,1,Europe
+Lithuania,28,2797,0.1,Registry,1,Europe
+Luxembourg,39,606,0.644,Registry,1,Europe
+Malta,No data available,449,N/A,No data available,No data available,Europe
+Netherlands,1473,17145,0.859,Registry,1,Europe
+Poland,917,38412,0.239,Registry,1,Europe
+Portugal,307,10342,0.297,Registry,1,Europe
+Romania,224,21464,0.104,Registry,1,Europe
+Slovakia,308,5444,0.566,Registry,1,Europe
+Slovenia,113,2102,0.538,Registry,1,Europe
+Spain,2320,47262,0.491,Registry,1,Europe
+Sweden,689,10031,0.687,Registry,1,Europe
+UK,10509,65074,1.615,Registry,1,Europe
+Estonia,46,1244,0.37,Literature,2,Europe
+Switzerland,983,8288,1.186,Registry,1,Europe
+Norway,294,5371,0.547,Registry,1,Europe
+Ukraine,208,43944,0.047,Registry,1,Europe
+Russia,3425,143005,0.24,Registry,1,Europe
+Albania,128,3064,0.418,Registry,1,Europe
+Armenia,33,3038,0.109,Registry,1,Europe
+Croatia,132,4272,0.309,Registry,1,Europe
+Serbia,198,7075,0.28,Registry,1,Europe
+Moldova,64,3433,0.186,Registry,1,Europe
+North Macedonia,127,2119,0.599,Registry,1,Europe
+Belarus,111,9519,0.117,Registry,1,Europe
+Georgia,72,4926,0.146,Registry,1,Europe
+Finland,64,5538,0.116,Literature,3,Europe
+Bosnia and Herzegovina,40,3847,0.104,Literature,4,Europe
+Iceland,14,344,0.407,Registry,5,Europe
+USA,31199,326688,0.955,Registry,6,North America
+Canada,4344,37044,1.173,Registry,7,North America
+Mexico,950,126053,0.075,CF expert,8,North America
+Guatemala,40,16573,0.024,CF expert,9,North America
+Cuba,296,11116,0.266,Literature,10,North America
+Haiti,No data available,N/A,N/A,No data available,No data available,North America
+Dominican Republic,61,10298,0.059,Literature,11,North America
+Honduras,2,9000,0.002,Literature,12,North America
+Nicaragua,No data available,N/A,N/A,No data available,No data available,North America
+El Salvador,No data available,N/A,N/A,No data available,No data available,North America
+Costa Rica,110,4985,0.221,CF expert,13,North America
+Panama,No data available,N/A,N/A,No data available,No data available,North America
+Jamaica,No data available,N/A,N/A,No data available,No data available,North America
+Trinidad,No data available,N/A,N/A,No data available,No data available,North America
+India,600,1296692,0.005,Literature,14,Asia
+China,93,1384689,0.001,Literature,15,Asia
+Indonesia,6,268149,0,Literature,14,Asia
+Pakistan,150,223912,0.007,Literature,16,Asia
+Bangladesh,95,159342,0.006,Literature,14,Asia
+Japan,30,125918,0.002,CF expert,14,Asia
+Philippines,No data available,N/A,N/A,No data available,No data available,Asia
+Vietnam,No data available,N/A,N/A,No data available,No data available,Asia
+Thailand,40,68855,0.006,CF expert,14,Asia
+Myanmar,No data available,N/A,N/A,No data available,No data available,Asia
+South Korea,80,51300,0.016,CF expert,14,Asia
+North Korea,No data available,N/A,N/A,No data available,No data available,Asia
+Uzbekistan,No data available,N/A,N/A,No data available,No data available,Asia
+Malaysia,60,32426,0.019,CF expert,14,Asia
+Nepal,1,29623,0,Literature,17,Asia
+Sri Lanka,10,22580,0.004,Literature,18,Asia
+Kazakhstan,144,18737,0.077,CF expert,19,Asia
+Cambodia,No data available,N/A,N/A,No data available,No data available,Asia
+Azerbaijan,31,10047,0.031,CF expert,20,Asia
+Tajikistan,No data available,N/A,N/A,No data available,No data available,Asia
+Laos,No data available,N/A,N/A,No data available,No data available,Asia
+Kyrgyzstan,12,5848,0.021,CF expert,21,Asia
+Turkmenistan,No data available,N/A,N/A,No data available,No data available,Asia
+Singapore,18,5696,0.032,Literature,14,Asia
+Mongolia,No data available,N/A,N/A,No data available,No data available,Asia
+Israel,589,8407,0.701,Registry,1,Asia
+Turkey,1811,81228,0.223,Registry,1,Asia
+Oman,149,3485,0.428,CF expert,24,Asia
+Qatar,82,2366,0.347,Literature,25,Asia
+Bahrain,109,1442,0.756,Literature,26,Asia
+Saudi Arabia,396,33119,0.12,Literature,27,Asia
+Iran,300,83059,0.036,Literature,14,Asia
+Jordan,202,10458,0.193,Literature,28,Asia
+Palestine,270,4863,0.555,CF expert,29,Asia
+Lebanon,22,6094,0.036,Literature,30,Asia
+Syria,25,17739,0.014,Literature,31,Asia
+UAE,23,9638,0.024,Literature,32,Asia
+Kuwait,No data available,N/A,N/A,No data available,No data available,Asia
+Iraq,No data available,N/A,N/A,No data available,No data available,Asia
+Afghanistan,1,34907,0,Literature,33,Asia
+Yemen,No data available,N/A,N/A,No data available,No data available,Asia
+Australia,3151,24748,1.273,Registry,22,Oceania
+New Zealand,501,4780,1.048,Registry,23,Oceania
+Papua New Guinea,No data available,N/A,N/A,No data available,No data available,Oceania
+Brazil,6240,209130,0.298,Registry,34,South America
+Chile,734,17922,0.41,CF expert,35,South America
+Argentina,1500,44964,0.334,CF expert,36,South America
+Colombia,972,48750,0.199,CF expert,37,South America
+Peru,36,31332,0.011,Literature,38,South America
+Venezuela,300,29626,0.101,Literature,39,South America
+Ecuador,62,16489,0.038,Literature,40,South America
+Bolivia,No data available,N/A,N/A,No data available,No data available,South America
+Paraguay,No data available,N/A,N/A,No data available,No data available,South America
+Uruguay,190,3371,0.564,CF expert,41,South America
+Egypt,800,99407,0.08,CF expert,42,Africa
+South Africa,500,55356,0.09,Registry,43,Africa
+Algeria,180,41638,0.043,Literature,44,Africa
+Libya,10,6622,0.015,Literature,45,Africa
+Sudan,35,43111,0.008,Literature,46,Africa
+Morocco,73,34868,0.021,CF expert,47,Africa
+Nigeria,No data available,N/A,N/A,No data available,No data available,Africa

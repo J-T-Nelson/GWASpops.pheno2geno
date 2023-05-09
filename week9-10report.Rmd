@@ -7,7 +7,6 @@ output: html_document
 
 ## Progress Update
 
-SUMMARIZE PROGRESS THUS FAR HERE... DO IT AFTER WRITING OTHER SECTIONS
 
 
 ### Recalculation of Fst

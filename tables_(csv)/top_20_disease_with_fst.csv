@@ -1,0 +1,429 @@
+,VariantID,MAPPED_GENE,EnsVar_most_severe_consequence,DISEASE/TRAIT,MAPPED_TRAIT,Parent term,population_labels,Fst_per_population
+204,rs260643,EDAR,intron_variant,acne vulgaris,acne,Other disease,CDX|CHB|CHS|EAS|KHV,0.6058|0.603|0.5577|0.5355|0.5276
+5,rs1016189,MAGI2,intron_variant,Acute graft-versus-host disease (gut) (recipient effect),acute graft vs. host disease,Immune system disorder,FIN,0.3603
+56,rs11610143,ACVR1B,intron_variant,Adenocarcinoma,lung adenocarcinoma,Cancer,PEL,0.432
+23,rs10772040,,intergenic_variant,Adolescent idiopathic scoliosis,adolescent idiopathic scoliosis,Other disease,CDX|EAS|KHV,0.4478|0.4316|0.4398
+203,rs2602813,OPCML,intron_variant,Adolescent idiopathic scoliosis,adolescent idiopathic scoliosis,Other disease,GIH|ITU,0.3473|0.3989
+258,rs4764080,GNAI2P1 - RPL30P11,intergenic_variant,Adolescent idiopathic scoliosis,adolescent idiopathic scoliosis,Other disease,PJL|PUR|SAS,0.3362|0.3362|0.3362
+351,rs739496,"ATXN2, SH2B3",3_prime_UTR_variant,Adolescent idiopathic scoliosis,adolescent idiopathic scoliosis,Other disease,CHB|KHV,0.4486|0.4187
+361,rs760500,FAM120B - NA,non_coding_transcript_exon_variant,Adolescent idiopathic scoliosis,adolescent idiopathic scoliosis,Other disease,CHB|CHS|EAS|JPT,0.4699|0.5024|0.4424|0.4862
+384,rs8064088,C16orf70,intron_variant,Adolescent idiopathic scoliosis,adolescent idiopathic scoliosis,Other disease,GWD,0.5401
+423,rs9651899,RN7SL865P - LINC02463,intergenic_variant,Adolescent idiopathic scoliosis,adolescent idiopathic scoliosis,Other disease,EAS|FIN|ITU,0.4158|0.3581|0.3431
+243,rs3800917,MAD1L1,intron_variant,Adverse response to drug,"adverse effect, response to drug",Other disease,PUR,0.302
+339,rs7087342,ADARB2,intron_variant,Adverse response to drug,"adverse effect, response to drug",Other disease,CEU,0.3154
+152,rs174547,"FADS2, FADS1",intron_variant,"Age-related diseases, mortality and associated endophenotypes","total cholesterol measurement, hematocrit, stroke, ventricular rate measurement, body mass index, atrial fibrillation, high density lipoprotein cholesterol measurement, coronary artery disease, diastolic blood pressure, triglyceride measurement, systolic blood pressure, heart failure, obsolete_cancer, diabetes mellitus, glucose measurement, mortality",Cardiovascular disease,KHV,0.428
+153,rs174547,"FADS2, FADS1",intron_variant,"Age-related diseases, mortality and associated endophenotypes","total cholesterol measurement, hematocrit, stroke, ventricular rate measurement, body mass index, atrial fibrillation, high density lipoprotein cholesterol measurement, coronary artery disease, diastolic blood pressure, triglyceride measurement, systolic blood pressure, heart failure, obsolete_cancer, diabetes mellitus, glucose measurement, mortality",Cancer,KHV,0.428
+154,rs174547,"FADS2, FADS1",intron_variant,"Age-related diseases, mortality and associated endophenotypes","total cholesterol measurement, hematocrit, stroke, ventricular rate measurement, body mass index, atrial fibrillation, high density lipoprotein cholesterol measurement, coronary artery disease, diastolic blood pressure, triglyceride measurement, systolic blood pressure, heart failure, obsolete_cancer, diabetes mellitus, glucose measurement, mortality",Digestive system disorder,KHV,0.428
+31,rs10948071,ZNF318,intron_variant,Age-related hearing impairment (MTAG),age-related hearing impairment,Neurological disorder,ASW,0.3167
+93,rs12913832,"HERC2, HERC2",intron_variant,Age-related macular degeneration,age-related macular degeneration,Neurological disorder,CDX|CLM|EAS|ESN,0.5153|0.3573|0.6997|0.5805
+97,rs12913832,"HERC2, HERC2",intron_variant,Age-related macular degeneration,age-related macular degeneration,Other disease,CDX|CLM|EAS|ESN,0.5153|0.3573|0.6997|0.5805
+138,rs16824395,LSAMP,intron_variant,Alcohol dependence (age at onset),"age at onset, alcohol dependence",Neurological disorder,BEB|CEU|CLM|IBS,0.4577|0.3832|0.3421|0.3379
+35,rs11065828,CUX2,intron_variant,Alcohol-associated liver disease in light drinkers,alcoholic liver disease,Digestive system disorder,BEB,0.2988
+285,rs5743618,TLR1,missense_variant,"Allergic disease (asthma, hay fever or eczema)",allergic disease,Immune system disorder,CDX|EUR|FIN,0.4922|0.5649|0.4803
+286,rs5743618,TLR1,missense_variant,"Allergic disease (asthma, hay fever or eczema)",allergic disease,Other disease,CDX|EUR|FIN,0.4922|0.5649|0.4803
+317,rs63406760,CDK2AP1,intron_variant,"Allergic disease (asthma, hay fever or eczema)",allergic disease,Other disease,CHS|FIN|IBS|ITU|PUR|SAS,0.5095|0.478|0.3595|0.4247|0.5063|0.3488
+319,rs63406760,CDK2AP1,intron_variant,"Allergic disease (asthma, hay fever or eczema)",allergic disease,Immune system disorder,CHS|FIN|IBS|ITU|PUR|SAS,0.5095|0.478|0.3595|0.4247|0.5063|0.3488
+381,rs8056890,ATP2A1,intron_variant,"Allergic disease (asthma, hay fever or eczema)",allergic disease,Other disease,PEL,0.4365
+382,rs8056890,ATP2A1,intron_variant,"Allergic disease (asthma, hay fever or eczema)",allergic disease,Immune system disorder,PEL,0.4365
+292,rs5743618,TLR1,missense_variant,Allergic rhinitis,allergic rhinitis,Immune system disorder,CDX|EUR|FIN,0.4922|0.5649|0.4803
+318,rs63406760,CDK2AP1,intron_variant,Allergic rhinitis,allergic rhinitis,Immune system disorder,CHS|FIN|IBS|ITU|PUR|SAS,0.5095|0.478|0.3595|0.4247|0.5063|0.3488
+418,rs9607782,EP300-AS1,intron_variant,Alzheimer’s disease polygenic risk score (upper quantile vs lower quantile),"Alzheimer disease, polygenic risk score",Neurological disorder,MXL,0.3494
+194,rs2358973,MYO1C,intron_variant,Alzheimer's disease,Alzheimer disease,Neurological disorder,ITU,0.4199
+345,rs7185636,IQCK,intron_variant,Alzheimer's disease (late onset),late-onset Alzheimers disease,Neurological disorder,AFR|GWD|MSL|YRI,0.4721|0.5507|0.5692|0.5243
+375,rs802571,CNTNAP2,intron_variant,Alzheimer's disease (late onset),Alzheimer disease,Neurological disorder,YRI,0.5146
+219,rs2854437,SORD,intron_variant,Alzheimer's disease in APOE e4+ carriers,Alzheimer disease,Neurological disorder,ASW|MSL,0.3081|0.5428
+19,rs10490031,PID1,intron_variant,Alzheimer's disease or gastroesophageal reflux disease,"Alzheimer disease, gastroesophageal reflux disease",Digestive system disorder,MXL,0.4316
+20,rs10490031,PID1,intron_variant,Alzheimer's disease or gastroesophageal reflux disease,"Alzheimer disease, gastroesophageal reflux disease",Neurological disorder,MXL,0.4316
+311,rs61882743,AMBRA1,intron_variant,"Anorexia nervosa, attention-deficit/hyperactivity disorder, autism spectrum disorder, bipolar disorder, major depression, obsessive-compulsive disorder, schizophrenia, or Tourette syndrome (pleiotropy)","anorexia nervosa, obsessive-compulsive disorder, attention deficit hyperactivity disorder, Tourette syndrome, unipolar depression, autism spectrum disorder, schizophrenia, obsolete_bipolar disorder",Neurological disorder,AFR|ASW|ESN|GWD|LWK|YRI,0.4748|0.318|0.5369|0.533|0.4831|0.5125
+354,rs7521492,,intergenic_variant,"Anorexia nervosa, attention-deficit/hyperactivity disorder, autism spectrum disorder, bipolar disorder, major depression, obsessive-compulsive disorder, schizophrenia, or Tourette syndrome (pleiotropy)","anorexia nervosa, obsessive-compulsive disorder, attention deficit hyperactivity disorder, Tourette syndrome, unipolar depression, autism spectrum disorder, schizophrenia, obsolete_bipolar disorder",Neurological disorder,CLM,0.2893
+48,rs11250135,"FAM167A-AS1, FAM167A-AS1",intron_variant,Aortic valve stenosis,aortic stenosis,Cardiovascular disease,CHB|EAS|JPT,0.4427|0.4091|0.4522
+151,rs174547,"FADS2, FADS1",intron_variant,Aortic valve stenosis,aortic stenosis,Cardiovascular disease,KHV,0.428
+156,rs174551,"FADS1, FADS2",5_prime_UTR_variant,Asthma,asthma,Other disease,KHV,0.4285
+244,rs3805236,GAB1,intron_variant,Asthma,asthma,Other disease,IBS|SAS,0.3869|0.3252
+284,rs5743618,TLR1,missense_variant,Asthma,asthma,Other disease,CDX|EUR|FIN,0.4922|0.5649|0.4803
+408,rs943451,PRKCQ,intron_variant,Asthma,asthma,Other disease,GIH|TSI,0.4437|0.462
+287,rs5743618,TLR1,missense_variant,Asthma (age of onset),asthma,Other disease,CDX|EUR|FIN,0.4922|0.5649|0.4803
+142,rs1716183,PITPNM2,intron_variant,Asthma (childhood onset),childhood onset asthma,Other disease,ACB|ESN|YRI,0.3778|0.5663|0.5172
+272,rs4833103,TLR1,intron_variant,Asthma (childhood onset),childhood onset asthma,Other disease,CHS|CLM,0.4349|0.3111
+291,rs5743618,TLR1,missense_variant,Asthma (childhood onset),childhood onset asthma,Other disease,CDX|EUR|FIN,0.4922|0.5649|0.4803
+409,rs943451,PRKCQ,intron_variant,Asthma (childhood onset),childhood onset asthma,Other disease,GIH|TSI,0.4437|0.462
+55,rs11603634,MUC2 - MUC5AC,intergenic_variant,Asthma (moderate or severe),asthma,Other disease,GIH|STU,0.3883|0.3879
+81,rs12450323,IKZF3,intron_variant,Asthma and hay fever,"asthma, seasonal allergic rhinitis",Other disease,ITU|PUR,0.4043|0.2779
+82,rs12450323,IKZF3,intron_variant,Asthma and hay fever,"asthma, seasonal allergic rhinitis",Immune system disorder,ITU|PUR,0.4043|0.2779
+289,rs5743618,TLR1,missense_variant,Asthma onset (childhood vs adult),"asthma, age at onset",Other disease,CDX|EUR|FIN,0.4922|0.5649|0.4803
+196,rs2411306,FSIP1,intron_variant,Asthma with severe exacerbations,asthma,Other disease,MXL,0.3399
+336,rs6847640,KLF3 - RNA5SP158,intergenic_variant,Atopic asthma,atopic asthma,Other disease,FIN,0.403
+255,rs4643526,PUS10,intron_variant,Atopic dermatitis,atopic eczema,Immune system disorder,ACB|AFR|GWD|LWK|MSL|YRI,0.3891|0.4901|0.5551|0.5222|0.5688|0.514
+27,rs10873298,LINC01629,non_coding_transcript_exon_variant,Atrial fibrillation,atrial fibrillation,Cardiovascular disease,TSI,0.4381
+28,rs10873299,LINC01629,non_coding_transcript_exon_variant,Atrial fibrillation,atrial fibrillation,Cardiovascular disease,TSI,0.4375
+334,rs67969609,TEX41,intron_variant,Atrial fibrillation,atrial fibrillation,Cardiovascular disease,CDX|CHS,0.4759|0.4333
+391,rs8181996,LINC01629,intron_variant,Atrial fibrillation,atrial fibrillation,Cardiovascular disease,TSI,0.4353
+26,rs10873298,LINC01629,non_coding_transcript_exon_variant,Atrial fibrillation (MTAG),atrial fibrillation,Cardiovascular disease,TSI,0.4381
+86,rs12621647,TEX41,intron_variant,Atrial fibrillation (MTAG),atrial fibrillation,Cardiovascular disease,CDX,0.4507
+207,rs2647995,UNGP1 - HNRNPA1P48,regulatory_region_variant,Attention deficit hyperactivity disorder or autism spectrum disorder or intelligence (pleiotropy),"attention deficit hyperactivity disorder, autism spectrum disorder, intelligence",Neurological disorder,YRI,0.5132
+342,rs7140,SPNS1,missense_variant,Attention deficit hyperactivity disorder or autism spectrum disorder or intelligence (pleiotropy),"attention deficit hyperactivity disorder, autism spectrum disorder, intelligence",Neurological disorder,PEL,0.5196
+164,rs1865680,TBL1Y,intron_variant,Autism,autism,Neurological disorder,FIN|PJL|PUR,0.3648|0.2657|0.2657
+169,rs2032624,DDX3Y,intron_variant,Autism,autism,Neurological disorder,FIN,0.3948
+425,rs9785971,AMELY,intron_variant,Autism,autism,Neurological disorder,BEB|EAS|EUR,0.3325|0.4853|0.4648
+235,rs35324223,MDK,5_prime_UTR_variant,Autism spectrum disorder or schizophrenia,"autism spectrum disorder, schizophrenia",Neurological disorder,AFR|ESN|GWD|LWK|YRI,0.4732|0.5287|0.5394|0.4826|0.512
+356,rs7521492,,intergenic_variant,Autism spectrum disorder or schizophrenia,"autism spectrum disorder, schizophrenia",Neurological disorder,CLM,0.2893
+416,rs9607782,EP300-AS1,intron_variant,Autism spectrum disorder or schizophrenia,"autism spectrum disorder, schizophrenia",Neurological disorder,MXL,0.3494
+337,rs6867265,NA - HINT1,intergenic_variant,"Autism spectrum disorder, attention deficit-hyperactivity disorder, bipolar disorder, major depressive disorder, and schizophrenia (combined)","attention deficit hyperactivity disorder, unipolar depression, autism spectrum disorder, schizophrenia, obsolete_bipolar disorder",Neurological disorder,GBR,0.3347
+2,rs10035291,SSBP2,intron_variant,Bipolar disorder,obsolete_bipolar disorder,Neurological disorder,LWK,0.5033
+364,rs76317718,ARHGEF15,intron_variant,Bipolar disorder,obsolete_bipolar disorder,Neurological disorder,AMR,0.2773
+225,rs314580,LINC00440,intron_variant,Bipolar disorder and eating disorder,"eating disorder, obsolete_bipolar disorder",Neurological disorder,GBR,0.3214
+130,rs151181,CLN3,intron_variant,Bipolar disorder or body mass index,"body mass index, obsolete_bipolar disorder",Neurological disorder,PEL,0.4834
+224,rs3026433,ATP2A2,5_prime_UTR_variant,Bipolar I disorder,bipolar I disorder,Neurological disorder,ITU,0.4402
+216,rs2820446,LYPLAL1-AS1 - ZC3H11B,intergenic_variant,Body fat percentage and type 2 diabetes (pairwise),"body fat percentage, type 2 diabetes mellitus",Digestive system disorder,PEL,0.4205
+406,rs9385400,CENPW - MIR588,intron_variant,Body fat percentage and type 2 diabetes (pairwise),"body fat percentage, type 2 diabetes mellitus",Digestive system disorder,CHS|JPT,0.4368|0.4469
+410,rs9532984,DGKH,intron_variant,Body fat percentage or coronary artery disease (MTAG),"body fat percentage, coronary artery disease",Cardiovascular disease,SAS|STU,0.3674|0.3674
+39,rs11119434,SYT14 - SERTAD4-AS1,intergenic_variant,Breast cancer,breast carcinoma,Cancer,AMR|PJL|PUR,0.2341|0.2731|0.2731
+46,rs112238765,NEK10,intron_variant,Breast cancer,breast carcinoma,Cancer,SAS|STU,0.3676|0.3676
+66,rs11715126,NEK10,intron_variant,Breast cancer,breast carcinoma,Cancer,SAS,0.3648
+71,rs11814448,DNAJC1 - ADIPOR1P1,intergenic_variant,Breast cancer,breast carcinoma,Cancer,AFR|GWD|KHV|TSI,0.4615|0.5748|0.5267|0.4665
+330,rs66783663,CDH12,intron_variant,Breast cancer,breast carcinoma,Cancer,PEL,0.5234
+370,rs7904519,TCF7L2,intron_variant,Breast cancer,breast carcinoma,Cancer,CHS,0.4265
+394,rs873994,CDYL2,intron_variant,Breast cancer,breast carcinoma,Cancer,MSL,0.5179
+371,rs7904519,TCF7L2,intron_variant,Breast cancer (estrogen-receptor negative),estrogen-receptor negative breast cancer,Cancer,CHS,0.4265
+403,rs9323497,PLEK2,intron_variant,Broad depression or major depressive disorder (recurrent),unipolar depression,Neurological disorder,CEU,0.348
+108,rs13010313,TEX41,intron_variant,Cardioembolic stroke (MTAG),cardioembolic stroke,Cardiovascular disease,CDX|CHS|EAS,0.4431|0.4517|0.4123
+205,rs2643826,RNU1-96P - Y_RNA,regulatory_region_variant,Cardiovascular disease,cardiovascular disease,Other disease,SAS|STU|TSI,0.4608|0.4608|0.4608
+302,rs6021247,NFATC2,intron_variant,Cardiovascular disease,cardiovascular disease,Other disease,SAS,0.3196
+307,rs604723,ARHGAP42,intron_variant,Cardiovascular disease,cardiovascular disease,Other disease,PUR,0.3018
+50,rs1129038,"HERC2, HERC2",3_prime_UTR_variant,Cataracts,cataract,Other disease,CDX|CLM|EAS|ESN,0.5158|0.3567|0.6934|0.581
+104,rs13003464,PUS10,intron_variant,Celiac disease,celiac disease,Immune system disorder,AFR|LWK|MSL,0.4539|0.4962|0.509
+178,rs2157453,AIMP1P2 - NA,intron_variant,Celiac disease,celiac disease,Immune system disorder,JPT,0.4782
+326,rs6547598,TCF7L1,intron_variant,Cervical cancer,cervical carcinoma,Cancer,ASW,0.3391
+238,rs35955841,SPTB,intron_variant,Chagas cardiomyopathy in Tripanosoma cruzi seropositivity,Chagas cardiomyopathy,Cardiovascular disease,SAS,0.332
+185,rs2237892,"KCNQ1, KCNQ1",intron_variant,Childhood onset type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,MXL,0.3517
+16,rs1047781,FUT2,missense_variant,Cholelithiasis,cholelithiasis,Digestive system disorder,AMR|BEB|CEU|CHB,0.3921|0.3058|0.3198|0.5077
+294,rs5757922,ADSL,intron_variant,Cholelithiasis,cholelithiasis,Digestive system disorder,ASW|BEB,0.3933|0.3399
+117,rs1419138,NA - RAB11FIP2,intergenic_variant,Choroidal melanoma,choroidal melanoma,Cancer,CEU|EUR|GBR,0.3702|0.3197|0.3634
+251,rs4456788,GATD3A,intron_variant,"Chronic inflammatory diseases (ankylosing spondylitis, Crohn's disease, psoriasis, primary sclerosing cholangitis, ulcerative colitis) (pleiotropy)","ankylosing spondylitis, psoriasis, ulcerative colitis, Crohn's disease, sclerosing cholangitis",Immune system disorder,PEL,0.5155
+252,rs4456788,GATD3A,intron_variant,"Chronic inflammatory diseases (ankylosing spondylitis, Crohn's disease, psoriasis, primary sclerosing cholangitis, ulcerative colitis) (pleiotropy)","ankylosing spondylitis, psoriasis, ulcerative colitis, Crohn's disease, sclerosing cholangitis",Digestive system disorder,PEL,0.5155
+179,rs2177223,,intergenic_variant,Chronic kidney disease x type 2 diabetes interaction,"chronic kidney disease, type 2 diabetes mellitus",Digestive system disorder,GBR,0.3412
+180,rs2177223,,intergenic_variant,Chronic kidney disease x type 2 diabetes interaction,"chronic kidney disease, type 2 diabetes mellitus",Other disease,GBR,0.3412
+347,rs7254272,ZBTB7A - MAP2K2,regulatory_region_variant,Chronic lymphocytic leukemia,chronic lymphocytic leukemia,Cancer,CLM|GBR|IBS|ITU|PUR,0.3341|0.523|0.3403|0.4962|0.3704
+72,rs11905172,POFUT1,intron_variant,Chronic obstructive pulmonary disease,chronic obstructive pulmonary disease,Other disease,PJL,0.2475
+61,rs11665674,SEC1P - FUT2,intergenic_variant,Chronic sinusitis,chronic rhinosinusitis,Other disease,AMR|FIN,0.3988|0.3568
+32,rs11038927,AMBRA1,intron_variant,"Cognitive ability, years of educational attainment or schizophrenia (pleiotropy)","schizophrenia, intelligence, self reported educational attainment",Neurological disorder,AFR|ASW|ESN|GWD|LWK|YRI,0.4761|0.329|0.5371|0.5332|0.4833|0.5127
+419,rs9607782,EP300-AS1,intron_variant,"Cognitive ability, years of educational attainment or schizophrenia (pleiotropy)","schizophrenia, intelligence, self reported educational attainment",Neurological disorder,MXL,0.3494
+38,rs11114149,SYT1 - NOP56P3,regulatory_region_variant,Colorectal cancer,colorectal cancer,Cancer,GIH|STU,0.4043|0.4139
+92,rs12913832,"HERC2, HERC2",intron_variant,Colorectal cancer,colorectal cancer,Cancer,CDX|CLM|EAS|ESN,0.5153|0.3573|0.6997|0.5805
+122,rs1446585,R3HDM1,missense_variant,Colorectal cancer,colorectal cancer,Cancer,CDX|CLM,0.4855|0.4652
+146,rs174537,"MYRF, TMEM258",non_coding_transcript_exon_variant,Colorectal cancer,colorectal cancer,Cancer,KHV,0.422
+183,rs2226738,NA - ELOCP20,intergenic_variant,Colorectal cancer,colorectal cancer,Cancer,ACB|AFR|ASW|ESN|GWD|LWK|MSL|YRI,0.4446|0.5398|0.3861|0.6082|0.5514|0.5276|0.6276|0.583
+144,rs174533,"MYRF, TMEM258",intron_variant,Colorectal cancer or advanced adenoma,"colorectal cancer, colorectal adenoma",Cancer,MXL,0.4028
+248,rs4245229,SMAD7,intron_variant,Colorectal cancer x menopausal hormone therapy interaction (2df test),"colorectal cancer, hormone replacement therapy",Cancer,ACB|GWD|MSL,0.4163|0.5466|0.5518
+249,rs4245229,SMAD7,intron_variant,Colorectal cancer x menopausal hormone therapy interaction (3df test),"colorectal cancer, hormone replacement therapy",Cancer,ACB|GWD|MSL,0.4163|0.5466|0.5518
+36,rs11065828,CUX2,intron_variant,Colorectal polyp,polyp of large intestine,Digestive system disorder,BEB,0.2988
+52,rs1129038,"HERC2, HERC2",3_prime_UTR_variant,Corneal astigmatism,Corneal astigmatism,Other disease,CDX|CLM|EAS|ESN,0.5158|0.3567|0.6934|0.581
+96,rs12913832,"HERC2, HERC2",intron_variant,Corneal astigmatism,Corneal astigmatism,Other disease,CDX|CLM|EAS|ESN,0.5153|0.3573|0.6997|0.5805
+127,rs147967693,DNASE1L1,intron_variant,Coronary artery disease,coronary artery disease,Cardiovascular disease,BEB,0.2749
+170,rs2058619,MAP4K3-DT,intron_variant,Coronary artery disease,coronary artery disease,Cardiovascular disease,TSI,0.4273
+177,rs2153219,TAB2 - ZC3H12D,intergenic_variant,Coronary artery disease,coronary artery disease,Cardiovascular disease,CDX|KHV,0.4438|0.4561
+208,rs269863,DUOX2,intron_variant,Coronary artery disease,coronary artery disease,Cardiovascular disease,ACB|AFR|ASW|ESN|GWD|LWK|MSL|YRI,0.4458|0.5513|0.4024|0.5492|0.5944|0.6347|0.6334|0.5474
+305,rs604723,ARHGAP42,intron_variant,Coronary artery disease,coronary artery disease,Cardiovascular disease,PUR,0.3018
+316,rs62956461,"CNPY2, CNPY2-AS1",splice_region_variant,Coronary artery disease,coronary artery disease,Cardiovascular disease,MSL,0.5071
+385,rs8068952,BCAS3,intron_variant,"Coronary artery disease (myocardial infarction, percutaneous transluminal coronary angioplasty, coronary artery bypass grafting, angina or chromic ischemic heart disease)",coronary artery disease,Cardiovascular disease,ACB|AFR|ESN|GWD|LWK|MSL|YRI,0.3803|0.5027|0.5724|0.5638|0.5298|0.5839|0.5453
+68,rs117949785,RPH3A,intron_variant,Coronary artery disease or factor VII levels (pleiotropy),"coronary artery disease, factor VII measurement",Cardiovascular disease,BEB|CEU|FIN|GBR,0.3051|0.3648|0.3539|0.3447
+37,rs11066359,RPH3A,intron_variant,Coronary artery disease or factor VIII levels (pleiotropy),"factor VIII measurement, coronary artery disease",Cardiovascular disease,BEB,0.2739
+182,rs2219939,CHRNB4 - ADAMTS7,intergenic_variant,Coronary artery disease or ischemic stroke,"stroke, coronary artery disease",Cardiovascular disease,CEU,0.3334
+69,rs117949785,RPH3A,intron_variant,Coronary artery disease or von Willebrand factor levels (pleiotropy),"von Willebrand factor measurement, coronary artery disease",Cardiovascular disease,BEB|CEU|FIN|GBR,0.3051|0.3648|0.3539|0.3447
+366,rs76509900,LINC02304 - LINC02325,intergenic_variant,COVID-19 (covid vs negative),COVID-19,Other disease,MXL,0.377
+279,rs4921542,MTMR7,intron_variant,Creutzfeldt-Jakob disease (variant),Creutzfeldt Jacob Disease,Neurological disorder,CEU|GBR,0.3159|0.3317
+105,rs13003464,PUS10,intron_variant,Crohn's disease,Crohn's disease,Immune system disorder,AFR|LWK|MSL,0.4539|0.4962|0.509
+107,rs13003464,PUS10,intron_variant,Crohn's disease,Crohn's disease,Digestive system disorder,AFR|LWK|MSL,0.4539|0.4962|0.509
+128,rs151181,CLN3,intron_variant,Crohn's disease,Crohn's disease,Digestive system disorder,PEL,0.4834
+129,rs151181,CLN3,intron_variant,Crohn's disease,Crohn's disease,Immune system disorder,PEL,0.4834
+133,rs1517352,STAT4,intron_variant,Crohn's disease,Crohn's disease,Digestive system disorder,GIH,0.4075
+134,rs1517352,STAT4,intron_variant,Crohn's disease,Crohn's disease,Immune system disorder,GIH,0.4075
+145,rs174537,"MYRF, TMEM258",non_coding_transcript_exon_variant,Crohn's disease,Crohn's disease,Digestive system disorder,KHV,0.422
+147,rs174537,"MYRF, TMEM258",non_coding_transcript_exon_variant,Crohn's disease,Crohn's disease,Immune system disorder,KHV,0.422
+260,rs4787458,IL27 - NUPR1,intergenic_variant,Crohn's disease,Crohn's disease,Digestive system disorder,KHV,0.438
+261,rs4787458,IL27 - NUPR1,intergenic_variant,Crohn's disease,Crohn's disease,Immune system disorder,KHV,0.438
+362,rs762421,GATD3A,intron_variant,Crohn's disease,Crohn's disease,Digestive system disorder,PEL,0.5173
+363,rs762421,GATD3A,intron_variant,Crohn's disease,Crohn's disease,Immune system disorder,PEL,0.5173
+400,rs9286879,AIMP1P2 - NA,intron_variant,Crohn's disease,Crohn's disease,Digestive system disorder,JPT,0.4696
+401,rs9286879,AIMP1P2 - NA,intron_variant,Crohn's disease,Crohn's disease,Immune system disorder,JPT,0.4696
+262,rs4787458,IL27 - NUPR1,intergenic_variant,Crohn's disease or Leprosy (opposite effect),"leprosy, Crohn's disease",Immune system disorder,KHV,0.438
+263,rs4787458,IL27 - NUPR1,intergenic_variant,Crohn's disease or Leprosy (opposite effect),"leprosy, Crohn's disease",Neurological disorder,KHV,0.438
+266,rs4796791,STAT3,intron_variant,Crohn's disease or systemic sclerosis,"systemic scleroderma, Crohn's disease",Cardiovascular disease,GIH|KHV|TSI,0.4384|0.4358|0.4376
+267,rs4796791,STAT3,intron_variant,Crohn's disease or systemic sclerosis,"systemic scleroderma, Crohn's disease",Immune system disorder,GIH|KHV|TSI,0.4384|0.4358|0.4376
+99,rs12913832,"HERC2, HERC2",intron_variant,Cutaneous malignant melanoma,cutaneous melanoma,Cancer,CDX|CLM|EAS|ESN,0.5153|0.3573|0.6997|0.5805
+100,rs12913832,"HERC2, HERC2",intron_variant,Cutaneous melanoma or hair colour,"cutaneous melanoma, hair color",Cancer,CDX|CLM|EAS|ESN,0.5153|0.3573|0.6997|0.5805
+396,rs897984,"BCL7C, MIR762HG, MIR4519",non_coding_transcript_exon_variant,Dementia with Lewy bodies,Lewy body dementia,Metabolic disorder,CHB|CHS|TSI,0.4785|0.4205|0.4191
+77,rs12171500,ZBED3-AS1,intron_variant,"Dental caries (decayed, missing and filled teeth)",dental caries,Digestive system disorder,ITU,0.4879
+76,rs12171500,ZBED3-AS1,intron_variant,"Dental caries (decayed, missing and filled tooth surfaces)",dental caries,Digestive system disorder,ITU,0.4879
+172,rs2092563,EP300-AS1,intron_variant,Depression,unipolar depression,Neurological disorder,MXL,0.3638
+421,rs9611460,RBX1 - Y_RNA,intergenic_variant,Depression,unipolar depression,Neurological disorder,MXL,0.4396
+402,rs9323497,PLEK2,intron_variant,Depressive symptom measurement or major depressive disorder,"unipolar depression, depressive symptom measurement",Neurological disorder,CEU,0.348
+42,rs11192283,SORCS3,intron_variant,Depressive symptoms,depressive symptom measurement,Neurological disorder,PJL,0.2539
+57,rs11610143,ACVR1B,intron_variant,Depressive symptoms,depressive symptom measurement,Neurological disorder,PEL,0.432
+199,rs2413631,RBX1,intron_variant,Depressive symptoms,depressive symptom measurement,Neurological disorder,AMR|LWK,0.2046|0.4993
+420,rs9611460,RBX1 - Y_RNA,intergenic_variant,Depressive symptoms,depressive symptom measurement,Neurological disorder,MXL,0.4396
+120,rs143384,GDF5,5_prime_UTR_variant,Developmental dysplasia of the hip,developmental dysplasia of the hip,Other disease,GIH|TSI,0.4107|0.4387
+273,rs4833103,TLR1,intron_variant,Diabetes in response to antihypertensive drug treatment (treatment strategy interaction),"response to antihypertensive drug, diabetes mellitus, response to beta blocker, response to calcium channel blocker",Digestive system disorder,CHS|CLM,0.4349|0.3111
+13,rs10432638,UBXN2A,intron_variant,Diabetic retinopathy (all NPDR and PDR),diabetic retinopathy,Metabolic disorder,MXL,0.368
+25,rs10828735,PRTFDC1,intron_variant,Diisocyanate-induced asthma,"asthma, response to diisocyanate",Other disease,EUR|IBS|MXL,0.3361|0.3814|0.4085
+74,rs12074934,OR10J3 - OR10J7P,intergenic_variant,Diisocyanate-induced asthma,"asthma, response to diisocyanate",Other disease,ACB|CDX|CHB|EAS|GIH,0.394|0.521|0.4802|0.469|0.5015
+98,rs12913832,"HERC2, HERC2",intron_variant,Diisocyanate-induced asthma,"asthma, response to diisocyanate",Other disease,CDX|CLM|EAS|ESN,0.5153|0.3573|0.6997|0.5805
+123,rs1446585,R3HDM1,missense_variant,Distal colorectal cancer,colorectal cancer,Cancer,CDX|CLM,0.4855|0.4652
+124,rs1446585,R3HDM1,missense_variant,Distal/Left-sided colorectal cancer,colorectal cancer,Cancer,CDX|CLM,0.4855|0.4652
+343,rs7170666,MIR1179 - MIR7-2,intergenic_variant,Endometriosis (MTAG),endometriosis,Other disease,EUR|GBR,0.2977|0.3604
+350,rs73885319,APOL1,missense_variant,End-stage kidney disease,chronic kidney disease,Other disease,BEB,0.3597
+47,rs11249906,PPP1R3B - NA,intron_variant,Essential hypertension (time to event),"essential hypertension, age at diagnosis",Cardiovascular disease,EAS|KHV,0.413|0.4103
+78,rs12297948,CAPZA3 - RPL7P6,intergenic_variant,Externalizing behaviour (multivariate analysis),"attention deficit hyperactivity disorder, substance abuse, antisocial behaviour measurement",Neurological disorder,GIH|STU|TSI,0.3966|0.4425|0.4425
+79,rs12297948,CAPZA3 - RPL7P6,intergenic_variant,Externalizing behaviour (multivariate analysis),"attention deficit hyperactivity disorder, substance abuse, antisocial behaviour measurement",Other disease,GIH|STU|TSI,0.3966|0.4425|0.4425
+211,rs2820443,LYPLAL1-AS1 - ZC3H11B,regulatory_region_variant,Femoral hernia,femoral hernia,Other disease,PEL,0.4197
+215,rs2820446,LYPLAL1-AS1 - ZC3H11B,intergenic_variant,Femoral hernia,femoral hernia,Other disease,PEL,0.4205
+276,rs4846567,LYPLAL1-AS1 - ZC3H11B,regulatory_region_variant,Femoral hernia,femoral hernia,Other disease,PEL,0.4205
+314,rs62388754,"ZNRD1ASP, ZNRD1ASP, ZNRD1ASP, ZNRD1ASP, ZNRD1ASP, ZNRD1ASP, ZNRD1ASP",intron_variant,Frontal fibrosing alopecia,frontal fibrosing alopecia,Other disease,BEB,0.2967
+14,rs1047781,FUT2,missense_variant,Gastric ulcer,gastric ulcer,Digestive system disorder,AMR|BEB|CEU|CHB,0.3921|0.3058|0.3198|0.5077
+257,rs4665630,KLHL29,intron_variant,Generalized epilepsy,generalised epilepsy,Neurological disorder,GBR,0.3627
+94,rs12913832,"HERC2, HERC2",intron_variant,Glaucoma,obsolete_glaucoma,Other disease,CDX|CLM|EAS|ESN,0.5153|0.3573|0.6997|0.5805
+175,rs2093210,C14orf39,intron_variant,Glaucoma,obsolete_glaucoma,Other disease,MXL,0.3604
+18,rs10483727,C14orf39 - SALRNA1,intergenic_variant,Glaucoma (high intraocular pressure),open-angle glaucoma,Other disease,MXL,0.345
+176,rs2093210,C14orf39,intron_variant,Glaucoma (high intraocular pressure),open-angle glaucoma,Other disease,MXL,0.3604
+174,rs2093210,C14orf39,intron_variant,Glaucoma (low intraocular pressure),low tension glaucoma,Neurological disorder,MXL,0.3604
+17,rs10483727,C14orf39 - SALRNA1,intergenic_variant,Glaucoma (primary open-angle),open-angle glaucoma,Other disease,MXL,0.345
+173,rs2093210,C14orf39,intron_variant,Glaucoma (primary open-angle),open-angle glaucoma,Other disease,MXL,0.3604
+229,rs34935520,NA - SALRNA1,intergenic_variant,Glaucoma (primary open-angle),open-angle glaucoma,Other disease,MXL,0.3443
+428,rs993471,COL11A1,intron_variant,Glaucoma (primary open-angle),open-angle glaucoma,Other disease,TSI,0.459
+247,rs3827760,EDAR,missense_variant,Hair/balding pattern: Pattern 1 (UKB data field 2395_1),androgenetic alopecia,Other disease,ACB|AMR|BEB|CDX|CEU|CLM|IBS|ITU|MXL|PJL|PUR|SAS|STU,0.3835|0.3202|0.4339|0.4975|0.4451|0.3663|0.3613|0.3793|0.3902|0.3902|0.3902|0.3902|0.3902
+45,rs11203032,NA - CH25H,intergenic_variant,Heart failure,heart failure,Cardiovascular disease,IBS|ITU,0.3989|0.3447
+323,rs6457709,HLA-DOA - HLA-DPA1,regulatory_region_variant,Hepatitis B,susceptibility to hepatitis B infection measurement,Digestive system disorder,FIN,0.3462
+30,rs10948071,ZNF318,intron_variant,Hypertension,hypertension,Cardiovascular disease,ASW,0.3167
+206,rs2643826,RNU1-96P - Y_RNA,regulatory_region_variant,Hypertension,hypertension,Cardiovascular disease,SAS|STU|TSI,0.4608|0.4608|0.4608
+230,rs35085068,PRMT5 - HAUS4,intron_variant,Hypertension,hypertension,Cardiovascular disease,AFR|LWK,0.4496|0.506
+256,rs4665630,KLHL29,intron_variant,Hypertension,hypertension,Cardiovascular disease,GBR,0.3627
+277,rs4846567,LYPLAL1-AS1 - ZC3H11B,regulatory_region_variant,Hypertension,hypertension,Cardiovascular disease,PEL,0.4205
+303,rs6021247,NFATC2,intron_variant,Hypertension,hypertension,Cardiovascular disease,SAS,0.3196
+306,rs604723,ARHGAP42,intron_variant,Hypertension,hypertension,Cardiovascular disease,PUR,0.3018
+346,rs72375069,SLC4A7,intron_variant,Hypertension,hypertension,Cardiovascular disease,SAS,0.3398
+392,rs820430,SLC4A7 - RNU1-96P,regulatory_region_variant,Hypertension,hypertension,Cardiovascular disease,SAS,0.3436
+399,rs9277348,"HLA-DPB1, HLA-DPB1, HLA-DPB1, HLA-DPB1, HLA-DPB1, HLA-DPB1, HLA-DPB1, HLA-DPA1, HLA-DPA1, HLA-DPA1, HLA-DPA1, HLA-DPA1, HLA-DPA1, HLA-DPA1",missense_variant,Hypothyroidism,hypothyroidism,Other disease,CDX,0.4374
+237,rs35629860,FBRS,intron_variant,Immunoglobulin light chain (AL) amyloidosis,AL amyloidosis,Cardiovascular disease,BEB|STU,0.2907|0.3693
+88,rs12627970,RPL3 - SYNGR1,TF_binding_site_variant,Inflammatory bowel disease,inflammatory bowel disease,Immune system disorder,ITU,0.4421
+89,rs12627970,RPL3 - SYNGR1,TF_binding_site_variant,Inflammatory bowel disease,inflammatory bowel disease,Digestive system disorder,ITU,0.4421
+131,rs1517352,STAT4,intron_variant,Inflammatory bowel disease,inflammatory bowel disease,Immune system disorder,GIH,0.4075
+132,rs1517352,STAT4,intron_variant,Inflammatory bowel disease,inflammatory bowel disease,Digestive system disorder,GIH,0.4075
+299,rs59998884,GATD3A,intron_variant,Inflammatory bowel disease,inflammatory bowel disease,Immune system disorder,PEL,0.523
+300,rs59998884,GATD3A,intron_variant,Inflammatory bowel disease,inflammatory bowel disease,Digestive system disorder,PEL,0.523
+388,rs8127691,GATD3A,intron_variant,Inflammatory bowel disease,inflammatory bowel disease,Digestive system disorder,PEL,0.5194
+389,rs8127691,GATD3A,intron_variant,Inflammatory bowel disease,inflammatory bowel disease,Immune system disorder,PEL,0.5194
+3,rs1012621,TGM3,intron_variant,Inflammatory skin disease,"atopic eczema, psoriasis",Other disease,ASW,0.3138
+4,rs1012621,TGM3,intron_variant,Inflammatory skin disease,"atopic eczema, psoriasis",Immune system disorder,ASW,0.3138
+53,rs1156389,LINC02163 - RNU6-334P,intron_variant,Insomnia,insomnia,Neurological disorder,PJL,0.2529
+65,rs116945310,STRBP,intron_variant,Insomnia,insomnia,Neurological disorder,YRI,0.5342
+84,rs12484074,ZC3H7B,synonymous_variant,Insomnia,insomnia,Neurological disorder,PEL,0.4466
+109,rs13054099,SLC25A17 - ST13,TF_binding_site_variant,Insomnia,insomnia,Neurological disorder,AMR|MXL,0.2134|0.4908
+111,rs13168358,GRIA1,intron_variant,Insomnia,insomnia,Neurological disorder,CHS|EAS|JPT,0.4793|0.4336|0.4782
+112,rs13206608,RN7SL554P - RREB1,intergenic_variant,Insomnia,insomnia,Neurological disorder,SAS,0.3154
+125,rs144895060,MIR106A - LARP1BP3,intergenic_variant,Insomnia,insomnia,Neurological disorder,AMR|PJL|PUR|SAS,0.2489|0.3186|0.3186|0.3186
+136,rs1567084,FOXP1,intron_variant,Insomnia,insomnia measurement,Neurological disorder,CLM,0.3091
+139,rs1687657,LINC00917 - FENDRR,regulatory_region_variant,Insomnia,insomnia,Neurological disorder,GIH,0.3674
+143,rs1737894,NOL4L,intron_variant,Insomnia,insomnia,Neurological disorder,PUR,0.2551
+162,rs1790099,MPHOSPH9,intron_variant,Insomnia,insomnia,Neurological disorder,CEU|CLM|GBR|IBS|ITU|SAS|STU,0.3811|0.4527|0.4217|0.3697|0.3305|0.4501|0.3919
+197,rs2413631,RBX1,intron_variant,Insomnia,insomnia,Neurological disorder,AMR|LWK,0.2046|0.4993
+221,rs293566,NOL4L,non_coding_transcript_exon_variant,Insomnia,insomnia,Neurological disorder,CLM|SAS,0.3134|0.3216
+271,rs4822020,ZC3H7B,intron_variant,Insomnia,insomnia,Neurological disorder,PEL,0.4289
+274,rs4836913,STRBP,intron_variant,Insomnia,insomnia,Neurological disorder,JPT,0.4412
+301,rs6014499,LINC01440 - CBLN4,intergenic_variant,Insomnia,insomnia,Neurological disorder,ASW,0.3526
+335,rs6801781,FOXP1,intron_variant,Insomnia,insomnia,Neurological disorder,CHB|CHS|EAS|JPT,0.4495|0.4312|0.422|0.4498
+338,rs6930773,LINC00271,intron_variant,Insomnia,insomnia,Neurological disorder,STU,0.3833
+379,rs80533,MCHR1 - SLC25A17,intergenic_variant,Insomnia,insomnia,Neurological disorder,AMR,0.2228
+395,rs874168,TEX15 - PURG,intergenic_variant,Insomnia,insomnia measurement,Neurological disorder,STU,0.3676
+200,rs2441727,CTNNA3,intron_variant,Interstitial lung disease,interstitial lung disease,Other disease,CDX|EUR|IBS,0.4386|0.3067|0.3796
+328,rs6631122,CKS1BP6 - FTLP2,intergenic_variant,Interstitial lung disease,interstitial lung disease,Other disease,ASW,0.3162
+21,rs10744777,ALDH2,intron_variant,Ischemic stroke,Ischemic stroke,Cardiovascular disease,PUR,0.3233
+22,rs10744777,ALDH2,intron_variant,Ischemic stroke (small artery occlusion),"Ischemic stroke, small artery occlusion",Cardiovascular disease,PUR,0.3233
+137,rs1681087,SARNP,intron_variant,Kawasaki disease,mucocutaneous lymph node syndrome,Immune system disorder,MSL,0.5116
+398,rs9277332,HLA-DOA - HLA-DPA1,intergenic_variant,Keratinocyte cancer (MTAG),keratinocyte carcinoma,Cancer,FIN,0.3294
+119,rs143384,GDF5,5_prime_UTR_variant,Knee osteoarthritis,"osteoarthritis, knee",Other disease,GIH|TSI,0.4107|0.4387
+280,rs56116847,SBNO1,intron_variant,Knee osteoarthritis,"osteoarthritis, knee",Other disease,GIH|STU,0.3484|0.3869
+368,rs77237189,LINC01781 - NA,intergenic_variant,Large artery stroke,large artery stroke,Cardiovascular disease,AMR,0.2253
+155,rs174549,"FADS2, FADS1",5_prime_UTR_variant,Laryngeal squamous cell carcinoma,laryngeal squamous cell carcinoma,Cancer,PEL,0.4323
+59,rs11610143,ACVR1B,intron_variant,Lung cancer,lung carcinoma,Cancer,PEL,0.432
+60,rs11612312,ACVR1B,intron_variant,Major depressive disorder (MTAG),major depressive disorder,Neurological disorder,PEL,0.432
+87,rs12625546,LINC01432,intron_variant,Male-pattern baldness,obsolete_alopecia,Other disease,ITU,0.3326
+222,rs2965030,TWIST1,intron_variant,Male-pattern baldness,balding measurement,Other disease,AFR|ASW|ESN|LWK|YRI,0.4719|0.3172|0.5455|0.5107|0.5369
+242,rs3790553,WARS2,intron_variant,Male-pattern baldness,balding measurement,Other disease,KHV,0.4742
+245,rs3827760,EDAR,missense_variant,Male-pattern baldness,androgenetic alopecia,Other disease,ACB|AMR|BEB|CDX|CEU|CLM|IBS|ITU|MXL|PJL|PUR|SAS|STU,0.3835|0.3202|0.4339|0.4975|0.4451|0.3663|0.3613|0.3793|0.3902|0.3902|0.3902|0.3902|0.3902
+246,rs3827760,EDAR,missense_variant,Male-pattern baldness,balding measurement,Other disease,ACB|AMR|BEB|CDX|CEU|CLM|IBS|ITU|MXL|PJL|PUR|SAS|STU,0.3835|0.3202|0.4339|0.4975|0.4451|0.3663|0.3613|0.3793|0.3902|0.3902|0.3902|0.3902|0.3902
+308,rs6088466,AHCY - ITCH,intergenic_variant,Male-pattern baldness,balding measurement,Other disease,MXL,0.5127
+309,rs618205,LINC01710 - LYPLAL1-DT,intergenic_variant,Male-pattern baldness,balding measurement,Other disease,EUR|GIH,0.3304|0.3966
+407,rs9388490,CENPW - MIR588,intron_variant,Male-pattern baldness,obsolete_alopecia,Other disease,CHS|JPT,0.432|0.4421
+236,rs35390,,intron_variant,Melanoma,melanoma,Cancer,CEU|EUR|FIN|GBR,0.4146|0.3543|0.3526|0.4136
+149,rs174546,"FADS1, FADS2",3_prime_UTR_variant,Metabolic syndrome,"high density lipoprotein cholesterol measurement, metabolic syndrome",Digestive system disorder,KHV,0.4285
+150,rs174546,"FADS1, FADS2",3_prime_UTR_variant,Metabolic syndrome,"high density lipoprotein cholesterol measurement, metabolic syndrome",Metabolic disorder,KHV,0.4285
+250,rs4403550,MKRN4P - SDCBPP3,intergenic_variant,Migraine,migraine disorder,Cardiovascular disease,ACB|ESN,0.3974|0.5637
+327,rs655484,DLG2,intron_variant,Migraine without aura,"migraine without aura, susceptibility to, 4",Cardiovascular disease,AMR|PJL|PUR,0.2193|0.2587|0.2587
+6,rs10245867,JAZF1,intron_variant,Multiple sclerosis,multiple sclerosis,Immune system disorder,CHS,0.4332
+40,rs11150602,SETD1A,intron_variant,Multiple sclerosis,multiple sclerosis,Immune system disorder,CHB|CHS|ITU,0.5369|0.4307|0.3673
+160,rs17749211,SAMD12,3_prime_UTR_variant,Multiple sclerosis,multiple sclerosis,Immune system disorder,PJL,0.2471
+265,rs4796791,STAT3,intron_variant,Multiple sclerosis,multiple sclerosis,Immune system disorder,GIH|KHV|TSI,0.4384|0.4358|0.4376
+411,rs9568402,DLEU1,intron_variant,Multiple sclerosis,multiple sclerosis,Immune system disorder,CHB,0.439
+141,rs17123757,NA - S1PR1,intron_variant,Multiple sclerosis and C-reactive protein levels (pleiotropy),"C-reactive protein measurement, multiple sclerosis",Immune system disorder,MXL,0.3528
+90,rs12756986,NA - S1PR1,regulatory_region_variant,Multiple sclerosis and HDL levels (pleiotropy),"high density lipoprotein cholesterol measurement, multiple sclerosis",Immune system disorder,GBR,0.4377
+80,rs12425451,TEAD4 - TSPAN9,TF_binding_site_variant,Narcolepsy with cataplexy,narcolepsy-cataplexy syndrome,Neurological disorder,ACB|AFR|ESN|MSL|YRI,0.4073|0.4693|0.5327|0.5252|0.5449
+41,rs11192283,SORCS3,intron_variant,Neuroticism,neuroticism measurement,Neurological disorder,PJL,0.2539
+58,rs11610143,ACVR1B,intron_variant,Neuroticism,neuroticism measurement,Neurological disorder,PEL,0.432
+110,rs13054099,SLC25A17 - ST13,TF_binding_site_variant,Neuroticism,neuroticism measurement,Neurological disorder,AMR|MXL,0.2134|0.4908
+198,rs2413631,RBX1,intron_variant,Neuroticism,neuroticism measurement,Neurological disorder,AMR|LWK,0.2046|0.4993
+322,rs6447129,SLC30A9 - BEND4,intergenic_variant,Neuroticism,neuroticism measurement,Neurological disorder,ACB|AFR|ASW|ESN|GWD|LWK|YRI,0.4035|0.4938|0.3097|0.5845|0.5342|0.5065|0.5465
+380,rs80533,MCHR1 - SLC25A17,intergenic_variant,Neuroticism,neuroticism measurement,Neurological disorder,AMR,0.2228
+101,rs12913832,"HERC2, HERC2",intron_variant,Nevus count or cutaneous melanoma,"nevus count, cutaneous melanoma",Cancer,CDX|CLM|EAS|ESN,0.5153|0.3573|0.6997|0.5805
+163,rs185146,SLC45A2,intron_variant,Nevus count or cutaneous melanoma,"nevus count, cutaneous melanoma",Cancer,CEU|EUR|FIN|GBR|IBS|TSI,0.5757|0.5263|0.5315|0.5831|0.3921|0.5694
+192,rs2279162,MRPS7,non_coding_transcript_exon_variant,Nonalcoholic fatty liver disease (imputed),non-alcoholic fatty liver disease,Digestive system disorder,YRI,0.5128
+427,rs9908820,RNU6-938P - Y_RNA,TF_binding_site_variant,Nonalcoholic fatty liver disease (imputed),non-alcoholic fatty liver disease,Digestive system disorder,GWD|MSL,0.5161|0.5271
+95,rs12913832,"HERC2, HERC2",intron_variant,Non-melanoma skin cancer,non-melanoma skin carcinoma,Cancer,CDX|CLM|EAS|ESN,0.5153|0.3573|0.6997|0.5805
+158,rs174570,FADS2,intron_variant,Non-melanoma skin cancer,non-melanoma skin carcinoma,Cancer,CDX|JPT,0.4492|0.4611
+324,rs6457709,HLA-DOA - HLA-DPA1,regulatory_region_variant,Non-melanoma skin cancer,non-melanoma skin carcinoma,Cancer,FIN,0.3462
+393,rs830620,FOXP1 - EIF4E3,intron_variant,Non-melanoma skin cancer,non-melanoma skin carcinoma,Cancer,PJL,0.2521
+73,rs12068879,KAZN,intron_variant,Non-response to antidepressants and depression,"unipolar depression, mood disorder, response to antidepressant",Neurological disorder,FIN|IBS|ITU|PUR,0.4376|0.4281|0.3936|0.4513
+239,rs3741353,OSBPL5,intron_variant,Nonsyndromic orofacial cleft x sex interaction,"orofacial cleft, sex interaction measurement",Other disease,GIH|STU,0.3872|0.4065
+340,rs7125179,ST14,intron_variant,Nonsyndromic orofacial cleft x sex interaction,"orofacial cleft, sex interaction measurement",Other disease,YRI,0.5202
+240,rs3741353,OSBPL5,intron_variant,Nonsyndromic orofacial cleft x sex interaction (2df),"orofacial cleft, sex interaction measurement",Other disease,GIH|STU,0.3872|0.4065
+341,rs7125179,ST14,intron_variant,Nonsyndromic orofacial cleft x sex interaction (2df),"orofacial cleft, sex interaction measurement",Other disease,YRI,0.5202
+344,rs7184597,RABEP2,non_coding_transcript_exon_variant,Obesity,obesity,Metabolic disorder,KHV,0.5276
+75,rs12075,"CADM3-AS1, ACKR1",missense_variant,Obesity-related traits,CCL2 measurement,Metabolic disorder,ACB|CDX|IBS|ITU|PUR|SAS|STU|TSI,0.3859|0.4503|0.3458|0.3774|0.4592|0.4592|0.4592|0.4592
+281,rs562638,SAMD4B,intron_variant,Obesity-related traits,physical activity,Metabolic disorder,ESN,0.5401
+320,rs6427419,KIRREL1,splice_region_variant,Obesity-related traits,energy intake,Metabolic disorder,ASW,0.3387
+367,rs77125470,SPTBN2,intron_variant,Opioid addiction,opioid dependence,Neurological disorder,PEL,0.4401
+103,rs12931235,VN1R68P - VN1R69P,intergenic_variant,Opioid use disorder vs exposed controls,opioid use disorder,Other disease,IBS|PJL,0.3381|0.2507
+397,rs927485,CDC5L - SUPT3H,regulatory_region_variant,Ossification of the posterior longitudinal ligament of the spine,ossification of the posterior longitudinal ligament of the spine,Other disease,ASW,0.3297
+210,rs2785988,LYPLAL1-AS1 - ZC3H11B,intergenic_variant,Osteoarthritis,osteoarthritis,Other disease,PEL,0.4208
+231,rs35206230,CSK - LMAN1L,intergenic_variant,Osteoarthritis,osteoarthritis,Other disease,CEU,0.3216
+209,rs2785988,LYPLAL1-AS1 - ZC3H11B,intergenic_variant,Osteoarthritis (hip),"osteoarthritis, hip",Other disease,PEL,0.4208
+387,rs8112559,IRF2BP1 - MYPOP,regulatory_region_variant,Osteoarthritis of the hand,"osteoarthritis, hand",Other disease,CLM,0.3184
+212,rs2820443,LYPLAL1-AS1 - ZC3H11B,regulatory_region_variant,Osteoarthritis of the hip or knee,"osteoarthritis, hip, osteoarthritis, knee",Other disease,PEL,0.4197
+187,rs2255280,"C9, DAB2",intron_variant,Pancreatic cancer,pancreatic carcinoma,Cancer,GBR,0.3278
+118,rs14235,BCKDK,synonymous_variant,Parkinson's disease,Parkinson disease,Neurological disorder,CHB|CHS|EAS|JPT,0.5665|0.461|0.4538|0.4818
+321,rs6430538,CCNT2-AS1,intron_variant,Parkinson's disease,Parkinson disease,Neurological disorder,EUR,0.3323
+220,rs2904880,"RABEP2, CD19",missense_variant,Parkinson's disease or first degree relation to individual with Parkinson's disease,Parkinson disease,Neurological disorder,KHV,0.5362
+217,rs28498223,RAD51B,intron_variant,Pediatric asthma,childhood onset asthma,Other disease,MSL,0.5283
+288,rs5743618,TLR1,missense_variant,Pediatric asthma,childhood onset asthma,Other disease,CDX|EUR|FIN,0.4922|0.5649|0.4803
+165,rs1932040,RUNX2 - NA,TF_binding_site_variant,Periodontal microbiota,periodontitis,Digestive system disorder,PJL,0.2477
+275,rs4842266,SYT1 - NOP56P3,regulatory_region_variant,Peripheral artery disease,peripheral arterial disease,Cardiovascular disease,GIH|STU,0.3938|0.4035
+264,rs4787458,IL27 - NUPR1,intergenic_variant,Pneumonia,pneumonia,Other disease,KHV,0.438
+140,rs17023134,UNC5C,intron_variant,Polycystic ovary syndrome (reproductive subtype),polycystic ovary syndrome,Other disease,KHV,0.4245
+201,rs2525776,,intergenic_variant,Posterior cortical atrophy and Alzheimer's disease,"Alzheimer disease, obsolete_posterior cortical atrophy",Neurological disorder,YRI,0.5141
+376,rs8038734,ARIH1,intron_variant,Posterior cortical atrophy and Alzheimer's disease,"Alzheimer disease, obsolete_posterior cortical atrophy",Neurological disorder,ACB|AFR|LWK,0.3856|0.4543|0.5198
+167,rs2012820,ACTN1,intron_variant,Post-traumatic stress disorder (mental health questionnaire or predicted),post-traumatic stress disorder,Neurological disorder,CHS,0.4258
+352,rs739496,"ATXN2, SH2B3",3_prime_UTR_variant,Primary biliary cholangitis,primary biliary cirrhosis,Cancer,CHB|KHV,0.4486|0.4187
+369,rs77871618,Y_RNA - CXCR5,intergenic_variant,Primary biliary cholangitis,primary biliary cirrhosis,Cancer,BEB,0.2753
+424,rs968451,PDGFB - RPL3,intron_variant,Primary biliary cholangitis,biliary liver cirrhosis,Cancer,JPT,0.4845
+189,rs2267407,SYNGR1,intron_variant,Primary biliary cirrhosis,primary biliary cirrhosis,Cancer,JPT,0.4527
+121,rs143886976,EPHA3,intron_variant,Progression free survival in serous epithelial ovarian cancer treated with carboplatin and paclitaxel,"progression free survival, response to carboplatin, ovarian serous carcinoma, response to paclitaxel",Cancer,PJL|PUR,0.2572|0.2572
+218,rs28538685,ADAMTS17,intron_variant,Progression free survival in serous epithelial ovarian cancer treated with carboplatin and paclitaxel,"progression free survival, response to carboplatin, ovarian serous carcinoma, response to paclitaxel",Cancer,CLM|EUR|FIN|ITU,0.3188|0.329|0.3915|0.4398
+10,rs103294,MIR4752 - LILRA5,3_prime_UTR_variant,Prostate cancer,prostate carcinoma,Cancer,CHB,0.4484
+62,rs11673591,PCAT19,intron_variant,Prostate cancer,prostate carcinoma,Cancer,ACB|AFR|AMR|GWD|LWK,0.3874|0.4878|0.1968|0.6001|0.5499
+296,rs58629129,PMVK - PBXIP1,regulatory_region_variant,Prostate cancer,prostate carcinoma,Cancer,ACB|GIH|ITU|KHV|TSI,0.3809|0.4091|0.4224|0.4128|0.4447
+422,rs9623117,TNRC6B,intron_variant,Prostate cancer,prostate carcinoma,Cancer,LWK,0.5105
+15,rs1047781,FUT2,missense_variant,Psoriasis,psoriasis,Immune system disorder,AMR|BEB|CEU|CHB,0.3921|0.3058|0.3198|0.5077
+24,rs10782001,FBXL19,intron_variant,Psoriasis,psoriasis,Immune system disorder,CHB,0.4498
+115,rs13708,STX1B,3_prime_UTR_variant,Psoriasis,psoriasis,Immune system disorder,CHB,0.4504
+171,rs2066808,STAT2,intron_variant,Psoriasis,psoriasis,Immune system disorder,MSL,0.5097
+278,rs4908343,AHDC1 - FGR,regulatory_region_variant,Psoriasis,psoriasis,Immune system disorder,ACB|FIN,0.3785|0.3519
+168,rs2020854,STAT2,splice_donor_region_variant,Psoriatic arthritis,psoriatic arthritis,Immune system disorder,MSL,0.5171
+329,rs6631122,CKS1BP6 - FTLP2,intergenic_variant,Pulmonary fibrosis,pulmonary fibrosis,Cancer,ASW,0.3162
+290,rs5743618,TLR1,missense_variant,Respiratory diseases,respiratory system disease,Other disease,CDX|EUR|FIN,0.4922|0.5649|0.4803
+102,rs12918327,ZNF689,non_coding_transcript_exon_variant,Rheumatoid arthritis,rheumatoid arthritis,Immune system disorder,BEB|ITU|PJL|SAS|STU,0.3648|0.3814|0.2723|0.3293|0.4004
+228,rs34480360,ZNF629 - Metazoa_SRP,regulatory_region_variant,Rheumatoid arthritis,rheumatoid arthritis,Immune system disorder,BEB|STU,0.2885|0.3794
+293,rs5757628,SYNGR1,intron_variant,Rheumatoid arthritis,rheumatoid arthritis,Immune system disorder,JPT,0.4513
+331,rs67250450,JAZF1,intron_variant,Rheumatoid arthritis,rheumatoid arthritis,Immune system disorder,CHB|EAS|JPT,0.4452|0.4101|0.4455
+227,rs34480360,ZNF629 - Metazoa_SRP,regulatory_region_variant,Rheumatoid arthritis (rheumatoid factor and/or anti-cyclic citrullinated peptide seropositive),"rheumatoid arthritis, anti-citrullinated protein antibody seropositivity, rheumatoid factor seropositivity measurement",Immune system disorder,BEB|STU,0.2885|0.3794
+70,rs11798231,FAM3A,non_coding_transcript_exon_variant,Schizophrenia,schizophrenia,Neurological disorder,PJL,0.2742
+114,rs13233308,ABCB1,intron_variant,Schizophrenia,schizophrenia,Neurological disorder,GIH|STU,0.363|0.373
+234,rs35324223,MDK,5_prime_UTR_variant,Schizophrenia,schizophrenia,Neurological disorder,AFR|ESN|GWD|LWK|YRI,0.4732|0.5287|0.5394|0.4826|0.512
+282,rs56335113,LINC01756 - LINC01648,intergenic_variant,Schizophrenia,schizophrenia,Neurological disorder,TSI,0.4567
+310,rs61882743,AMBRA1,intron_variant,Schizophrenia,schizophrenia,Neurological disorder,AFR|ASW|ESN|GWD|LWK|YRI,0.4748|0.318|0.5369|0.533|0.4831|0.5125
+313,rs62153901,SNRNP200,intron_variant,Schizophrenia,schizophrenia,Neurological disorder,PJL,0.2998
+357,rs7521492,,intergenic_variant,Schizophrenia,schizophrenia,Neurological disorder,CLM,0.2893
+365,rs76442143,DOCK3,intron_variant,Schizophrenia,schizophrenia,Neurological disorder,AMR,0.1998
+373,rs7951870,,intron_variant,Schizophrenia,schizophrenia,Neurological disorder,ACB|AFR|ASW|ESN|GWD|LWK,0.383|0.4829|0.3137|0.5407|0.5565|0.5018
+390,rs815609,MFAP3,intron_variant,Schizophrenia,schizophrenia,Neurological disorder,CDX|CHB|CHS|EAS|JPT,0.4369|0.4819|0.4658|0.4597|0.5272
+412,rs959071,EPN2,intron_variant,Schizophrenia,schizophrenia,Neurological disorder,CEU|EUR|FIN|GBR|IBS|TSI,0.4187|0.4323|0.3811|0.4437|0.4333|0.4771
+415,rs9607782,EP300-AS1,intron_variant,Schizophrenia,schizophrenia,Neurological disorder,MXL,0.3494
+85,rs12485034,,intergenic_variant,Schizophrenia (MTAG),schizophrenia,Neurological disorder,MXL,0.3493
+113,rs13233308,ABCB1,intron_variant,Schizophrenia (MTAG),schizophrenia,Neurological disorder,GIH|STU,0.363|0.373
+312,rs61882743,AMBRA1,intron_variant,Schizophrenia (MTAG),schizophrenia,Neurological disorder,AFR|ASW|ESN|GWD|LWK|YRI,0.4748|0.318|0.5369|0.533|0.4831|0.5125
+355,rs7521492,,intergenic_variant,Schizophrenia (MTAG),schizophrenia,Neurological disorder,CLM,0.2893
+374,rs7951870,,intron_variant,Schizophrenia (MTAG),schizophrenia,Neurological disorder,ACB|AFR|ASW|ESN|GWD|LWK,0.383|0.4829|0.3137|0.5407|0.5565|0.5018
+404,rs9358912,H4C5 - H2BC8,intergenic_variant,Schizophrenia (MTAG),schizophrenia,Neurological disorder,ITU,0.4227
+417,rs9607782,EP300-AS1,intron_variant,Schizophrenia (MTAG),schizophrenia,Neurological disorder,MXL,0.3494
+254,rs4565870,CREB3L1 - DGKZ,intergenic_variant,Selective IgA deficiency,selective IgA deficiency disease,Immune system disorder,LWK,0.4956
+159,rs17623373,ENPP6,intron_variant,Severe influenza A (H1N1) infection,influenza A (H1N1),Other disease,BEB|CLM,0.2904|0.3067
+157,rs174565,"FADS1, FADS2",intron_variant,Skin cancer,skin neoplasm,Cancer,CDX|JPT,0.4492|0.4611
+166,rs2009262,PNPT1 - EFEMP1,intergenic_variant,Spherical equivalent,refractive error,Other disease,CHB|EAS|KHV,0.4329|0.4198|0.473
+268,rs4805962,RN7SL150P - RPS4XP23,intergenic_variant,Spherical equivalent or myopia (age of diagnosis),"refractive error, age at onset, Myopia",Other disease,CHS|EAS|JPT,0.4578|0.4223|0.493
+186,rs2238151,ALDH2,intron_variant,Stroke (ischemic),stroke,Cardiovascular disease,PUR,0.3238
+332,rs6730157,"RAB3GAP1, ZRANB3",non_coding_transcript_exon_variant,Sudden cardiac arrest in coronary artery disease,sudden cardiac arrest,Cardiovascular disease,CDX|CLM,0.4666|0.4284
+353,rs7403279,"HERC2, HERC2",intron_variant,Sunburns,sunburn,Other disease,FIN|GBR,0.5382|0.3968
+1,rs10032909,LINC01088,intron_variant,Systemic lupus erythematosus,obsolete_systemic lupus erythematosus,Immune system disorder,EUR,0.3539
+8,rs10245867,JAZF1,intron_variant,Systemic lupus erythematosus,obsolete_systemic lupus erythematosus,Immune system disorder,CHS,0.4332
+33,rs11059927,SLC15A4,non_coding_transcript_exon_variant,Systemic lupus erythematosus,obsolete_systemic lupus erythematosus,Immune system disorder,AMR,0.1974
+34,rs11059928,SLC15A4,intron_variant,Systemic lupus erythematosus,obsolete_systemic lupus erythematosus,Immune system disorder,AMR,0.1974
+54,rs11590283,PUSL1,non_coding_transcript_exon_variant,Systemic lupus erythematosus,obsolete_systemic lupus erythematosus,Immune system disorder,CEU|EUR|FIN|GBR|IBS|TSI,0.4203|0.3973|0.3448|0.3685|0.4063|0.4325
+116,rs1385374,SLC15A4,intron_variant,Systemic lupus erythematosus,obsolete_systemic lupus erythematosus,Immune system disorder,AMR,0.1989
+181,rs218174,MANEALP1 - DARS1,intergenic_variant,Systemic lupus erythematosus,obsolete_systemic lupus erythematosus,Immune system disorder,CEU,0.3866
+333,rs6736175,STAT4,intron_variant,Systemic lupus erythematosus,obsolete_systemic lupus erythematosus,Immune system disorder,GIH,0.3784
+386,rs8072449,SLC25A19 - GRB2,intergenic_variant,Systemic lupus erythematosus,obsolete_systemic lupus erythematosus,Immune system disorder,AFR|ESN|GWD|MSL|YRI,0.4725|0.5572|0.5167|0.5396|0.5287
+426,rs9894206,GRB2,intron_variant,Systemic lupus erythematosus,obsolete_systemic lupus erythematosus,Immune system disorder,ESN,0.5222
+190,rs2275247,KIAA0319L,synonymous_variant,Systemic lupus erythematosus and Systemic sclerosis,"systemic scleroderma, obsolete_systemic lupus erythematosus",Cardiovascular disease,CEU|EUR|FIN|GBR|IBS,0.3426|0.3542|0.3244|0.3537|0.3417
+191,rs2275247,KIAA0319L,synonymous_variant,Systemic lupus erythematosus and Systemic sclerosis,"systemic scleroderma, obsolete_systemic lupus erythematosus",Immune system disorder,CEU|EUR|FIN|GBR|IBS,0.3426|0.3542|0.3244|0.3537|0.3417
+253,rs45471499,"IGHM, IGHM",missense_variant,Systemic sclerosis,systemic scleroderma,Cardiovascular disease,CLM|EUR|PJL|PUR,0.3152|0.3152|0.3152|0.3152
+360,rs75748221,SGSM3,intron_variant,Systolic blood pressure x depressive symptoms interaction (1df test),"unipolar depression, systolic blood pressure",Neurological disorder,AMR|ASW|BEB|CEU|EUR|PJL|PUR|SAS,0.2711|0.313|0.2809|0.3154|0.3041|0.3266|0.3266|0.3266
+359,rs75748221,SGSM3,intron_variant,Systolic blood pressure x depressive symptoms interaction (2df test),"unipolar depression, systolic blood pressure",Neurological disorder,AMR|ASW|BEB|CEU|EUR|PJL|PUR|SAS,0.2711|0.313|0.2809|0.3154|0.3041|0.3266|0.3266|0.3266
+11,rs103294,MIR4752 - LILRA5,3_prime_UTR_variant,Takayasu arteritis,Takayasu arteritis,Cardiovascular disease,CHB,0.4484
+315,rs62392216,"HLA-W, HLA-W, HLA-W, HLA-W, HLA-W, HLA-W, HLA-W",non_coding_transcript_exon_variant,Takayasu arteritis,Takayasu arteritis,Cardiovascular disease,BEB,0.291
+372,rs7904519,TCF7L2,intron_variant,Thoracic aortic aneurysms,thoracic aortic aneurysm,Cardiovascular disease,CHS,0.4265
+12,rs10421769,GPATCH1,stop_gained,Thrombosis in response to liver transplant,"coronary thrombosis, GM11992",Cardiovascular disease,CEU|EUR,0.3939|0.4003
+298,rs5951698,PHEX,intron_variant,Tourette syndrome,Tourette syndrome,Neurological disorder,CLM,0.328
+7,rs10245867,JAZF1,intron_variant,Type 1 diabetes,type 1 diabetes mellitus,Digestive system disorder,CHS,0.4332
+9,rs10245867,JAZF1,intron_variant,Type 1 diabetes,type 1 diabetes mellitus,Immune system disorder,CHS,0.4332
+29,rs10919928,ZNF281 - KIF14,intron_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,CLM|GBR,0.2959|0.3965
+43,rs11201999,GRID1,intron_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,AMR,0.211
+63,rs11680058,GACAT3 - CYRIA,intron_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,ACB|GWD,0.4158|0.5238
+67,rs117483894,TCF12,intron_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,AMR,0.2135
+91,rs12878003,LINC00523,intron_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,IBS,0.3423
+126,rs1459513,ZBTB20 - EIF4E2P2,intron_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,IBS,0.3322
+148,rs174541,FADS2,non_coding_transcript_exon_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,KHV,0.4205
+161,rs17866443,ZNF800,intron_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,AMR,0.2142
+184,rs2237892,"KCNQ1, KCNQ1",intron_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,MXL,0.3517
+188,rs2257883,RPSAP52,intron_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,ESN|GWD|MSL,0.5241|0.5168|0.5112
+202,rs2526678,FADS2,non_coding_transcript_exon_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,BEB|IBS,0.392|0.3986
+213,rs2820443,LYPLAL1-AS1 - ZC3H11B,regulatory_region_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,PEL,0.4197
+214,rs2820446,LYPLAL1-AS1 - ZC3H11B,intergenic_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,PEL,0.4205
+223,rs2971760,EEF1B2P6 - NDUFB9P2,intergenic_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,PEL,0.4538
+226,rs343093,"HMGA2-AS1, HMGA2",intron_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,ESN,0.5221
+295,rs57676627,ERN1,intron_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,ACB|AFR|ASW|BEB|CHB|EUR|GIH|GWD|PEL|PJL|PUR,0.3934|0.5023|0.3346|0.2707|0.6282|0.5263|0.4863|0.5263|0.5517|0.2849|0.2849
+297,rs590616,ARHGAP42,intron_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,CHB|EAS|KHV,0.4635|0.4358|0.4334
+304,rs60276348,ERN1,intron_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,ACB|AFR|ASW|ESN|GWD|LWK|MSL|YRI,0.3936|0.5014|0.3349|0.6284|0.5265|0.4865|0.518|0.5519
+325,rs6488140,ASS1P14 - SYT10,intergenic_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,GBR,0.3266
+358,rs75412658,CASC15,non_coding_transcript_exon_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,JPT,0.492
+377,rs8042680,"PRC1-AS1, PRC1",intron_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,EUR,0.3204
+378,rs8046545,ATP2A1,intron_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,MSL,0.5256
+383,rs8056890,ATP2A1,intron_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,PEL,0.4365
+405,rs9358912,H4C5 - H2BC8,intergenic_variant,Type 2 diabetes,type 2 diabetes mellitus,Digestive system disorder,ITU,0.4227
+413,rs9607685,TNRC6B,intron_variant,Type 2 diabetes or prostate cancer (pleiotropy),"prostate carcinoma, type 2 diabetes mellitus",Cancer,LWK,0.5103
+414,rs9607685,TNRC6B,intron_variant,Type 2 diabetes or prostate cancer (pleiotropy),"prostate carcinoma, type 2 diabetes mellitus",Digestive system disorder,LWK,0.5103
+106,rs13003464,PUS10,intron_variant,Ulcerative colitis,ulcerative colitis,Immune system disorder,AFR|LWK|MSL,0.4539|0.4962|0.509
+135,rs1517352,STAT4,intron_variant,Ulcerative colitis,ulcerative colitis,Immune system disorder,GIH,0.4075
+44,rs11202345,SHLD2,intron_variant,Urate levels,urate measurement,Metabolic disorder,IBS,0.3604
+193,rs2306125,ADAM15,intron_variant,Urate levels,urate measurement,Metabolic disorder,CDX|CHB|CHS|EAS|JPT,0.4658|0.4723|0.4827|0.4609|0.4971
+195,rs2384000,PTPN11 - RPH3A,intergenic_variant,Urate levels,urate measurement,Metabolic disorder,CHS,0.4383
+241,rs3769005,MCM6,intron_variant,Urate levels,urate measurement,Metabolic disorder,CEU,0.316
+259,rs4766898,HECTD4,intron_variant,Urate levels,urate measurement,Metabolic disorder,CLM,0.3012
+283,rs56401710,"CRIP3, SLC22A7",intron_variant,Urate levels,urate measurement,Metabolic disorder,ASW,0.3354
+348,rs7305242,ALDH2 - MAPKAPK5-AS1,intergenic_variant,Urate levels,urate measurement,Metabolic disorder,CLM,0.3042
+64,rs11692588,GREB1,intron_variant,Uterine fibroids,uterine fibroid,Cancer,GIH|STU|TSI,0.388|0.4165|0.4165
+83,rs12479436,GREB1,intron_variant,Uterine fibroids,uterine fibroid,Cancer,GIH|STU|TSI,0.3942|0.4225|0.4225
+269,rs4821942,TNRC6B,intron_variant,Uterine leiomyoma or breast cancer (pleiotropy),"Uterine leiomyoma, breast carcinoma",Cancer,MXL,0.3485
+270,rs4821942,TNRC6B,intron_variant,Uterine leiomyoma or ER positive breast cancer (pleiotropy),"Uterine leiomyoma, estrogen-receptor positive breast cancer",Cancer,MXL,0.3485
+51,rs1129038,"HERC2, HERC2",3_prime_UTR_variant,Uveal melanoma,Uveal Melanoma,Cancer,CDX|CLM|EAS|ESN,0.5158|0.3567|0.6934|0.581
+233,rs35257692,NA - RREB1,regulatory_region_variant,Uveal melanoma,Uveal Melanoma,Cancer,SAS,0.3555
+232,rs35257692,NA - RREB1,regulatory_region_variant,Uveal melanoma with any chromosomal aberration,Uveal Melanoma,Cancer,SAS,0.3555
+349,rs7327620,MIPEP,intron_variant,Venous thromboembolism,venous thromboembolism,Cardiovascular disease,MXL,0.4058
+49,rs1129038,"HERC2, HERC2",3_prime_UTR_variant,Vitiligo,Vitiligo,Immune system disorder,CDX|CLM|EAS|ESN,0.5158|0.3567|0.6934|0.581

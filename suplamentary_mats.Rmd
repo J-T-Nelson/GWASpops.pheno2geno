@@ -1,0 +1,308 @@
+---
+title: "Supplementary Materials"
+author: "Jon Tanner Nelson"
+date: "2023-05-06"
+output: html_document
+---
+
+## Visulaizations
+
+
+
+### PCA
+
+#### Unique SNPs per Parent Term: 
+
+| Cancer     | Cardiovascular disease | Digestive System Disorder | Immune System Disorder | Metabolic Disorder | Neurological Disorder | Other Disease | Total |
+|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
+| 66 | 51 | 75 | 74 | 18 | 162 | 105 | 477 |
+
+
+
+![](./GeneralPlots/report11_12/PCA/AllVariantsPCA.PNG)
+
+![](./GeneralPlots/report11_12/PCA/allDiseaseVariants.PNG)
+
+![](./GeneralPlots/report11_12/PCA/PCA_allSubPopsVSmetaPop_withSuperPopulationColor.PNG)
+
+![](./GeneralPlots/report11_12/PCA/CancerPCA.PNG)
+
+![](./GeneralPlots/report11_12/PCA/CardiovascularPCA.PNG)
+
+![](./GeneralPlots/report11_12/PCA/DigestiveDisorderPCA.PNG)
+
+![](./GeneralPlots/report11_12/PCA/ImmuneDisorderPCA.PNG)
+
+![](./GeneralPlots/report11_12/PCA/MEtabolicDisorderPCA.PNG)
+
+![](./GeneralPlots/report11_12/PCA/NeuroDisorderPCA.PNG)
+
+
+
+### Number SNPs above Fst Thresholds per Sub Population
+
+#### All Diseases: 
+
+![](./GeneralPlots/report11_12/barPlot_diseaseAbove0_2.png)
+
+![](./GeneralPlots/report11_12/barPlot_diseaseAbove0_3.png)
+
+![](./GeneralPlots/report11_12/barPlot_diseaseAbove4.png)
+
+![](./GeneralPlots/report11_12/barPlot_diseaseAbove0_5.png)
+
+
+##### Monogenic Diseases: 
+
+![](./GeneralPlots/report11_12/barPlot_monogenic_AllAbove0_2.png)
+
+![](./GeneralPlots/report11_12/barPlot_monogenic_AllAbove0_3.png)
+
+
+![](./GeneralPlots/report11_12/barPlot_monogenic_AllAbove0_4.png)
+
+
+
+
+### Prevalence Vs Mean Allele Frequency
+
+**CRITICAL NOTE ON THESE PLOTS:** 
+
+Unfortunately these plots were not able to be configured as I desired. For unknown reasons the row order was not able to be changed, and due to time constraints I wasn't able to resolve this issue before generating the plots. Further the GBR sub population within the "mean-allele-frequency" bar graphs is evidently incorrect. Some error in preprocessing occurred with this sub population which can be seen in these graphs, thus the GBR population comparison here should be ignored. 
+
+#### Correlation Table
+
+![](./GeneralPlots/final_report_plots/correlation_table.PNG)
+
+
+#### Bar Plots: 
+
+![](./GeneralPlots/final_report_plots/meanAlleleFreq_ Asthma .png)
+
+![](./GeneralPlots/final_report_plots/prevalence_ Asthma .png)
+
+![](./GeneralPlots/final_report_plots/meanAlleleFreq_ Breast cancer .png)
+
+![](./GeneralPlots/final_report_plots/prevalence_ Breast cancer .png)
+
+![](./GeneralPlots/final_report_plots/meanAlleleFreq_ Colorectal cancer .png)
+
+![](./GeneralPlots/final_report_plots/prevalence_ Colorectal cancer .png)
+
+![](./GeneralPlots/final_report_plots/meanAlleleFreq_ Cystic Fibrosis .png)
+
+![](./GeneralPlots/final_report_plots/prevalence_ Cystic Fibrosis .png)
+
+![](./GeneralPlots/final_report_plots/meanAlleleFreq_ Hypertension .png)
+
+![](./GeneralPlots/final_report_plots/prevalence_ Hypertension .png)
+
+![](./GeneralPlots/final_report_plots/meanAlleleFreq_ Inflammatory bowel disease .png)
+
+![](./GeneralPlots/final_report_plots/prevalence_ Inflammatory bowel disease .png)
+
+![](./GeneralPlots/final_report_plots/meanAlleleFreq_ Multiple sclerosis .png)
+
+![](./GeneralPlots/final_report_plots/prevalence_ Multiple sclerosis .png)
+
+![](./GeneralPlots/final_report_plots/meanAlleleFreq_ Phenylketonuria .png)
+
+![](./GeneralPlots/final_report_plots/prevalence_ Phenylketonuria .png)
+
+![](./GeneralPlots/final_report_plots/meanAlleleFreq_ Prostate cancer .png)
+
+![](./GeneralPlots/final_report_plots/prevalence_ Prostate cancer .png)
+
+![](./GeneralPlots/final_report_plots/meanAlleleFreq_ Type 2 diabetes .png)
+
+![](./GeneralPlots/final_report_plots/prevalence_ Type 2 diabetes .png)
+
+
+
+
+
+### Top 20 SNPs (by Fst) Per Super Population 
+
+#### Admixed American
+
+![](./GeneralPlots/report11_12/admixedAmerican_top20variants.PNG)
+
+#### African
+
+![](./GeneralPlots/report11_12/African_top20variants.PNG)
+
+#### East Asian 
+
+![](./GeneralPlots/report11_12/EastAsian_top20variants.PNG)
+
+#### South Asian
+
+![](./GeneralPlots/report11_12/SouthAsian_top20variants.PNG)
+
+#### European 
+
+![](./GeneralPlots/report11_12/European_top20variants.PNG)
+
+
+
+
+## Tables
+
+
+
+**NOTE: All tables will be displayed partially here and can be downloaded for complete viewing from the "tables_(csv)" folder**
+
+### 
+
+
+#### Top 20 Disease SNPs per Sub Population
+
+```{r, echo=FALSE, layout="l-body-outset"}
+load("./workingData/top20_disease_vars_perPop_with_fst.rds")
+library(knitr)
+kable(head(t20_disease_with_fst))
+```
+
+
+#### Top 10 Monogenic Disease SNPs per Sub Population
+
+
+```{r, echo=FALSE, layout="l-body-outset"}
+load("./workingData/top10_monogenic_vars_perPop_with_fst.rds")
+library(knitr)
+kable(head(t10_mono_with_fst))
+```
+
+
+
+#### Complete Set of Monogenic Disease Associated Variants
+
+```{r, echo=FALSE, layout="l-body-outset"}
+load("./workingData/monogenic_variants_complete.rds")
+library(knitr)
+kable(head(monogenic_variants_complete))
+```
+
+
+
+
+## R Version & Packages Used
+
+### Version: 
+                               
+platform       x86_64-w64-mingw32               
+arch           x86_64                           
+os             mingw32                          
+crt            ucrt                             
+system         x86_64, mingw32                  
+status                                          
+major          4                                
+minor          2.1                              
+year           2022                             
+month          06                               
+day            23                               
+svn rev        82513                            
+language       R                                
+version.string R version 4.2.1 (2022-06-23 ucrt)
+nickname       Funny-Looking Kid         
+
+
+### Packages: 
+
+**Package**       **Version**
+
+curl                4.3.2
+
+data.table         1.14.2
+
+dplyr              1.0.10
+
+esquisse            1.1.2
+
+ggplot2             3.3.6
+
+ggrepel             0.9.3
+
+httr                1.4.4
+
+jsonlite            1.8.0
+
+knitr               1.40
+
+purrr               0.3.4
+
+tibble              3.1.8
+
+tidyr               1.2.1
+
+GWASpops.pheno2geno 0.900
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
